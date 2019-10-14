@@ -1,0 +1,14 @@
+*.7z
+*.rar
+*.zip
+*.tar.gz
+*.debug
+*.log
+*.exe
+!iconv.exe
+!oggdec.exe
+!tisunpack.exe
+!TobExLoader.exe
+setup-SoD2BG2_IU
+setup-SoD2BG2_IU.command
+SoD2BG2_IU/backup/*
