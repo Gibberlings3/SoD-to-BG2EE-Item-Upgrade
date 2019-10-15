@@ -1,0 +1,770 @@
+/*
+CDItemMakerTweaks
+1 - Tongue of Burning Acid +4
+2 - Tongue of Burning Acid +5
+3 - Soft Feet +1
+4 - Crown of Truths
+5 - Horned Helm of Dumathoin
+6 - Archer's Eagle Eyes
+7 - Belt of the Blademaster
+8 - Biter +3
+9 - Icy Blade of the Void +5
+10 - Icy Hammer of the Void +5
+11 - Melodius Bart Hat
+12 - Robe of Roaring Flames
+13 - Mirrored Buckler of the Fist
+14 - Sundermaul +5
+15 - The Scorched Earth +3
+16 - Star-Strewn Boots of Amaunator
+17 - Verdant Crimson Dragon Plate
+18 - Verdant Shadow Dragonscale
+19 - Chromatic Crimson Dragon Plate(Shadow Scales)
+20 - Chromatic Crimson Dragon Plate(Blue Scales)
+21 - Chromatic Crimson Dragon Plate(White Scales)
+22 - Chromatic Crimson Dragon Plate(Silver Scales)
+23 - Chromatic Shadow Dragonscale(Red Scales)
+24 - Chromatic Shadow Dragonscale(Blue Scales)
+25 - Chromatic Shadow Dragonscale(White Scales)
+26 - Chromatic Shadow Dragonscale(Silver Scales)
+27 - Stalker's Gauntlets of Blinding Strike
+28 - The Scorched Earth +5
+29 - Cloverleaf +1
+30 - Uncursed Staff of Antipode
+31 - Nasty Backwhacker +4
+32 - Bow of the Wailing Banshee +4
+33 - Adventurer's Nimble Gloves of Guarding
+34 - Quiver of Void-Tipped Arrows +3
+35 - Bag of Darkness +3
+36 - Illusory Cloak of Arcana
+37 - Element's Fury +3
+38 - Element's Fury +4
+39 - Maelstrom Axe +3
+40 - Maelstrom Pike +4
+41 - Maelstrom Axe +4
+42 - Maelstrom Pike +5
+43 - Trollkiller's Ioun Stone
+44 - Trollkiller's Ioun Stone +1
+45 - Bulwark of Egons +3
+46 - Vexation +5
+47 - Bulwark of Egons +4
+48 - Astral Crossbow +4
+49 - Shadowed Spear of the Tempest +4
+50 - Shadowed Spear of the Tempest +6
+51 - Carmine Viridian Dragon Plate
+52 - Umbral Viridian Dragonscale
+53 - Dragonscale Shield +3
+54 - Green Dragonscale Armor +4
+55 - Silver Dragon Blade +4
+56 - Silver Dragon Blade +5
+57 - Dragonscale Aegis +4
+58 - Tongue of Acid +4
+59 - Tongue of Acid +5
+*/
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",1)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",2)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd1a",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",3)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkboot1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",4)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkcrwn1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",5)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkhelm1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",6)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkamul1",Player1,2,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",7)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkblt01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",8)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkdart1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",9)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd02",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",10)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkham01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",11)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkhat01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",12)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkrobe1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",13)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkshld1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",14)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkham02",Player1,0,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",15)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd03",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",16)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkboot2",Player1,1,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",17)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplat1",Player1,2,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",18)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkleat1",Player1,2,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",19)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplt1a",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",20)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplt1b",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",21)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplt1c",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",22)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplt1d",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",23)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea1a",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",24)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea1b",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",25)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea1c",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",26)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea1d",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",27)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkbrac1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",28)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd3a",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",29)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkblt02",Player1,1,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",30)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkstaf1",Player1,0,10,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",31)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkclub1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",32)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkbow01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",33)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkglov1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",34)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkquiv1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",35)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkquiv2",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",36)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkclk01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",37)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtktdag1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",38)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtktdag2",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",39)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkaxe01",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",40)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkhalb1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",41)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkaxe02",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",42)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkhalb2",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",43)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkioun1",Player1,1,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",44)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkioun2",Player1,1,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",45)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkshld2",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",46)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd04",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",47)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkshd2a",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",48)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkxbow1",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",49)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtksper1",Player1,0,30,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",50)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkspr1a",Player1,0,30,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",51)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkplt1e",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",52)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea1e",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",53)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("bdshld05",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",54)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkleat2",Player1,2,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",55)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd05",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",56)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd5a",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",57)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkshld3",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",58)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd1b",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("CDItemMakerTweaks","GLOBAL",59)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CDItemMakerTweaks","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd1c",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END

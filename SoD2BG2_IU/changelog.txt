@@ -1,0 +1,15 @@
+Version 0.2.0 changes
+
+corrected charge ability count for some items.
+
+corrected broken recipes
+
+updated upgraded item icons with new, custom icons.
+
+Doubled area of effect size on Verdant Crimson Dragon armor (and its variants) charge ability.
+
+modified charge abilities for writhing fog and chain lightning on items that have them,
+to be more in-line with the vitriolic sphere and produce fire charges in power.
+
+Added additional items from SoD and upgrade recipes for them to cromwell and cespenar.
+

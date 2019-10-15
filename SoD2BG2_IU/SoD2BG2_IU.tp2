@@ -1,0 +1,691 @@
+//SoD2BG2EE Item Upgrade
+
+BACKUP ~SoD2BG2_IU/backup~
+AUTHOR ~Daeros Trollkiller~
+
+VERSION ~v0.2.0~
+
+README ~SoD2BG2_IU/README.txt~
+
+LANGUAGE ~English~ ~english~ ~SoD2BG2_IU/language/english/english.tra~
+
+BEGIN @9000
+PRINT @9001
+
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkvit.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkpfir.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkshrod.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkanti.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkshout.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkdagg1.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtksnow.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkcloud.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwave.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkaxel.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwhirl.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwind.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicel.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicely.pro~
+
+COPY ~SoD2BG2_IU/bam~ ~override~
+COPY ~SoD2BG2_IU/spl~ ~override~
+COPY ~SoD2BG2_IU/eff~ ~override~
+COPY ~SoD2BG2_IU/vvc~ ~override~
+COPY ~SoD2BG2_IU/wav~ ~override~
+
+INCLUDE ~SoD2BG2_IU/lib/functions.tpa~
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END
+
+COPY ~SoD2BG2_IU/itm/acid/bdsw1h02.itm~ ~override~ 
+SAY NAME1 @2000
+SAY NAME2 @2001
+SAY 0x54 @2002
+
+COPY ~SoD2BG2_IU/itm/acid4/dtkswd01.itm~ ~override~
+SAY NAME1 @2000
+SAY NAME2 @2003
+SAY 0x54 @2004
+
+COPY ~SoD2BG2_IU/itm/acid5/dtkswd1a.itm~ ~override~ 
+SAY NAME1 @2000
+SAY NAME2 @2005
+SAY 0x54 @2006
+
+COPY ~SoD2BG2_IU/itm/drag/bdleat05.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2008
+SAY 0x50 @2009
+SAY 0x54 @2010
+
+COPY ~SoD2BG2_IU/itm/softft/bdboot01.itm~ ~override~ 
+SAY NAME1 @2011
+SAY NAME2 @2012
+SAY 0x54 @2013
+
+COPY ~SoD2BG2_IU/itm/softft1/dtkboot1.itm~ ~override~ 
+SAY NAME1 @2011
+SAY NAME2 @2014
+SAY 0x54 @2015
+
+COPY ~SoD2BG2_IU/itm/crown/bdhelm01.itm~ ~override~ 
+SAY NAME1 @2016
+SAY NAME2 @2017
+SAY 0x50 @2018
+SAY 0x54 @2019
+
+COPY ~SoD2BG2_IU/itm/crownt/dtkcrwn1.itm~ ~override~ 
+SAY NAME1 @2016
+SAY NAME2 @2020
+SAY 0x54 @2021
+
+COPY ~SoD2BG2_IU/itm/helmduma/dtkhelm1.itm~ ~override~ 
+SAY NAME2 @2022
+SAY 0x54 @2023
+
+COPY ~SoD2BG2_IU/itm/aeyes/dtkamul1.itm~ ~override~ 
+SAY NAME2 @2024
+SAY 0x54 @2025
+
+COPY ~SoD2BG2_IU/itm/bbelt/dtkblt01.itm~ ~override~ 
+SAY NAME2 @2026
+SAY 0x54 @2027
+
+COPY ~SoD2BG2_IU/itm/biter/dtkdart1.itm~ ~override~ 
+SAY NAME2 @2028
+SAY 0x54 @2029
+
+COPY ~SoD2BG2_IU/itm/voidsw/dtkswd02.itm~ ~override~ 
+SAY NAME2 @2030
+SAY 0x54 @2031
+
+COPY ~SoD2BG2_IU/itm/voidham/dtkham01.itm~ ~override~ 
+SAY NAME2 @2032
+SAY 0x54 @2033
+
+COPY ~SoD2BG2_IU/itm/bardhat/dtkhat01.itm~ ~override~ 
+SAY NAME1 @2034
+SAY NAME2 @2035
+SAY 0x54 @2036
+
+COPY ~SoD2BG2_IU/itm/frobe/dtkrobe1.itm~ ~override~ 
+SAY NAME2 @2037
+SAY 0x54 @2038
+
+COPY ~SoD2BG2_IU/itm/buckler/dtkshld1.itm~ ~override~ 
+SAY NAME2 @2039
+SAY 0x54 @2040
+
+COPY ~SoD2BG2_IU/itm/sunder/bdhamm01.itm~ ~override~ 
+SAY NAME2 @2041
+SAY 0x54 @2042
+
+COPY ~SoD2BG2_IU/itm/sunder5/dtkham02.itm~ ~override~ 
+SAY NAME2 @2043
+SAY 0x54 @2044
+
+COPY ~SoD2BG2_IU/itm/flameswd/dtkswd03.itm~ ~override~ 
+SAY NAME1 @2000
+SAY NAME2 @2045
+SAY 0x54 @2046
+
+COPY ~SoD2BG2_IU/itm/starboot/bdboot03.itm~ ~override~
+SAY NAME1 @2011 
+SAY NAME2 @2047
+SAY 0x54 @2048
+
+COPY ~SoD2BG2_IU/itm/starboot1/dtkboot2.itm~ ~override~
+SAY NAME1 @2011 
+SAY NAME2 @2049
+SAY 0x54 @2050
+
+COPY ~SoD2BG2_IU/itm/vcdragp/dtkplat1.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2051
+SAY 0x50 @2009
+SAY 0x54 @2052
+
+COPY ~SoD2BG2_IU/itm/vsdragl/dtkleat1.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2053
+SAY 0x50 @2009
+SAY 0x54 @2054
+
+COPY ~SoD2BG2_IU/itm/ccdragpb/dtkplt1b.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2055
+SAY 0x50 @2009
+SAY 0x54 @2056
+
+COPY ~SoD2BG2_IU/itm/ccdragps/dtkplt1a.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2057
+SAY 0x50 @2009
+SAY 0x54 @2058
+
+COPY ~SoD2BG2_IU/itm/ccdragpw/dtkplt1c.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2059
+SAY 0x50 @2009
+SAY 0x54 @2060
+
+COPY ~SoD2BG2_IU/itm/ccdragpsil/dtkplt1d.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2061
+SAY 0x50 @2009
+SAY 0x54 @2062
+
+COPY ~SoD2BG2_IU/itm/csdraglb/dtklea1b.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2063
+SAY 0x50 @2009
+SAY 0x54 @2064
+
+COPY ~SoD2BG2_IU/itm/csdraglr/dtklea1a.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2065
+SAY 0x50 @2009
+SAY 0x54 @2066
+
+COPY ~SoD2BG2_IU/itm/csdraglw/dtklea1c.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2067
+SAY 0x50 @2009
+SAY 0x54 @2068
+
+COPY ~SoD2BG2_IU/itm/csdraglsil/dtklea1d.itm~ ~override~ 
+SAY NAME1 @2007
+SAY NAME2 @2069
+SAY 0x50 @2009
+SAY 0x54 @2070
+
+COPY ~SoD2BG2_IU/itm/stalkg/bdbrac05.itm~ ~override~ 
+SAY NAME2 @2071
+SAY 0x54 @2072
+
+COPY ~SoD2BG2_IU/itm/stalkg1/dtkbrac1.itm~ ~override~ 
+SAY NAME2 @2073
+SAY 0x54 @2074
+
+COPY ~SoD2BG2_IU/itm/ruby/dtkruby.itm~ ~override~
+SAY NAME1 @2075
+SAY NAME2 @2076
+SAY 0x50 @2077
+SAY 0x54 @2078
+
+COPY ~SoD2BG2_IU/itm/topaz/dtktopaz.itm~ ~override~
+SAY NAME1 @2075
+SAY NAME2 @2079
+SAY 0x50 @2077
+SAY 0x54 @2080
+
+COPY ~SoD2BG2_IU/itm/frost/dtkfrost.itm~ ~override~
+SAY NAME1 @2075
+SAY NAME2 @2081
+SAY 0x50 @2077
+SAY 0x54 @2082 
+
+COPY ~SoD2BG2_IU/itm/flameswd1/dtkswd3a.itm~ ~override~
+SAY NAME1 @2000
+SAY NAME2 @2083
+SAY 0x54 @2084
+
+COPY ~SoD2BG2_IU/itm/luckbelt/bdbelt01.itm~ ~override~
+SAY NAME2 @2085
+SAY 0x54 @2086
+
+COPY ~SoD2BG2_IU/itm/cursestaff/bdblun06.itm~ ~override~
+SAY NAME2 @2087
+SAY 0x54 @2088
+
+COPY ~SoD2BG2_IU/itm/backwhack/bdblun07.itm~ ~override~
+SAY NAME2 @2089
+SAY 0x54 @2090
+
+COPY ~SoD2BG2_IU/itm/bansheebow/bdbow04.itm~ ~override~
+SAY NAME2 @2091
+SAY 0x54 @2092
+
+COPY ~SoD2BG2_IU/itm/nimblef/bdbrac03.itm~ ~override~
+SAY NAME2 @2093
+SAY 0x54 @2094
+
+COPY ~SoD2BG2_IU/itm/bagpipe/bdbrd04.itm~ ~override~
+SAY NAME1 @2095
+SAY NAME2 @2096
+SAY 0x50 @2097
+SAY 0x54 @2098
+
+COPY ~SoD2BG2_IU/itm/darkbull/bdbull02.itm~ ~override~
+SAY NAME2 @2099
+SAY 0x54 @2100
+
+COPY ~SoD2BG2_IU/itm/voidarrow/bdarow02.itm~ ~override~
+SAY NAME2 @2101
+SAY 0x54 @2102
+
+COPY ~SoD2BG2_IU/itm/cloakarcan/bdclck06.itm~ ~override~
+SAY NAME2 @2103
+SAY 0x54 @2104
+
+COPY ~SoD2BG2_IU/itm/eledagg/bddagg01.itm~ ~override~
+SAY NAME2 @2105
+SAY 0x54 @2106
+
+COPY ~SoD2BG2_IU/itm/stormpike/bdhalb01.itm~ ~override~
+SAY NAME2 @2107
+SAY 0x54 @2108
+
+COPY ~SoD2BG2_IU/itm/trollblood/bdioun01.itm~ ~override~
+SAY NAME2 @2109
+SAY 0x54 @2110
+
+COPY ~SoD2BG2_IU/itm/greenscale/bdscaleg.itm~ ~override~ 
+SAY NAME1 @2111
+SAY NAME2 @2112
+SAY 0x50 @2113
+SAY 0x54 @2114
+
+COPY ~SoD2BG2_IU/itm/egons/bdshld03.itm~ ~override~
+SAY NAME2 @2115
+SAY 0x54 @2116
+
+COPY ~SoD2BG2_IU/itm/dragshld/bdshld05.itm~ ~override~
+SAY NAME2 @2117
+SAY 0x54 @2118
+
+COPY ~SoD2BG2_IU/itm/vex/bdsw1h21.itm~ ~override~
+SAY NAME2 @2119
+SAY 0x54 @2120
+
+COPY ~SoD2BG2_IU/sto/bdkeyr.sto~ ~override~
+SAY NAME2 @2121
+
+COPY ~SoD2BG2_IU/itm/keyring/bdkeyr.itm~ ~override~
+SAY NAME2 @2121
+SAY 0x54 @2122
+
+COPY ~SoD2BG2_IU/itm/luckbelt1/dtkblt02.itm~ ~override~
+SAY NAME2 @2123
+SAY 0x54 @2124
+
+COPY ~SoD2BG2_IU/itm/cursestaff1/dtkstaf1.itm~ ~override~
+SAY NAME2 @2125
+SAY 0x54 @2126
+
+COPY ~SoD2BG2_IU/itm/backwhack1/dtkclub1.itm~ ~override~
+SAY NAME2 @2127
+SAY 0x54 @2128
+
+COPY ~SoD2BG2_IU/itm/bansheebow1/dtkbow01.itm~ ~override~
+SAY NAME2 @2129
+SAY 0x54 @2130
+
+COPY ~SoD2BG2_IU/itm/nimblef1/dtkglov1.itm~ ~override~
+SAY NAME2 @2131
+SAY 0x54 @2132
+
+COPY ~SoD2BG2_IU/itm/voidquiv/dtkquiv1.itm~ ~override~
+SAY NAME2 @2133
+SAY 0x54 @2134
+
+COPY ~SoD2BG2_IU/itm/darkbag/dtkquiv2.itm~ ~override~
+SAY NAME2 @2135
+SAY 0x54 @2136
+
+COPY ~SoD2BG2_IU/itm/cloakarcan1/dtkclk01.itm~ ~override~
+SAY NAME2 @2137
+SAY 0x54 @2138
+
+COPY ~SoD2BG2_IU/itm/eledagg1/dtktdag1.itm~ ~override~
+SAY NAME2 @2139
+SAY 0x54 @2140
+
+COPY ~SoD2BG2_IU/itm/eledagg2/dtktdag2.itm~ ~override~
+SAY NAME2 @2141
+SAY 0x54 @2142
+
+COPY ~SoD2BG2_IU/itm/maelaxe/dtkaxe01.itm~ ~override~
+SAY NAME2 @2143
+SAY 0x54 @2144
+
+COPY ~SoD2BG2_IU/itm/maelpike/dtkhalb1.itm~ ~override~
+SAY NAME2 @2145
+SAY 0x54 @2146
+
+COPY ~SoD2BG2_IU/itm/maelaxe1/dtkaxe02.itm~ ~override~
+SAY NAME2 @2147
+SAY 0x54 @2148
+
+COPY ~SoD2BG2_IU/itm/maelpike1/dtkhalb2.itm~ ~override~
+SAY NAME2 @2149
+SAY 0x54 @2150
+
+COPY ~SoD2BG2_IU/itm/trollblood1/dtkioun1.itm~ ~override~
+SAY NAME2 @2151
+SAY 0x54 @2152
+
+COPY ~SoD2BG2_IU/itm/trollblood2/dtkioun2.itm~ ~override~
+SAY NAME2 @2153
+SAY 0x54 @2154
+
+COPY ~SoD2BG2_IU/itm/egons1/dtkshld2.itm~ ~override~
+SAY NAME2 @2155
+SAY 0x54 @2156
+
+COPY ~SoD2BG2_IU/itm/vex1/dtkswd04.itm~ ~override~
+SAY NAME2 @2157
+SAY 0x54 @2158
+
+COPY ~SoD2BG2_IU/itm/egons2/dtkshd2a.itm~ ~override~
+SAY NAME2 @2159
+SAY 0x54 @2160
+
+COPY ~SoD2BG2_IU/itm/astralxbow/bdxbow01.itm~ ~override~
+SAY NAME2 @2161
+SAY 0x54 @2162
+
+COPY ~SoD2BG2_IU/itm/shadowspear/bdsper01.itm~ ~override~
+SAY NAME2 @2163
+SAY 0x54 @2164
+
+COPY ~SoD2BG2_IU/itm/emerald/dtkemrld.itm~ ~override~
+SAY NAME1 @2075
+SAY NAME2 @2165
+SAY 0x50 @2077
+SAY 0x54 @2166
+
+COPY ~SoD2BG2_IU/itm/astralxbow1/dtkxbow1.itm~ ~override~
+SAY NAME2 @2167
+SAY 0x54 @2168
+
+COPY ~SoD2BG2_IU/itm/shadowspear1/dtksper1.itm~ ~override~
+SAY NAME2 @2169
+SAY 0x54 @2170
+
+COPY ~SoD2BG2_IU/itm/shadowspear2/dtkspr1a.itm~ ~override~
+SAY NAME2 @2171
+SAY 0x54 @2172
+
+COPY ~SoD2BG2_IU/itm/ccdragpgrn/dtkplt1e.itm~ ~override~
+SAY NAME2 @2173
+SAY 0x54 @2174
+
+COPY ~SoD2BG2_IU/itm/csdraglgrn/dtklea1e.itm~ ~override~
+SAY NAME2 @2175
+SAY 0x54 @2176
+
+COPY ~SoD2BG2_IU/itm/gdragarm/dtkleat2.itm~ ~override~
+SAY NAME1 @2007
+SAY NAME2 @2178
+SAY 0x50 @2009
+SAY 0x54 @2180
+
+COPY ~SoD2BG2_IU/itm/dragblade/dtkswd05.itm~ ~override~
+SAY NAME2 @2181
+SAY 0x54 @2182
+
+COPY ~SoD2BG2_IU/itm/dragblade1/dtkswd5a.itm~ ~override~
+SAY NAME2 @2183
+SAY 0x54 @2184
+
+COPY ~SoD2BG2_IU/itm/dragshld1/dtkshld3.itm~ ~override~
+SAY NAME2 @2185
+SAY 0x54 @2186
+
+COPY ~SoD2BG2_IU/itm/blackscale/dtkscal1.itm~ ~override~ 
+SAY NAME1 @2187
+SAY NAME2 @2188
+SAY 0x50 @2189
+SAY 0x54 @2190
+
+COPY ~SoD2BG2_IU/itm/acid4a/dtkswd1b.itm~ ~override~
+SAY NAME2 @2191
+SAY 0x54 @2192
+
+COPY ~SoD2BG2_IU/itm/acid5a/dtkswd1c.itm~ ~override~
+SAY NAME2 @2193
+SAY 0x54 @2194
+
+
+// compiled in serial so that COPY_TRANS will get the one before it
+COMPILE ~SoD2BG2_IU/dialogue/crom1.d~ // Tongue of Burning Acid +4
+COMPILE ~SoD2BG2_IU/dialogue/crom2.d~ // Tongue of Burning Acid +5
+COMPILE ~SoD2BG2_IU/dialogue/crom3.d~ // Soft Feet +1
+COMPILE ~SoD2BG2_IU/dialogue/crom4.d~ // Crown of Truths
+COMPILE ~SoD2BG2_IU/dialogue/crom5.d~ // Horned Helm of Dumathoin
+COMPILE ~SoD2BG2_IU/dialogue/crom6.d~ // Archer's Eagle Eyes
+COMPILE ~SoD2BG2_IU/dialogue/crom7.d~ // Belt of the Blademaster
+COMPILE ~SoD2BG2_IU/dialogue/crom8.d~ // Biter +3
+COMPILE ~SoD2BG2_IU/dialogue/crom9.d~ // Icy Blade of the Void +5
+COMPILE ~SoD2BG2_IU/dialogue/crom10.d~ // Icy Hammer of the Void +5
+COMPILE ~SoD2BG2_IU/dialogue/crom11.d~ // Melodius Bard Hat
+COMPILE ~SoD2BG2_IU/dialogue/crom12.d~ // Robe of Roaring Flames
+COMPILE ~SoD2BG2_IU/dialogue/crom13.d~ // Mirrored Buckler of the Fist +2
+COMPILE ~SoD2BG2_IU/dialogue/crom14.d~ // Sundermaul +5
+COMPILE ~SoD2BG2_IU/dialogue/crom15.d~ // The Scorched Earth +3
+COMPILE ~SoD2BG2_IU/dialogue/crom16.d~ // Solar Boots of the Cosmos
+COMPILE ~SoD2BG2_IU/dialogue/crom17.d~ // Verdant Crimson/Shadow armor
+COMPILE ~SoD2BG2_IU/dialogue/crom18.d~ // Chromatic Crimson/Carmine Viridian armor
+COMPILE ~SoD2BG2_IU/dialogue/crom19.d~ // Chromatic Shadow/Umbral Viridian armor
+COMPILE ~SoD2BG2_IU/dialogue/crom20.d~ // Stalker's Gauntlets of Blinding Strike
+COMPILE ~SoD2BG2_IU/dialogue/crom21.d~ // The Scorched Earth +5
+COMPILE ~SoD2BG2_IU/dialogue/crom22.d~ // Cloverleaf +1
+COMPILE ~SoD2BG2_IU/dialogue/crom23.d~ // Uncursed Staff of Antipode
+COMPILE ~SoD2BG2_IU/dialogue/crom23a.d~ // Uncursed Staff of Antipode - recharge
+COMPILE ~SoD2BG2_IU/dialogue/crom24.d~ // Nasty Backwhacker +4
+COMPILE ~SoD2BG2_IU/dialogue/crom25.d~ // Bow of the Wailing Banshee +4
+COMPILE ~SoD2BG2_IU/dialogue/crom26.d~ // Adventurer's Nimble Gloves of Guarding
+COMPILE ~SoD2BG2_IU/dialogue/crom27.d~ // Quiver of Void-Tipped Arrows +3
+COMPILE ~SoD2BG2_IU/dialogue/crom28.d~ // Bag of Darkness +3
+COMPILE ~SoD2BG2_IU/dialogue/crom29.d~ // Illusory Cloak of Arcana
+COMPILE ~SoD2BG2_IU/dialogue/crom30.d~ // Element's Fury +3
+COMPILE ~SoD2BG2_IU/dialogue/crom31.d~ // Element's Fury +4
+COMPILE ~SoD2BG2_IU/dialogue/crom32.d~ // Maelstrom Axe +3 or Pike +4
+COMPILE ~SoD2BG2_IU/dialogue/crom33.d~ // Maelstrom Axe +4
+COMPILE ~SoD2BG2_IU/dialogue/crom34.d~ // Maelstrom Pike +5
+COMPILE ~SoD2BG2_IU/dialogue/crom35.d~ // Trollkiller's Ioun Stone
+COMPILE ~SoD2BG2_IU/dialogue/crom36.d~ // Trollkiller's Ioun Stone +1
+COMPILE ~SoD2BG2_IU/dialogue/crom37.d~ // Bulwark of Egons +3
+COMPILE ~SoD2BG2_IU/dialogue/crom38.d~ // Vexation +5
+COMPILE ~SoD2BG2_IU/dialogue/crom39.d~ // Bulwark of Egons +4
+COMPILE ~SoD2BG2_IU/dialogue/crom40.d~ // Astral Crossbow +4
+COMPILE ~SoD2BG2_IU/dialogue/crom41.d~ // Shadowed Spear of the Tempest +4
+COMPILE ~SoD2BG2_IU/dialogue/crom42.d~ // Shadowed Spear of the Tempest +6
+COMPILE ~SoD2BG2_IU/dialogue/crom43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~SoD2BG2_IU/dialogue/crom44.d~ // Silver Dragon Blade +4
+COMPILE ~SoD2BG2_IU/dialogue/crom45.d~ // Silver Dragon Blade +5
+COMPILE ~SoD2BG2_IU/dialogue/crom46.d~ // Dragonscale Aegis +4
+COMPILE ~SoD2BG2_IU/dialogue/crom47.d~ // Tongue of Acid +5
+
+EXTEND_BOTTOM ~ar0334.bcs~ ~SoD2BG2_IU/scripts/ar0334.baf~		//item generating script for cromwell
+
+
+// compiled in serial so that COPY_TRANS will get the one before it
+COMPILE ~SoD2BG2_IU/dialogue/cespy1.d~ // Tongue of Burning Acid +4/Tongue of Acid +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy2.d~ // Tongue of Burning Acid +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy3.d~ // Soft Feet +1
+COMPILE ~SoD2BG2_IU/dialogue/cespy4.d~ // Crown of Truths
+COMPILE ~SoD2BG2_IU/dialogue/cespy5.d~ // Horned Helm of Dumathoin
+COMPILE ~SoD2BG2_IU/dialogue/cespy6.d~ // Archer's Eagle Eyes
+COMPILE ~SoD2BG2_IU/dialogue/cespy7.d~ // Belt of the Blademaster
+COMPILE ~SoD2BG2_IU/dialogue/cespy8.d~ // Biter +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy9.d~ // Icy Blade of the Void +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy10.d~ // Icy Hammer of the Void +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy11.d~ // Melodius Bard Hat
+COMPILE ~SoD2BG2_IU/dialogue/cespy12.d~ // Robe of Roaring Flames
+COMPILE ~SoD2BG2_IU/dialogue/cespy13.d~ // Mirrored Buckler of the Fist +2
+COMPILE ~SoD2BG2_IU/dialogue/cespy14.d~ // Sundermaul +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy15.d~ // The Scorched Earth +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy16.d~ // Solar Boots of the Cosmos
+COMPILE ~SoD2BG2_IU/dialogue/cespy17.d~ // Verdant Crimson/Shadow armor
+COMPILE ~SoD2BG2_IU/dialogue/cespy18.d~ // Chromatic Crimson/Carmine Viridian armor
+COMPILE ~SoD2BG2_IU/dialogue/cespy19.d~ // Chromatic Shadow/Umbral Viridian armor
+COMPILE ~SoD2BG2_IU/dialogue/cespy20.d~ // Stalker's Gauntlets of Blinding Strike
+COMPILE ~SoD2BG2_IU/dialogue/cespy21.d~ // The Scorched Earth +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy22.d~ // Cloverleaf +1
+COMPILE ~SoD2BG2_IU/dialogue/cespy23.d~ // Uncursed Staff of Antipode
+COMPILE ~SoD2BG2_IU/dialogue/cespy23a.d~ // Uncursed Staff of Antipode - recharge
+COMPILE ~SoD2BG2_IU/dialogue/cespy24.d~ // Nasty Backwhacker +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy25.d~ // Bow of the Wailing Banshee +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy26.d~ // Adventurer's Nimble Gloves of Guarding
+COMPILE ~SoD2BG2_IU/dialogue/cespy27.d~ // Quiver of Void-Tipped Arrows +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy28.d~ // Bag of Darkness +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy29.d~ // Illusory Cloak of Arcana
+COMPILE ~SoD2BG2_IU/dialogue/cespy30.d~ // Element's Fury +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy31.d~ // Element's Fury +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy32.d~ // Maelstrom Axe +3 or Pike +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy33.d~ // Maelstrom Axe +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy34.d~ // Maelstrom Pike +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy35.d~ // Trollkiller's Ioun Stone
+COMPILE ~SoD2BG2_IU/dialogue/cespy36.d~ // Trollkiller's Ioun Stone +1
+COMPILE ~SoD2BG2_IU/dialogue/cespy37.d~ // Bulwark of Egons +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy38.d~ // Vexation +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy39.d~ // Bulwark of Egons +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy40.d~ // Astral Crossbow +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy41.d~ // Shadowed Spear of the Tempest +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy42.d~ // Shadowed Spear of the Tempest +6
+COMPILE ~SoD2BG2_IU/dialogue/cespy43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~SoD2BG2_IU/dialogue/cespy44.d~ // Silver Dragon Blade +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy45.d~ // Silver Dragon Blade +5
+COMPILE ~SoD2BG2_IU/dialogue/cespy46.d~ // Dragonscale Aegis +4
+COMPILE ~SoD2BG2_IU/dialogue/cespy47.d~ // Tongue of Acid +5
+
+
+EXTEND_BOTTOM ~botsmith.bcs~ ~SoD2BG2_IU/scripts/cespy.baf~  //Item generating script for cespy
+
+//Adding items to creatures
+
+COPY_EXISTING ~FIRKRA02.CRE~ ~override~
+ADD_CRE_ITEM ~BDHELM01~ #0 #0 #0 ~NONE~ ~INV~		//Crown Of Lies
+
+COPY_EXISTING ~GMAYOR.CRE~ ~override~
+ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~GRON.CRE~ ~override~
+ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~THESHAL.CRE~ ~override~
+ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~SHADRA01.CRE~ ~override~
+ADD_CRE_ITEM ~bdsw1h02~ #0 #0 #0 ~NONE~ ~INV~		//Tongue of Acid +3
+
+COPY_EXISTING ~DRAGSHAD.CRE~ ~override~
+ADD_CRE_ITEM ~bdsw1h02~ #0 #0 #0 ~NONE~ ~INV~		//Tongue of Acid +3
+
+COPY_EXISTING ~DRAGSILV.CRE~ ~override~
+ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
+
+COPY_EXISTING ~UDSILVER.CRE~ ~override~
+ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
+
+COPY_EXISTING ~TAZOK.CRE~ ~override~
+ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//Dragonscale Armor
+
+COPY_EXISTING ~MAEVAR.CRE~ ~override~
+ADD_CRE_ITEM ~bdboot01~ #0 #0 #0 ~NONE~ ~BOOTS~		//Soft Feet
+
+COPY_EXISTING ~BHEYE.CRE~ ~override~
+ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
+
+COPY_EXISTING ~UNSEE.CRE~ ~override~
+ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
+
+COPY_EXISTING ~SHADEL.CRE~ ~override~
+ADD_CRE_ITEM ~bdbrac05~ #0 #0 #0 ~NONE~ ~GLOVES~		//Stalker's Gauntlets
+
+COPY_EXISTING ~TORGAL.CRE~ ~override~
+ADD_CRE_ITEM ~bdsper01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Shadowed Spear +2
+
+COPY_EXISTING ~GORSAL.CRE~ ~override~
+ADD_CRE_ITEM ~dtkruby~ #0 #0 #0 ~NONE~ ~INV~		//Heart of Flame
+
+COPY_EXISTING ~GORCHR.CRE~ ~override~
+ADD_CRE_ITEM ~dtktopaz~ #0 #0 #0 ~NONE~ ~INV~		//Eye of Ichor
+
+COPY_EXISTING ~FSDRAGON.CRE~ ~override~
+ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
+
+COPY_EXISTING ~HDRAGRED.CRE~ ~override~
+ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
+
+COPY_EXISTING ~HDRAGSIL.CRE~ ~override~
+ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver scales
+
+COPY_EXISTING ~DRAGBLAC.CRE~ ~override~
+ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
+
+COPY_EXISTING ~SEVPAT01.CRE~ ~override~
+ADD_CRE_ITEM ~bdhamm01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Sundermaul +3
+
+COPY_EXISTING ~SEVPAT04.CRE~ ~override~
+ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~SEVPAT05.CRE~ ~override~
+ADD_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
+
+COPY_EXISTING ~SEVPAT02.CRE~ ~override~
+ADD_CRE_ITEM ~bdblun06~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Uncursed Staff +1
+
+COPY_EXISTING ~SEVPAT03.CRE~ ~override~
+ADD_CRE_ITEM ~bdbrd04~ #0 #0 #0 ~NONE~ ~QITEM1~		//Screaming bagpipes
+
+COPY_EXISTING ~NALIA8.CRE~ ~override~
+ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~NALIA10.CRE~ ~override~
+ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~NALIA11.CRE~ ~override~
+ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~NALIA13.CRE~ ~override~
+ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~COHRVALE.CRE~ ~override~
+ADD_CRE_ITEM ~bdblun07~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Backwhacker +2
+
+COPY_EXISTING ~BREGG.CRE~ ~override~
+ADD_CRE_ITEM ~bdbrac03~ #0 #0 #0 ~NONE~ ~GLOVES~	//Nimblefinger Gloves
+
+COPY_EXISTING ~MEKRAT.CRE~ ~override~
+ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
+
+COPY_EXISTING ~SPPAIN.CRE~ ~override~
+ADD_CRE_ITEM ~bddagg01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Element's Fury +2
+
+COPY_EXISTING ~DUECLA01.CRE~ ~override~
+ADD_CRE_ITEM ~bdkeyr~ #0 #0 #0 ~IDENTIFIED~ ~INV~	//Keyring
+
+COPY_EXISTING ~KELDOR9.CRE~ ~override~
+ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+
+COPY_EXISTING ~RENGAA.CRE~ ~override~
+ADD_CRE_ITEM ~bdshld03~ #0 #0 #0 ~NONE~ ~SHIELD~	//Shield of Egons +2
+
+COPY_EXISTING ~GALL.CRE~ ~override~
+ADD_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Banshee +2
+
+COPY_EXISTING ~GORSTA06.CRE~ ~override~
+ADD_CRE_ITEM ~dtkfrost~ #0 #0 #0 ~NONE~ ~INV~	//Soul of Frost
+
+//Adding items to stores
+
+COPY_EXISTING ~SHOP04.sto~ ~override~
+ADD_STORE_ITEM ~bdbull02~ #0 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
+
+COPY_EXISTING ~SHOP04.STO~ ~override~
+ADD_STORE_ITEM ~bdarow02~ #0 #0 #0 ~IDENTIFIED~ #80		//Void-Tipped Arrow +3
+
+COPY_EXISTING ~RIBALD.STO~ ~override~
+ADD_STORE_ITEM ~bdhalb01~ #0 #0 #0 ~IDENTIFIED~ #1		//Storm Pike +2
+
+COPY_EXISTING ~GARLENA.STO~ ~override~
+ADD_STORE_ITEM ~dtkemrld~ #0 #0 #0 ~NONE~ #1		//Breath of Wind
+
+
+
+
+
+
