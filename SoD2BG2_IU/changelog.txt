@@ -1,3 +1,11 @@
+Version 0.2.2 changes:
+
+added new potrait icon for "frozen" status
+
+corrected descriptions for melee and thrown/ranged abilities for items that have them.
+
+
+
 Version 0.2.1 changes:
 
 corrected/changed some item descriptions

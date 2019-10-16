@@ -47,6 +47,7 @@ COPY ~SoD2BG2_IU/wav~ ~override~
 INCLUDE ~SoD2BG2_IU/lib/functions.tpa~
 
 LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4001) STR_VAR bam_file = dtkfroze RET icon END
 
 COPY ~SoD2BG2_IU/itm/acid/bdsw1h02.itm~ ~override~ 
 SAY NAME1 @2000
@@ -695,6 +696,63 @@ ADD_STORE_ITEM ~bdhalb01~ #0 #0 #0 ~IDENTIFIED~ #1		//Storm Pike +2
 COPY_EXISTING ~GARLENA.STO~ ~override~
 ADD_STORE_ITEM ~dtkemrld~ #0 #0 #0 ~NONE~ #1		//Breath of Wind
 
+//Adding Melee/Thrown descriptions
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5001)
+  SET melee_strref = RESOLVE_STR_REF(@5002)
+  INSERT_2DA_ROW num_rows num_cols ~dtktdag1  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5001)
+  SET melee_strref = RESOLVE_STR_REF(@5002)
+  INSERT_2DA_ROW num_rows num_cols ~dtktdag2  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5001)
+  SET melee_strref = RESOLVE_STR_REF(@5002)
+  INSERT_2DA_ROW num_rows num_cols ~dtkaxe01  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5001)
+  SET melee_strref = RESOLVE_STR_REF(@5002)
+  INSERT_2DA_ROW num_rows num_cols ~dtkaxe02  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5002)
+  SET melee_strref = RESOLVE_STR_REF(@5003)
+  INSERT_2DA_ROW num_rows num_cols ~dtksper1  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5002)
+  SET melee_strref = RESOLVE_STR_REF(@5003)
+  INSERT_2DA_ROW num_rows num_cols ~dtkspr1a  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+//Remove visual and audio effects from physical mirror and cloak of mirroing
 
 BEGIN @9002
 PRINT @9003
