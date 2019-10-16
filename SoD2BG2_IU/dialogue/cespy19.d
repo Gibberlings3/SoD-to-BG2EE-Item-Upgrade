@@ -431,7 +431,7 @@ END
 IF ~~ THEN BEGIN HowMuch_redscale 
 SAY @1078
  IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",23)
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",23)
                                  		TakePartyGold(20000)
                                  		TakePartyItemNum("dtkleat1",1)
                                 		TakePartyItemNum("scaler",1)
@@ -444,7 +444,7 @@ END
 IF ~~ THEN BEGIN HowMuch_bluescale
 SAY @1078
  IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",24)
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",24)
                                 	        TakePartyGold(20000)
                                  		TakePartyItemNum("dtkleat1",1)
                                  		TakePartyItemNum("compon19",1)
@@ -457,7 +457,7 @@ END
 IF ~~ THEN BEGIN HowMuch_whitescale
 SAY @1078
  IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",25)
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",25)
                                 	        TakePartyGold(20000)
                                  		TakePartyItemNum("dtkleat1",1)
                                  		TakePartyItemNum("compon18",1)
@@ -470,7 +470,7 @@ END
 IF ~~ THEN BEGIN HowMuch_silverscale
 SAY @1078
  IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",26)
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",26)
                                 	        TakePartyGold(20000)
                                  		TakePartyItemNum("dtkleat1",1)
                                  		TakePartyItemNum("ohdscale",1)
@@ -483,7 +483,7 @@ END
 IF ~~ THEN BEGIN HowMuch_greenscale
 SAY @1078
  IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",52)
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",52)
                                 	        TakePartyGold(20000)
                                  		TakePartyItemNum("dtkleat1",1)
                                  		TakePartyItemNum("bdscaleg",1)

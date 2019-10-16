@@ -16,7 +16,7 @@ APPEND BOTSMITH
 
   IF ~~ THEN BEGIN DragBlade4Cespy_want SAY @1188
     IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
-    IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",55)
+    IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",55)
                                                  TakePartyGold(7500)
                                                  TakePartyItemNum("bdsw2h01",1)
                                                  DestroyItem("bdsw2h01")

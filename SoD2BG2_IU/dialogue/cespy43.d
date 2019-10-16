@@ -25,7 +25,7 @@ END
 IF ~~ THEN BEGIN HowMuch_shield 
 SAY @1184
  IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",53)
+ IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",53)
                                  		TakePartyGold(7500)
                                  		TakePartyItemNum("bdscaleg",1)
                                  		DestroyItem("bdscaleg")
@@ -36,7 +36,7 @@ END
 IF ~~ THEN BEGIN HowMuch_armor
 SAY @1184
  IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",54)
+ IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",54)
                                 	        TakePartyGold(7500)
                                  		TakePartyItemNum("bdscaleg",1)
                                  		DestroyItem("bdscaleg")

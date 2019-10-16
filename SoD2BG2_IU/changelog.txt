@@ -1,4 +1,22 @@
-Version 0.2.0 changes
+Version 0.2.1 changes:
+
+corrected/changed some item descriptions
+
+removed redundant files
+
+updated documentation
+
+general cleanup of files
+
+corrected charge ability on Sundermaul +5 to be in-line with it's description
+
+added new optional component - remove visual and audio effects from physical mirror, reflection shield, cloak of mirroring.
+
+
+
+
+
+Version 0.2.0 changes:
 
 corrected charge ability count for some items.
 

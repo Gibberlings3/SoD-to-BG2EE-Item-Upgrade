@@ -17,7 +17,7 @@ APPEND WSMITH01
   
   IF ~~ THEN BEGIN NewItem3 SAY @97
     IF ~PartyGoldLT(5000)~ THEN REPLY #67011 GOTO NoThanks
-    IF ~PartyGoldGT(4999)~ THEN REPLY #67012 DO ~SetGlobal("CDItems","ar0334",31)
+    IF ~PartyGoldGT(4999)~ THEN REPLY #67012 DO ~SetGlobal("DTKItems","ar0334",31)
                                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                                  TakePartyGold(5000)
                                                  TakePartyItemNum("bdblun07",1)

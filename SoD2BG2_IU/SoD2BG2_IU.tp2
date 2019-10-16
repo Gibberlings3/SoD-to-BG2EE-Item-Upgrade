@@ -1,14 +1,24 @@
 //SoD2BG2EE Item Upgrade
 
 BACKUP ~SoD2BG2_IU/backup~
-AUTHOR ~Daeros Trollkiller~
+SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
 VERSION ~v0.2.0~
 
 README ~SoD2BG2_IU/README.txt~
 
+ASK_EVERY_COMPONENT
+
 LANGUAGE ~English~ ~english~ ~SoD2BG2_IU/language/english/english.tra~
 
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Siege of Dragonspear-BG2:EE Item Upgrade         \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @9000
 PRINT @9001
 
@@ -26,6 +36,7 @@ ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwhirl.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwind.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicel.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicely.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkquake.pro~
 
 COPY ~SoD2BG2_IU/bam~ ~override~
 COPY ~SoD2BG2_IU/spl~ ~override~
@@ -685,6 +696,10 @@ COPY_EXISTING ~GARLENA.STO~ ~override~
 ADD_STORE_ITEM ~dtkemrld~ #0 #0 #0 ~NONE~ #1		//Breath of Wind
 
 
+BEGIN @9002
+PRINT @9003
+
+COPY ~SoD2BG2_IU/physm~ ~override~
 
 
 

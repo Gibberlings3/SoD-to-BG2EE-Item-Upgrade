@@ -5,8 +5,10 @@
 /////                                                  \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
-@9000 = ~Installing SoD to BG2:EE Item upgrade.~
-@9001 = ~Transferring files...~
+@9000 = ~SoD to BG2:EE Item upgrade by Daeros_Trollkiller~
+@9001 = ~Mod by Daeros_Trollkiller~
+@9002 = ~Remove visual and sound effect for physical mirror, cloak of mirroring, reflection shield-does not prevent reflection effect from working~
+@9003 = ~Installing...~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -1064,7 +1066,7 @@ Equipped abilities:
 
 Weight: 2~
 @2073 = ~Stalker's Gauntlets of Blinding Strike~
-@2074 = ~The stalker's gauntlets have been expertly reforged at the request of <CHARNAME>.  The gauntlets now offer rogues and rangers an additional 1/2 attack per round, and the prior enchanment' full powers are now usable by rogues and rangers alike.  
+@2074 = ~The stalker's gauntlets have been expertly reforged at the request of <CHARNAME>.  The gauntlets now offer thieves and rangers an additional 1/2 attack per round, and the prior enchanment's full powers are now usable by thieves and stalkers alike.  
 
 STATISTICS:
 
@@ -1398,7 +1400,7 @@ Requires:
 
 Weight: 4~
 @2127 = ~Nasty Backwhacker +4~
-@2128 = ~After meticulous reforging at the behest of <CHARNAME>, using the barb of a wyvern's tail and the fercious spirit of a wolverine, the backwhacker seemingly comes alive in it's weilder's hands with the spirits of both beasts.  Poisoned splinters from the weapon embed themselves in a foe's flesh, causing lingering damage.
+@2128 = ~After meticulous reforging at the behest of <CHARNAME>, using the barb of a wyvern's tail and the fercious spirit of a wolverine, the backwhacker seemingly comes alive in it's weilder's hands with the spirits of both beasts.  Poisonous splinters from the weapon embed themselves in a foe's flesh, causing lingering damage.
 
 STATISTICS:
 
@@ -1502,7 +1504,7 @@ Requires:
 
 Weight: 1~
 @2141 = ~Element's Fury +4~
-@2142 = ~With the addition of the sould of frost placed in it's hilt, the dagger of elemental fury has been further empowered, and now deals more elemental damage to all targets, and can rarely release a blast of frost centered on the target, damaging all foes in the immediate area with the freezing cold.
+@2142 = ~With the addition of the Soul of Frost placed in it's hilt, the dagger of elemental fury has been further empowered, and now deals more elemental damage to all targets, and can rarely release a blast of frost centered on the target, damaging all foes in the immediate area with the freezing cold.
 
 STATISTICS:
 

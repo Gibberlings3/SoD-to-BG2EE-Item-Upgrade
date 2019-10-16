@@ -21,7 +21,7 @@ APPEND BOTSMITH
 
   IF ~~ THEN BEGIN NimbleGloveCespy_want SAY @1115
     IF ~PartyGoldLT(5000)~ THEN REPLY #66908 GOTO 10
-    IF ~PartyGoldGT(4999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",33)
+    IF ~PartyGoldGT(4999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",33)
                                                  TakePartyGold(5000)
                                                  TakePartyItemNum("bdbrac03",1)
                                                  DestroyItem("bdbrac03")

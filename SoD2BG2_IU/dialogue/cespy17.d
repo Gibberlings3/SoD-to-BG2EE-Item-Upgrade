@@ -52,7 +52,7 @@ END
 IF ~~ THEN BEGIN HowMuch_shadowscale 
 SAY @1068
  IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",18)
+ IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",18)
                                  		TakePartyGold(15000)
                                  		TakePartyItemNum("bdleat05",1)
                                 		TakePartyItemNum("scaleb",1)
@@ -65,7 +65,7 @@ END
 IF ~~ THEN BEGIN HowMuch_redscale
 SAY @1068
  IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",17)
+ IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",17)
                                 	        TakePartyGold(15000)
                                  		TakePartyItemNum("bdleat05",1)
                                  		TakePartyItemNum("scaler",1)

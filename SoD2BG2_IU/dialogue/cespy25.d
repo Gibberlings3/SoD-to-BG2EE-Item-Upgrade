@@ -76,7 +76,7 @@ END
 IF ~~ THEN BEGIN HowMuch_gesen 
 SAY @1108
  IF ~PartyGoldLT(10000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(9999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",32)
+ IF ~PartyGoldGT(9999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",32)
                                  		TakePartyGold(10000)
                                  		TakePartyItemNum("bdbow04",1)
                                 		TakePartyItemNum("bdbrd04",1)
@@ -91,7 +91,7 @@ END
 IF ~~ THEN BEGIN HowMuch_gond 
 SAY @1108
  IF ~PartyGoldLT(10000)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(9999)~ THEN REPLY #66909 DO ~SetGlobal("CDItemMakerTweaks","GLOBAL",32)
+ IF ~PartyGoldGT(9999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",32)
                                  		TakePartyGold(10000)
                                  		TakePartyItemNum("bdbow04",1)
                                 		TakePartyItemNum("bdbrd04",1)

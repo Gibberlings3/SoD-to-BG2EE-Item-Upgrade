@@ -19,7 +19,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_shield 
 SAY @56
- IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("CDItems","ar0334",53)
+ IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("DTKItems","ar0334",53)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(7500)
                                  TakePartyItemNum("bdscaleg",1)
@@ -30,7 +30,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_armor
 SAY @56
- IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("CDItems","ar0334",54)
+ IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("DTKItems","ar0334",54)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(7500)
                                  TakePartyItemNum("bdscaleg",1)

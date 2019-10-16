@@ -1,598 +1,661 @@
+/*  
+1 - Tongue of Burning Acid +4
+2 - Tongue of Burning Acid +5
+3 - Soft Feet +1
+4 - Crown of Truths
+5 - Horned Helm of Dumathoin
+6 - Archer's Eagle Eyes
+7 - Belt of the Blademaster
+8 - Biter +3
+9 - Icy Blade of the Void +5
+10 - Icy Hammer of the Void +5
+11 - Melodius Bard Hat
+12 - Robe of Roaring Flames
+13 - Mirrored Buckler of the Fist
+14 - Sundermaul +5
+15 - The Scorched Earth +3
+16 - Star-Strewn Boots of Amaunator
+17 - Verdant Crimson Dragon Plate
+18 - Verdant Shadow Dragonscale
+19 - Chromatic Crimson Dragon Plate(Shadow Scales)
+20 - Chromatic Crimson Dragon Plate(Blue Scales)
+21 - Chromatic Crimson Dragon Plate(White Scales)
+22 - Chromatic Crimson Dragon Plate(Silver Scales)
+23 - Chromatic Shadow Dragonscale(Red Scales)
+24 - Chromatic Shadow Dragonscale(Blue Scales)
+25 - Chromatic Shadow Dragonscale(White Scales)
+26 - Chromatic Shadow Dragonscale(Silver Scales)
+27 - Stalker's Gauntlets of Blinding Strike
+28 - The Scorched Earth +5
+29 - Cloverleaf +1
+30 - Uncursed Staff of Antipode
+31 - Nasty Backwhacker +4
+32 - Bow of the Wailing Banshee +4
+33 - Adventurer's Nimble Gloves of Guarding
+34 - Quiver of Void-Tipped Arrows +3
+35 - Bag of Darkness +3
+36 - Illusory Cloak of Arcana
+37 - Element's Fury +3
+38 - Element's Fury +4
+39 - Maelstrom Axe +3
+40 - Maelstrom Pike +4
+41 - Maelstrom Axe +4
+42 - Maelstrom Pike +5
+43 - Trollkiller's Ioun Stone
+44 - Trollkiller's Ioun Stone +1
+45 - Bulwark of Egons +3
+46 - Vexation +5
+47 - Bulwark of Egons +4
+48 - Astral Crossbow +4
+49 - Shadowed Spear of the Tempest +4
+50 - Shadowed Spear of the Tempest +6
+51 - Carmine Viridian Dragon Plate
+52 - Umbral Viridian Dragonscale
+53 - Dragonscale Shield +3
+54 - Green Dragonscale Armor +4
+55 - Silver Dragon Blade +4
+56 - Silver Dragon Blade +5
+57 - Dragonscale Aegis +4
+58 - Tongue of Acid +4
+59 - Tongue of Acid +5
+*/
+
+
 IF
-  Global("CDItems","ar0334",1)
+  Global("DTKItems","ar0334",1)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd01",Player1,0,0,0) // Tongue of Burning Acid +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",2)
+  Global("DTKItems","ar0334",2)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd1a",Player1,0,0,0) // Tongue of Burning Acid +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",3)
+  Global("DTKItems","ar0334",3)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkboot1",Player1,0,0,0) // Soft Feet +1 
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",4)
+  Global("DTKItems","ar0334",4)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkcrwn1",Player1,0,0,0) // Crown of Truths
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",5)
+  Global("DTKItems","ar0334",5)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkhelm1",Player1,1,1,0) // Horned Helm of Dumathoin
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",6)
+  Global("DTKItems","ar0334",6)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkamul1",Player1,2,0,0) // Archer's Eagle Eyes
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",7)
+  Global("DTKItems","ar0334",7)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkblt01",Player1,0,0,0) // Belt of the Blademaster
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",8)
+  Global("DTKItems","ar0334",8)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkdart1",Player1,0,0,0) // Biter +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",9)
+  Global("DTKItems","ar0334",9)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd02",Player1,0,0,0) // Icy Blade of the Void +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",10)
+  Global("DTKItems","ar0334",10)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkham01",Player1,0,0,0) // Icy Hammer of the Void +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",11)
+  Global("DTKItems","ar0334",11)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkhat01",Player1,0,0,0) // Melodius Bard Hat
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",12)
+  Global("DTKItems","ar0334",12)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkrobe1",Player1,0,0,0) // Robe of Roaring Flames
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",13)
+  Global("DTKItems","ar0334",13)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkshld1",Player1,0,0,0) // Mirrored Buckler of the Fist +2
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",14)
+  Global("DTKItems","ar0334",14)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkham02",Player1,0,1,0) // Sundermaul +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",15)
+  Global("DTKItems","ar0334",15)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd03",Player1,0,0,0) // The Scorched Earth +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",16)
+  Global("DTKItems","ar0334",16)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkboot2",Player1,1,0,0) // Solar Boots of the Cosmos
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",17)
+  Global("DTKItems","ar0334",17)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplat1",Player1,2,0,0) // Verdant Crimson Dragon Plate
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",18)
+  Global("DTKItems","ar0334",18)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkleat1",Player1,2,0,0) // Verdant Shadow Dragonscale
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",19)
+  Global("DTKItems","ar0334",19)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplt1b",Player1,1,1,0) // Chromatic Crimson Dragon Plate(Blue Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",20)
+  Global("DTKItems","ar0334",20)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplt1a",Player1,1,1,0) // Chromatic Crimson Dragon Plate(Shadow Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",21)
+  Global("DTKItems","ar0334",21)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplt1d",Player1,1,1,0) // Chromatic Crimson Dragon Plate(Silver Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",22)
+  Global("DTKItems","ar0334",22)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplt1c",Player1,1,1,0) // Chromatic Crimson Dragon Plate(White Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",23)
+  Global("DTKItems","ar0334",23)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtklea1b",Player1,1,1,0) // Chromatic Shadow Dragonscale(Blue Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",24)
+  Global("DTKItems","ar0334",24)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtklea1a",Player1,1,1,0) // Chromatic Shadow Dragonscale(Red Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",25)
+  Global("DTKItems","ar0334",25)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtklea1d",Player1,1,1,0) // Chromatic Shadow Dragonscale(Silver Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",26)
+  Global("DTKItems","ar0334",26)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtklea1c",Player1,1,1,0) // Chromatic Shadow Dragonscale(White Scales)
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",27)
+  Global("DTKItems","ar0334",27)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkbrac1",Player1,0,0,0) // Stalker's Gauntlets of Blinding Strike
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",28)
+  Global("DTKItems","ar0334",28)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd3a",Player1,0,0,0) // The Scorched Earth +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",29)
+  Global("DTKItems","ar0334",29)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkblt02",Player1,1,0,0) // Cloverleaf +1
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",30)
+  Global("DTKItems","ar0334",30)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkstaf1",Player1,0,10,0) // Uncursed Staff of Antipode
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",31)
+  Global("DTKItems","ar0334",31)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkclub1",Player1,0,0,0) // Backwhacker +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",32)
+  Global("DTKItems","ar0334",32)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkbow01",Player1,0,0,0) // Bow of the Wailing Banshee +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",33)
+  Global("DTKItems","ar0334",33)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkglov1",Player1,0,0,0) // Adventurer's Nimble Gloves of Guarding
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",34)
+  Global("DTKItems","ar0334",34)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkquiv1",Player1,0,0,0) // Quiver of Void-Tipped Arrows +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",35)
+  Global("DTKItems","ar0334",35)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkquiv2",Player1,0,0,0) // Bag of Darkness +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",36)
+  Global("DTKItems","ar0334",36)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkclk01",Player1,0,0,0) // Illusory Cloak of Arcana
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",37)
+  Global("DTKItems","ar0334",37)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtktdag1",Player1,0,0,0) // Element's Fury +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",38)
+  Global("DTKItems","ar0334",38)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtktdag2",Player1,0,0,0) // Element's Fury +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",39)
+  Global("DTKItems","ar0334",39)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkaxe01",Player1,0,0,0) // Maelstrom Axe +3
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",40)
+  Global("DTKItems","ar0334",40)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkhalb1",Player1,0,0,0) // Maelstrom Pike +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",41)
+  Global("DTKItems","ar0334",41)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkaxe02",Player1,0,0,0) // Maelstrom Axe +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",42)
+  Global("DTKItems","ar0334",42)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkhalb2",Player1,0,0,0) // Maelstrom Pike +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",43)
+  Global("DTKItems","ar0334",43)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkioun1",Player1,1,0,0) // Trollkiller's Ioun Stone
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",44)
+  Global("DTKItems","ar0334",44)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkioun2",Player1,1,0,0) // Trollkiller's Ioun Stone +1
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",45)
+  Global("DTKItems","ar0334",45)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkshld2",Player1,0,0,0) // Bulwark of the Egons +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",46)
+  Global("DTKItems","ar0334",46)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd04",Player1,0,0,0) // Vexation +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",47)
+  Global("DTKItems","ar0334",47)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkshd2a",Player1,0,0,0) // Bulwark of Egons +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",48)
+  Global("DTKItems","ar0334",48)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkxbow1",Player1,0,0,0) // Astral Crossbow +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",49)
+  Global("DTKItems","ar0334",49)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtksper1",Player1,0,30,0) // Shadowed Spear of the Tempest +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",50)
+  Global("DTKItems","ar0334",50)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkspr1a",Player1,0,30,0) // Shadowed Spear of the Tempest +6
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
@@ -600,108 +663,108 @@ END
 
 
 IF
-  Global("CDItems","ar0334",51)
+  Global("DTKItems","ar0334",51)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkplt1e",Player1,1,1,0) // Carmine Viridian Dragon Plate
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",52)
+  Global("DTKItems","ar0334",52)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtklea1e",Player1,1,1,0) // Umbral Viridian Dragonscale
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",53)
+  Global("DTKItems","ar0334",53)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("bdshld05",Player1,0,0,0) // Green Dragonscale Shield
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",54)
+  Global("DTKItems","ar0334",54)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkleat2",Player1,2,0,0) // Green Dragonscale Armor +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",55)
+  Global("DTKItems","ar0334",55)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd05",Player1,0,0,0) // Silver Dragon Blade +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",56)
+  Global("DTKItems","ar0334",56)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd5a",Player1,0,0,0) // Silver Dragon Blade +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",57)
+  Global("DTKItems","ar0334",57)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkshld3",Player1,0,0,0) // Dragonscale Aegis +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",58)
+  Global("DTKItems","ar0334",58)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd1b",Player1,0,0,0) // Tongue of Acid +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
 IF
-  Global("CDItems","ar0334",59)
+  Global("DTKItems","ar0334",59)
   Global("ForgeStuff","GLOBAL",1)
 THEN
   RESPONSE #100
     SetGlobal("ForgeStuff","GLOBAL",0)
-    SetGlobal("CDItems","ar0334",0)
+    SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd1c",Player1,0,0,0) // Tongue of Acid +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))

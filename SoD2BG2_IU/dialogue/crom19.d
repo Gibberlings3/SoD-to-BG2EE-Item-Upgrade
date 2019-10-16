@@ -429,7 +429,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_redscale 
 SAY @74
- IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("CDItems","ar0334",20)
+ IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("DTKItems","ar0334",20)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(20000)
                                  TakePartyItemNum("dtkleat1",1)
@@ -442,7 +442,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_whitescale
 SAY @74
- IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("CDItems","ar0334",22)
+ IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("DTKItems","ar0334",22)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(20000)
                                  TakePartyItemNum("dtkleat1",1)
@@ -455,7 +455,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_silverscale
 SAY @74
- IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("CDItems","ar0334",21)
+ IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("DTKItems","ar0334",21)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(20000)
                                  TakePartyItemNum("dtkleat1",1)
@@ -468,7 +468,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_bluescale
 SAY @74
- IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("CDItems","ar0334",19)
+ IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("DTKItems","ar0334",19)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(20000)
                                  TakePartyItemNum("dtkleat1",1)
@@ -481,7 +481,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_greenscale
 SAY @74
- IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("CDItems","ar0334",52)
+ IF ~PartyGoldGT(19999)~ THEN DO ~SetGlobal("DTKItems","ar0334",52)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(20000)
                                  TakePartyItemNum("dtkleat1",1)

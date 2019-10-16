@@ -51,7 +51,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_shadowscale 
 SAY @61
- IF ~PartyGoldGT(14999)~ THEN DO ~SetGlobal("CDItems","ar0334",18)
+ IF ~PartyGoldGT(14999)~ THEN DO ~SetGlobal("DTKItems","ar0334",18)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(15000)
                                  TakePartyItemNum("bdleat05",1)
@@ -64,7 +64,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_redscale
 SAY @61
- IF ~PartyGoldGT(14999)~ THEN DO ~SetGlobal("CDItems","ar0334",17)
+ IF ~PartyGoldGT(14999)~ THEN DO ~SetGlobal("DTKItems","ar0334",17)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(15000)
                                  TakePartyItemNum("bdleat05",1)
