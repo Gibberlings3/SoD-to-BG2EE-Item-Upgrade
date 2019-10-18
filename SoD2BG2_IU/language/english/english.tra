@@ -7,7 +7,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @9000 = ~SoD to BG2:EE Item upgrade by Daeros_Trollkiller~
 @9001 = ~Mod by Daeros_Trollkiller~
-@9002 = ~Remove visual and sound effect for physical mirror, cloak of mirroring, reflection shield-does not prevent reflection effect from working~
+@9002 = ~Remove visual and sound effect for physical mirror, cloak of mirroring, reflection shield (Does not affect function)~
 @9003 = ~Installing...~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -2028,3 +2028,15 @@ Weight: 2~
 @5001 = ~Thrown~
 @5002 = ~Melee~
 @5003 = ~Wind Slash~
+@5004 = ~Produce Fire~
+@5005 = ~Vitriolic Sphere~
+@5006 = ~Chain Lightning~
+@5007 = ~Cone of Cold~
+@5008 = ~Poison Weapon~
+@5009 = ~Neutralize Poison~
+@5010 = ~Wizard Eye~
+@5011 = ~Writhing Fog~
+@5012 = ~Frost-Fireball~
+@5013 = ~Blessing of Tymora~
+@5014 = ~False Dawn~
+@5015 = ~Earthquake~

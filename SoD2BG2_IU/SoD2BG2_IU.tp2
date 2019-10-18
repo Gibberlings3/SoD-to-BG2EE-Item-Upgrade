@@ -752,6 +752,182 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   PRETTY_PRINT_2DA
 BUT_ONLY
 
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5009)
+  INSERT_2DA_ROW num_rows num_cols ~bdleat05  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5010)
+  INSERT_2DA_ROW num_rows num_cols ~dtkamul1  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5008)
+  SET melee_strref = RESOLVE_STR_REF(@5004)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1e  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5011)
+  SET melee_strref = RESOLVE_STR_REF(@5004)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1d  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5004)
+  SET melee_strref = RESOLVE_STR_REF(@5006)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1b  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5005)
+  SET melee_strref = RESOLVE_STR_REF(@5004)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1a  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5004)
+  SET melee_strref = RESOLVE_STR_REF(@5007)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1a  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5004)
+  SET melee_strref = RESOLVE_STR_REF(@5007)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplt1c  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5005)
+  SET melee_strref = RESOLVE_STR_REF(@5006)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1b  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5008)
+  SET melee_strref = RESOLVE_STR_REF(@5005)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1e  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5005)
+  SET melee_strref = RESOLVE_STR_REF(@5004)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1a  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5005)
+  INSERT_2DA_ROW num_rows num_cols ~dtkleat1  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5004)
+  INSERT_2DA_ROW num_rows num_cols ~dtkplat1  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5011)
+  SET melee_strref = RESOLVE_STR_REF(@5005)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1d  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5005)
+  SET melee_strref = RESOLVE_STR_REF(@5007)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5012)
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5009)
+  INSERT_2DA_ROW num_rows num_cols ~dtkleat2  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5013)
+  INSERT_2DA_ROW num_rows num_cols ~dtkblt02  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5014)
+  INSERT_2DA_ROW num_rows num_cols ~dtkboot2  %thrown_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5015)
+  SET melee_strref = RESOLVE_STR_REF(@5015)
+  INSERT_2DA_ROW num_rows num_cols ~dtkham02  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+
 //Remove visual and audio effects from physical mirror and cloak of mirroing
 
 BEGIN @9002
