@@ -3,7 +3,7 @@ Siege of Dragonspear to Baldur's Gate 2:Enhanced Edition
 First and foremost:  A HUGE thanks to Jastey for helping me to learn WeiDu!
 		     This mod wouldnt have happened otherwise.
 
-Version 0.2.3
+Version 0.2.4
 
 
 Purpose of this mod:
@@ -13,7 +13,7 @@ an upgrade path for these items along with most of the other SoD items that can
 normally be imported via cromwell and cespenar.  If you do not have SoD, or a SoD 
 save game to import, you can access them via EE keeper or the console.  I highly reccomend 
 playing through SoD and collecting these items normally, as it will give a 
-greater appreciation for this mod, as the dialogues with cromwell and cespy
+greater appreciation for this mod, as some of the dialogues with cromwell and cespy
 reference where the items came from.  I included one importable item from vanilla Baldur's Gate:EE
 That imports into BG2 that I always felt should have had a bighter future in terms 
 of being able to upgrade it.  I'm not going to give it away here because I would
@@ -26,12 +26,12 @@ to upgrade other items in game, forcing the player into an either/or choice for
 greater replability and challenge.
 
 Starting in the 0.2.0 update, entirely new item components have been added into the game to use in some of the upgrade recipes.
-I dont want to spoil their locations, but they shouldnt be too hard to locate.
+I dont want to spoil their locations, but they shouldnt be too hard to find.
 
 You may send me feedback at: https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade/p1?new=1
 
 
-New SoD items imported by the mod:
+Additional SoD items imported by the mod:
 
 KeyRing (By popular demand)
 Tongue of Acid +3

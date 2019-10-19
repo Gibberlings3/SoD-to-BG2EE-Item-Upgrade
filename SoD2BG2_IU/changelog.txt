@@ -1,3 +1,12 @@
+Version 0.2.4 changes:
+
+Removed redundant files to prevent conflicts with other mods.
+
+Removed additional component to prevent conflicts with other mods: - remove visual and audio effects from physical mirror, reflection shield, cloak of mirroring.
+
+
+
+
 Version 0.2.3 changes:
 
 Updated tool-tip definitions for charge abilities on new items

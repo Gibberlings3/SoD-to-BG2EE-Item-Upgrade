@@ -6,9 +6,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @9000 = ~SoD to BG2:EE Item upgrade by Daeros_Trollkiller~
-@9001 = ~Mod by Daeros_Trollkiller~
-@9002 = ~Remove visual and sound effect for physical mirror, cloak of mirroring, reflection shield (Does not affect function)~
-@9003 = ~Installing...~
+@9001 = ~Installing.......~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -1900,7 +1898,7 @@ Requires:
  6 Strength
 
 Weight: 7~
-@2181 = ~Silver Dragon Blade +4~
+@2181 = ~Vorpal Dragon Blade +4~
 @2182 = ~The well-worn blade of the Dragon Blade +3 has been reforged with a vorpal blade of silver.  The new blade is exceedingly sharp, able to cut through flesh and bone with ease. 
 
 STATISTICS:
@@ -1922,8 +1920,8 @@ Requires:
  14 Strength
 
 Weight: 9~
-@2183 = ~Silver Dragon Blade +5~
-@2184 = ~With the Soul of Frost placed into the pommel, the Silver Dragon Blade roars to life with the force of a raging blizzard from each slash from the massive blade, cleaving foes and leaving frostbitten wounds in it's wake.  One critical hits, the blade emits a blast of ice so cold it can freeze opponents, stunning them, and sending shards of ice into nearby targets, impaling and slowing them. 
+@2183 = ~Vorpal Dragon Blade +5~
+@2184 = ~With the Soul of Frost placed into the pommel, the Vorpal Dragon Blade roars to life with the force of a raging blizzard from each slash from the massive blade, cleaving foes and leaving frostbitten wounds in it's wake.  One critical hits, the blade emits a blast of ice so cold it can freeze opponents, stunning them, and sending shards of ice into nearby targets, impaling and slowing them. 
 
 STATISTICS:
 
@@ -2009,6 +2007,68 @@ Requires:
  6 Strength
 
 Weight: 2~
+@2195 = ~Cornetto~
+@2196 = ~The Forest Queen's Benediction~
+@2197 = ~A cornetto is a slender horn, usually carved from wood. Finger holes bored along its length allow a musician to create a variety of notes. A mouthpiece crafted of ivory or horn is attached to the tapered end.
+
+STATISTICS:
+
+Weight: 3~
+@2198 = ~Mielikki, the Forest Queen, bestows her gifts only on those who show kindness and compassion to all living creatures. Legend tells that a bard once came upon a pack of hunters running a unicorn to ground. The bard, despite being outnumbered, threw herself at the hunters and fought them valiantly while the unicorn escaped. The hunters beat the bard near to death and left her broken body on the ground. Moments after they left, the unicorn stepped softly to the bard and extended its horn. The bard grasped the horn weakly and, to her astonishment, it came away in her hand. The bard sat up, healed of all wounds and bestowed with a valuable gift. The unicorn vanished into the trees, and the bard found the horn bestowed healing powers whenever she played it.
+
+The cornetto can only be played by a bard of exceptional virtue and wisdom.
+
+STATISTICS:
+
+Charge abilities:
+– Mass Cure once per day
+
+Requires:
+ 13 Wisdom
+
+Weight: 3~
+@2199 = ~Jester's Bracers~
+@2200 = ~These bracers once belonged to a traveling bard famed for his sharp tongue and quick retorts. One rainy night, the bard took refuge in a rickety inn on the road to Shadowdale. There he performed for his supper, sprinkling his routine with caustic jibes as was his custom. One of the drinkers in the tavern, an old woman, stood up midway through the performance and snapped, "You think it clever to insult and belittle others? Do so, then, for as long as you live!" The bard found himself unable to remove his now-cursed protective bracers and was forced to spout corny jokes until he could pay a wizard to remove them.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 5
+– Charisma: -1 (except for Jesters)
+– Wearer is forced to tell corny jokes 
+– May only be removed with a Remove Curse spell
+
+Weight: 2~
+@2201 = ~The Night's Embrace +3~
+@2202 = ~A thief from Iriaebor who feared being captured by the city guard was known to have favored this armor. She designed the suit so that if she were ever incapacitated in any way, she would be rendered temporarily invisible. The armor did its job, and the thief had a long and successful career in the city. When she retired, she gifted the armor to her younger brother, and it has changed hands many times since then.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– Hide In Shadows: +20%
+
+Armor Class: 5 (7 vs. piercing and missile)
+Requires:
+ 3 Strength
+
+Weight: 5~
+@2203 = ~Engulfing Darkness +8~
+@2204 = ~A thief's gift from the heavens and their target's curse from the hells, the night's gift has been reforged with black dragon's scales and magick's empoering it further.  In addition to protecting it's weaer from the fiercest blows, if struck, the armor now render's it's wearer temporarily invisible, allowing a strike from the shadows or a hasty retreat.  A rogue could hardly ask for better protection on the battlefield.
+
+STATISTICS:
+
+Equipped abilities:
+– If the wearer is rendered helpless or stricken (e.g. by a Hold Person spell, or any source of damage), <PRO_HESHE> becomes invisible for 1 turn
+– Hide In Shadows: +30%
+– Slashing Damage Resistance: +10%
+– Crushing Damage Resistance: +10%
+
+Armor Class: 0 (2 vs. piercing and missile)
+Requires:
+ 3 Strength
+
+Weight: 5~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2016,7 +2076,7 @@ Weight: 2~
 /////                                                  \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
-@4000 = ~Immolated in Flames~
+@4000 = ~Immolated~
 @4001 = ~Frozen~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
