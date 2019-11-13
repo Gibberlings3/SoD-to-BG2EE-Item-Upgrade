@@ -1,0 +1,8 @@
+IF
+Global("DeSpawnItem","AR3001",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR3001",1)
+ActionOverride("Chest2",CreateItem("dtkemrld",0,0,0)) // Breath of Wind
+Continue()
+END

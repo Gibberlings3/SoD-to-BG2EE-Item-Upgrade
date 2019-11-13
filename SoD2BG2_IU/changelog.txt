@@ -1,9 +1,42 @@
+Version 0.3.0 changes:
+
+Updated the following items with new abilities:
+
+Vorpal Dragon Blade +4
+Vorpal Dragon Blade +5
+Voidsword +5
+Voidhammer +5
+
+Changed upgrade recipe for Shield of Egons (second upgrade)
+
+
+Added new icons for several upgraded versions of items
+
+
+Added five additional items from SoD, and upgrade paths for four of them:
+
+The Forest Queen's Benediction
+Jester's Bracers (corny joke component does not currently work properly, I temporarily removed from item until I can figure out how to implment properly)
+The Night's Embrace +3
+Ring of Purity
+Dervish Crescent +2
+
+
+
+Changed location of the following items:
+
+Keyring (moved to jailer's table in Irenicus' dungeon)
+Soft Feet
+Breath of Wind
+
+
+
+
 Version 0.2.4 changes:
 
 Removed redundant files to prevent conflicts with other mods.
 
 Removed additional component to prevent conflicts with other mods: - remove visual and audio effects from physical mirror, reflection shield, cloak of mirroring.
-
 
 
 

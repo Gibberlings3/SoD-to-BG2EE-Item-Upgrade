@@ -166,8 +166,8 @@
 @149 = ~To further improve this blade for ye, I would need a heart of the damned and 7,500gp.~
 @150 = ~Ye have the heart here, and the gold, I'll just need yer help at me forge again for the day, me apprentice took one hell of a beatin from a sailor at the tavern last eve.~
 @151 = ~Ahh, the bulwark of egons, ye wish it improved further ye say?~
-@152 = ~I can improve yer shield with the eye of tyr, if ye find it, bring it back here and I'll fix up yer shield for a meager 5,000gp.~
-@153 = ~The eye of tyr!  I can use this to improve yer bulwark of egons.  Shall we get to work on 'er?~
+@152 = ~I can improve yer shield with an old symbol of the sun god, Amaunator, if ye find one, bring it back here and I'll fix up yer shield for a meager 5,000gp.~
+@153 = ~The symbol of Amaunator!  I can use this to improve yer bulwark of egons.  Shall we get to work on 'er?~
 @154 = ~This be one heavenly crossbow ye got here, ye wish it enhanced eh?~
 @155 = ~I could enhance this bow for ye, I would need something to make a new limb with, say a gesen bowshaft.  And I would need 5,000 fer me trouble.~
 @156 = ~This be gesen's work alright, I can use this to enhance yer crossbow.~
@@ -183,7 +183,19 @@
 @166 = ~Ye certainly are a brave one to have slain a black dragon for these scales.  I can use these to enhance yer shield.  I would need 7,500gp fer the commission, shall we begin work?~
 @167 = ~Ye would like to improve the Tongue of Acid even further?~
 @168 = ~It be a tall order to improve that hellblade more, I'd need to reforge it using an elemental gemstone and it would take 15,000gp fer my work at the forge.~
-@169 = ~By the Soul Forger, an elemental gem of acid?  Never thought I'd see such a thing in me lifetime.  I can use this to reforge yer hellblade.  I would just need 15,000gp and yer help at me forge again.~
+@169 = ~By the Soul Forger, an elemental gem of acidic ichor?  Never thought I'd see such a thing in me lifetime.  I can use this to reforge yer hellblade.  I would just need 15,000gp and yer help at me forge again.~
+@170 = ~Ey, whats this?  Appears to be Iriaeborian craftsmanship that forged this armor.~
+@171 = ~I could greatly improve the protective ability of this shadowy armor if ye can bring me some scales from a black dragon.~
+@172 = ~Ye've gone and slain a black dragon 'ave ye?  These scales will do nicely for your Iriaeborian leathers.   Just a toss 7,500gp in fer me coffers and I'll get to work for ye.~
+@173 = ~Ey?  What be this?  Some accursed bard's bracers?~
+@174 = ~Hmmm, ye know, ol' Cromwell may be able to make these jokers' bracers better for ye.  It'd take some dark magic though.  I'd need to use the power from two demon's hearts along with 5,000gp fer me trouble, and I cannae gaurantee the curse would be lifted.~
+@175 = ~Well now, ye've gone and carved two hearts from demons.  I'll not ask ye where from, but if'n ye would like me to use em to enhance those bracers of yers, I'll get to work right away.~
+@176 = ~Ye have a blessed ring here, do ye?  Did ye pluck this one from Strohm's tomb?  I cannae hardly believe me eyes.~
+@177 = ~I can improve this holy ring fer ya with an equally holy gemstone, such as the Eye of Tyr.~
+@178 = ~Ah, yes indeed, this be the Eye of Tyr, I can use this to improve the ring of purity.  I just need 5,000gp and a day at the forge for the work.~
+@179 = ~A Calimshite saber?  Nicely balanced and quick, ye would like it improved?~
+@180 = ~I can reforge this blade if ye can bring me another fast saber, like the Belm +2, and a murky oil of speed to temper it with.~
+@181 = ~Ye have the Belm +2 and the oil I need to reforge this blade for you, just 5,000gp fer me work and it's a done deal.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -357,8 +369,8 @@
 @1163 = ~You has heart of the damned, I can use it to makes your vexblade more...vexxing.~
 @1164 = ~Ok then master, I looks for more shinys then.~
 @1165 = ~You would like for Cespenar to reforge the bulwark of egons into something more powerful?~
-@1166 = ~I would need for the master to find and bring the eye of tyr to me, and 5,000 golds to reforge egon shield.~
-@1167 = ~This sure is the eye of tyr, so very shiny.... I can use to reforge your shield if you want.~
+@1166 = ~I would need for the master to find and bring a symbol of Amaunator, and 5,000 golds to reforge egon shield.~
+@1167 = ~This sure is symbol of sun god, so very shiny.... I can use to reforge your shield if you want.~
 @1168 = ~Nope?  What else you has?~
 @1169 = ~What's this?  heavenly bow of crosses?  I don't likes it one bit!~
 @1170 = ~You wants for I to make crossbow better?  Hmm, I would needs a new limb for it, could use a gesen bowshaft, and 5,000 golds.~
@@ -396,7 +408,23 @@
 @1202 = ~I would needs the silver Gith-hilt, and 10,000 gold shinys.~
 @1203 = ~The master would like tongue-blade improved more?~
 @1204 = ~Hmm, would be most difficult to make tongue-blade stronger, would need elemental gemstone for that.~
-@1205 = ~Yep, you has elemental gem of ichor here, I can use this to reforge your tongue-blade.  I just needs 15,000 gold shinys to finish it.~  
+@1205 = ~Yep, you has elemental gem of ichor here, I can use this to reforge your tongue-blade.  I just needs 15,000 gold shinys to finish it.~
+@1206 = ~Shadowy night armor?  Most useful for the master, but not so strong, you want for loyal butler to make stronger?~
+@1207 = ~I can makes night armor much better protection for you, I just needs some scales from black dragon and 7,500 golds.~
+@1208 = ~You has the scales I need here for the night armor, shall I get to work for you?~
+@1209 = ~No then?  Ok, what else do you has?~
+@1210 = ~Hmmm, most interesting master, bracers that are good joke?  I bets I can make even better joke!~
+@1211 = ~I can makes these jester bracers better, they just needs empowered with hearts from demons, and 5,000 gold shinys.~
+@1212 = ~Ohh yes master, these are nice hearts from demonses.  Shall I get to work on joker bracers for you?~
+@1213 = ~No?  Not for to want to make joke on enemies?  Okays then, what else you has in bag?~
+@1214 = ~Oooh, shiny shiny ring, too bad cespenar cant wear, but maybe can improves for the master.~
+@1215 = ~To make shiny holy ring better needs more holy power, could use Eye of Tyr.~
+@1216 = ~Ah yes, shiny Eye of Tyr.  I can use to make ring even more pure.  I just needs 5,000 golds to make for you.~
+@1217 = ~No?  Ok then, what other shinys you want me to look through?~
+@1218 = ~What's this?  Looks like genie blade, fast one too.~
+@1219 = ~Cespenar can make genie blade even faster for the master, I just needs another fast blade like um... um... Belm +2, that can work, and oh yes needs oil of speed too, but murky one.~
+@1220 = ~You has the Belm +2 and the oil, just 5,000 gold shinys and I make genie sword faster for you.~
+@1221 = ~Ok then, maybe just rub blade and make wishes?  What else you has for me to look through?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -625,18 +653,22 @@ Proficiency Type: Dart
 Type: One-handed
 
 Weight: 0~
-@2030 = ~Icy Blade of the Void +5~
-@2031 = ~The skull of the lich's necromantic powers have satisfied some of the insatiable hunger of the void sword, it no longer drains energy from it's weilder.  Wounds made by the blade now instantly freeze, causing further damage to it's victims.  However, undead are still not harmed by the blade, and the weilder's strength (or lack thereof) has no effect on the sword's effectiveness in battle.
+@2030 = ~Vampiric Voidsword +5~
+@2031 = ~By absorbing the dark magics contained in the lich's skull, the Voidsword's hunger has been amplified greatly.  Strikes from the blade now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or it's effects.
 
 STATISTICS:
+
+Equipped abilities:
+– Strength: -1
 
 Combat abilities:
 – The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates)
 – Does no damage to the undead
 – Bonuses to hit and damage based on strength do not apply to this weapon
+– 30% chance on hit of 2d3 damage (magic) and -1 to Strength for 5 rounds to enemies in 15' radius(No Save), weilder is healed for amount of damage done.
 
 THAC0: +5
-Damage: 1d8+5 (magic) +2d6 (cold)
+Damage: 1d8+5 (magic)
 Speed Factor: 2
 Proficiency Type: Long Sword
 Type: One-handed
@@ -644,20 +676,24 @@ Requires:
  6 Strength
 
 Weight: 2~
-@2032 = ~Icy Hammer of the Void +5~
-@2033 = ~The skull of the lich's necromantic powers have satisfied some of the insatiable hunger of the void hammer, it no longer drains energy from it's weilder.  Wounds made by the blade now instantly freeze, causing further damage to it's victims.  However, undead are still not harmed by the hammer, and the weilder's strength (or lack thereof) has no effect on the hammers's effectiveness in battle.
+@2032 = ~Vampiric Voidhammer +5~
+@2033 = ~By absorbing the dark magics contained in the lich's skull, the Voidhammer's hunger has been amplified greatly.  Strikes from the hammer now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or it's effects.
 
 STATISTICS:
+
+Equipped abilities:
+– Strength: -1
 
 Combat abilities:
 – The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates)
 – Does no damage to the undead
 – Bonuses to hit and damage based on strength do not apply to this weapon
+– 30% chance on hit of 2d3 damage (magic) and -1 to Strength for 5 rounds to enemies in 15' radius(No Save), weilder is healed for amount of damage done.
 
 THAC0: +5
-Damage: 1d4+6 (magic) +2d6 (cold)
-Speed Factor: 1
-Proficiency Type: War Hammer
+Damage: 1d8+5 (magic)
+Speed Factor: 2
+Proficiency Type: Long Sword
 Type: One-handed
 Requires:
  9 Strength
@@ -1688,7 +1724,7 @@ Requires:
 
 Weight: 2~
 @2159 = ~Bulwark of Egons +4~
-@2160 = ~With the eye of tyr set into the hub of the bulwark of egons, the shield now shimmers with holy power and light.  The weilder of this shield is blessed with the power of the morninglord, making them a holy force against evil.
+@2160 = ~With the symbol of Amaunator set into the hub of the bulwark of egons, the shield now shimmers with holy power and light.  The weilder of this shield is blessed with the power of the morninglord, making them a holy force against evil.
 
 STATISTICS:
 
@@ -1748,7 +1784,11 @@ Requires:
 
 Weight: 3~
 @2165 = ~Breath of Wind~
-@2166 = ~This emerald gemstone swirls with an inner green light, almost jumping out of your hands.  Looking inside, you see a swirling vortex of wind, decimating all it encounters, reducing all to mere splinters.~
+@2166 = ~This emerald gemstone swirls with an inner green light, almost jumping out of your hands.  Looking inside, you see a swirling vortex of wind, decimating all it encounters, reducing all to mere splinters.
+
+STATISTICS:
+
+Weight: 1~
 @2167 = ~Astral Crossbow +4~
 @2168 = ~By replacing the limb of the astral crossbow with the gesen bowshaft, the bow shoots straighter and hits harder than before.  While visions of one's soul leaving their body no longer occur, a critical hit from the bow hits the target with a blast of magical force, doing additional damage and knocking them back and unconcious.
 
@@ -1905,6 +1945,7 @@ STATISTICS:
 
 Equipped abilities:
 – Slashing Damage: +10% bonus
+– Chance to score a critical hit: +5% (this weapon only)
 – While enraged, the chance to score a critical hit is increased by 10% (Berserkers, Barbarians and Rashemi warriors only)
 
 Combat abilities:
@@ -1927,6 +1968,7 @@ STATISTICS:
 
 Equipped abilities:
 – Slashing Damage: +10% bonus
+– Chance to score a critical hit: +5% (this weapon only)
 – While enraged, the chance to score a critical hit is increased by 10% (Berserkers, Barbarians and Rashemi warriors only)
 
 Combat abilities:
@@ -2035,7 +2077,6 @@ STATISTICS:
 Equipped abilities:
 – Armor Class: 5
 – Charisma: -1 (except for Jesters)
-– Wearer is forced to tell corny jokes 
 – May only be removed with a Remove Curse spell
 
 Weight: 2~
@@ -2053,22 +2094,128 @@ Requires:
  3 Strength
 
 Weight: 5~
-@2203 = ~Engulfing Darkness +8~
-@2204 = ~A thief's gift from the heavens and their target's curse from the hells, the night's gift has been reforged with black dragon's scales and magick's empoering it further.  In addition to protecting it's weaer from the fiercest blows, if struck, the armor now render's it's wearer temporarily invisible, allowing a strike from the shadows or a hasty retreat.  A rogue could hardly ask for better protection on the battlefield.
+@2203 = ~The Night's Embrace +6~
+@2204 = ~Tough and durable black dragon scales have been interworked into the leather plates of the Iriaeborian's thief's armor, greatly increasing it's protective abilities.  The magics imparted from the scales have amplified the armor's ability to render it's wearer temporarily invisible such that there is a chance it will do so when the wearer takes damage from any attack.
 
 STATISTICS:
 
 Equipped abilities:
-– If the wearer is rendered helpless or stricken (e.g. by a Hold Person spell, or any source of damage), <PRO_HESHE> becomes invisible for 1 turn
+– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
+– If the wearer recieves damage from any source, there is a 25% chance <PRO_HESHE> becomes invisible for 1 turn
 – Hide In Shadows: +30%
 – Slashing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
-Armor Class: 0 (2 vs. piercing and missile)
+Armor Class: 1 (3 vs. piercing and missile)
 Requires:
  3 Strength
 
 Weight: 5~
+@2205 = ~Wicked Jester's Bracers~
+@2206 = ~These bracers once belonged to a traveling bard famed for his sharp tongue and quick retorts. One rainy night, the bard took refuge in a rickety inn on the road to Shadowdale. There he performed for his supper, sprinkling his routine with caustic jibes as was his custom. One of the drinkers in the tavern, an old woman, stood up midway through the performance and snapped, "You think it clever to insult and belittle others? Do so, then, for as long as you live!" The bard found himself unable to remove his now-cursed protective bracers and was forced to spout corny jokes until he could pay a wizard to remove them.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 2
+– Charisma: -4 (+4 for Jesters)
+– May only be removed with a Remove Curse spell
+
+Charge abilities:
+– Cacophony of Chaos twice per day
+  Special: All enemies within the area of effect must make a Saving Throw vs. Spell at -4 every round that they remain in the area of effect. If the Saving Throw is failed, one of the following random effects occurs:
+ – target is polymorphed into a squirrel
+ – target is confused
+ – target is paralyzed
+ – target is deafened
+ – target is blinded
+ – target is panicked
+ – target is rendered unconscious
+ – target is silenced
+ Range: 40 ft.
+ Duration: 1 turn
+ Area of Effect: 15-ft. radius
+ 
+– Knife Trick twice per day
+  Special: A dagger is thrown and once it reaches it's target, it shatters, sending shards flying into enemies in a 15-ft. radius.  Enemies must Save vs. Death at -4 or be affected by:
+ –3d7 damage (piercing) (No Save)
+ –target is intoxicated for one turn
+ –target is blinded for one turn
+ –target is poisoned for one damage per second for 24 seconds
+   
+   
+
+Weight: 2~
+@2207 = ~Ring of Purity~
+@2208 = ~This ring, designed for the hero Zachiira, is engraved with holy symbols. When Zachiira requested aid from King Strohm III, it was the king’s royal advisor, the great and powerful Theurgist Karlash Arnostognas, who made this item, in the hope that it would aid the hero in her battle against a demon vampire. Zachiira survived the encounter, but sadly her triumphal return was met with rather less celebration and rather more grief, as the good king was already dead when she arrived. Zachiira laid the holy artifact at the entrance to the king’s tomb, and it was there the relic was discovered by wandering thrill-seekers.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 vs. evil creatures
+– Hit Points: +10
+– Chant
+
+Weight: 0~
+@2209 = ~Holy Ring of Purity~
+@2210 = ~By setting the Eye of Tyr into Zachiira's blessed ring, it now pulses and flows with holy power.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 vs. evil creatures
+– Magic Resistance: +10%
+– Hit Points: +20
+– Chant
+
+Charge abilities:
+– Mass Exaltation once per day
+– Mass Cure once per day
+
+Weight: 0~
+@2211 = ~Dervish Crescent +2~
+@2212 = ~The length of this blade is etched with flames, genies, and whirlwinds. Small glittering particles along its length evoke a sandstorm. The style and quality of the blade indicates it was made in Calimshan.
+
+STATISTICS:
+
+Equipped abilities:
+– Movement Speed: +1
+
+Combat abilities:
+– 10% chance per kill that the wielder will be affected by Fireshield (Red)
+
+THAC0: +2
+Damage: 1d8+2, +1 fire
+Damage Type: Slashing
+Speed Factor: 3
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 3~
+@2213 = ~Dervish Crescent of Speed +3~
+@2214 = ~Painstakingly reforged for <CHARNAME>, this Calmishite scimitar now allows the weilder to strike harder and faster, like a whirling dervish.  Enemies' wounds are seared upon each strike and there is a greater chance of being enveloped by a protective ring of flame.
+
+STATISTICS:
+
+Equipped abilities:
+– Movement Speed: +1
+
+Combat abilities:
+– 15% chance per kill that the wielder will be affected by Fireshield (Red)
+– 1 extra attack per round
+
+THAC0: +3
+Damage: 1d8+3, +1d3 fire
+Damage Type: Slashing
+Speed Factor: 3
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 3~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2100,3 +2247,7 @@ Weight: 5~
 @5013 = ~Blessing of Tymora~
 @5014 = ~False Dawn~
 @5015 = ~Earthquake~
+@5016 = ~Cacophony of Chaos~
+@5017 = ~Knife Trick~
+@5018 = ~Mass Exaltation~
+@5019 = ~Mass Cure~

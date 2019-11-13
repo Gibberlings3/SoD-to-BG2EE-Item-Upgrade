@@ -6,8 +6,8 @@ END
 APPEND BOTSMITH              
 
   IF ~~ THEN BEGIN EgonShieldTyrCespy SAY @1165
-    IF ~!PartyHasItem("compon02")~ THEN GOTO need_EgonShieldTyrCespy
-    IF ~PartyHasItem("compon02")~ THEN GOTO EgonShieldTyrCespy_want
+    IF ~!PartyHasItem("key23")~ THEN GOTO need_EgonShieldTyrCespy
+    IF ~PartyHasItem("key23")~ THEN GOTO EgonShieldTyrCespy_want
   END
 
   IF ~~ THEN BEGIN need_EgonShieldTyrCespy SAY @1166
@@ -20,8 +20,8 @@ APPEND BOTSMITH
                                                  TakePartyGold(5000)
                                                  TakePartyItemNum("dtkshld2",1)
                                                  DestroyItem("dtkshld2")
-                                                 TakePartyItemNum("compon02",1)
-                                                 DestroyItem("compon02")
+                                                 TakePartyItemNum("key23",1)
+                                                 DestroyItem("key23")
                                                  DestroyGold(5000)~ GOTO 11
     IF ~~ THEN REPLY #66910 GOTO EgonShieldTyrCespy_stall
   END

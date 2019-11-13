@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.2.4~
+VERSION ~v0.3.0~
 
 README ~SoD2BG2_IU/README.txt~
 
@@ -37,6 +37,11 @@ ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkwind.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicel.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkicely.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkquake.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkdrain.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkjest.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkjestx.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkchaos.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkexalt.pro~
 
 COPY ~SoD2BG2_IU/bam~ ~override~
 COPY ~SoD2BG2_IU/spl~ ~override~
@@ -477,6 +482,25 @@ COPY ~SoD2BG2_IU/itm/nightarm1/dtklea02.itm~ ~override~
 SAY NAME2 @2203
 SAY 0x54 @2204
 
+COPY ~SoD2BG2_IU/itm/jester1/dtkbrac2.itm~ ~override~ 
+SAY NAME2 @2205
+SAY 0x54 @2206
+
+COPY ~SoD2BG2_IU/itm/ringpurity/bdring10.itm~ ~override~ 
+SAY NAME2 @2207
+SAY 0x54 @2208
+
+COPY ~SoD2BG2_IU/itm/ringpurity1/dtkring1.itm~ ~override~ 
+SAY NAME2 @2209
+SAY 0x54 @2210
+
+COPY ~SoD2BG2_IU/itm/dervish/bdsw1h08.itm~ ~override~ 
+SAY NAME2 @2211
+SAY 0x54 @2212
+
+COPY ~SoD2BG2_IU/itm/dervish1/dtkswd06.itm~ ~override~ 
+SAY NAME2 @2213
+SAY 0x54 @2214
 
 // compiled in serial so that COPY_TRANS will get the one before it
 COMPILE ~SoD2BG2_IU/dialogue/crom1.d~ // Tongue of Burning Acid +4
@@ -527,6 +551,10 @@ COMPILE ~SoD2BG2_IU/dialogue/crom44.d~ // Silver Dragon Blade +4
 COMPILE ~SoD2BG2_IU/dialogue/crom45.d~ // Silver Dragon Blade +5
 COMPILE ~SoD2BG2_IU/dialogue/crom46.d~ // Dragonscale Aegis +4
 COMPILE ~SoD2BG2_IU/dialogue/crom47.d~ // Tongue of Acid +5
+COMPILE ~SoD2BG2_IU/dialogue/crom48.d~ // The Night's Embrace +6
+COMPILE ~SoD2BG2_IU/dialogue/crom49.d~ // Wicked Jester's Bracers
+COMPILE ~SoD2BG2_IU/dialogue/crom50.d~ // Holy Ring of Purity
+COMPILE ~SoD2BG2_IU/dialogue/crom51.d~ // Dervish Crescent of Speed +3
 
 EXTEND_BOTTOM ~ar0334.bcs~ ~SoD2BG2_IU/scripts/ar0334.baf~		//item generating script for cromwell
 
@@ -580,9 +608,18 @@ COMPILE ~SoD2BG2_IU/dialogue/cespy44.d~ // Silver Dragon Blade +4
 COMPILE ~SoD2BG2_IU/dialogue/cespy45.d~ // Silver Dragon Blade +5
 COMPILE ~SoD2BG2_IU/dialogue/cespy46.d~ // Dragonscale Aegis +4
 COMPILE ~SoD2BG2_IU/dialogue/cespy47.d~ // Tongue of Acid +5
-
+COMPILE ~SoD2BG2_IU/dialogue/cespy48.d~ // The Night' Embrace +6
+COMPILE ~SoD2BG2_IU/dialogue/cespy49.d~ // Wicked Jester's Bracers
+COMPILE ~SoD2BG2_IU/dialogue/cespy50.d~ // Holy Ring of Purity
+COMPILE ~SoD2BG2_IU/dialogue/cespy51.d~ // Dervish Crescent of Speed +3
 
 EXTEND_BOTTOM ~botsmith.bcs~ ~SoD2BG2_IU/scripts/cespy.baf~  //Item generating script for cespy
+
+//Adding items to containers
+
+EXTEND_BOTTOM ~ar0602.bcs~ ~SoD2BG2_IU/scripts/ar0602.baf~	//keyring
+EXTEND_BOTTOM ~ar3001.bcs~ ~SoD2BG2_IU/scripts/ar3001.baf~	//Breath of Wind
+
 
 //Adding items to creatures
 
@@ -613,8 +650,11 @@ ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
 COPY_EXISTING ~TAZOK.CRE~ ~override~
 ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//Dragonscale Armor
 
-COPY_EXISTING ~MAEVAR.CRE~ ~override~
+COPY_EXISTING ~PIRSEA01.CRE~ ~override~
 ADD_CRE_ITEM ~bdboot01~ #0 #0 #0 ~NONE~ ~BOOTS~		//Soft Feet
+
+COPY_EXISTING ~MAEVAR.CRE~ ~override~
+ADD_CRE_ITEM ~bdleat07~ #0 #0 #0 ~NONE~ ~ARMOR~		//The Night's Embrace +3
 
 COPY_EXISTING ~BHEYE.CRE~ ~override~
 ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
@@ -685,8 +725,8 @@ ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
 COPY_EXISTING ~SPPAIN.CRE~ ~override~
 ADD_CRE_ITEM ~bddagg01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Element's Fury +2
 
-COPY_EXISTING ~DUECLA01.CRE~ ~override~
-ADD_CRE_ITEM ~bdkeyr~ #0 #0 #0 ~IDENTIFIED~ ~INV~	//Keyring
+// COPY_EXISTING ~DUECLA01.CRE~ ~override~
+// ADD_CRE_ITEM ~bdkeyr~ #0 #0 #0 ~IDENTIFIED~ ~INV~	//Illych placeholder
 
 COPY_EXISTING ~KELDOR9.CRE~ ~override~
 ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
@@ -700,6 +740,27 @@ ADD_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Ba
 COPY_EXISTING ~GORSTA06.CRE~ ~override~
 ADD_CRE_ITEM ~dtkfrost~ #0 #0 #0 ~NONE~ ~INV~	//Soul of Frost
 
+COPY_EXISTING ~DDGUARD1.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD2.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD3.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD4.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD5.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD6.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
+
+COPY_EXISTING ~DDGUARD7.CRE~ ~override~
+ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~INV~	//Ring of Purity
+
 //Adding items to stores
 
 COPY_EXISTING ~SHOP04.sto~ ~override~
@@ -708,11 +769,15 @@ ADD_STORE_ITEM ~bdbull02~ #0 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
 COPY_EXISTING ~SHOP04.STO~ ~override~
 ADD_STORE_ITEM ~bdarow02~ #0 #0 #0 ~IDENTIFIED~ #80		//Void-Tipped Arrow +3
 
+COPY_EXISTING ~SHOP04.STO~ ~override~
+ADD_STORE_ITEM ~bdbrd01~ #0 #0 #0 ~IDENTIFIED~ #1		//Forest Queen's Benediction
+
+COPY_EXISTING ~SHOP04.STO~ ~override~
+ADD_STORE_ITEM ~bdbrac02~ #0 #0 #0 ~IDENTIFIED~ #1		//Jester's Bracers
+
 COPY_EXISTING ~RIBALD.STO~ ~override~
 ADD_STORE_ITEM ~bdhalb01~ #0 #0 #0 ~IDENTIFIED~ #1		//Storm Pike +2
 
-COPY_EXISTING ~GARLENA.STO~ ~override~
-ADD_STORE_ITEM ~dtkemrld~ #0 #0 #0 ~NONE~ #1		//Breath of Wind
 
 //Adding Melee/Thrown descriptions
 
@@ -947,6 +1012,26 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   INSERT_2DA_ROW num_rows num_cols ~dtkham02  %thrown_strref%  %melee_strref%  -1~
   PRETTY_PRINT_2DA
 BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5017)
+  SET melee_strref = RESOLVE_STR_REF(@5016)
+  INSERT_2DA_ROW num_rows num_cols ~dtkbrac2  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5018)
+  SET melee_strref = RESOLVE_STR_REF(@5019)
+  INSERT_2DA_ROW num_rows num_cols ~dtkring1  %thrown_strref%  %melee_strref%  -1~
+  PRETTY_PRINT_2DA
+BUT_ONLY
+
+
 
 
 

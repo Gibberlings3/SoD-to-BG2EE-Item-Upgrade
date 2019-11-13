@@ -58,6 +58,10 @@
 57 - Dragonscale Aegis +4
 58 - Tongue of Acid +4
 59 - Tongue of Acid +5
+60 - The Night's Gift +6
+61 - Wicked Jester's Bracers
+62 - Holy Ring of Purity
+63 - Dervish Crescent of Speed +3
 */
 
 IF
@@ -765,5 +769,53 @@ THEN
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
     GiveItemCreate("dtkswd1c",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",60)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtklea02",Player1,0,0,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",61)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkbrac2",Player1,2,2,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",62)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkring1",Player1,1,1,0)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",63)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkswd06",Player1,0,0,0)
     StartDialogueNoSet(Player1)
 END

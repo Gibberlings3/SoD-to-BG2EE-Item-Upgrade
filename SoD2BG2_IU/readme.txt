@@ -1,23 +1,24 @@
 Siege of Dragonspear to Baldur's Gate 2:Enhanced Edition
 
 First and foremost:  A HUGE thanks to Jastey for helping me to learn WeiDu!
-		     This mod wouldnt have happened otherwise.
+		     This mod would'nt have happened otherwise.
 
-Version 0.2.4
+Version 0.3.0
 
 
 Purpose of this mod:
 
 This mod imports additional items from Seige of Dragonspear, and provides
 an upgrade path for these items along with most of the other SoD items that can 
-normally be imported via cromwell and cespenar.  If you do not have SoD, or a SoD 
-save game to import, you can access them via EE keeper or the console.  I highly reccomend 
+normally be imported via cromwell and cespenar.  For SoD items normally imported:  If you do not have SoD, or a SoD 
+save game to import, you can access them via EE keeper or the console.  The newly added items
+will be present regardless of whether you import a character of game from SoD.  I highly reccomend 
 playing through SoD and collecting these items normally, as it will give a 
 greater appreciation for this mod, as some of the dialogues with cromwell and cespy
 reference where the items came from.  I included one importable item from vanilla Baldur's Gate:EE
-That imports into BG2 that I always felt should have had a bighter future in terms 
+That imports into BG2 that I always felt should have had a brighter future in terms 
 of being able to upgrade it.  I'm not going to give it away here because I would
-like for it to be somewhat of a surprise.  I will give a hint: it can be found in Irencus' dungeon.
+like for it to be somewhat of a surprise.  I will give a hint: it can be found in Irenicus' dungeon.
 
 All new recipes have been added to both Cromwell and Cespenar, so you will not
 run into a situation where if you missed something in SoA you are prevented from
@@ -59,6 +60,18 @@ Vexation +2
 Astral Crossbow +2
 Shadowed Spear +2
 Dragonscale Shield +3 (has to be forged using green scales)
+The Forest Queen's Benediction
+Jester's Bracers (corny joke component does not currently work properly, I temporarily removed from item until I can figure out how to implment properly)
+The Night's Embrace +3
+Ring of Purity
+Dervish Crescent +2
+
+New upgrade components created for this mod:
+Heart of Flame
+Eye of Ichor
+Soul of Frost
+Breath of Wind
+Black Dragon Scales
 
 
 These items have been placed in logical (at least to me) locations around Shadows of Amn.  
@@ -100,6 +113,10 @@ Vexation +2
 Astral Crossbow +2
 Shadowed Spear +2  (can be upgraded twice)
 Dragonscale Shield +3
+Jester's Bracers (corny joke component does not currently work properly, I temporarily removed from item until I can figure out how to implment properly)
+The Night's Embrace +3
+Ring of Purity
+Dervish Crescent +2
 
 
 

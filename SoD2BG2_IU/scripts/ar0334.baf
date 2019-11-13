@@ -58,6 +58,10 @@
 57 - Dragonscale Aegis +4
 58 - Tongue of Acid +4
 59 - Tongue of Acid +5
+60 - The Night's Embrace +6
+61 - Wicked Jester's Bracers
+62 - Holy Ring of Purity
+63 - Dervish Crescent of Speed +3
 */
 
 
@@ -770,3 +774,50 @@ THEN
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
+IF
+  Global("DTKItems","ar0334",60)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea02",Player1,0,0,0) // The Night's Gift +6
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",61)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbrac2",Player1,2,2,0) // Wicked Jester's Bracers
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",62)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkring1",Player1,1,1,0) // Holy Ring of Purity
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",63)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd06",Player1,0,0,0) // Dervish Crescent of Speed +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
