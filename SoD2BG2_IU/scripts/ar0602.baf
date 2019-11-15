@@ -6,3 +6,12 @@ SetGlobal("DeSpawnItem","AR0602",1)
 ActionOverride("Jailkeep Table",CreateItem("bdkeyr",0,0,0)) // Keyring
 Continue()
 END
+
+IF
+	Global("BD_HAVE_SOD","GLOBAL",0)
+	Global("BD_SOD_IMPORT_11","GLOBAL",0)	//Global variable test
+THEN
+    RESPONSE #100
+        SetGlobal("BD_HAVE_SOD","GLOBAL",1)
+	SetGlobal("BD_SOD_IMPORT_11","GLOBAL",1)
+END

@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.3.0~
+VERSION ~v0.4.0~
 
 README ~SoD2BG2_IU/README.txt~
 
@@ -20,6 +20,7 @@ LANGUAGE ~English~ ~english~ ~SoD2BG2_IU/language/english/english.tra~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 BEGIN @9000
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
 PRINT @9001
 
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkvit.pro~
@@ -502,6 +503,18 @@ COPY ~SoD2BG2_IU/itm/dervish1/dtkswd06.itm~ ~override~
 SAY NAME2 @2213
 SAY 0x54 @2214
 
+COPY ~SoD2BG2_IU/itm/focusband/bdhelm15.itm~ ~override~
+SAY NAME1 @2215
+SAY NAME2 @2216
+SAY 0x50 @2217
+SAY 0x54 @2218
+
+COPY ~SoD2BG2_IU/itm/wizzard/bdhelm12.itm~ ~override~
+SAY NAME1 @2219
+SAY NAME2 @2220
+SAY 0x50 @2221
+SAY 0x54 @2222
+
 // compiled in serial so that COPY_TRANS will get the one before it
 COMPILE ~SoD2BG2_IU/dialogue/crom1.d~ // Tongue of Burning Acid +4
 COMPILE ~SoD2BG2_IU/dialogue/crom2.d~ // Tongue of Burning Acid +5
@@ -760,6 +773,15 @@ ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
 
 COPY_EXISTING ~DDGUARD7.CRE~ ~override~
 ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~INV~	//Ring of Purity
+
+COPY_EXISTING ~ohnlanne.CRE~ ~override~
+ADD_CRE_ITEM ~bdhelm12~ #0 #0 #0 ~NONE~ ~HELMET~	//Wizzard Hat
+
+COPY_EXISTING ~ohralor.CRE~ ~override~
+ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
+
+COPY_EXISTING ~ohralor2.CRE~ ~override~
+ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
 
 //Adding items to stores
 
@@ -1032,9 +1054,20 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 BUT_ONLY
 
 
+// Force import-able items from SoD
+
+BEGIN @9004
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+SUBCOMPONENT @9002
 
 
+EXTEND_BOTTOM ~baldur.bcs~ ~SoD2BG2_IU/scripts/baldur.baf~	//SoD Global Variables with Voidsword +3
 
+BEGIN @9005
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+SUBCOMPONENT @9002
+
+EXTEND_BOTTOM ~baldur.bcs~ ~SoD2BG2_IU/scripts/baldur1.baf~	//SoD Global Variables with Voidhammer +3
 
 
 

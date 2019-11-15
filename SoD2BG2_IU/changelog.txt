@@ -1,3 +1,15 @@
+Version 0.4.0 changes:
+
+Added new optional component - Force importable SoD items to be in their normal locations
+
+Added two more items from SoD:
+
+Headband of Focus
+Wizzard Hat
+
+Added new icons for elemental gemstones
+
+
 Version 0.3.0 changes:
 
 Updated the following items with new abilities:

@@ -7,6 +7,11 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @9000 = ~SoD to BG2:EE Item upgrade by Daeros_Trollkiller~
 @9001 = ~Installing.......~
+@9002 = ~Force all import-able SoD items to be available in their normal locations~
+@9003 = ~This mod is not compatible with your game.  It is only compatible with Baldur's Gate 2:Enhanced Edition.~
+@9004 = ~All importable items with Voidsword +3~
+@9005 = ~All importable items with Voidhammer +3~
+@9006 = ~*****NOTE: Voidsword +3 and Voidhammer +3 are mutually exclusive, choose which to import*****~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2216,6 +2221,41 @@ Requires:
  10 Strength
 
 Weight: 3~
+@2215 = ~Headband~
+@2216 = ~Headband of Focus~
+@2217 = ~A ribbon or band worn around the head.
+
+STATISTICS:
+
+Weight: 1~
+@2218 = ~A worshipper of Nobanion crafted this gold silk headband, embroidered with abstract running lions along its length, while meditating on the teachings of Lord Firemane. When the headband was complete, the worshipper found that Nobanion had rewarded his fealty by granting the headband the ability to conjure a surge of might within the wearer.
+
+STATISTICS:
+
+Equipped abilities:
+– THAC0: +2 (unarmed attacks)
+– Critical Hit Chance: +5% (unarmed attacks)
+
+Charge abilities:
+– Draw Upon Holy Might once per day
+
+Weight: 1~
+@2219 = ~Hat~
+@2220 = ~Wizzard Hat~
+@2221 = ~This soft cap looks neither durable nor practical. Its stylish appearance marks it as strictly decorative.
+
+STATISTICS:
+
+Weight: 0~
+@2222 = ~This classic pointed wizard's hat has the wearer's title emblazoned across it in rather gaudy sequins. The wizzard's hat makes the wearer much faster, both in casting and on foot. A wizard who runs away from combat lives to run away another day, after all.
+
+STATISTICS:
+
+Equipped abilities:
+– Casting Speed: +1
+– Movement Speed: +2
+
+Weight: 0~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
