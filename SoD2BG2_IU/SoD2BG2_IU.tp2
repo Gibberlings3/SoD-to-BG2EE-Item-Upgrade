@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.4.0~
+VERSION ~v0.4.1~
 
 README ~SoD2BG2_IU/README.txt~
 
@@ -809,7 +809,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5001)
   SET melee_strref = RESOLVE_STR_REF(@5002)
   INSERT_2DA_ROW num_rows num_cols ~dtktdag1  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -818,7 +818,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5001)
   SET melee_strref = RESOLVE_STR_REF(@5002)
   INSERT_2DA_ROW num_rows num_cols ~dtktdag2  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -827,7 +827,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5001)
   SET melee_strref = RESOLVE_STR_REF(@5002)
   INSERT_2DA_ROW num_rows num_cols ~dtkaxe01  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -836,7 +836,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5001)
   SET melee_strref = RESOLVE_STR_REF(@5002)
   INSERT_2DA_ROW num_rows num_cols ~dtkaxe02  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -845,7 +845,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5002)
   SET melee_strref = RESOLVE_STR_REF(@5003)
   INSERT_2DA_ROW num_rows num_cols ~dtksper1  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -854,7 +854,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5002)
   SET melee_strref = RESOLVE_STR_REF(@5003)
   INSERT_2DA_ROW num_rows num_cols ~dtkspr1a  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 
@@ -864,16 +864,16 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5009)
-  INSERT_2DA_ROW num_rows num_cols ~bdleat05  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~bdleat05  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5010)
-  INSERT_2DA_ROW num_rows num_cols ~dtkamul1  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkamul1  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 
@@ -883,7 +883,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5008)
   SET melee_strref = RESOLVE_STR_REF(@5004)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1e  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 
@@ -893,7 +893,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5011)
   SET melee_strref = RESOLVE_STR_REF(@5004)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1d  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -902,7 +902,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5004)
   SET melee_strref = RESOLVE_STR_REF(@5006)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1b  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 
@@ -912,7 +912,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5005)
   SET melee_strref = RESOLVE_STR_REF(@5004)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1a  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -921,7 +921,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5004)
   SET melee_strref = RESOLVE_STR_REF(@5007)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1a  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -930,7 +930,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5004)
   SET melee_strref = RESOLVE_STR_REF(@5007)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1c  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -939,7 +939,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5005)
   SET melee_strref = RESOLVE_STR_REF(@5006)
   INSERT_2DA_ROW num_rows num_cols ~dtklea1b  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -948,7 +948,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5008)
   SET melee_strref = RESOLVE_STR_REF(@5005)
   INSERT_2DA_ROW num_rows num_cols ~dtklea1e  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -957,23 +957,23 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5005)
   SET melee_strref = RESOLVE_STR_REF(@5004)
   INSERT_2DA_ROW num_rows num_cols ~dtklea1a  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5005)
-  INSERT_2DA_ROW num_rows num_cols ~dtkleat1  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkleat1  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5004)
-  INSERT_2DA_ROW num_rows num_cols ~dtkplat1  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkplat1  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -982,7 +982,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5011)
   SET melee_strref = RESOLVE_STR_REF(@5005)
   INSERT_2DA_ROW num_rows num_cols ~dtklea1d  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -991,39 +991,39 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5005)
   SET melee_strref = RESOLVE_STR_REF(@5007)
   INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5012)
-  INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5009)
-  INSERT_2DA_ROW num_rows num_cols ~dtkleat2  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkleat2  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5013)
-  INSERT_2DA_ROW num_rows num_cols ~dtkblt02  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkblt02  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5014)
-  INSERT_2DA_ROW num_rows num_cols ~dtkboot2  %thrown_strref%  -1~
-  PRETTY_PRINT_2DA
+  INSERT_2DA_ROW num_rows num_cols ~dtkboot2  %thrown_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -1032,7 +1032,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5015)
   SET melee_strref = RESOLVE_STR_REF(@5015)
   INSERT_2DA_ROW num_rows num_cols ~dtkham02  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -1041,7 +1041,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5017)
   SET melee_strref = RESOLVE_STR_REF(@5016)
   INSERT_2DA_ROW num_rows num_cols ~dtkbrac2  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
 BUT_ONLY
 
 COPY_EXISTING ~tooltip.2da~ ~override~
@@ -1050,7 +1050,23 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   SET thrown_strref = RESOLVE_STR_REF(@5018)
   SET melee_strref = RESOLVE_STR_REF(@5019)
   INSERT_2DA_ROW num_rows num_cols ~dtkring1  %thrown_strref%  %melee_strref%  -1~
-  PRETTY_PRINT_2DA
+  SET num_rows += 1
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5020)
+  INSERT_2DA_ROW num_rows num_cols ~dtkioun1  %thrown_strref%  %melee_strref% -1 -1~
+  SET num_rows += 1
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5021)
+  INSERT_2DA_ROW num_rows num_cols ~dtkioun2  %thrown_strref%  %melee_strref% -1 -1~
+  SET num_rows += 1
 BUT_ONLY
 
 

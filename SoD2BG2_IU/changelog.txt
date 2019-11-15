@@ -1,3 +1,10 @@
+Version 0.4.1 changes:
+
+Cleaned up code for adding descriptions to item abilities
+
+added abilitiy description for Trollkiller Ioun Stone (both versions)
+
+
 Version 0.4.0 changes:
 
 Added new optional component - Force importable SoD items to be in their normal locations
