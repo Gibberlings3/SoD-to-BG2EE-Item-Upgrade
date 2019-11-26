@@ -54,6 +54,7 @@ INCLUDE ~SoD2BG2_IU/lib/functions.tpa~
 
 LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END
 LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4001) STR_VAR bam_file = dtkfroze RET icon END
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4002) STR_VAR bam_file = dtkanmgp RET icon END
 
 COPY ~SoD2BG2_IU/itm/acid/bdsw1h02.itm~ ~override~ 
 SAY NAME1 @2000
@@ -426,11 +427,15 @@ SAY NAME2 @2171
 SAY 0x54 @2172
 
 COPY ~SoD2BG2_IU/itm/ccdragpgrn/dtkplt1e.itm~ ~override~
+SAY NAME1 @2007
 SAY NAME2 @2173
+SAY 0x50 @2009
 SAY 0x54 @2174
 
 COPY ~SoD2BG2_IU/itm/csdraglgrn/dtklea1e.itm~ ~override~
+SAY NAME1 @2007
 SAY NAME2 @2175
+SAY 0x50 @2009
 SAY 0x54 @2176
 
 COPY ~SoD2BG2_IU/itm/gdragarm/dtkleat2.itm~ ~override~
@@ -753,24 +758,6 @@ ADD_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Ba
 COPY_EXISTING ~GORSTA06.CRE~ ~override~
 ADD_CRE_ITEM ~dtkfrost~ #0 #0 #0 ~NONE~ ~INV~	//Soul of Frost
 
-COPY_EXISTING ~DDGUARD1.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
-COPY_EXISTING ~DDGUARD2.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
-COPY_EXISTING ~DDGUARD3.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
-COPY_EXISTING ~DDGUARD4.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
-COPY_EXISTING ~DDGUARD5.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
-COPY_EXISTING ~DDGUARD6.CRE~ ~override~
-ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~RRING~	//Ring of Purity
-
 COPY_EXISTING ~DDGUARD7.CRE~ ~override~
 ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~INV~	//Ring of Purity
 
@@ -920,15 +907,6 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5004)
   SET melee_strref = RESOLVE_STR_REF(@5007)
-  INSERT_2DA_ROW num_rows num_cols ~dtkplt1a  %thrown_strref%  %melee_strref%  -1~
-  SET num_rows += 1
-BUT_ONLY
-
-COPY_EXISTING ~tooltip.2da~ ~override~
-  COUNT_2DA_COLS num_cols
-  COUNT_2DA_ROWS num_cols num_rows
-  SET thrown_strref = RESOLVE_STR_REF(@5004)
-  SET melee_strref = RESOLVE_STR_REF(@5007)
   INSERT_2DA_ROW num_rows num_cols ~dtkplt1c  %thrown_strref%  %melee_strref%  -1~
   SET num_rows += 1
 BUT_ONLY
@@ -998,7 +976,8 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5012)
-  INSERT_2DA_ROW num_rows num_cols ~dtklea1c  %thrown_strref% -1 -1~
+  SET melee_strref = RESOLVE_STR_REF(@5012)
+  INSERT_2DA_ROW num_rows num_cols ~dtkstaf1  %thrown_strref%  %melee_strref% -1~
   SET num_rows += 1
 BUT_ONLY
 

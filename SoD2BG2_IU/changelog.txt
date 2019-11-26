@@ -1,8 +1,31 @@
+Version 0.5.0 changes:
+
+Created new icons for several upgraded items
+
+Changed the upgrade recipes for Star-Strewn boots
+
+Changed upgrade of Star-Strewn Boots to be more in-line with it's
+Existing abilities, and updated it's description to match.
+
+
+Version 0.4.2 changes:
+
+Removed additional ring of purity drops from guardians in Firkraag's maze
+
+Corrected rewards from Cromwell recipes using dragon scales
+
+Corrected item descriptions for several items
+
+
+
 Version 0.4.1 changes:
 
 Cleaned up code for adding descriptions to item abilities
 
-added abilitiy description for Trollkiller Ioun Stone (both versions)
+added charge ability description for Trollkiller Ioun Stone (both versions)
+
+added charge description for Uncursed Staff of Antipode
+
 
 
 Version 0.4.0 changes:

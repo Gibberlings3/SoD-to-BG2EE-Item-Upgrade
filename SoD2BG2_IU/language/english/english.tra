@@ -66,8 +66,9 @@
 @44 = ~I can reforge that unbalanced flamin' blade of yours, and make it a far more effective and balanced weapon.  I would just need a sword of flame, a blade of searing, and five scrolls of agannazar's scorcher.  7,500gp for the day's work at the forge and it'd be a done deal for ye.~
 @45 = ~A flaming sword, a searing blade, and five of the scorcher scrolls.  I can get right to work on reforging that unweildy burning sword of yours if ye'd like.~
 @46 = ~Ahhh, just lookin' at these boots reminds me of gazin' at the skies over the harbor at night.~
-@47 = ~If'n ye come across a symbol of amaunator in your travels, I can improve these starry boots with 'er and a paltry sum of 7500gp for the forgin'.~
-@48 = ~Blasted brightness... this be a symbol of the sun god fer sure.  I can use it to enhance those starry boots of yours if'n ye wants.~
+@47 = ~If'n ye want me to improve Crommus' old boots for ye, I'd need a few things.  Two potions each of magic protection, magic shielding, and magic blocking.~
+@48 = ~Ye have all the potions I need here to reforge those starry boots, I would just need 5,000gp for me work at the forge.  Shall I get started on em for ye?~
+@49 = ~Placeholder~
 @50 = ~Ahh, I believe I recognize the craftmanship of this Green Dragonscale o' yers.  Jegg's works is it?  How is the ol' bird?~
 @51 = ~I can rework this dragonscale into better armor if ye can bring me some red or shadow dragon scales.~
 @52 = ~Aye, ye've collected some more scales from the dastardly beasts.  I can use 'em to reforge yer green dragonscale.~
@@ -264,12 +265,12 @@
 @1053 = ~No?  Can Cespenar use for to hang pictures then?~
 @1054 = ~Another sword that burns?  This one not burn so good, very clumsy too.~
 @1055 = ~I can fixes up clumsy burn sword for you, Cespenar just needs a sword of flame, a blade of searing, five scrolls of agannazar's scorcher, and 7500 golds.~
-@1056 = ~Yepyepyep!  Sword of flame, blade of sear and five scrolls of scorching fires.  Would you like Cesepenar to fix clumsy burn sword?~
+@1056 = ~Yepyepyep!  Sword of flame, blade of sear, and five scrolls of scorching fires.  Would you like Cesepenar to fix clumsy burn sword?~
 @1057 = ~No fix burn sword?  Maybe can use to light candles then?  What else you has, master?~
 @1058 = ~Such starry, shiny boots!  Can Cespenar wear to dance with other imps?~
-@1059 = ~I's can makes starboots better if master can provide a Symbol of Amaunator and 7,500 golds.~
-@1060 = ~Wow! so bright this symbol of sun!  I can use to enhance starbootsies if the master wants.~
-@1061 = ~Why not?  Would the master rather use boot for to drink ale?~
+@1059 = ~I can makes starboots really shine for the master if <PRO_HESHE> can bring me two potions of magic protection, magic shielding, magic blocking, and 5,000 gold skinys, cant forget the golds!~
+@1060 = ~Potions of blocking, shielding, and protection, check, check, and check!  I can use to enhance starbootsies if the master wants.~
+@1061 = ~Why not?  Would the master rather use boot for to drink ale out of?  Boot-ale is best!~
 @1062 = ~Phew, stinks like dead dragon.  This armor is made from stinky dragon hide?~ 
 @1063 = ~Cespenar can make stinky dragon armor better if you brings him more scales to work with.  Red scales or shadow dragon scales will work.~
 @1064 = ~Yes, yes!  I can use these scales to improve stinky green dragon hide of yours.~
@@ -798,6 +799,9 @@ Weight: 4~
 @2045 = ~The Scorched Earth +3~
 @2046 = ~Expertly reforged for <CHARNAME>, the flame tongue is now a far more balanced blade and searing flames scorch enemies with every slash, leaving charred wounds in it's wake.  The sword remains very effective against cold-based, regenerating creatures, and the undead.
 
+Combat abilities:
+– 10% chance per hit of immolating the target in flames, causing 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+
 STATISTICS:
 
 THAC0: +3, +4 vs. cold-using, and regenerating creatures, +5 vs. undead
@@ -819,22 +823,18 @@ Equipped abilities:
 – Magic Resistance: +7%, +15% (Wizard Slayers)
 
 Weight: 4~
-@2049 = ~Star-Strewn Boots of Amaunator~
-@2050 = ~The Star-strewn boots now bear the shining symbol of Amaunator.  Combined with Artipheon's magics already infused into Crommus's former footwear, these boots now provide additional protections from the undead.  Once per day the wearer may stomp their feet to create a blinding flash of sunlight, damaging and confusing all undead in the immediate area.
+@2049 = ~Star-Strewn Boots of Antimagic~
+@2050 = ~Crommus' boots have been meticulously reforged for <CHARNAME>, further improving their ability to sheild their wearer from magical attacks.  The boots now also have a limited ability to envelop the wearer in a protective shell of antimagic, preventing all magic from affecting the wearer for a short duration.  
 
 STATISTICS:
 
 Equipped abilities:
-– Magic Resistance: +7%, +15% (Wizard Slayers)
-– +1 THAC0 vs. undead
-– +1 damage to undead
-– Negative plane protection
+– Magic Resistance: +10%, +20% (Wizard Slayers)
 
 Charge Abilities:
-– False Dawn once per day
-  Damage: 6d6 to undead (no save)
-  Undead are confused (no save)
-  Area of effect: 30-ft. radius
+– Minor Antimagic Shell
+  Dispels all magical effects on user and prevents further spells from affecting user for 5 rounds.
+  Disables Wizard and Priest spells for the duration of the effect.  
 
 Weight: 4~
 @2051 = ~Verdant Crimson Dragon Plate~
@@ -2265,6 +2265,7 @@ Weight: 0~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @4000 = ~Immolated~
 @4001 = ~Frozen~
+@4002 = ~Minor Antimagic Shell~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2285,7 +2286,7 @@ Weight: 0~
 @5011 = ~Writhing Fog~
 @5012 = ~Frost-Fireball~
 @5013 = ~Blessing of Tymora~
-@5014 = ~False Dawn~
+@5014 = ~Minor Antimagic Shell~
 @5015 = ~Earthquake~
 @5016 = ~Cacophony of Chaos~
 @5017 = ~Knife Trick~

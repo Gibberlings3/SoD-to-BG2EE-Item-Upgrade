@@ -14,17 +14,17 @@
 13 - Mirrored Buckler of the Fist
 14 - Sundermaul +5
 15 - The Scorched Earth +3
-16 - Star-Strewn Boots of Amaunator
+16 - Star-Strewn Boots of Antimagic
 17 - Verdant Crimson Dragon Plate
 18 - Verdant Shadow Dragonscale
 19 - Chromatic Crimson Dragon Plate(Shadow Scales)
 20 - Chromatic Crimson Dragon Plate(Blue Scales)
 21 - Chromatic Crimson Dragon Plate(White Scales)
 22 - Chromatic Crimson Dragon Plate(Silver Scales)
-23 - Chromatic Shadow Dragonscale(Red Scales)
-24 - Chromatic Shadow Dragonscale(Blue Scales)
-25 - Chromatic Shadow Dragonscale(White Scales)
-26 - Chromatic Shadow Dragonscale(Silver Scales)
+23 - Chromatic Shadow Dragonscale(Blue Scales)
+24 - Chromatic Shadow Dragonscale(Red Scales)
+25 - Chromatic Shadow Dragonscale(Silver Scales)
+26 - Chromatic Shadow Dragonscale(White Scales)
 27 - Stalker's Gauntlets of Blinding Strike
 28 - The Scorched Earth +5
 29 - Cloverleaf +1
@@ -253,7 +253,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkboot2",Player1,1,0,0) // Solar Boots of the Cosmos
+    GiveItemCreate("dtkboot2",Player1,5,0,0) // Star-Strewn Boots of Antimagic
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 

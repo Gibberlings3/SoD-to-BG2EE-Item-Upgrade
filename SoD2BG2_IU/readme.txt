@@ -3,7 +3,7 @@ Siege of Dragonspear to Baldur's Gate 2:Enhanced Edition
 First and foremost:  A HUGE thanks to Jastey for helping me to learn WeiDu!
 		     This mod would'nt have happened otherwise.
 
-Version 0.4.1
+Version 0.5.0
 
 
 Purpose of this mod:
@@ -92,6 +92,7 @@ Headband of Focus
 Wizzard Hat
 
 New upgrade components created for this mod:
+
 Heart of Flame
 Eye of Ichor
 Soul of Frost
@@ -138,7 +139,7 @@ Vexation +2
 Astral Crossbow +2
 Shadowed Spear +2  (can be upgraded twice)
 Dragonscale Shield +3
-Dragon Blade 3 (can be upgraded twice)
+Dragon Blade +3 (can be upgraded twice)
 Jester's Bracers (corny joke component does not currently work properly, I temporarily removed from item until I can figure out how to implement properly)
 The Night's Embrace +3
 Ring of Purity
