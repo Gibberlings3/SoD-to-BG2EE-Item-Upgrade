@@ -1,3 +1,18 @@
+Version 0.5.1 changes:
+
+Relocated the following items:
+
+(Green) Dragonscale Armor
+Vexation +2
+
+Updated effects of Tongue of Burning Acid +4 and +5 to be more in-line with similar items,
+and provide something more unique
+
+Updated description of Tongue of Burning Acid +4, +5 
+
+Updated the recipe and requirements for Tongue of Burning Acid +5
+
+
 Version 0.5.0 changes:
 
 Created new icons for several upgraded items

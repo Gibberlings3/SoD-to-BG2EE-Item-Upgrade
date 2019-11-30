@@ -6,8 +6,8 @@ END
 APPEND BOTSMITH              
 
   IF ~~ THEN BEGIN SwordAcid5Cespy SAY @1004
-    IF ~!PartyHasItem("compon01")~ THEN GOTO need_SwordAcid5Cespy
-    IF ~PartyHasItem("compon01")~ THEN GOTO SwordAcid5Cespy_want
+    IF ~!PartyHasItem("dtktopaz")~ THEN GOTO need_SwordAcid5Cespy
+    IF ~PartyHasItem("dtktopaz")~ THEN GOTO SwordAcid5Cespy_want
   END
 
   IF ~~ THEN BEGIN need_SwordAcid5Cespy SAY @1005
@@ -20,8 +20,8 @@ APPEND BOTSMITH
                                                  TakePartyGold(15000)
                                                  TakePartyItemNum("dtkswd01",1)
                                                  DestroyItem("dtkswd01")
-                                                 TakePartyItemNum("compon01",1)
-                                                 DestroyItem("compon01")
+                                                 TakePartyItemNum("dtktopaz",1)
+                                                 DestroyItem("dtktopaz")
                                                  DestroyGold(15000)~ GOTO 11
     IF ~~ THEN REPLY #66910 GOTO SwordAcid5Cespy_stall
   END

@@ -24,8 +24,8 @@
 @2 = ~Let's see if ye got what I need to reforge that hellish blade of yours...~
 @3 = ~Well, let's see what else ye got.~
 @4 = ~Ah, the hellblade again eh?  Last time this damnable blade nearly ruined my best hammer!~
-@5 = ~Aye, I might be able to improve the Tongue of Burning Acid with some liquid mercury if ye can find some, along with 15,000gp for the work.~
-@6 = ~This be liquid mercury alright, I can improve that hellish blade with it if'n ye want.~
+@5 = ~It be a tall order to improve this blade further, I'd need an elemental gemstone of ichor, along with 15,000gp for the work.~
+@6 = ~This be the gemstone we need, I can improve that hellish blade with it if'n ye want.~
 @7 = ~What's this? A right nice pair of boots these are, quite soft and quiet.~
 @8 = ~I could improve these boots with some elven chain and a commission of 7500gp.~
 @9 = ~Ah, thats some elven chain alright, I can improve these boots with them.~
@@ -214,8 +214,8 @@
 @1002 = ~Let me sees if the master has what I need to reforge the tongue-blade...~
 @1003 = ~I can uses this angry blaze-sword and scroll to make blaze-tongue blade.~
 @1004 = ~You would like Cespenar to improve the blaze-tongue-blade for the master?~
-@1005 = ~Cespenar can makes it even better with some liquid mercury and more golds.~
-@1006 = ~Ooh, and you gots some liquid mercury. 15,000 gp and I will makes the master a most hellish tongue-blade indeed, hehe.~
+@1005 = ~Cespenar would need somethings special, like an Eye of Ichor to make blade better.~
+@1006 = ~Ooh, and you gots the Eye of Ichor. 15,000 gp and I will makes the master a most hellish tongue-blade indeed, hehe.~
 @1007 = ~I is so excited the master is using one of our very own blades, Let's sees what else you has.~
 @1008 = ~Hmm, soft bootses for feet?~
 @1009 = ~I can makes softboots better with some elven chain.~
@@ -495,12 +495,15 @@ Requires:
 
 Weight: 2~
 @2003 = ~Tongue of Burning Acid +4~
-@2004 = ~After being enhanced with the fiery essence of Angurvadal, the blade of the Tongue of Acid is now engulfed in hellish green flames of acidic wrath.  Wounds caused by the blade sizzle and burn with acidic fire, causing crippling pain to any creature unfortunate enough to be struck by it.
+@2004 = ~After being enhanced with the fiery essence of Angurvadal, the blade of the Tongue of Acid is now engulfed in hellish green flames of acidic wrath.  Wounds caused by the blade sizzle and burn with acidic fire, causing crippling pain to any creature unfortunate enough to be struck by it.  Rarely, the caustic flames will trigger a torrent of acid, causing further damage to creatures caught in it.
 
 STATISTICS:
 
 Combat abilities:
 – 15% chance per hit of slowing the target for 3 rounds (Save vs. Spell negates)
+– 5% chance per hit of triggering an acid storm:
+  Damage: 1d4 (acid) for 3 rounds, 1d6 (acid) for 3 rounds, 1d8 (acid) for 3 rounds (Save vs. Spell each round for half)
+  Radius: 12 ft. (moving out of range does not cancel damage)
 
 THAC0: +4
 Damage: 1d8+4, +1d3 (acid), +1 (fire)
@@ -513,7 +516,7 @@ Requires:
 
 Weight: 2~
 @2005 = ~Tongue of Burning Acid +5~
-@2006 = ~After tempering the hellish blade with the liquid mercury, this infernal blade from Avernus has reached it's full potential.  Ghastly green acidic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on it's victims, slowing their ability to fight.  Eerily, the inscription on the hilt seems to have changed on it's own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with it's horrific endowment.
+@2006 = ~After setting the Eye of Ichor into the hilt, this infernal blade from Avernus has reached it's full potential.  Ghastly green acidic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on it's victims, slowing their ability to fight.  In addition, the acidic storms are triggerd more easily, adding the proverbial salt to wounds caused by the blade.  Eerily, the inscription on the hilt seems to have changed on it's own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with it's horrific endowment.
 
 STATISTICS:
 
@@ -522,7 +525,10 @@ Equipped Abilities:
 
 Combat abilities:
 – 20% chance per hit of slowing the target for 3 rounds (Save vs. Spell negates)
-
+– 15% chance per hit of triggering an acid storm:
+  Damage: 1d4 (acid) for 3 rounds, 1d6 (acid) for 3 rounds, 1d8 (acid) for 3 rounds (Save vs. Spell each round for half)
+  Radius: 12 ft. (moving out of range does not cancel damage)
+  
 THAC0: +5
 Damage: 1d8+5, 1d3+1 (acid), 1d3+1 (fire)
 Damage Type: Slashing
@@ -2294,3 +2300,18 @@ Weight: 0~
 @5019 = ~Mass Cure~
 @5020 = ~Mass Minor Trollish Regeneration~
 @5021 = ~Mass Trollish Regeneration~
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Dialogue for Jester's Bracers Corny Jokes effect \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+@7000 = ~Why does the honeybee hum? He knows not the words! Waka waka!~
+@7001 = ~How do ettins leave messages for one another? On a bull-ettin board!~
+@7002 = ~Where is the safest place in all the land for diving? Waterdeep!~
+@7003 = ~Never listen to a tale from a wyrm—they tend to drag on!~
+@7004 = ~Why do skeletons never battle with one another? They lack guts.~
+@7005 = ~Two orcs walk into a bar. Ouch!~
+@7006 = ~Last time I told a joke to a ghoul, he laughed his head off!~
+@7007 = ~What has the body of a lion, the wings of a dragon, and tastes great covered in butter? A manti-corn!~

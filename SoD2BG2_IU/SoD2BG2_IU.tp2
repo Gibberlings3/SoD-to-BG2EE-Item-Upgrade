@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.4.1~
+VERSION ~v0.5.1~
 
 README ~SoD2BG2_IU/README.txt~
 
@@ -43,6 +43,7 @@ ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkjest.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkjestx.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkchaos.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkexalt.pro~
+ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkastrm.pro~
 
 COPY ~SoD2BG2_IU/bam~ ~override~
 COPY ~SoD2BG2_IU/spl~ ~override~
@@ -476,9 +477,12 @@ SAY NAME2 @2196
 SAY 0x50 @2197
 SAY 0x54 @2198
 
-COPY ~SoD2BG2_IU/itm/jester/bdbrac02.itm~ ~override~ 
+COPY ~SoD2BG2_IU/itm/jester/bdbrac02.itm~ ~override~  // Jester's Bracers
 SAY NAME2 @2199
 SAY 0x54 @2200
+//LPF ~DELETE_EFFECT~ INT_VAR opcode=177 END - work in progress for corny jokes component - not ready yet
+//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 0 parameter2 = 2 STR_VAR resource = EVAL "%bdbrac02.eff%" END
+//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 16398 parameter2 = 9 STR_VAR resource = EVAL "%bdbrac2a.eff%" END
 
 COPY ~SoD2BG2_IU/itm/nightarm/bdleat07.itm~ ~override~ 
 SAY NAME2 @2201
@@ -488,9 +492,12 @@ COPY ~SoD2BG2_IU/itm/nightarm1/dtklea02.itm~ ~override~
 SAY NAME2 @2203
 SAY 0x54 @2204
 
-COPY ~SoD2BG2_IU/itm/jester1/dtkbrac2.itm~ ~override~ 
+COPY ~SoD2BG2_IU/itm/jester1/dtkbrac2.itm~ ~override~ 	// Wicked Jester's Bracers
 SAY NAME2 @2205
 SAY 0x54 @2206
+//LPF ~DELETE_EFFECT~ INT_VAR opcode=177 END - work in progress for corny jokes component - not ready yet
+//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 0 parameter2 = 2 STR_VAR resource = EVAL "%bdbrac02.eff%" END
+//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 16398 parameter2 = 9 STR_VAR resource = EVAL "%bdbrac2a.eff%" END
 
 COPY ~SoD2BG2_IU/itm/ringpurity/bdring10.itm~ ~override~ 
 SAY NAME2 @2207
@@ -665,7 +672,7 @@ ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
 COPY_EXISTING ~UDSILVER.CRE~ ~override~
 ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
 
-COPY_EXISTING ~TAZOK.CRE~ ~override~
+COPY_EXISTING ~TDR10A.CRE~ ~override~
 ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//Dragonscale Armor
 
 COPY_EXISTING ~PIRSEA01.CRE~ ~override~
@@ -710,7 +717,7 @@ ADD_CRE_ITEM ~bdhamm01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Sundermaul +3
 COPY_EXISTING ~SEVPAT04.CRE~ ~override~
 ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
 
-COPY_EXISTING ~SEVPAT05.CRE~ ~override~
+COPY_EXISTING ~TRRAK01.CRE~ ~override~
 ADD_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
 
 COPY_EXISTING ~SEVPAT02.CRE~ ~override~

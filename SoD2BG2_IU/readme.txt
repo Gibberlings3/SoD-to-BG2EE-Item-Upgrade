@@ -1,9 +1,9 @@
 Siege of Dragonspear to Baldur's Gate 2:Enhanced Edition
 
 First and foremost:  A HUGE thanks to Jastey for helping me to learn WeiDu!
-		     This mod would'nt have happened otherwise.
+		     This mod wouldn't have happened otherwise.
 
-Version 0.5.0
+Version 0.5.1
 
 
 Purpose of this mod:
