@@ -1,6 +1,76 @@
 # Changelog
 
 
+## Version 0.6.0
+
+December 14th, 2019
+
+### Changed
+
+- Upgrade recipe for Soft Feet
+- Upgraded version of Soft Feet with new abilities and icon
+- Updated visual effect for Mass Exaltation spell.
+- Relocated the following items:
+  - Dervish Crescent +2
+  - Soft Feet
+  - Nimblefinger Gloves
+  - Vexation +2
+  - Storm Pike +2
+  - Sundermaul +3
+  - Cloverleaf
+  - Soul of Frost
+- Changed avatar graphics for the following items:
+  - Nasty Backwhacker +4
+  - Dervish Crescent of Speed +3
+  - Maelstrom Axe +3
+  - Maelstrom Axe +4
+  - Maelstrom Pike +4
+  - Maelstrom Pike +5
+  - The Night's Embrace +6
+  - Carmine Viridian Dragon Plate
+  
+### Fixed
+  
+- Restored (Green) Dragonscale Armor to it's normal stats and description from SoD
+- Corrected several item descriptions
+- Corrected some dialogues for Cromwell
+- Corrected amount of ability charges on Chromtic Crimson Dragon Plate(blue scales)
+  
+### Added
+
+- New icons for the following items:
+  - Tongue of Burning Acid +4
+  - Tongue of Burning Acid +5
+  - Nasty Backwhacker +4
+  - Dervish Crescent of Speed +3
+  - Trollkiller's Ioun Stone
+  - Trollkiller's Ioun Stone +1
+  - Verdant Crimson Dragon Plate
+  - Carmine Viridian Dragon Plate
+  - Chromatic Shadow Dragonscale (Silver scales)
+  - Chromatic Shadow Dragonscale (Red Scales)
+  - Chromatic Shadow Dragonscale (White Scales)
+  - Chromatic Shadow Dragonscale (Blue Scales)
+  - Chromatic Crimson Dragon Plate (Blue Scales)
+  - Chromatic Crimson Dragon Plate (Shadow Scales)
+  - Chromatic Crimson Dragon Plate (Silver Scales)
+  - Chromatic Crimson Dragon Plate (White Scales)
+  - Chromatic Crimson Dragon Plate (Green Scales)
+  - Carmine Viridian Dragon Plate
+  - Astral Crossbow +4
+  - Maelstrom Axe +3
+  - Maelstrom Axe +4
+  - Maelstrom Pike +4
+  - Maelstrom Pike +5
+  - Melodius Bard Hat
+  - Mirrored Bucker of the Fist +2
+  - Robe of Roaring Flames
+  - Crown of Truths
+  - The Night's Embrace +6
+  - Vampiric Voidsword +5
+  - Vampiric Voidhammer +5
+
+
 ## Version 0.5.1
 
 November 29, 2019
