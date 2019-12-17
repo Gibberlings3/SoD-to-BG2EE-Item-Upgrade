@@ -27,8 +27,8 @@
 @5 = ~It be a tall order to improve this blade further, I'd need an elemental gemstone of ichor, along with 15,000gp for the work.~
 @6 = ~This be the gemstone we need, I can improve that hellish blade with it if'n ye want.~
 @7 = ~What's this? A right nice pair of boots these are, quite soft and quiet.~
-@8 = ~I could improve these boots with some elven chain and a commission of 7500gp.~
-@9 = ~Ah, thats some elven chain alright, I can improve these boots with them.~
+@8 = ~I could improve these boots with some liquid mercury and a commission of 7500gp.~
+@9 = ~Ah, thats some liquid mercury alright, I can improve these boots with them.~
 @10 = ~What've ye got here?  Hah! a crown of false gemstones and gold.  Still, it seems to have a bit o' enchantment to it.~
 @11 = ~I could make this false crown ring true with real gemstones of emerald, diamond, star sapphire, a potion of insight and 5,000gp.~
 @12 = ~This looks to be the gems I need, and the potion.  I can reforge that crown of yours into one fit for a king if ye'd like.~
@@ -56,13 +56,13 @@
 @34 = ~What've ye got there, a Thayvian mage's robe?~
 @35 = ~If'n ye happen to come across the robe of vecna, I can use it's threading and magics to enhance that flamin' conjurer's robe of yours.  It would cost ye 10,000gp for the commission.~
 @36 = ~I see ye've managed to get the old lich's robe, quite impressive.  I can use it to improve that Thayvian robe if'n ye want.~
-@37 = ~What've ye got there?  One of the bucklers from those mercenaries at Baldur's Gate?~
+@37 = ~What's this now?  One of the bucklers from those mercenaries at Baldur's Gate?~
 @38 = ~This old dwarf can rework that Flaming Fist buckler of yours into something special if'n ye can provide me with a reflection shield +1, two scrolls of protection against normal missiles, two potions of mirrored eyes, and 10,000gp for me trouble.~
 @39 = ~Ye've got the reflection shield, scrolls, and potions.  I can rework that Flaming Fist buckler of yours if'n ye would like.~
 @40 = ~Is this?.... Hah!  It is!  The false "Crom Faeyr".  Where in the realms did you find this accursed thing?~
 @41 = ~Hmmm, I might be able to improve that accursed hammer if'n you can find me a rune of clangeddin to scribe into it.  It would take 5,000gp fer the work.~
 @42 = ~This be one of the clangeddin runes alright, I can use it to enhance that blasphemous hammer of yours.~
-@43 = ~What 'ave ye here?  The balance and heft of this burning blade be all wrong, was it even made to be held by mortal hands?~
+@43 = ~What've ye here?  The balance and heft of this burning blade be all wrong, was it even made to be held by mortal hands?~
 @44 = ~I can reforge that unbalanced flamin' blade of yours, and make it a far more effective and balanced weapon.  I would just need a sword of flame, a blade of searing, and five scrolls of agannazar's scorcher.  7,500gp for the day's work at the forge and it'd be a done deal for ye.~
 @45 = ~A flaming sword, a searing blade, and five of the scorcher scrolls.  I can get right to work on reforging that unweildy burning sword of yours if ye'd like.~
 @46 = ~Ahhh, just lookin' at these boots reminds me of gazin' at the skies over the harbor at night.~
@@ -100,14 +100,14 @@
 @77 = ~The Verdant Shadow Dragonscale?  Ye wish to improve it further, eh?~
 @78 = ~I can rework the armor for ye with some more scales.  Blue, white, red, or silver will do.~
 @79 = ~Scales from a red dragon?  I can use these to further enhance your armor.~
-@80 = ~Well now, I haven't seen any of these in an age... these be stalker's gauntlets?~
+@80 = ~Well now, I haven't seen any of these in an age... be these a pair of stalker's gauntlets?~
 @81 = ~Always wanted to try me hand at reforgin a pair o' these, and I believe I can do it for ye with a bracers of blinding strike, an improved haste scroll, two potions of power and two potions of master thievery.~
 @82 = ~Ye have everything I need here to upgrade those stalker gauntlets of yers.  It'll be 10,000gp and I'll need yer help at me forge.  Me son of a kobald of an apprentice was out all hours deep in his cups with the blasted courtesans again.~
 @83 = ~The Scorched Earth again eh?  Not hot enough for ye?  Heh.~
 @84 = ~Be a difficult task to make this blade burn hotter... but I might just be able to do it for ye if'n ye can find me an elemental gem of flame.  Oh, and a small comission for me work, 15,000gp should cover it.  And lest I forget, I'll need yer help for the day at me forge.  That damnable apprentice of mine has gone and knocked up a half-orc lass.  I doubt I will ever see him again, heh.~
 @85 = ~Looks like ye found an elemental gem of flame, they be rare as hen's teeth.  Shall we get started on mounting it into yer blade?~
-@86 = ~What ye got here?  A lucky belt ye say?~
-@87 = ~Methinks I can make this belt even more lucky for ye and yer friends with five scrolls of luck and 10,000gp.~
+@86 = ~What've ye got here?  A lucky belt ye say?~
+@87 = ~Methinks I can make this belt even more "lucky" for ye and yer friends with five scrolls of luck and 10,000gp.~
 @88 = ~Ye have everything I need to fix up that lucky belt for ye, I'll just need yer help at the forge again.  That half orc lass did a real number on me apprentice, he's going to be laid up a few days at least, the scoundrel.  Shall we begin?~
 @89 = ~Now this is an odd bird, a cursed staff that's uncursed...but still cursed?~
 @90 = ~I may just be able to empower that accursed stick o' yers a bit.  I would need a wand of fire, a wand of frost, and 5,000gp.~
@@ -121,10 +121,10 @@
 @98 = ~Hmm, be this bow of orcish origin?  Looks to be quite frightening.~
 @99 = ~I can make this banshee's bow wail upon your enemies for you, I would just need something like some screaming bagpipes to make it do so, along with a bowstring of gesen or gond to hold it all together.~
 @100 = ~I would need 10,000gp and yer help fer the day.  Me apprentice managed to smash his hand with me anvil and will be laid up fer awhile.~
-@101 = ~I can use this Githyanki hilt to reforge that devil's sword if ye would like.~
-@102 = ~I can use Angurvadal and the scroll to reforge that devil's sword if ye would like.~
-@103 = ~Hmm, looks like ye have the hilt, and the blazing sword and scroll too, I could use either to reforge that devil's blade if ye would like.~
-@104 = ~It does'nt look like ye have what I need to reforge that hellblade...~
+@101 = ~I can use this Githyanki hilt to reforge that devil's sword if ye would like, it would cost ye 10,000 gold fer the work.~
+@102 = ~I can use Angurvadal and the scroll to reforge that devil's sword if ye would like, just a mere pittance of 10,000 gold for tha' forgin.~
+@103 = ~Hmm, looks like ye have the hilt, and the blazing sword and scroll too, I could use either to reforge that devil's blade if ye would like.  Just toss me 10,000 gold for me coffers and I'll get started~
+@104 = ~It doesn't look like ye have what I need to reforge that hellblade...~
 @105 = ~Let's see if ye got all I need to rework this orcish bow...~ 
 @106 = ~I can use this gesen bowstring along with yer bagpipes to improve your bow.~
 @107 = ~I can use this bowstring of gond along with yer bagpipes to improve your bow.~
@@ -189,7 +189,7 @@
 @166 = ~Ye certainly are a brave one to have slain a black dragon for these scales.  I can use these to enhance yer shield.  I would need 7,500gp fer the commission, shall we begin work?~
 @167 = ~Ye would like to improve the Tongue of Acid even further?~
 @168 = ~It be a tall order to improve that hellblade more, I'd need to reforge it using an elemental gemstone and it would take 15,000gp fer my work at the forge.~
-@169 = ~By the Soul Forger, an elemental gem of acidic ichor?  Never thought I'd see such a thing in me lifetime.  I can use this to reforge yer hellblade.  I would just need 15,000gp and yer help at me forge again.~
+@169 = ~By the Soul Forger, an elemental gem of corrosive ichor?  Never thought I'd see such a thing in me lifetime.  I can use this to reforge yer hellblade.  I would just need 15,000gp and yer help at me forge again.~
 @170 = ~Ey, whats this?  Appears to be Iriaeborian craftsmanship that forged this armor.~
 @171 = ~I could greatly improve the protective ability of this shadowy armor if ye can bring me some scales from a black dragon.~
 @172 = ~Ye've gone and slain a black dragon 'ave ye?  These scales will do nicely for your Iriaeborian leathers.   Just a toss 7,500gp in fer me coffers and I'll get to work for ye.~
@@ -218,8 +218,8 @@
 @1006 = ~Ooh, and you gots the Eye of Ichor. 15,000 gp and I will makes the master a most hellish tongue-blade indeed, hehe.~
 @1007 = ~I is so excited the master is using one of our very own blades, Let's sees what else you has.~
 @1008 = ~Hmm, soft bootses for feet?~
-@1009 = ~I can makes softboots better with some elven chain.~
-@1010 = ~Lookses like you have some elven chain, I can improve you softboots with it and 7500 gp.~
+@1009 = ~I can makes softboots better with some liquid mercury.~
+@1010 = ~Lookses like you have some liquid mercury here, I can improve you softboots with it and 7500 gp.~
 @1011 = ~So crude having to walk on feets anyway, much better flying.  Any other shinys?~
 @1012 = ~Pretty crown for head? With false gems and golds?~
 @1013 = ~I can makes false crown better with real emerald, diamond, star sapphire, potion of insight.~
@@ -516,7 +516,7 @@ Requires:
 
 Weight: 2~
 @2005 = ~Tongue of Burning Acid +5~
-@2006 = ~After setting the Eye of Ichor into the hilt, this infernal blade from Avernus has reached it's full potential.  Ghastly green acidic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on it's victims, slowing their ability to fight.  In addition, the acidic storms are triggerd more easily, adding the proverbial salt to wounds caused by the blade.  Eerily, the inscription on the hilt seems to have changed on it's own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with it's horrific endowment.
+@2006 = ~After setting the Eye of Ichor into the pommel, this infernal blade from Avernus has reached it's full potential.  Ghastly green acidic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on it's victims, slowing their ability to fight.  In addition, the acidic storms are triggerd more easily, adding the proverbial salt to wounds caused by the blade.  Eerily, the inscription on the hilt seems to have changed on it's own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with it's horrific endowment.
 
 STATISTICS:
 
@@ -540,21 +540,14 @@ Requires:
 
 Weight: 2~
 @2007 = ~Scale Armor~
-@2008 = ~Green Dragonscale~
+@2008 = ~Dragonscale Armor~
 @2009 = ~Scale armor is made from the tough, chitinous scales of creatures througout the realms.  The protective quality varies dependant on the scales used, and the skill of the smith who fashions them into armor.  Natural resistances and even some magical abilities from the host can be imparted to the wearer.~
-@2010 = ~This shimmering viridian suit of leather armor is soft and supple despite the strength in the plates of green dragon scale, likeley due to either the young age of the dragon, or perhaps it had just molted before it was killed. The wearer of this armor is protected from even the heaviest blows as well as from poison, and may even neutralize many other types of afflictions from the wearer or their companions once per day.
+@2010 = ~This shimmering viridian suit of leather armor is soft and supple despite the strength in the plates of green dragon scale. The wearer of this armor is protected from even the heaviest blows as well as from poison.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-
-Charge abilities:
-– Neutralize Poison once per day
-  Special: Heals 10 Hit Points and cures poison,   
-  disease, deafness, and blindness
-  Range: 10 ft.
-  Area of Effect: 1 creature
 
 Armor Class: 4 (2 vs. slashing, 3 vs. piercing and missile)
 Requires:
@@ -574,16 +567,20 @@ Equipped abilities:
 – Immunity to Grease, Entangle, and Web
 
 Weight: 1~
-@2014 = ~Soft Feet +1~
-@2015 = ~With enchanted elven chain links woven into the Soft Feet, these boots now offer additional protections to the wearer, making this footwear the envy of any who heed the call of adventure.
+@2014 = ~Quicksilver Sabatons~
+@2015 = ~Empowered by the liquid mercury, these boots allow the wearer to deftly avoid almost any entanglement impeding <PRO_HISHER> movement.  Additionally, the wearer may now slip into the shadow plane briefly once per day, allowing <PRO_HIMHER> to move unseen amongst friend and foe alike, the world around them standing still.
 
 STATISTICS:
 
 Equipped abilities:
-– Armor Class +1
 – Saving Throws +1
-– Move Silently: +25%
-– Immunity to Grease, Entangle, and Web
+– Move Silently: +50%
+– Immunity to Grease, Entangle, Web, Stun, and Slow
+
+Charge abilities:
+– Shadowstep once per day
+  Move for seven seconds while others are frozen in time, may not attack or cast spells while in the Shadow Plane
+  
 
 Weight: 1~
 @2016 = ~Crown~
@@ -1135,7 +1132,7 @@ STATISTICS:
 
 Weight: 1~
 @2079 = ~Eye of Ichor~
-@2080 = ~This topaz gemstone pulses with a sickly yellow light, merely holding it produces an ill feeling.  When you look into the stone, you see a torrential river or acidic poison, dissolving all it comes into contact with.
+@2080 = ~This topaz gemstone pulses with a sickly yellow light, merely holding it produces an ill feeling.  When you look into the stone, you see a torrential river of caustic fluid, dissolving all it comes into contact with.
 
 STATISTICS:
 
@@ -1574,7 +1571,7 @@ Requires:
 
 Weight: 1~
 @2143 = ~Maelstrom Axe +3~
-@2144 = ~By attaching the axe head of the storm pike to a shortend wave shaft, The weapon is now usable as a throwing axe.  With the combined magics of a storm giant's bolt and umberlee's oceanic fury, foes take additional damage from frost and lightning, and most fire-using creatures are slain when hit.  Additionally, the weapon no longer damages the weilder on a critical miss, effectively being grounded by the new hilt.
+@2144 = ~By attaching the axe head of the storm pike to a shortend wave shaft, The weapon is now usable as a throwing axe.  With the combined magics of a storm giant's bolt and umberlee's oceanic fury, foes take additional damage from frost and lightning, and most fire-using creatures are slain when hit.  Additionally, the weapon no longer damages the weilder upon a critical miss, effectively being grounded by the new handle.
 
 STATISTICS:
 
@@ -1613,7 +1610,7 @@ Requires:
 
 Weight: 12~
 @2147 = ~Maelstrom Axe +4~
-@2148 = ~The maelstrom axe has been empowered by the crom faeyr scroll, and expertly reforged for <CHARNAME> using the head from the hammer of thunderbolts as a counterweight.  The weilder of this axe now holds in their hand the fury of a hurricane, doing additional cold and electrical damage.  The hammer head now allows the maelstrom axe to do crushing and slashing damage to enemies.  Additionally, and powerful storm will be summoned when a creature is struck by the axe.
+@2148 = ~The maelstrom axe has been empowered by the crom faeyr scroll, and expertly reforged for <CHARNAME> using the head from the hammer of thunderbolts as a counterweight.  It now slams into enemies with such force, that it can inflict crushing or slashing damage.  The fearsome power of a hurricane is stored in this weapon, hitting enemies with additional electrical and cold damage.  Rarely, a powerful storm is summoned when enemies are hit with the axe.
 
 STATISTICS:
 
@@ -2300,6 +2297,7 @@ Weight: 0~
 @5019 = ~Mass Cure~
 @5020 = ~Mass Minor Trollish Regeneration~
 @5021 = ~Mass Trollish Regeneration~
+@5022 = ~Shadowstep~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\

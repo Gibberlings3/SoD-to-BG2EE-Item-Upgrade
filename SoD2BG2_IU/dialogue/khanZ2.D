@@ -1,0 +1,11 @@
+ALTER_TRANS TRGENI01
+BEGIN 40
+END
+BEGIN 0
+END
+BEGIN
+"ACTION" ~GiveItemCreate("bdsw1h08",LastTalkedToBy,0,0,0)~
+END
+
+
+

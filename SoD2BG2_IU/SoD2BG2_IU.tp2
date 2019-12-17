@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.5.1~
+VERSION ~v0.6.0~
 
 README ~SoD2BG2_IU/readme.html~
 
@@ -530,7 +530,7 @@ SAY 0x54 @2222
 // compiled in serial so that COPY_TRANS will get the one before it
 COMPILE ~SoD2BG2_IU/dialogue/crom1.d~ // Tongue of Burning Acid +4
 COMPILE ~SoD2BG2_IU/dialogue/crom2.d~ // Tongue of Burning Acid +5
-COMPILE ~SoD2BG2_IU/dialogue/crom3.d~ // Soft Feet +1
+COMPILE ~SoD2BG2_IU/dialogue/crom3.d~ // Quicksilver Sabatons
 COMPILE ~SoD2BG2_IU/dialogue/crom4.d~ // Crown of Truths
 COMPILE ~SoD2BG2_IU/dialogue/crom5.d~ // Horned Helm of Dumathoin
 COMPILE ~SoD2BG2_IU/dialogue/crom6.d~ // Archer's Eagle Eyes
@@ -587,7 +587,7 @@ EXTEND_BOTTOM ~ar0334.bcs~ ~SoD2BG2_IU/scripts/ar0334.baf~		//item generating sc
 // compiled in serial so that COPY_TRANS will get the one before it
 COMPILE ~SoD2BG2_IU/dialogue/cespy1.d~ // Tongue of Burning Acid +4/Tongue of Acid +4
 COMPILE ~SoD2BG2_IU/dialogue/cespy2.d~ // Tongue of Burning Acid +5
-COMPILE ~SoD2BG2_IU/dialogue/cespy3.d~ // Soft Feet +1
+COMPILE ~SoD2BG2_IU/dialogue/cespy3.d~ // Quicksilver Sabatons
 COMPILE ~SoD2BG2_IU/dialogue/cespy4.d~ // Crown of Truths
 COMPILE ~SoD2BG2_IU/dialogue/cespy5.d~ // Horned Helm of Dumathoin
 COMPILE ~SoD2BG2_IU/dialogue/cespy6.d~ // Archer's Eagle Eyes
@@ -675,11 +675,8 @@ ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
 COPY_EXISTING ~TDR10A.CRE~ ~override~
 ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//Dragonscale Armor
 
-COPY_EXISTING ~PIRSEA01.CRE~ ~override~
-ADD_CRE_ITEM ~bdboot01~ #0 #0 #0 ~NONE~ ~BOOTS~		//Soft Feet
-
 COPY_EXISTING ~MAEVAR.CRE~ ~override~
-ADD_CRE_ITEM ~bdleat07~ #0 #0 #0 ~NONE~ ~ARMOR~		//The Night's Embrace +3
+REPLACE_CRE_ITEM ~bdleat07~ #0 #0 #0 ~NONE~ ~ARMOR~		//The Night's Embrace +3
 
 COPY_EXISTING ~BHEYE.CRE~ ~override~
 ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
@@ -703,7 +700,7 @@ COPY_EXISTING ~FSDRAGON.CRE~ ~override~
 ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
 
 COPY_EXISTING ~HDRAGRED.CRE~ ~override~
-ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
+ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
 
 COPY_EXISTING ~HDRAGSIL.CRE~ ~override~
 ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver scales
@@ -711,17 +708,26 @@ ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver scales
 COPY_EXISTING ~DRAGBLAC.CRE~ ~override~
 ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
 
-COPY_EXISTING ~SEVPAT01.CRE~ ~override~
-ADD_CRE_ITEM ~bdhamm01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Sundermaul +3
+//COPY_EXISTING ~SEVPAT01.CRE~ ~override~
+//ADD_CRE_ITEM ~bdhamm01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Sundermaul +3
 
-COPY_EXISTING ~SEVPAT04.CRE~ ~override~
+COPY_EXISTING ~HAER10.CRE~ ~override~
 ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
 
-COPY_EXISTING ~TRRAK01.CRE~ ~override~
-ADD_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
+COPY_EXISTING ~HAER11.CRE~ ~override~
+ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~HAER13.CRE~ ~override~
+ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~HAER15.CRE~ ~override~
+ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~PIRSEA01.CRE~ ~override~
+REPLACE_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
 
 COPY_EXISTING ~SEVPAT02.CRE~ ~override~
-ADD_CRE_ITEM ~bdblun06~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Uncursed Staff +1
+REPLACE_CRE_ITEM ~bdblun06~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Uncursed Staff +1
 
 COPY_EXISTING ~SEVPAT03.CRE~ ~override~
 ADD_CRE_ITEM ~bdbrd04~ #0 #0 #0 ~NONE~ ~QITEM1~		//Screaming bagpipes
@@ -739,10 +745,7 @@ COPY_EXISTING ~NALIA13.CRE~ ~override~
 ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
 
 COPY_EXISTING ~COHRVALE.CRE~ ~override~
-ADD_CRE_ITEM ~bdblun07~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Backwhacker +2
-
-COPY_EXISTING ~BREGG.CRE~ ~override~
-ADD_CRE_ITEM ~bdbrac03~ #0 #0 #0 ~NONE~ ~GLOVES~	//Nimblefinger Gloves
+REPLACE_CRE_ITEM ~bdblun07~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Backwhacker +2
 
 COPY_EXISTING ~MEKRAT.CRE~ ~override~
 ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
@@ -750,19 +753,16 @@ ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
 COPY_EXISTING ~SPPAIN.CRE~ ~override~
 ADD_CRE_ITEM ~bddagg01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Element's Fury +2
 
-// COPY_EXISTING ~DUECLA01.CRE~ ~override~
-// ADD_CRE_ITEM ~bdkeyr~ #0 #0 #0 ~IDENTIFIED~ ~INV~	//Illych placeholder
-
 COPY_EXISTING ~KELDOR9.CRE~ ~override~
 ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
 
-COPY_EXISTING ~RENGAA.CRE~ ~override~
-ADD_CRE_ITEM ~bdshld03~ #0 #0 #0 ~NONE~ ~SHIELD~	//Shield of Egons +2
+COPY_EXISTING ~OHDTERP.CRE~ ~override~
+REPLACE_CRE_ITEM ~bdshld03~ #0 #0 #0 ~NONE~ ~SHIELD~	//Shield of Egons +2
 
 COPY_EXISTING ~GALL.CRE~ ~override~
-ADD_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Banshee +2
+REPLACE_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Banshee +2
 
-COPY_EXISTING ~GORSTA06.CRE~ ~override~
+COPY_EXISTING ~GORBAT1.CRE~ ~override~
 ADD_CRE_ITEM ~dtkfrost~ #0 #0 #0 ~NONE~ ~INV~	//Soul of Frost
 
 COPY_EXISTING ~DDGUARD7.CRE~ ~override~
@@ -776,6 +776,24 @@ ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
 
 COPY_EXISTING ~ohralor2.CRE~ ~override~
 ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
+
+COPY_EXISTING ~KAYPAL01.CRE~ ~override~
+REPLACE_CRE_ITEM ~bdhalb01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Storm Pike +2
+
+COPY_EXISTING ~VAELASA.CRE~ ~override~
+ADD_CRE_ITEM ~bdbrd01~ #0 #0 #0 ~NONE~ ~QITEM1~		//Forest Queen's Benediction
+
+
+//Adding items as quest rewards
+		
+COMPILE ~SoD2BG2_IU/dialogue/khanz1.d~		//Dervish Crescent +2
+COMPILE ~SoD2BG2_IU/dialogue/khanz2.d~		//Dervish Crescent +2
+COMPILE ~SoD2BG2_IU/dialogue/renal1.d~		//Nimblefinger Gloves
+COMPILE ~SoD2BG2_IU/dialogue/renal2.d~		//Nimblefinger Gloves
+COMPILE ~SoD2BG2_IU/dialogue/thern1.d~		//Sundermaul +3
+COMPILE ~SoD2BG2_IU/dialogue/vaela1.d~		//Forest Queen's Benediction
+
+
 
 //Adding items to stores
 
@@ -791,8 +809,8 @@ ADD_STORE_ITEM ~bdbrd01~ #0 #0 #0 ~IDENTIFIED~ #1		//Forest Queen's Benediction
 COPY_EXISTING ~SHOP04.STO~ ~override~
 ADD_STORE_ITEM ~bdbrac02~ #0 #0 #0 ~IDENTIFIED~ #1		//Jester's Bracers
 
-COPY_EXISTING ~RIBALD.STO~ ~override~
-ADD_STORE_ITEM ~bdhalb01~ #0 #0 #0 ~IDENTIFIED~ #1		//Storm Pike +2
+COPY_EXISTING ~BMTHIEF.STO~ ~override~
+ADD_STORE_ITEM ~bdboot01~ #0 #0 #0 ~IDENTIFIED~ #1		//Soft Feet
 
 
 //Adding Melee/Thrown descriptions
@@ -1052,6 +1070,14 @@ COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_ROWS num_cols num_rows
   SET thrown_strref = RESOLVE_STR_REF(@5021)
   INSERT_2DA_ROW num_rows num_cols ~dtkioun2  %thrown_strref%  %melee_strref% -1 -1~
+  SET num_rows += 1
+BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  SET thrown_strref = RESOLVE_STR_REF(@5022)
+  INSERT_2DA_ROW num_rows num_cols ~dtkboot1  %thrown_strref% -1 -1~
   SET num_rows += 1
 BUT_ONLY
 

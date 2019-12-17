@@ -1,13 +1,13 @@
 // extend cespenar's generic item search with cromwell's items
 EXTEND_BOTTOM BOTSMITH 4
-  IF ~PartyHasItem("bdboot01")~ THEN GOTO NewItemCespy // Soft Boots +1
+  IF ~PartyHasItem("bdboot01")~ THEN GOTO NewItemCespy // Quicksilver Sabatons
 END
 
 APPEND BOTSMITH              
 
   IF ~~ THEN BEGIN NewItemCespy SAY @1008
-    IF ~!PartyHasItem("chan12")~ THEN GOTO need_NewItemCespy
-    IF ~PartyHasItem("chan12")~ THEN GOTO NewItemCespy_want
+    IF ~!PartyHasItem("compon01")~ THEN GOTO need_NewItemCespy
+    IF ~PartyHasItem("compon01")~ THEN GOTO NewItemCespy_want
   END
 
   IF ~~ THEN BEGIN need_NewItemCespy SAY @1009
@@ -20,8 +20,8 @@ APPEND BOTSMITH
                                                  TakePartyGold(7500)
                                                  TakePartyItemNum("bdboot01",1)
                                                  DestroyItem("bdboot01")
-                                                 TakePartyItemNum("chan12",1)
-                                                 DestroyItem("chan12")
+                                                 TakePartyItemNum("compon01",1)
+                                                 DestroyItem("compon01")
                                                  DestroyGold(7500)~ GOTO 11
     IF ~~ THEN REPLY #66910 GOTO NewItemCespy_stall
   END

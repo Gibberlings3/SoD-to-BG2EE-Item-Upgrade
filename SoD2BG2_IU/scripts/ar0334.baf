@@ -1,7 +1,7 @@
 /*  
 1 - Tongue of Burning Acid +4
 2 - Tongue of Burning Acid +5
-3 - Soft Feet +1
+3 - Quicksilver Sabatons
 4 - Crown of Truths
 5 - Horned Helm of Dumathoin
 6 - Archer's Eagle Eyes
@@ -97,7 +97,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkboot1",Player1,0,0,0) // Soft Feet +1 
+    GiveItemCreate("dtkboot1",Player1,0,0,0) // Quicksilver Sabatons 
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
