@@ -213,11 +213,8 @@ LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkwhirl%" END
 
 COPY ~SoD2BG2_IU/spl/dtkxbow1.spl~ ~override~
 
-// INCLUDE ~SoD2BG2_IU/lib/functions.tpa~
 
-//LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END
-//LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4001) STR_VAR bam_file = dtkfroze RET icon END
-//LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4002) STR_VAR bam_file = dtkanmgp RET icon END
+//  Items
 
 COPY ~SoD2BG2_IU/itm/acid/bdsw1h02.itm~ ~override~ 
 SAY NAME1 @2000
@@ -494,6 +491,7 @@ SAY 0x54 @2124
 COPY ~SoD2BG2_IU/itm/cursestaff1/dtkstaf1.itm~ ~override~
 SAY NAME2 @2125
 SAY 0x54 @2126
+LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkanti%" END
 
 COPY ~SoD2BG2_IU/itm/backwhack1/dtkclub1.itm~ ~override~
 SAY NAME2 @2127
