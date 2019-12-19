@@ -2,7 +2,7 @@
 ///// adding portrait icons                            \\\\\
 /////                                                  \\\\\
 
-DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+DEFINE_ACTION_FUNCTION dtk_new_portrait_icon
   INT_VAR string = 0
   STR_VAR bam_file = "****"
   RET     icon
