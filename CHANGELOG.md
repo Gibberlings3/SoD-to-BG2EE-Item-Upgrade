@@ -1,6 +1,33 @@
 # Changelog
 
 
+## Version 0.6.1
+
+### Changed
+
+- Updated Cone of Cold effect on Chromatic Crimson and Shadow Armors (white scales) graphics and range
+- Updated description images for the following items
+ - Sundermaul +5
+ - The Scorched Earth +3
+ - The Scorched Earth +5
+ - Mirrored Cloak of Arcana
+
+### Fixed
+
+- Corrected Cone of Cold effect on Chromatic Crimson and Shadow Armors (white scales) to be castable at point instead of living actor
+- Corrected acid hit visual effect from acid storm spell effect to stop playing when damage stops
+- Corrected the way new projectiles are assigned to items and spells for improved compatibility with other mods
+- Corrected the way new portrait icons are assigned to effects and spells for improved compatibility with other mods
+- Corrected "Frozen" effect to display the correct portrait icon
+
+### Added
+
+- Portrait icon added for acid storm effect
+
+### Removed
+
+- Unused projectile for upgraded jester's bracers
+
 ## Version 0.6.0
 
 December 14th, 2019
