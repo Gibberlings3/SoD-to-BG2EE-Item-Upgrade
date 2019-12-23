@@ -3,7 +3,7 @@
 BACKUP ~SoD2BG2_IU/backup~
 SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
 
-VERSION ~v0.6.1~
+VERSION ~v0.6.2~
 
 README ~SoD2BG2_IU/readme.html~
 
@@ -23,7 +23,12 @@ BEGIN @9000
 REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
 PRINT @9001
 
-INCLUDE ~SoD2BG2_IU/lib/functions.tpa~
+INCLUDE ~SoD2BG2_IU/lib/functions.tpa~		//adding functions
+
+
+///////////////////////
+// Adding Projectiles//
+///////////////////////
 
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkvit.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkpfir.pro~
@@ -48,173 +53,230 @@ ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkastrm.pro~
 ADD_PROJECTILE ~SoD2BG2_IU/pro/dtkcocld.pro~
 
 
+////////////////////
+//Adding Resources//
+////////////////////
+
 COPY ~SoD2BG2_IU/bam~ ~override~
 COPY ~SoD2BG2_IU/eff~ ~override~
 COPY ~SoD2BG2_IU/vvc~ ~override~
 COPY ~SoD2BG2_IU/wav~ ~override~
 
+
+//////////////////////////
+//Adding SoD Item Spells//
+//////////////////////////
+
 COPY ~SoD2BG2_IU/spl/bdbow04.spl~ ~override~
+
 COPY ~SoD2BG2_IU/spl/bdbrd04.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4004) END
+
 COPY ~SoD2BG2_IU/spl/bdhalb01.spl~ ~override~
+
 COPY ~SoD2BG2_IU/spl/bdnighte.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4005) END
+
 COPY ~SoD2BG2_IU/spl/bdsper1a.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4006) END
+
 COPY ~SoD2BG2_IU/spl/bdsper1b.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4007) END
+
 COPY ~SoD2BG2_IU/spl/bdstrdrn.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14042 parameter1 = RESOLVE_STR_REF(@4008) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1452 parameter1 = RESOLVE_STR_REF(@4009) END
+
 COPY ~SoD2BG2_IU/spl/bdsw1h02.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
+
 COPY ~SoD2BG2_IU/spl/bdsw1h08.spl~ ~override~
+
 COPY ~SoD2BG2_IU/spl/bdsw1h21.spl~ ~override~
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4011) END
+
 COPY ~SoD2BG2_IU/spl/bdxbow01.spl~ ~override~
+
+
+//////////////////////////
+//Adding new Item Spells//
+//////////////////////////
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4002) STR_VAR bam_file = dtkanmgp RET icon END
 COPY ~SoD2BG2_IU/spl/dtkanmag.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 206 parameter2 = icon END
-
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4012) END
 
 COPY ~SoD2BG2_IU/spl/dtkanti.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkanti%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4003) STR_VAR bam_file = dtkastmp RET icon END
 COPY ~SoD2BG2_IU/spl/dtkastrm.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkastrm%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 102 parameter2 = icon END
 
 COPY ~SoD2BG2_IU/spl/dtkbldvx.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4011) END
+
 COPY ~SoD2BG2_IU/spl/dtkchaos.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkchaos%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkcloud.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcloud%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkcocld.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcocld%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkdeafn.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+
 COPY ~SoD2BG2_IU/spl/dtkderv1.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+
 COPY ~SoD2BG2_IU/spl/dtkdrain.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkdrain%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4008) END
 
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4001) STR_VAR bam_file = dtkfroze RET icon END
 COPY ~SoD2BG2_IU/spl/dtkicel.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkicel%" END
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 205 parameter2 = icon END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4001) END
+
 
 
 COPY ~SoD2BG2_IU/spl/dtkicely.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkicely%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
 
 
 COPY ~SoD2BG2_IU/spl/dtkjestp.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4013) END
+
 COPY ~SoD2BG2_IU/spl/dtkknife.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkjest%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 17396 parameter1 = RESOLVE_STR_REF(@4014) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14674 parameter1 = RESOLVE_STR_REF(@4015) END
 
 COPY ~SoD2BG2_IU/spl/dtkluck.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4016) END
+
 COPY ~SoD2BG2_IU/spl/dtkprfir.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkpfir%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkquake.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkquake%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkshout.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkshout%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END   // adding potrait icon for spell
 COPY ~SoD2BG2_IU/spl/dtkshrd.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 94 parameter2 = icon END
-
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4000) END
 
 COPY ~SoD2BG2_IU/spl/dtkshrdb.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkshrod%" END
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 94 parameter2 = icon END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4000) END
 
 COPY ~SoD2BG2_IU/spl/dtksnow.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtksnow%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkstrvx.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14674 parameter1 = RESOLVE_STR_REF(@4015) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14042 parameter1 = RESOLVE_STR_REF(@4008) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1452 parameter1 = RESOLVE_STR_REF(@4009) END
+
 COPY ~SoD2BG2_IU/spl/dtktyr1.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkexalt%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkvit.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkvit%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 COPY ~SoD2BG2_IU/spl/dtkvity.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+
 COPY ~SoD2BG2_IU/spl/dtkvitz.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+
 COPY ~SoD2BG2_IU/spl/dtkwave.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkwave%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1280 parameter1 = RESOLVE_STR_REF(@4017) END
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 20438 parameter1 = RESOLVE_STR_REF(@4018) END
 
 COPY ~SoD2BG2_IU/spl/dtkwfog.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
+
 COPY ~SoD2BG2_IU/spl/dtkwhirl.spl~ ~override~
 LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkwhirl%" END
-// SAY 0x08 @STRING  - Spell Name
-// SAY 0x50 @STRING  - spell description
-// SAY 0x18e @STRING - spell name for display
-
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
+LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4017) END
 
 COPY ~SoD2BG2_IU/spl/dtkxbow1.spl~ ~override~
+// SAY 0x08 @STRING  // Spell Name
+// SAY 0x50 @STRING  // Spell description
 
 
-//  Items
+
+/////////////////
+// Adding Items//
+/////////////////
+
 
 COPY ~SoD2BG2_IU/itm/acid/bdsw1h02.itm~ ~override~ 
 SAY NAME1 @2000
@@ -694,6 +756,13 @@ SAY NAME2 @2220
 SAY 0x50 @2221
 SAY 0x54 @2222
 
+
+
+/////////////////////////////
+//Adding Cromwell Dialogues//
+/////////////////////////////
+
+
 // compiled in serial so that COPY_TRANS will get the one before it
 COMPILE ~SoD2BG2_IU/dialogue/crom1.d~ // Tongue of Burning Acid +4
 COMPILE ~SoD2BG2_IU/dialogue/crom2.d~ // Tongue of Burning Acid +5
@@ -749,6 +818,11 @@ COMPILE ~SoD2BG2_IU/dialogue/crom50.d~ // Holy Ring of Purity
 COMPILE ~SoD2BG2_IU/dialogue/crom51.d~ // Dervish Crescent of Speed +3
 
 EXTEND_BOTTOM ~ar0334.bcs~ ~SoD2BG2_IU/scripts/ar0334.baf~		//item generating script for cromwell
+
+
+/////////////////////////////
+//Adding Cespenar Dialogues//
+/////////////////////////////
 
 
 // compiled in serial so that COPY_TRANS will get the one before it
@@ -807,13 +881,21 @@ COMPILE ~SoD2BG2_IU/dialogue/cespy51.d~ // Dervish Crescent of Speed +3
 
 EXTEND_BOTTOM ~botsmith.bcs~ ~SoD2BG2_IU/scripts/cespy.baf~  //Item generating script for cespy
 
-//Adding items to containers
+
+
+//////////////////////////////
+//Adding items to containers//
+//////////////////////////////
+
 
 EXTEND_BOTTOM ~ar0602.bcs~ ~SoD2BG2_IU/scripts/ar0602.baf~	//keyring
 EXTEND_BOTTOM ~ar3001.bcs~ ~SoD2BG2_IU/scripts/ar3001.baf~	//Breath of Wind
 
 
-//Adding items to creatures
+/////////////////////////////
+//Adding items to creatures//
+/////////////////////////////
+
 
 COPY_EXISTING ~FIRKRA02.CRE~ ~override~
 ADD_CRE_ITEM ~BDHELM01~ #0 #0 #0 ~NONE~ ~INV~		//Crown Of Lies
@@ -951,7 +1033,10 @@ COPY_EXISTING ~VAELASA.CRE~ ~override~
 ADD_CRE_ITEM ~bdbrd01~ #0 #0 #0 ~NONE~ ~QITEM1~		//Forest Queen's Benediction
 
 
-//Adding items as quest rewards
+
+/////////////////////////////////
+//Adding items as quest rewards//
+/////////////////////////////////
 		
 COMPILE ~SoD2BG2_IU/dialogue/khanz1.d~		//Dervish Crescent +2
 COMPILE ~SoD2BG2_IU/dialogue/khanz2.d~		//Dervish Crescent +2
@@ -961,8 +1046,9 @@ COMPILE ~SoD2BG2_IU/dialogue/thern1.d~		//Sundermaul +3
 COMPILE ~SoD2BG2_IU/dialogue/vaela1.d~		//Forest Queen's Benediction
 
 
-
-//Adding items to stores
+//////////////////////////
+//Adding items to stores//
+//////////////////////////
 
 COPY_EXISTING ~SHOP04.sto~ ~override~
 ADD_STORE_ITEM ~bdbull02~ #0 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
@@ -980,7 +1066,9 @@ COPY_EXISTING ~BMTHIEF.STO~ ~override~
 ADD_STORE_ITEM ~bdboot01~ #0 #0 #0 ~IDENTIFIED~ #1		//Soft Feet
 
 
-//Adding Melee/Thrown descriptions
+////////////////////////////////////
+//Adding Melee/Thrown descriptions//
+////////////////////////////////////
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -1037,7 +1125,9 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 BUT_ONLY
 
 
-//Adding Charge ability descriptions
+//////////////////////////////////////
+//Adding Charge ability descriptions//
+//////////////////////////////////////
 
 COPY_EXISTING ~tooltip.2da~ ~override~
   COUNT_2DA_COLS num_cols
@@ -1249,7 +1339,9 @@ COPY_EXISTING ~tooltip.2da~ ~override~
 BUT_ONLY
 
 
-// Force import-able items from SoD
+/////////////////////////////////////////
+// Force all import-able items from SoD//
+/////////////////////////////////////////
 
 BEGIN @9004
 REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
