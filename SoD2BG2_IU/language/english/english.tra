@@ -2262,13 +2262,29 @@ Weight: 0~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
-///// Icons                                            \\\\\
+///// Icons and Spell Display Strings                  \\\\\
 /////                                                  \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @4000 = ~Immolated~
 @4001 = ~Frozen~
 @4002 = ~Minor Antimagic Shell~
+@4003 = ~Corrosive Rain~
+@4004 = ~Deafened~
+@4005 = ~Invisible~
+@4006 = ~THAC0 Modification~
+@4007 = ~Protected from Normal Weapons~
+@4008 = ~Strength Modification~
+@4009 = ~Strengthend~
+@4010 = ~Slowed~
+@4011 = ~Bleeding~
+@4012 = ~Dispel Effects~
+@4013 = ~Poisoned~
+@4014 = ~Intoxicated~
+@4015 = ~Blinded~
+@4016 = ~Tymora's Blessing~
+@4017 = ~Stunned~
+@4018 = ~Unconscious~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\

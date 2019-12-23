@@ -1,16 +1,24 @@
 # Changelog
 
 
+## Version 0.6.2
+
+### Fixed
+
+- Changed the way string references are set for spells and effects to be more compatible with other mods
+
+
+
 ## Version 0.6.1
 
 ### Changed
 
 - Updated Cone of Cold effect on Chromatic Crimson and Shadow Armors (white scales) graphics and range
 - Updated description images for the following items
- - Sundermaul +5
- - The Scorched Earth +3
- - The Scorched Earth +5
- - Mirrored Cloak of Arcana
+  - Sundermaul +5
+  - The Scorched Earth +3
+  - The Scorched Earth +5
+  - Mirrored Cloak of Arcana
 
 ### Fixed
 
