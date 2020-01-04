@@ -707,11 +707,18 @@ SAY 0x50 @2197
 SAY 0x54 @2198
 
 COPY ~SoD2BG2_IU/itm/jester/bdbrac02.itm~ ~override~  // Jester's Bracers
-SAY NAME2 @2199
-SAY 0x54 @2200
-//LPF ~DELETE_EFFECT~ INT_VAR opcode=177 END - work in progress for corny jokes component - not ready yet
-//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 0 parameter2 = 2 STR_VAR resource = EVAL "%bdbrac02.eff%" END
-//LPF ~ADD_SPELL_EFFECT~ INT_VAR opcode=177 target=1 timing=2 duration=0 parameter1 = 16398 parameter2 = 9 STR_VAR resource = EVAL "%bdbrac2a.eff%" END
+  SAY NAME2 @2199
+  SAY DESC @2200
+COPY_EXISTING ~bdbrac02.eff~ ~override~
+  SET strref = RESOLVE_STR_REF (@45232)
+  WRITE_LONG 0x60 strref
+  SET strref = RESOLVE_STR_REF (@45233)
+  SET strref = RESOLVE_STR_REF (@45234)
+  SET strref = RESOLVE_STR_REF (@45235)
+  SET strref = RESOLVE_STR_REF (@45236)
+  SET strref = RESOLVE_STR_REF (@45237)
+  SET strref = RESOLVE_STR_REF (@45238)
+  SET strref = RESOLVE_STR_REF (@45239)
 
 COPY ~SoD2BG2_IU/itm/nightarm/bdleat07.itm~ ~override~ 
 SAY NAME2 @2201

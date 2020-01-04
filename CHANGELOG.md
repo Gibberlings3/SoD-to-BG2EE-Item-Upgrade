@@ -1,12 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Corrected string references used by Jester's Bracers
+
 
 ## Version 0.6.2
 
 ### Fixed
 
 - Changed the way string references are set for spells and effects to be more compatible with other mods
-
 
 
 ## Version 0.6.1
@@ -35,6 +40,7 @@
 ### Removed
 
 - Unused projectile for upgraded jester's bracers
+
 
 ## Version 0.6.0
 
