@@ -50,7 +50,7 @@ As I feel that discovery is very much part of the fun in bringing in these new i
 
 SoD to BG2EE Item Upgrade is (c) 2019 Daeros_Trollkiller.
 
-You are allowed to submit [maintenance updates](MAINTENANCE-NOTICE.md) for this mod.
+You are allowed to submit [maintenance updates](MAINTENANCE-NOTICE.md) for this mod. This mod is additionally licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
 
 
 ## Further Reading
