@@ -32,6 +32,8 @@ What this mod does:
 
 - Imports Helm of Opposition from BG1 - simply because it's fun, and if you know how to use it, it can be *very* useful.
 
+- Includes an optional component to change Cromwell's equipment to something more in-line with his skills as a forger of highly magical items.
+
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 
 

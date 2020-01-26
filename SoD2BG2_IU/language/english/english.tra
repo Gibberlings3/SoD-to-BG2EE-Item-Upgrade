@@ -12,6 +12,7 @@
 @9004 = ~All importable items with Voidsword +3~
 @9005 = ~All importable items with Voidhammer +3~
 @9006 = ~*****NOTE: Voidsword +3 and Voidhammer +3 are mutually exclusive, choose which to import*****~
+@9007 = ~****Optional****  Change Cromwell's equipment to be more in-line with his forging skills~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -20,7 +21,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @0 = ~Ach!, The ichor on this damned blade nearly burned right through me glove!  Be this sword from the hells themselves?~
-@1 = ~Ye know, I might be able to improve it with a blazing sword as fiery as the hells themselves and a scroll of disintegrate to reduce it to it's essence.  Or I could use a Githyanki's silver hilt if'n ye could wrestle one away from the beasts.~
+@1 = ~Ye know, I might be able to improve it with a blazing sword as fiery as the hells themselves and a scroll of disintegrate to reduce it to its essence.  Or I could use a Githyanki's silver hilt if'n ye could wrestle one away from the beasts.~
 @2 = ~Let's see if ye got what I need to reforge that hellish blade of yours...~
 @3 = ~Well, let's see what else ye got.~
 @4 = ~Ah, the hellblade again eh?  Last time this damnable blade nearly ruined my best hammer!~
@@ -54,7 +55,7 @@
 @32 = ~I can make this pretentious hat more practical for a minstrel with ioun stones of gold and dusty rose.  Toss in 7,500gp for the day's work and Cromwell will do ye right.~
 @33 = ~Aye, ioun stones of both gold and dusty rose ye have here, I can get to work on that musician's hat o' yours if ye would like.~
 @34 = ~What've ye got there, a Thayvian mage's robe?~
-@35 = ~If'n ye happen to come across the robe of vecna, I can use it's threading and magics to enhance that flamin' conjurer's robe of yours.  It would cost ye 10,000gp for the commission.~
+@35 = ~If'n ye happen to come across the robe of vecna, I can use its threading and magics to enhance that flamin' conjurer's robe of yours.  It would cost ye 10,000gp for the commission.~
 @36 = ~I see ye've managed to get the old lich's robe, quite impressive.  I can use it to improve that Thayvian robe if'n ye want.~
 @37 = ~What's this now?  One of the bucklers from those mercenaries at Baldur's Gate?~
 @38 = ~This old dwarf can rework that Flaming Fist buckler of yours into something special if'n ye can provide me with a reflection shield +1, two scrolls of protection against normal missiles, two potions of mirrored eyes, and 10,000gp for me trouble.~
@@ -202,6 +203,26 @@
 @179 = ~A Calimshite saber?  Nicely balanced and quick, ye would like it improved?~
 @180 = ~I can reforge this blade if ye can bring me another fast saber, like the Belm +2, and a murky oil of speed to temper it with.~
 @181 = ~Ye have the Belm +2 and the oil I need to reforge this blade for you, just 5,000gp fer me work and it's a done deal.~
+@182 = ~Hmm, very interesting blade ye have here, quite cold to the touch, and seething with anger.  This be one of the old Sharran blades ye say?~
+@183 = ~Aye, I can enhance this blade for ye, it needs something to balance and focus the raw anger from the spirit trapped within.  I'd need either the blade or hilt from the ancient sword, Equalizer, if'n ye can find them.~
+@184 = ~Let me rummage through yer pack and see if ye have something I can use to enhance this dark blade for ye...~
+@185 = ~Ah, ye've gone and found the blade of the Equalizer, I can use this to enhance that dead priestess' blade of yours.~
+@186 = ~Ah, ye've gone and found the hilt of the Equalizer, I can use this to enhance that dead priestess' blade of yours.~
+@187 = ~Quite the treasure hunter ye be, having located both the hilt and blade of the Equalizer.  I can use either to enhance Varscona for ye.~
+@188 = ~I would just need the hilt and 5,000gp for the commission to do the work.~
+@189 = ~I would just need the blade and 5,000gp for the commission to do the work.~
+@190 = ~The Varscona +3?  Ye would like it further enhanced?  Quite a feat to enhance this blade further methinks...~
+@191 = ~Aye, I can enhance the dark blade further, but I would need an elemental gemstone of frost to do so.~
+@192 = ~Ye have the Soul of Frost here, I can use this to reforge Varscona +3 into a far more powerful blade, I would just need 10,000gp for the work and yer help for the day once again at me forge.~
+@193 = ~It cannae be.... a magical axe from the lost Stonfire clan!  It was here in Athkatla in some blasted tavern, ye say?~
+@194 = ~It'd be a right honor to enhance this fine piece o' dwarven craftsmanship for ye.  To do so would take nothing less than an elemental gemstone of flame and 10,000 gold crowns.~
+@195 = ~Aye, this is certainly a gemstone of flame ye have here, shall we get to work on yer axe?~
+@196 = ~Ah, this looks to be some scrappy ol' wizard's hat...~
+@197 = ~If'n ye would like to have this old hat enhanced, it'd take some potent magics.  Methinks it would take the Circlet of Netheril, nothing less.~
+@198 = ~Aye, this be the Cirlet of Netheril ye have here.  I can enhance that old pointy hat of yers with it along with a mere 10,000 gold crowns fer me trouble at tha' forge~
+@199 = ~The Sourceror's Cap?  Ye say ye would like it enhanced further?  Hmmm, let me think a moment...~
+@200 = ~Yes, I believe I can enhance this cap o' yers.  I would need an ioun stone of bronze and 5,000 gold crowns~
+@201 = ~Well then, ye certainly be proficient in the adventurin' business.  I can use this bronze ioun stone to enhance yer Sourceror's Cap.  Are ye ready to help at me forge fer the day, <CHARNAME>?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -431,6 +452,31 @@
 @1219 = ~Cespenar can make genie blade even faster for the master, I just needs another fast blade like um... um... Belm +2, that can work, and oh yes needs oil of speed too, but murky one.~
 @1220 = ~You has the Belm +2 and the oil, just 5,000 gold shinys and I make genie sword faster for you.~
 @1221 = ~Ok then, maybe just rub blade and make wishes?  What else you has for me to look through?~
+@1222 = ~Hmm, what's this?  Cold, angry sword from long-dead priestess?  Sooo much anger it has...~
+@1223 = ~I can makes the angry dead lady's sword more focused and powerful for you master, I would just needs either the blade or hilt from ancient equalizer sword.~
+@1224 = ~Let's see if the master has what I needs for to reforge cold, angry sword....~
+@1225 = ~Ah yes!  Master has the equalizer blade, I can use this to enhance your Varscona sword.~
+@1226 = ~Ah yes!  Master has the equalizer hilt, I can use this to enhance your Varscona sword.~
+@1227 = ~Master is most skillful treasure hunter!  I can use either the equalizer blade or hilt you have to enhance Varscona sword.~
+@1228 = ~Loyal butler would just needs the hilt and 5,000 gold shinys, always needs the gold shinys!~
+@1229 = ~Loyal butler would just needs the blade and 5,000 gold shinys, always needs the gold shinys!~
+@1230 = ~No then?  just as well.... maybe master should consider giving sword back to dead priestess lady, maybe won't be so angry then...~
+@1231 = ~The master wants cold, angry sword enhanced further?~
+@1232 = ~Hmmm, Cespenar would need something special to make Varscona sword even better.  Would take elemental gem like Soul of Frost.~
+@1233 = ~Yep! This is the Soul of Frost gem!  I can use this, and 10,000 gold shinys to reforge Varscona sword for you.~
+@1234 = ~No?  Alright then, maybe master can use to keep ale kegs nice and cold for to drink.~
+@1235 = ~Old dwarf axe that makes heat?  Not nearly warm enough for Cespenar's liking...~
+@1236 = ~Cespenar can make old dwarf axe makes much more heat, but would need an elemental gemstone of fire...~
+@1237 = ~So warm to hold!  This is elemental gemstone of fire we need for dwarf axe.  I just need 10,000 of your gold shinys to complete the recipe for you, master.~
+@1238 = ~No on making dwarf axe hotter, got it, anything else?~
+@1239 = ~Hmmm, what's this? magic hat?  Makes go fast for mageses?~
+@1240 = ~Loyal butler can makes magic hat much better for the mageses! I would needs something special... like Circlet of Netheril... oh and 10,000 gold shinys, always needs the shinys!~
+@1241 = ~Yepyep!  This is Circlet of Netheril, should I get to work on magic hat for you, master?~
+@1242 = ~Are you sure, master?  Maybe use old hat for dishrag instead?~
+@1243 = ~Magic mage hat again master?  Hmmm, don't know if have recipe for... wait a minute... maybe... yes!~
+@1244 = ~Cespenar has just one recipe that would make mage hat better.  Needs bronze ioun stone and 5,000 gold shinys.~
+@1245 = ~Ah... you does have a bronze ioun stone!  Where does the master get such wonderful toys?  Should I use to enhance mageses hat for you?~
+@1246 = ~Well then, would the master consider letting Cespenar use?  No?  Stingy, stingy...  what else you has then?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -468,6 +514,10 @@
 @6027 = ~I would rather wait until I find a silver hilt.~
 @6028 = ~How much would that take using the silver hilt?~
 @6029 = ~I would rather wait until I find the blazing sword and scroll.~
+@6030 = ~What would that take using the equalizer's hilt?~
+@6031 = ~What would it take using the equalizer's blade?~
+@6032 = ~I would rather wait until I find the equalizer's hilt.~
+@6033 = ~I would rather wait until I find the equalizer's blade.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -495,18 +545,19 @@ Requires:
 
 Weight: 2~
 @2003 = ~Tongue of Burning Acid +4~
-@2004 = ~After being enhanced with the fiery essence of Angurvadal, the blade of the Tongue of Acid is now engulfed in hellish green flames of acidic wrath.  Wounds caused by the blade sizzle and burn with acidic fire, causing crippling pain to any creature unfortunate enough to be struck by it.  Rarely, the caustic flames will trigger a torrent of acid, causing further damage to creatures caught in it.
+@2004 = ~After being reforged and enhanced with the fiery essence of Angurvadal, the blade of the Tongue of Acid is now engulfed in hellish green flames of acidic wrath.  Wounds caused by the blade sizzle and burn with acidic fire, causing crippling pain to any creature unfortunate enough to be struck by it.
 
 STATISTICS:
 
+Equipped Abilities:
+– Negative Plane Protection
+
 Combat abilities:
-– 15% chance per hit of slowing the target for 3 rounds (Save vs. Spell negates)
-– 5% chance per hit of triggering an acid storm:
-  Damage: 1d4 (acid) for 3 rounds, 1d6 (acid) for 3 rounds, 1d8 (acid) for 3 rounds (Save vs. Spell each round for half)
-  Radius: 12 ft. (moving out of range does not cancel damage)
+– 15% chance per hit of crippling pain on target for 3 rounds
+  Special: -4 AC, -4 THAC0, -6 to dexterity, -1 attacks per round, movement rate slowed by 50% (Save vs. Spell at -2 negates)
 
 THAC0: +4
-Damage: 1d8+4, +1d3 (acid), +1 (fire)
+Damage: 1d8+4, 1d2+1 (acid), 1d2+1 (fire)
 Damage Type: Slashing
 Speed Factor: 2
 Proficiency Type: Long Sword
@@ -516,18 +567,26 @@ Requires:
 
 Weight: 2~
 @2005 = ~Tongue of Burning Acid +5~
-@2006 = ~After setting the Eye of Ichor into the pommel, this infernal blade from Avernus has reached it's full potential.  Ghastly green acidic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on it's victims, slowing their ability to fight.  In addition, the acidic storms are triggerd more easily, adding the proverbial salt to wounds caused by the blade.  Eerily, the inscription on the hilt seems to have changed on it's own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with it's horrific endowment.
+@2006 = ~After setting the Eye of Ichor into the pommel, this infernal blade from Avernus has reached its full potential.  Ghastly green caustic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on its victims, slowing their ability to fight.  In addition, the weilder may blanket <PRO_HISHER> foes in a cuastic fog, causing acid damage and asphyxiating them.   Eerily, the inscription on the hilt seems to have changed on its own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with its horrific endowment.
 
 STATISTICS:
 
 Equipped Abilities:
 – Negative Plane Protection
 
+Charge Abilities:
+– Caustic Fog once per day
+  Damage: 2d4 (acid) per round (No Save)
+  Special: Movement rate slowed by 50% for one round (No Save) Chance per round of -2 penalty to dexterity, -2 penalty to strength, and unconcious for one round (Save vs. Spell at -2 negates)
+  Special: No effect on unbreathing creatures
+  Range: 40 ft.
+  Area of Effect: 12-ft. radius
+  Duration: 1 turn
+  
+
 Combat abilities:
-– 20% chance per hit of slowing the target for 3 rounds (Save vs. Spell negates)
-– 15% chance per hit of triggering an acid storm:
-  Damage: 1d4 (acid) for 3 rounds, 1d6 (acid) for 3 rounds, 1d8 (acid) for 3 rounds (Save vs. Spell each round for half)
-  Radius: 12 ft. (moving out of range does not cancel damage)
+– 20% chance per hit of crippling pain on target for 3 rounds
+  Special: -4 AC, -4 THAC0, -6 to dexterity, -1 attacks per round, movement rate slowed by 50% (Save vs. Spell at -2 negates)
   
 THAC0: +5
 Damage: 1d8+5, 1d3+1 (acid), 1d3+1 (fire)
@@ -663,7 +722,7 @@ Type: One-handed
 
 Weight: 0~
 @2030 = ~Vampiric Voidsword +5~
-@2031 = ~By absorbing the dark magics contained in the lich's skull, the Voidsword's hunger has been amplified greatly.  Strikes from the blade now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or it's effects.
+@2031 = ~By absorbing the dark magics contained in the lich's skull, the Voidsword's hunger has been amplified greatly.  Strikes from the blade now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or its effects.
 
 STATISTICS:
 
@@ -686,7 +745,7 @@ Requires:
 
 Weight: 2~
 @2032 = ~Vampiric Voidhammer +5~
-@2033 = ~By absorbing the dark magics contained in the lich's skull, the Voidhammer's hunger has been amplified greatly.  Strikes from the hammer now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or it's effects.
+@2033 = ~By absorbing the dark magics contained in the lich's skull, the Voidhammer's hunger has been amplified greatly.  Strikes from the hammer now do more damage, and there is a chance on hit of draining strength and life from all enemies within a 15' radius.  The life drained from the targets is transferred to the weilder, healing <PRO_HESHE> for the amount of damage done.  Undead, however are still unaffected by this weapon or its effects.
 
 STATISTICS:
 
@@ -771,7 +830,7 @@ Requires:
 
 Weight: 4~
 @2043 = ~Sundermaul +5~
-@2044 = ~With the Rune of Clangeddin inscribed into the head of Sundermaul, it's power is now much more akin to what it's original creator proclaimed.  Conversly, the gods also seem appeased with this modification, allowing the weilder to focus the power of an earthquake upon their enemies once per day instead of randomly on themselves and their allies.
+@2044 = ~With the Rune of Clangeddin inscribed into the head of Sundermaul, its power is now much more akin to what its original creator proclaimed.  Conversly, the gods also seem appeased with this modification, allowing the weilder to focus the power of an earthquake upon their enemies once per day instead of randomly on themselves and their allies.
 
 STATISTICS:
 
@@ -800,7 +859,7 @@ Requires:
 
 Weight: 4~
 @2045 = ~The Scorched Earth +3~
-@2046 = ~Expertly reforged for <CHARNAME>, the flame tongue is now a far more balanced blade and searing flames scorch enemies with every slash, leaving charred wounds in it's wake.  The sword remains very effective against cold-based, regenerating creatures, and the undead.
+@2046 = ~Expertly reforged for <CHARNAME>, the flame tongue is now a far more balanced blade and searing flames scorch enemies with every slash, leaving charred wounds in its wake.  The sword remains very effective against cold-based, regenerating creatures, and the undead.
 
 Combat abilities:
 – 10% chance per hit of immolating the target in flames, causing 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
@@ -881,7 +940,7 @@ Requires:
 
 Weight: 10~
 @2055 = ~Chromatic Crimson Dragon Plate~ //Blue Scales
-@2056 = ~The Verdant Crimson Dragon Plate armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining it's resistances to poison and flame attacks.  Additionally, the wearer my direct the stored electrical energy once per day against their foes.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+@2056 = ~The Verdant Crimson Dragon Plate armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and flame attacks.  Additionally, the wearer my direct the stored electrical energy once per day against their foes.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
 
 STATISTICS:
 
@@ -906,7 +965,7 @@ Requires:
 
 Weight: 30~
 @2057 = ~Chromatic Crimson Dragon Plate~  //Shadow Scales
-@2058 = ~Scales from a diabolical shadow dragon have been interlinked and woven into the Verdant Crimson Dragon Plate, further enhancing its protective abilities against blows and acid attacks.  Additionally, the wearer may direct a glowing green orb of corrosive acid at their foes once per day.  This sturdy suit of armor also retains it's protections from poison and fire. A warrior could hardly ask for better protection on the battlefront.
+@2058 = ~Scales from a diabolical shadow dragon have been interlinked and woven into the Verdant Crimson Dragon Plate, further enhancing its protective abilities against blows and acid attacks.  Additionally, the wearer may direct a glowing green orb of corrosive acid at their foes once per day.  This sturdy suit of armor also retains its protections from poison and fire. A warrior could hardly ask for better protection on the battlefront.
 
 STATISTICS:
 
@@ -932,7 +991,7 @@ Requires:
 
 Weight: 30~
 @2059 = ~Chromatic Crimson Dragon Plate~  //White Scales
-@2060 = ~The Verdant Crimson Dragon Plate has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining it's resistances to poison and flame attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+@2060 = ~The Verdant Crimson Dragon Plate has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and flame attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
 
 STATISTICS:
 
@@ -958,7 +1017,7 @@ Requires:
 
 Weight: 30~
 @2061 = ~Chromatic Crimson Dragon Plate~  //Silver Scales
-@2062 = ~The Verdant Crimson Dragon Plate has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining it's defenses against to poison and flame attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all.
+@2062 = ~The Verdant Crimson Dragon Plate has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining its defenses against to poison and flame attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all.
 
 STATISTICS:
 
@@ -989,7 +1048,7 @@ Requires:
 
 Weight: 30~
 @2063 = ~Chromatic Shadow Dragonscale~  //Blue Scales
-@2064 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining it's resistances to poison and acid attacks.  The wearer may even direct a lightning blast at their foes once per day from the stored electrical energy in the blue scales.  This truly magnificent work of craftsmanship even retains its flexible, supple nature, providing excellent protection and ease of movement.
+@2064 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and acid attacks.  The wearer may even direct a lightning blast at their foes once per day from the stored electrical energy in the blue scales.  This truly magnificent work of craftsmanship even retains its flexible, supple nature, providing excellent protection and ease of movement.
 
 STATISTICS:
 
@@ -1014,7 +1073,7 @@ Requires:
 
 Weight: 10~
 @2065 = ~Chromatic Shadow Dragonscale~  //Red Scales
-@2066 = ~Scales from a fierce red dragon have been interlinked and woven into the Verdant Shadow Dragonscale armor, further improving its ability to deflect even the sharpest blows, and providing protection against fire attacks.  In addition, the wearer may engulf their enemies in flames once per day.  Remarkably, the armor retains its flexibility and does not hinder it's wearer, all the while continuing to provide protection from acid and poison.  This is a truly impressive piece of craftsmanship.
+@2066 = ~Scales from a fierce red dragon have been interlinked and woven into the Verdant Shadow Dragonscale armor, further improving its ability to deflect even the sharpest blows, and providing protection against fire attacks.  In addition, the wearer may engulf their enemies in flames once per day.  Remarkably, the armor retains its flexibility and does not hinder its wearer, all the while continuing to provide protection from acid and poison.  This is a truly impressive piece of craftsmanship.
 
 STATISTICS:
 
@@ -1040,7 +1099,7 @@ Requires:
 
 Weight: 10~
 @2067 = ~Chromatic Shadow Dragonscale~  //White Scales
-@2068 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining it's resistances to poison and acid attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  Remarkably, the armor remains pliable and easy to move in as well, no doubt due to the excellent craftsmanship.
+@2068 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and acid attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  Remarkably, the armor remains pliable and easy to move in as well, no doubt due to the excellent craftsmanship.
 
 STATISTICS:
 
@@ -1066,7 +1125,7 @@ Requires:
 
 Weight: 10~
 @2069 = ~Chromatic Shadow Dragonscale~  //Silver Scales
-@2070 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining it's defences against poison and acid attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  Remarkably, the armor remains pliable and easy to move in as well. However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all. 
+@2070 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining its defences against poison and acid attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  Remarkably, the armor remains pliable and easy to move in as well. However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all. 
 
 STATISTICS:
 
@@ -1138,13 +1197,13 @@ STATISTICS:
 
 Weight: 1~
 @2081 = ~Soul of Frost~
-@2082 = ~This brilliant diamond gemstone shimmers with a cold, white light, almost freezing to the touch.  Gasing into the stone reveals an icy tundra, under a ceaseless blizzard, instantly freezing all in it's path.
+@2082 = ~This brilliant diamond gemstone shimmers with a cold, white light, almost freezing to the touch.  Gasing into the stone reveals an icy tundra, under a ceaseless blizzard, instantly freezing all in its path.
 
 STATISTICS:
 
 Weight: 1~
 @2083 = ~The Scorched Earth +5~
-@2084 = ~By setting the Heart of Flame into the hilt, the flame tongue now burns hotter and brighter than ever, leaving flame-scorched charred wounds in it's wake.  The blade now burns so hot that wounds made by it can sometimes ignite a foe's flesh, immolating them in flames which continue to cause damage and can even burn and spread to other creatures nearby.  Trolls, undead, and cold-using creatures are especially susceptible to this blade.
+@2084 = ~By setting the Heart of Flame into the hilt, the flame tongue now burns hotter and brighter than ever, leaving flame-scorched charred wounds in its wake.  The blade now burns so hot that wounds made by it can sometimes ignite a foe's flesh, immolating them in flames which continue to cause damage and can even burn and spread to other creatures nearby.  Trolls, undead, and cold-using creatures are especially susceptible to this blade.
 
 STATISTICS:
 
@@ -1419,7 +1478,7 @@ Duration: 2 turns
 
 Weight: 2~
 @2125 = ~The Uncursed Staff of Antipode~
-@2126 = ~The uncursed staff has been infused with frost and fire magics, a most volatile combination.  When struck by the staff, foes are blasted with frostfire causing extra damage.  Additionally, the weilder may direct a forst-fire ball at their enemies, the subsequent explosion causing scorching wounds and impaling them with shards of ice.
+@2126 = ~The Uncursed Staff +1 has been infused with frost and fire magics, a most volatile combination.  When struck by the staff, foes are blasted with frostfire causing extra fire of cold damage.  Additionally, the weilder may direct a frost-fireball at <PRO_HISHER> enemies, the subsequent explosion causing scorching wounds and impaling them with shards of ice.
 
 STATISTICS:
 
@@ -1428,12 +1487,12 @@ Equipped abilities:
 
 Charge Abilities:
 – Frost-Fire ball of Antipode
-  Damage: 5d5 fire, 5d5 cold (Save vs. Spell for half)
+  Damage: 10d5 fire or 10d5 cold (Save vs. Spell for half)
   Range: 90 ft.
   Area of Effect: 15-ft. radius
 
 THAC0: -2
-Damage: 1d6-2 (crushing), +1d3 (fire), +1d3 (cold)
+Damage: 1d6-2 (crushing), +2d3 (fire) or +2d3 (cold)
 Speed Factor: 3
 Proficiency Type: Quarterstaff
 Type: Two-handed
@@ -1442,7 +1501,7 @@ Requires:
 
 Weight: 4~
 @2127 = ~Nasty Backwhacker +4~
-@2128 = ~After meticulous reforging at the behest of <CHARNAME>, using the barb of a wyvern's tail and the fercious spirit of a wolverine, the backwhacker seemingly comes alive in it's weilder's hands with the spirits of both beasts.  Poisonous splinters from the weapon embed themselves in a foe's flesh, causing lingering damage.
+@2128 = ~After meticulous reforging at the behest of <CHARNAME>, using the barb of a wyvern's tail and the fercious spirit of a wolverine, the backwhacker seemingly comes alive in its weilder's hands with the spirits of both beasts.  Poisonous splinters from the weapon embed themselves in a foe's flesh, causing lingering damage.
 
 STATISTICS:
 
@@ -1524,7 +1583,7 @@ Equipped abilities:
 
 Weight: 3~
 @2139 = ~Element's Fury +3~
-@2140 = ~The element's fury has been caretakingly reforged for <CHARNAME>, and is now able to be used as a throwing a dagger that return's to the weilder's hand when thrown.  It is also hits harder and is more accurate in addition to retaining all of it's elemental abilities.
+@2140 = ~The element's fury has been caretakingly reforged for <CHARNAME>, and is now able to be used as a throwing a dagger that return's to the weilder's hand when thrown.  It is also hits harder and is more accurate in addition to retaining all of its elemental abilities.
 
 STATISTICS:
 
@@ -1546,7 +1605,7 @@ Requires:
 
 Weight: 1~
 @2141 = ~Element's Fury +4~
-@2142 = ~With the addition of the Soul of Frost placed in it's hilt, the dagger of elemental fury has been further empowered, and now deals more elemental damage to all targets, and can rarely release a blast of frost centered on the target, damaging all foes in the immediate area with the freezing cold.
+@2142 = ~With the addition of the Soul of Frost placed in its hilt, the dagger of elemental fury has been further empowered, and now deals more elemental damage to all targets, and can rarely release a blast of frost centered on the target, damaging all foes in the immediate area with the freezing cold.
 
 STATISTICS:
 
@@ -1581,7 +1640,7 @@ Combat abilities:
 – Slays fire elementals, efreet, and salamanders
 
 THAC0: +3
-Damage: 1d6+3 +1d3 electrical
+Damage: 1d6+3, +1d3 (electrical) or +1d3 (cold)
 Damage type (melee): Slashing
 Damage type (thrown): Missile
 Speed Factor: 1
@@ -1601,7 +1660,7 @@ Combat abilities:
 – Slays fire elementals, efreet, and salamanders
 
 THAC0: +4
-Damage: 1d10+4 (slashing or piercing, whichever is better), +1d4 cold
+Damage: 1d10+4 (slashing or piercing, whichever is better), +1d4 (cold) or +1d4 (electrical)
 Speed Factor: 7
 Proficiency Type: Halberd
 Type: Two-handed
@@ -1625,7 +1684,7 @@ Combat abilities:
   Area of effect: 17ft. radius
 
 THAC0: +4
-Damage: 1d6+4 +1d6 electrical
+Damage: 1d6+4, 1d3+1 (electrical) or 1d3+1 (cold)
 Damage type (melee): Slashing or Crushing, whichever is better
 Damage type (thrown): Slashing or Crushing, whichever is better
 Speed Factor: 1
@@ -1647,7 +1706,7 @@ Combat abilities:
   2d10 crushing damage, 25% chance of stun, 5% chance of being knocked unconcious (Save vs. Breath for half, avoids stun and sleep)
 
 THAC0: +5
-Damage: 1d10+5 (crushing or piercing, whichever is better), +1d8 cold
+Damage: 1d10+5 (crushing or piercing, whichever is better), +1d8 (cold) or +1d8 (electrical)
 Speed Factor: 7
 Proficiency Type: Halberd
 Type: Two-handed
@@ -1675,7 +1734,7 @@ Charge Abilities:
 
 Weight: 0~
 @2153 = ~Trollkiller's Ioun Stone +1~
-@2154 = ~The fighting spirit of Wong Fei has been enfused into the Trollkiller Ioun Stone, further focusing and enhancing it's abilities.  It further increases the vitality of the wearer and the regenerative abilities have also improved.  When peering into the stone, one can seemingly see a furious battle taking place, with silhouettes of Rigar Trueblood and Wong Fei fighting heroically against a horde of trolls, relishing the conflict as they fight.
+@2154 = ~The fighting spirit of Wong Fei has been enfused into the Trollkiller Ioun Stone, further focusing and enhancing its abilities.  It further increases the vitality of the wearer and the regenerative abilities have also improved.  When peering into the stone, one can seemingly see a furious battle taking place, with silhouettes of Rigar Trueblood and Wong Fei fighting heroically against a horde of trolls, relishing the conflict as they fight.
 
 STATISTICS:
 
@@ -1709,7 +1768,7 @@ Requires:
 
 Weight: 6~
 @2157 = ~Vexation +5~
-@2158 = ~Strengthened by the heart of the damned, the bleeding wounds caused by this blade can attract a swarm of insects to the victim, biting and chewing at the wounds, causing further damage and hindering their ability to fight.  Additionally, the force of a backstab from this accursed blade is such that it will now blind it's victims in addition to draining their strength.
+@2158 = ~Strengthened by the heart of the damned, the bleeding wounds caused by this blade can attract a swarm of insects to the victim, biting and chewing at the wounds, causing further damage and hindering their ability to fight.  Additionally, the force of a backstab from this accursed blade is such that it will now blind its victims in addition to draining their strength.
 
 STATISTICS:
 
@@ -1815,7 +1874,7 @@ Requires:
 
 Weight: 5~
 @2169 = ~Shadowed Spear of the Tempest +4~
-@2170 = ~By setting the breath of wind in the shaft, the shadowed spear has been empowered with the force of a whirlwind.  Swinging the spear through the air creates a bolt of wind energy that slashes it's target.  This energy is limited, however, and once exhausted, cannot be used again until the spear has time to recharge.
+@2170 = ~By setting the breath of wind in the shaft, the shadowed spear has been empowered with the force of a whirlwind.  Swinging the spear through the air creates a bolt of wind energy that slashes its target.  This energy is limited, however, and once exhausted, cannot be used again until the spear has time to recharge.
 
 STATISTICS:
 
@@ -1844,7 +1903,7 @@ Requires:
 
 Weight: 3~
 @2171 = ~Shadowed Spear of the Tempest +6~
-@2172 = ~By reforging the spear using Ixil's spike, it now strikes harder and more accuratley than before.  On a critical hit, the spear will whip up a whirlwind, causing slashing and cruhing damage, potentially stunning any being unfortunate enough to be in it's path.
+@2172 = ~By reforging the spear using Ixil's spike, it now strikes harder and more accuratley than before.  On a critical hit, the spear will whip up a whirlwind, causing slashing and cruhing damage, potentially stunning any being unfortunate enough to be in its path.
 
 STATISTICS:
 
@@ -1877,7 +1936,7 @@ Requires:
 
 Weight: 3~
 @2173 = ~Carmine Viridian Dragon Plate~ //Green Scales
-@2174 = ~The Verdant Crimson Dragon Plate armor has been reworked with more scales from a noxious green dragon further improving it's protection from physical attacks.  The armor now protects its weaerer from several maladies in addition to poison, as if constantly under the effects of neutralize poison.  The wearer may also draw toxins from the armor into their weapons once per day, allowing them to posion their foes with blows and strikes.
+@2174 = ~The Verdant Crimson Dragon Plate armor has been reworked with more scales from a noxious green dragon further improving its protection from physical attacks.  The armor now protects its weaerer from several maladies in addition to poison, as if constantly under the effects of neutralize poison.  The wearer may also draw toxins from the armor into their weapons once per day, allowing them to posion their foes with blows and strikes.
 
 STATISTICS:
 
@@ -1970,7 +2029,7 @@ Requires:
 
 Weight: 9~
 @2183 = ~Vorpal Dragon Blade +5~
-@2184 = ~With the Soul of Frost placed into the pommel, the Vorpal Dragon Blade roars to life with the force of a raging blizzard from each slash from the massive blade, cleaving foes and leaving frostbitten wounds in it's wake.  One critical hits, the blade emits a blast of ice so cold it can freeze opponents, stunning them, and sending shards of ice into nearby targets, impaling and slowing them. 
+@2184 = ~With the Soul of Frost placed into the pommel, the Vorpal Dragon Blade roars to life with the force of a raging blizzard from each slash from the massive blade, cleaving foes and leaving frostbitten wounds in its wake.  One critical hits, the blade emits a blast of ice so cold it can freeze opponents, stunning them, and sending shards of ice into nearby targets, impaling and slowing them. 
 
 STATISTICS:
 
@@ -2037,7 +2096,7 @@ Requires:
 
 Weight: 2~
 @2193 = ~Tongue of Acid +5~
-@2194 = ~The Eye of Ichor has been set into the hilt of the Tongue of Acid, increasing the amount of acid leached into the wounds it creates, doing even more damage and causing excrutiating pain to the unfortunate victim, making it ever more difficult for them to fight back.
+@2194 = ~The Eye of Ichor has been set into the hilt of the Tongue of Acid, increasing the amount of acid leached into the wounds it creates, doing even more damage and causing excrutiating pain to the unfortunate victim, making it ever more difficult for them to fight back.  Occasionally, the blade will release a burst of caustic ichor when it strikes a creature, covering it and nearby foes in viscous corrosive fluid, burning and temporarily blinding them.
 
 STATISTICS:
 
@@ -2046,6 +2105,11 @@ Equipped abilities:
 
 Combat abilities:
 – 20% chance per hit of slowing the target for 3 rounds (Save vs. Spell negates)
+– 10% chance per hit of corrosive burst
+  Damage: 2d3 Acid per round (Save vs. Spell at -4 halves)
+  Special: Blinds targets in area of effect (Save vs. Spell at -4 negates)
+  Duration: 4 rounds
+  Area of Effect: 5-ft. radius
 
 THAC0: +5
 Damage: 1d8+5, 1d6+1 (acid)
@@ -2103,7 +2167,7 @@ Requires:
 
 Weight: 5~
 @2203 = ~The Night's Embrace +6~
-@2204 = ~Tough and durable black dragon scales have been interworked into the leather plates of the Iriaeborian's thief's armor, greatly increasing it's protective abilities.  The magics imparted from the scales have amplified the armor's ability to render it's wearer temporarily invisible such that there is a chance it will do so when the wearer takes damage from any attack.
+@2204 = ~Tough and durable black dragon scales have been interworked into the leather plates of the Iriaeborian's thief's armor, greatly increasing its protective abilities.  The magics imparted from the scales have amplified the armor's ability to render its wearer temporarily invisible such that there is a chance it will do so when the wearer takes damage from any attack.
 
 STATISTICS:
 
@@ -2120,7 +2184,7 @@ Requires:
 
 Weight: 5~
 @2205 = ~Wicked Jester's Bracers~
-@2206 = ~These bracers once belonged to a traveling bard famed for his sharp tongue and quick retorts. One rainy night, the bard took refuge in a rickety inn on the road to Shadowdale. There he performed for his supper, sprinkling his routine with caustic jibes as was his custom. One of the drinkers in the tavern, an old woman, stood up midway through the performance and snapped, "You think it clever to insult and belittle others? Do so, then, for as long as you live!" The bard found himself unable to remove his now-cursed protective bracers and was forced to spout corny jokes until he could pay a wizard to remove them.
+@2206 = ~Dark energies from a pair of demon hearts have been enfused into the Jester's Bracers, which has not only enhanced their protective ability, but also now allows the wearer to inflict a multitude of maladies and hinderances upon <PRO_HISHER> foes, severly limiting their ability to fight back.  Alas, the curse is still intact, forcing the wearer to spout corny jokes.
 
 STATISTICS:
 
@@ -2145,7 +2209,7 @@ Charge abilities:
  Area of Effect: 15-ft. radius
  
 – Knife Trick twice per day
-  Special: A dagger is thrown and once it reaches it's target, it shatters, sending shards flying into enemies in a 15-ft. radius.  Enemies must Save vs. Death at -4 or be affected by:
+  Special: A dagger is thrown and once it reaches its target, it shatters, sending shards flying into enemies in a 15-ft. radius.  Enemies must Save vs. Death at -4 or be affected by:
  –3d7 damage (piercing) (No Save)
  –target is intoxicated for one turn
  –target is blinded for one turn
@@ -2259,6 +2323,145 @@ Equipped abilities:
 – Movement Speed: +2
 
 Weight: 0~
+@2223 = ~Varscona +3~
+@2224 = ~The cold fury of the Sharran priestess has been better focused in the blade, striking harder and more accuratley than before.  Occasionally, frozen, thorny brambles will erupt from the ground underneath its target, causing even more cold damage and ensnaring the victim.
+
+STATISTICS:
+
+Combat abilities:
+– 10% chance of icy thorns ensnaring the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
+
+THAC0: +3
+Damage: 1d8+3, 1d3+1 cold damage
+Damage type: Slashing
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3~
+@2225 = ~Varscona +5~
+@2226 = ~By placing the Soul of Frost into the pommel, Varscona's full icy wrath has been unleashed.  Wounds made by the blade are further exacerbated by frostbite with each slash.  The weilder of this blade my call upon the Sharran priestess' rage once per day, causing a field of frozen spikes to erupt upward from the ground, impaling enemies and hindering their ability to fight.
+
+STATISTICS:
+
+Combat abilities:
+– 15% chance of icy thorns ensnaring the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
+
+Charge abilities:
+– Ice Spikes once per day
+  Damage: 2d4 Cold per round (Save vs. Spell at -2 halves)
+  Special: Slows target for one round (Save vs. Spell at -2 negates)
+  Duration: 6 rounds
+  Range: 30 ft.
+  Radius: 8 ft.
+  
+
+THAC0: +5
+Damage: 1d8+5, +2d3 cold damage
+Damage type: Slashing
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3~
+@2227 = ~Stonefire +5~
+@2228 = ~By setting the Heart of Flame into its pommel, the Stonefire axe now draws upon power from the molten core of the world.  Each slash from the axe leaves scalded, charred wounds, burning the target with tremendous heat.  Occasionally, strikes from the axe will cause a burst of molten rock to erupt upwards from the ground at the target's feet covering them and nearby enemies, burning them and sending them into a panic as they try to shrug off the scorching magma.
+
+STATISTICS:
+
+Equipped abilities:
+– Cold Resistance +40%
+
+Combat abilities:
+– 15% Chance on hit of Magma Burst
+  Damage: 3d4 Fire per round (Save vs. Spell at -2 halves)
+  Special: Puts target into a panic state
+  Duration: 6 rounds (Save vs. Spell at -2 each round negates ongoing effects and damage)
+  Area of Effect: 5-ft. radius
+
+THAC0: +5 
+Damage: 1d8+5, +2d3 fire damage
+Damage type: Slashing
+Speed Factor: 4
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+@2229 = ~Sourceror's Cap~
+@2230 = ~By meticulous stitchwork and magical manipulations, the Circlet of Netheril has been combined with the Wizzard Hat, making it far more practical headgear for a master of the mystical arts.  At the cost of running speed and lower level spells, the cap enables the wearer to memorize more higher level spells and cast them far more quickly.  Afterall, why run away when one can stand their ground and eleminate their foes instead?
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: +10
+– Casting Speed: +2
+– Spell memorization reduced by 1 for levels 1-4
+– May memorize two extra level 5 and level 6 spells
+
+Weight: 0~
+@2231 = ~Sourceror's Cap +1~
+@2232 = ~By magically forcing the bronze ioun stone into stable orbit around the Sourceror's Cap, the wearer is able to memorize additional high level spells.  The masterful mage wearing this cap would do well to be wary of jealous rivals, most certainly ones who wear red robes...
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: +10
+– Casting Speed: +2
+– Spell memorization reduced by 1 for levels 1-4
+– May memorize two extra level 5 and level 6 spells
+– May memorize one extra level 7 and level 8 spell
+
+Weight: 0~
+@2233 = ~Forgemaster's Robe~
+@2234 = ~The forging of highly magical items is both tedious and dangerous work.  Manipulating the weave itself is tricky enough, yet alone forging such enchantments into weapons and armor.  Cromwell, being the ever practical dwarf, knew this and for his first creation after opening his shop in Athkatla, forged this robe for himself.  The robe not only provides protection from physical and magical harm, but also increases his strength and constitution, allowing him to work tirelessly at his forge, day after day, seemingly without stop. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 4
+– Strength: 18/75
+– Constitution: +2
+– Magic Resistance: +5%
+– Magic Damage Resistance: +10%
+
+Weight: 5~
+@2235 = ~Cromwell's Remorhaz Shell Helm~
+@2236 = ~Shortly after opening his shop in Athkatla, a fishmonger fleeing from Easthaven happend upon Cromwell's forge.  The fishmonger brought with him several chitinous Remorhaz shells, and told of destruction of his hometown by a horde of monsters commanded by what had been a seemingly harmless shop owner that lived in the town.  He requested Cromwell to forge him a suit of armor made from the shells so that he could return home to face the shopkeeper-mage who had betrayed his neighbors.  Unfortunately, the fishmonger could not afford the commission.  Not wanting to send away someone in such dire need, Cromwell agreed to make the armor if the fishmonger would allow him to keep a small portion of shell for himself.  Cromwell then used the shell to forge a new helmet for himself, as he knew it would provide greater protection against magical misfires at his forge.   No one knows what ever happened to the fishmonger or the unique suit of Remorhaz armor, it is most likely he was waylaid by bandits on his return trip and the armor stolen.
+
+STATISTICS:
+
+Equipped abilities:
+– Protects against critical hits
+– Armor Class: +1
+– Magic Resistance: +10%
+– Magic Damage Resistance: +20%
+
+Weight: 10~
+@2237 = ~The Forger +3~
+@2238 = ~This is Cromwell's personal hammer, a gift given to him by a rogue djinn attempting to escape from her indentured servitude at the hands of a very cruel Vizier whom abused her at his every whim and forced her to perform heinous deeds against innocents for his own amusement and gain.  After arriving in Athkatla, the djinn quickly fled from her docked ship into the first domicile she could find,  which happened to be Cromwell's shop.  After explaining her situation and pleading for help, Cromwell agreed to perform a dangerous and rare enchantment on the djinn's lamp to reverse the relationship between master and servant.  Once he caught up to her, the enfuriated Vizier immediately used his powerful magics to wrest the lamp from the djinn.  In his haste, he immediately rubbed the lamp to trap the djinn.  Much to his dismay, he was drawn into the lamp against his will, imprisoning himself and freeing the djinn.  The grateful djinn gifted this hammer to Cromwell before returning to Calimshan.  Over the years, Cromwell has used this hammer to forge many powerful magic items, and its power has grown as magics continue to seep slowly into it from his works.  None know what happend to the accursed lamp containing the eil Vizier, but it is said to be somewhere at the bottom of the trackless sea.
+
+STATISTICS:
+
+Combat abilities:
+– 50% chance of dealing +1d4 magic damage
+– 10% chance target is stunned for 3 seconds
+
+THAC0: +3
+Damage: 1d4+4
+Damage type: Crushing
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 5~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2269,7 +2472,7 @@ Weight: 0~
 @4000 = ~Immolated~
 @4001 = ~Frozen~
 @4002 = ~Minor Antimagic Shell~
-@4003 = ~Corrosive Rain~
+@4003 = ~Caustic Asphyxiation~
 @4004 = ~Deafened~
 @4005 = ~Invisible~
 @4006 = ~THAC0 Modification~
@@ -2285,6 +2488,13 @@ Weight: 0~
 @4016 = ~Tymora's Blessing~
 @4017 = ~Stunned~
 @4018 = ~Unconscious~
+@4019 = ~Icy Thorns~
+@4020 = ~Impaled~
+@4021 = ~Boiling Magma~
+@4022 = ~Corrosive Burst~
+@4023 = ~Corrosion~
+@4024 = ~Blinded~
+@4025 = ~Crippling Pain~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2314,6 +2524,8 @@ Weight: 0~
 @5020 = ~Mass Minor Trollish Regeneration~
 @5021 = ~Mass Trollish Regeneration~
 @5022 = ~Shadowstep~
+@5023 = ~Ice Spikes~
+@5024 = ~Caustic Fog~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2321,11 +2533,11 @@ Weight: 0~
 /////                                                  \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
-@7000 = ~Why does the honeybee hum? He knows not the words! Waka waka!~
-@7001 = ~How do ettins leave messages for one another? On a bull-ettin board!~
-@7002 = ~Where is the safest place in all the land for diving? Waterdeep!~
-@7003 = ~Never listen to a tale from a wyrm—they tend to drag on!~
-@7004 = ~Why do skeletons never battle with one another? They lack guts.~
-@7005 = ~Two orcs walk into a bar. Ouch!~
-@7006 = ~Last time I told a joke to a ghoul, he laughed his head off!~
-@7007 = ~What has the body of a lion, the wings of a dragon, and tastes great covered in butter? A manti-corn!~
+@45232 = ~Why does the honeybee hum? He knows not the words! Waka waka!~ [BD45232]
+@45233 = ~How do ettins leave messages for one another? On a bull-ettin board!~ [BD45233]
+@45234 = ~Where is the safest place in all the land for diving? Waterdeep!~ [BD45234]
+@45235 = ~Never listen to a tale from a wyrm—they tend to drag on!~ [BD45235]
+@45236 = ~Why do skeletons never battle with one another? They lack guts.~ [BD45236]
+@45237 = ~Two orcs walk into a bar. Ouch!~ [BD45237]
+@45238 = ~Last time I told a joke to a ghoul, he laughed his head off!~ [BD45238]
+@45239 = ~What has the body of a lion, the wings of a dragon, and tastes great covered in butter? A manti-corn!~ [BD45239]

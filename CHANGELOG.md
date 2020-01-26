@@ -1,5 +1,51 @@
 # Changelog
 
+## Version 1.0.0
+
+### Fixed
+
+- Corrected several instances of "it's" to "its" to reflect the possesive.
+- Corrected "Corny Jokes" effect on Jester's Bracers/Wicked Jester's Bracers and restored it to the items
+- Removed casting save check from Tongue of Acid and it's upgrades that was causing a double save check on the slow effect (one for casting and one for the effect itself)
+
+### Changed
+
+- Changes to Uncursed Staff of Antipode:
+ - ground icon
+ - updated avatar graphic to match new icon
+ - changed hit damage effect to 50% chance either cold or fire damage instead of both at the same time, amount of damage on hit remains the same
+ - changed charge ability to do 50% chance of cold of fire damage instead of both at the same time, amount of damage on hit remains the same
+- Changes to Tongue of Acid +4 and +5
+ - updated avatar graphic
+ - new hit effect to be more in line with similar upgraded items
+ - changed hit acid visual effect to play on every hit, as the weapon does acid damage with on each hit
+- Changes to Tongue of Burning Acid +4 and +5
+ - Changed hit visual effect to be more in-line with the damage done by the weapon
+ - Replaced hit acid storm effect from chance on hit to a charge ability of Corrosive Fog (new ability based on IWD death fog spell)
+- Visual effect for minor antimagic shell
+- Maelstrom Axe + 3 changes:
+ - 50% chance on hit of either cold or electrical damage, amount remains the same
+- Maelstrom Axe +4 changes:
+ - 50% chance on hit of either cold or electrical damage, amount reduced to 1d3+1
+
+### Added
+
+- Added new upgrade options for the following items
+  - Varscona +2
+  - Stonefire +3
+  - Wizzard Hat
+- Added potions of magic blocking to Ribald's special stock
+- New icons for Tongue of Burning Acid +4 and +5
+- New description images for Tongue of Burning Acid +4 and +5
+- New Description image for Maelstrom Axe +3 and +4
+- New projectile animation for Maelstrom Axe +4
+- New Description image for Vampiric Voidhammer +5
+- New optional component Change Cromwell's equipment to be more in line with his forging skills:
+ - Gives Cromwell a new robe, hammer, and helmet
+- New projectile animation for Biter +2 and Biter +3 with corrected palette to better match it's icon
+- New icon and description image for Uncursed Staff of Antipode
+- New projectile animation for Smashing Wave effect on Maelstrom Pike +5
+
 
 ## Version 0.6.2
 

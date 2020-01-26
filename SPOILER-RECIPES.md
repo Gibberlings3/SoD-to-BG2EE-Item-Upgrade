@@ -133,3 +133,14 @@ Buckler of the Fist +2
 Dragon Blade +3 — can be upgraded twice
 - 1st upgrade: Silver Blade + 7,500gp
   - 2nd upgrade: Soul of Frost + 10,000gp
+  
+Varscona +2 – can be upgraded twice
+- 1st upgrade: Hilt or Blade of the Equalizer + 5,000gp
+  - 2nd upgrade: Soul of Frost + 10,000gp
+  
+Stonefire +3
+- Heart of Flame + 10,000gp
+
+Wizzard Hat – can be upgraded twice
+- 1st upgrade: Circlet of Netheril(component version) + 10,000gp
+  - 2nd upgrade: Bronze Ioun Stone + 5,000gp
