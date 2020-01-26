@@ -62,6 +62,11 @@
 61 - Wicked Jester's Bracers
 62 - Holy Ring of Purity
 63 - Dervish Crescent of Speed +3
+64 - Varscona +3
+65 - Varscona +5
+66 - Stonefire +5
+67 - Sourceror's Cap
+68 - Sourceror's Cap +1
 */
 
 
@@ -85,7 +90,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkswd1a",Player1,0,0,0) // Tongue of Burning Acid +5
+    GiveItemCreate("dtkswd1a",Player1,0,1,0) // Tongue of Burning Acid +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -819,5 +824,65 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd06",Player1,0,0,0) // Dervish Crescent of Speed +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",64)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd07",Player1,0,0,0) // Varscona +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",65)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd7a",Player1,0,1,0) // Varscona +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",66)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkaxe03",Player1,0,0,0) // Stonefire +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",67)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtksorcp",Player1,0,0,0) // Sourceror's Cap
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",68)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtksrcp2",Player1,0,0,0) // Sourceror's Cap +1
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
