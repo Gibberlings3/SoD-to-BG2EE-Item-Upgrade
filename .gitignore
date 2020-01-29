@@ -9,7 +9,7 @@
 !oggdec.exe
 !tisunpack.exe
 !TobExLoader.exe
-setup-SoD2BG2_IU
-setup-SoD2BG2_IU.command
-SoD2BG2_IU/backup/*
-SoD2BG2_IU/*.html
+setup-sod2bg2_iu
+setup-sod2bg2_iu.command
+sod2bg2_iu/backup/*
+sod2bg2_iu/*.html
