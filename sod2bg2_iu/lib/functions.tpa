@@ -1,0 +1,42 @@
+/////                                                  \\\\\
+///// adding portrait icons                            \\\\\
+/////                                                  \\\\\
+
+DEFINE_ACTION_FUNCTION dtk_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+BEGIN
+  OUTER_SET icon = "-1"
+  
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~
+END
+
+// adds the string associated with a string or tra reference to dialog.tlk and returns its strref
+DEFINE_PATCH_FUNCTION RESOLVE_REF
+  STR_VAR ref = ~~ // reference in format @123 or #123
+  RET strref
+BEGIN
+  INNER_ACTION BEGIN
+    ACTION_IF (~%ref%~ STRING_COMPARE_REGEXP ~^[@#]-?[0-9]+$~ == 0) BEGIN
+      <<<<<<<< .../inlined/MI_RSR_%ref%.tpp
+        OUTER_SET strref = RESOLVE_STR_REF (>>>>>>>>
+        
+      SILENT
+      COPY - ~.../inlined/MI_RSR_%ref%.tpp~ ~.../inlined/MI_RSR_%ref%.tpp~
+        INSERT_BYTES SOURCE_SIZE (STRING_LENGTH ~%ref%)~)
+        WRITE_ASCIIE SOURCE_SIZE ~%ref%)~
+      VERBOSE
+        
+      INCLUDE ~.../inlined/MI_RSR_%ref%.tpp~
+    END
+    ELSE BEGIN
+      OUTER_SPRINT strref ~*~
+    END
+  END
+END

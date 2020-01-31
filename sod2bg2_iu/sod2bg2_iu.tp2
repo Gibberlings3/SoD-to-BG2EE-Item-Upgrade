@@ -1,0 +1,1234 @@
+//SoD2BG2EE Item Upgrade
+
+BACKUP ~sod2bg2_iu/backup~
+SUPPORT ~https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade~
+
+VERSION ~v1.0.0~
+
+README ~sod2bg2_iu/readme.html~
+
+ASK_EVERY_COMPONENT
+
+LANGUAGE ~English~ ~english~ ~sod2bg2_iu/language/english/english.tra~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Siege of Dragonspear-BG2:EE Item Upgrade         \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @9000
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+PRINT @9001
+
+INCLUDE ~sod2bg2_iu/lib/functions.tpa~		//adding functions
+
+
+///////////////////////
+// Adding Projectiles//
+///////////////////////
+
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkvit.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkpfir.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkshrod.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkanti.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkshout.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdagg1.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtksnow.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkcloud.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkwave.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkaxel.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkwhirl.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkwind.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkicel.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkicely.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkquake.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdrain.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkjest.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkchaos.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkexalt.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkcocld.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkispke.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkabrst.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkmagsp.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkafog.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkbiter.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkaxham.pro~
+
+
+////////////////////
+//Adding Resources//
+////////////////////
+
+COPY ~sod2bg2_iu/bam~ ~override~
+COPY ~sod2bg2_iu/eff~ ~override~
+COPY ~sod2bg2_iu/vvc~ ~override~
+COPY ~sod2bg2_iu/wav~ ~override~
+
+
+//////////////////////////
+//Adding SoD Item Spells//
+//////////////////////////
+
+COPY ~sod2bg2_iu/spl/bdbow04.spl~ ~override~
+
+COPY ~sod2bg2_iu/spl/bdbrd04.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4004) END
+
+COPY ~sod2bg2_iu/spl/bdhalb01.spl~ ~override~
+
+COPY ~sod2bg2_iu/spl/bdnighte.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4005) END
+
+COPY ~sod2bg2_iu/spl/bdsper1a.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4006) END
+
+COPY ~sod2bg2_iu/spl/bdsper1b.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4007) END
+
+COPY ~sod2bg2_iu/spl/bdstrdrn.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14042 parameter1 = RESOLVE_STR_REF(@4008) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1452 parameter1 = RESOLVE_STR_REF(@4009) END
+
+COPY ~sod2bg2_iu/spl/bdsw1h02.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
+
+COPY ~sod2bg2_iu/spl/bdsw1h08.spl~ ~override~
+
+COPY ~sod2bg2_iu/spl/bdsw1h21.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4011) END
+
+COPY ~sod2bg2_iu/spl/bdxbow01.spl~ ~override~
+
+
+//////////////////////////
+//Adding New Item Spells//
+//////////////////////////
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4002) STR_VAR bam_file = dtkanmgp RET icon END
+COPY ~sod2bg2_iu/spl/dtkanmag.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 206 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4012) END
+
+// COPY ~sod2bg2_iu/spl/dtkanti.spl~ ~override~
+  // LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkanti%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkbldvx.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4011) END
+
+COPY ~sod2bg2_iu/spl/dtkchaos.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkchaos%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkcloud.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcloud%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkcocld.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcocld%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkdeafn.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkderv1.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkdrain.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkdrain%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4008) END
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4001) STR_VAR bam_file = dtkfroze RET icon END
+COPY ~sod2bg2_iu/spl/dtkicel.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkicel%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 205 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4001) END
+
+COPY ~sod2bg2_iu/spl/dtkicely.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkicely%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
+
+COPY ~sod2bg2_iu/spl/dtkjestp.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4013) END
+
+COPY ~sod2bg2_iu/spl/dtkknife.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkjest%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 17396 parameter1 = RESOLVE_STR_REF(@4014) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14674 parameter1 = RESOLVE_STR_REF(@4015) END
+
+COPY ~sod2bg2_iu/spl/dtkluck.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4016) END
+
+COPY ~sod2bg2_iu/spl/dtkprfir.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkpfir%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkquake.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkquake%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkshout.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkshout%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4000) STR_VAR bam_file = dtkshrdd RET icon END   // adding potrait icon for spell
+COPY ~sod2bg2_iu/spl/dtkshrd.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 94 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4000) END
+
+COPY ~sod2bg2_iu/spl/dtkshrdb.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkshrod%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 94 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4000) END
+
+COPY ~sod2bg2_iu/spl/dtksnow.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtksnow%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkstrvx.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14674 parameter1 = RESOLVE_STR_REF(@4015) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 14042 parameter1 = RESOLVE_STR_REF(@4008) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1452 parameter1 = RESOLVE_STR_REF(@4009) END
+
+COPY ~sod2bg2_iu/spl/dtktyr1.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkexalt%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkvit.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkvit%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkvity.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkvitz.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+COPY ~sod2bg2_iu/spl/dtkwave.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkwave%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1280 parameter1 = RESOLVE_STR_REF(@4017) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 20438 parameter1 = RESOLVE_STR_REF(@4018) END
+
+COPY ~sod2bg2_iu/spl/dtkwfog.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
+
+COPY ~sod2bg2_iu/spl/dtkwhirl.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkwhirl%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4017) END
+
+COPY ~sod2bg2_iu/spl/dtkxbow1.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4019) STR_VAR bam_file = dtkithnp RET icon END
+COPY ~sod2bg2_iu/spl/dtkithrn.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 102 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4019) END
+
+// LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4019) STR_VAR bam_file = dtkithnp RET icon END
+COPY ~sod2bg2_iu/spl/dtkispke.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkispke%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  // LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 102 parameter2 = icon END
+  // LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4019) END
+
+COPY ~sod2bg2_iu/spl/dtkmagsp.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkmagsp%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4021) STR_VAR bam_file = dtkmagpp RET icon END
+COPY ~sod2bg2_iu/spl/dtkmagsb.spl~ ~override~
+  // LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkmagsp%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 36 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4021) END
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4023) STR_VAR bam_file = dtkabstp RET icon END
+COPY ~sod2bg2_iu/spl/dtkabrst.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkabrst%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 107 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1177 parameter1 = RESOLVE_STR_REF(@4023) END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1188 parameter1 = RESOLVE_STR_REF(@4024) END
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4003) STR_VAR bam_file = dtkafogp RET icon END
+COPY ~sod2bg2_iu/spl/dtkafog.spl~ ~override~
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkafog%" END
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 41 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 1177 parameter1 = RESOLVE_STR_REF(@4003) END
+
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4025) STR_VAR bam_file = dtksufop RET icon END
+COPY ~sod2bg2_iu/spl/dtksuffo.spl~ ~override~
+  // SAY NAME1 @STRING  // Spell Name
+  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+  LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 41 parameter2 = icon END
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 3421 parameter1 = RESOLVE_STR_REF(@4025) END
+
+
+
+/////////////////
+// Adding Items//
+/////////////////
+
+
+COPY ~sod2bg2_iu/itm/acid/bdsw1h02.itm~ ~override~ 
+  SAY NAME1 @2000
+  SAY NAME2 @2001
+  SAY DESC @2002
+
+COPY ~sod2bg2_iu/itm/acid4/dtkswd01.itm~ ~override~
+  SAY NAME1 @2000
+  SAY NAME2 @2003
+  SAY DESC @2004
+
+COPY ~sod2bg2_iu/itm/acid5/dtkswd1a.itm~ ~override~ 
+  SAY NAME1 @2000
+  SAY NAME2 @2005
+  SAY DESC @2006
+
+COPY ~sod2bg2_iu/itm/drag/bdleat05.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2008
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2010
+
+COPY ~sod2bg2_iu/itm/softft/bdboot01.itm~ ~override~ 
+  SAY NAME1 @2011
+  SAY NAME2 @2012
+  SAY DESC @2013
+
+COPY ~sod2bg2_iu/itm/softft1/dtkboot1.itm~ ~override~ 
+  SAY NAME1 @2011
+  SAY NAME2 @2014
+  SAY DESC @2015
+
+COPY ~sod2bg2_iu/itm/crown/bdhelm01.itm~ ~override~ 
+  SAY NAME1 @2016
+  SAY NAME2 @2017
+  SAY UNIDENTIFIED_DESC @2018
+  SAY DESC @2019
+
+COPY ~sod2bg2_iu/itm/crownt/dtkcrwn1.itm~ ~override~ 
+  SAY NAME1 @2016
+  SAY NAME2 @2020
+  SAY DESC @2021
+
+COPY ~sod2bg2_iu/itm/helmduma/dtkhelm1.itm~ ~override~ 
+  SAY NAME2 @2022
+  SAY DESC @2023
+
+COPY ~sod2bg2_iu/itm/aeyes/dtkamul1.itm~ ~override~ 
+  SAY NAME2 @2024
+  SAY DESC @2025
+
+COPY ~sod2bg2_iu/itm/bbelt/dtkblt01.itm~ ~override~ 
+  SAY NAME2 @2026
+  SAY DESC @2027
+
+COPY_EXISTING ~bddart01.itm~ ~override~
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkbiter%" END
+
+COPY ~sod2bg2_iu/itm/biter/dtkdart1.itm~ ~override~ 
+  SAY NAME2 @2028
+  SAY DESC @2029
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkbiter%" END
+
+COPY ~sod2bg2_iu/itm/voidsw/dtkswd02.itm~ ~override~ 
+  SAY NAME2 @2030
+  SAY DESC @2031
+
+COPY ~sod2bg2_iu/itm/voidham/dtkham01.itm~ ~override~ 
+  SAY NAME2 @2032
+  SAY DESC @2033
+
+COPY ~sod2bg2_iu/itm/bardhat/dtkhat01.itm~ ~override~ 
+  SAY NAME1 @2034
+  SAY NAME2 @2035
+  SAY DESC @2036
+
+COPY ~sod2bg2_iu/itm/frobe/dtkrobe1.itm~ ~override~ 
+  SAY NAME2 @2037
+  SAY DESC @2038
+
+COPY ~sod2bg2_iu/itm/buckler/dtkshld1.itm~ ~override~ 
+  SAY NAME2 @2039
+  SAY DESC @2040
+
+COPY ~sod2bg2_iu/itm/sunder/bdhamm01.itm~ ~override~ 
+  SAY NAME2 @2041
+  SAY DESC @2042
+
+COPY ~sod2bg2_iu/itm/sunder5/dtkham02.itm~ ~override~ 
+  SAY NAME2 @2043
+  SAY DESC @2044
+
+COPY ~sod2bg2_iu/itm/flameswd/dtkswd03.itm~ ~override~ 
+  SAY NAME1 @2000
+  SAY NAME2 @2045
+  SAY DESC @2046
+
+COPY ~sod2bg2_iu/itm/starboot/bdboot03.itm~ ~override~
+  SAY NAME1 @2011 
+  SAY NAME2 @2047
+  SAY DESC @2048
+
+COPY ~sod2bg2_iu/itm/starboot1/dtkboot2.itm~ ~override~
+  SAY NAME1 @2011 
+  SAY NAME2 @2049
+  SAY DESC @2050
+
+COPY ~sod2bg2_iu/itm/vcdragp/dtkplat1.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2051
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2052
+
+COPY ~sod2bg2_iu/itm/vsdragl/dtkleat1.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2053
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2054
+
+COPY ~sod2bg2_iu/itm/ccdragpb/dtkplt1b.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2055
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2056
+
+COPY ~sod2bg2_iu/itm/ccdragps/dtkplt1a.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2057
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2058
+
+COPY ~sod2bg2_iu/itm/ccdragpw/dtkplt1c.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2059
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2060
+
+COPY ~sod2bg2_iu/itm/ccdragpsil/dtkplt1d.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2061
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2062
+
+COPY ~sod2bg2_iu/itm/csdraglb/dtklea1b.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2063
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2064
+
+COPY ~sod2bg2_iu/itm/csdraglr/dtklea1a.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2065
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2066
+
+COPY ~sod2bg2_iu/itm/csdraglw/dtklea1c.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2067
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2068
+
+COPY ~sod2bg2_iu/itm/csdraglsil/dtklea1d.itm~ ~override~ 
+  SAY NAME1 @2007
+  SAY NAME2 @2069
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2070
+
+COPY ~sod2bg2_iu/itm/stalkg/bdbrac05.itm~ ~override~ 
+  SAY NAME2 @2071
+  SAY DESC @2072
+
+COPY ~sod2bg2_iu/itm/stalkg1/dtkbrac1.itm~ ~override~ 
+  SAY NAME2 @2073
+  SAY DESC @2074
+
+COPY ~sod2bg2_iu/itm/ruby/dtkruby.itm~ ~override~
+  SAY NAME1 @2075
+  SAY NAME2 @2076
+  SAY UNIDENTIFIED_DESC @2077
+  SAY DESC @2078
+
+COPY ~sod2bg2_iu/itm/topaz/dtktopaz.itm~ ~override~
+  SAY NAME1 @2075
+  SAY NAME2 @2079
+  SAY UNIDENTIFIED_DESC @2077
+  SAY DESC @2080
+
+COPY ~sod2bg2_iu/itm/frost/dtkfrost.itm~ ~override~
+  SAY NAME1 @2075
+  SAY NAME2 @2081
+  SAY UNIDENTIFIED_DESC @2077
+  SAY DESC @2082 
+
+COPY ~sod2bg2_iu/itm/flameswd1/dtkswd3a.itm~ ~override~
+  SAY NAME1 @2000
+  SAY NAME2 @2083
+  SAY DESC @2084
+
+COPY ~sod2bg2_iu/itm/luckbelt/bdbelt01.itm~ ~override~
+  SAY NAME2 @2085
+  SAY DESC @2086
+
+COPY ~sod2bg2_iu/itm/cursestaff/bdblun06.itm~ ~override~
+  SAY NAME2 @2087
+  SAY DESC @2088
+
+COPY ~sod2bg2_iu/itm/backwhack/bdblun07.itm~ ~override~
+  SAY NAME2 @2089
+  SAY DESC @2090
+
+COPY ~sod2bg2_iu/itm/bansheebow/bdbow04.itm~ ~override~
+  SAY NAME2 @2091
+  SAY DESC @2092
+
+COPY ~sod2bg2_iu/itm/nimblef/bdbrac03.itm~ ~override~
+  SAY NAME2 @2093
+  SAY DESC @2094
+
+COPY ~sod2bg2_iu/itm/bagpipe/bdbrd04.itm~ ~override~
+  SAY NAME1 @2095
+  SAY NAME2 @2096
+  SAY UNIDENTIFIED_DESC @2097
+  SAY DESC @2098
+
+COPY ~sod2bg2_iu/itm/darkbull/bdbull02.itm~ ~override~
+  SAY NAME2 @2099
+  SAY DESC @2100
+
+COPY ~sod2bg2_iu/itm/voidarrow/bdarow02.itm~ ~override~
+  SAY NAME2 @2101
+  SAY DESC @2102
+
+COPY ~sod2bg2_iu/itm/cloakarcan/bdclck06.itm~ ~override~
+  SAY NAME2 @2103
+  SAY DESC @2104
+
+COPY ~sod2bg2_iu/itm/eledagg/bddagg01.itm~ ~override~
+  SAY NAME2 @2105
+  SAY DESC @2106
+
+COPY ~sod2bg2_iu/itm/stormpike/bdhalb01.itm~ ~override~
+  SAY NAME2 @2107
+  SAY DESC @2108
+
+COPY ~sod2bg2_iu/itm/trollblood/bdioun01.itm~ ~override~
+  SAY NAME2 @2109
+  SAY DESC @2110
+
+COPY ~sod2bg2_iu/itm/greenscale/bdscaleg.itm~ ~override~ 
+  SAY NAME1 @2111
+  SAY NAME2 @2112
+  SAY UNIDENTIFIED_DESC @2113
+  SAY DESC @2114
+
+COPY ~sod2bg2_iu/itm/egons/bdshld03.itm~ ~override~
+  SAY NAME2 @2115
+  SAY DESC @2116
+
+COPY ~sod2bg2_iu/itm/dragshld/bdshld05.itm~ ~override~
+  SAY NAME2 @2117
+  SAY DESC @2118
+
+COPY ~sod2bg2_iu/itm/vex/bdsw1h21.itm~ ~override~
+  SAY NAME2 @2119
+  SAY DESC @2120
+
+COPY ~sod2bg2_iu/sto/bdkeyr.sto~ ~override~
+  SAY NAME2 @2121
+
+COPY ~sod2bg2_iu/itm/keyring/bdkeyr.itm~ ~override~
+  SAY NAME2 @2121
+  SAY DESC @2122
+
+COPY ~sod2bg2_iu/itm/luckbelt1/dtkblt02.itm~ ~override~
+  SAY NAME2 @2123
+  SAY DESC @2124
+
+COPY ~sod2bg2_iu/itm/cursestaff1/dtkstaf1.itm~ ~override~
+  SAY NAME2 @2125
+  SAY DESC @2126
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkanti%" END
+
+COPY ~sod2bg2_iu/itm/backwhack1/dtkclub1.itm~ ~override~
+  SAY NAME2 @2127
+  SAY DESC @2128
+
+COPY ~sod2bg2_iu/itm/bansheebow1/dtkbow01.itm~ ~override~
+  SAY NAME2 @2129
+  SAY DESC @2130
+
+COPY ~sod2bg2_iu/itm/nimblef1/dtkglov1.itm~ ~override~
+  SAY NAME2 @2131
+  SAY DESC @2132
+
+COPY ~sod2bg2_iu/itm/voidquiv/dtkquiv1.itm~ ~override~
+  SAY NAME2 @2133
+  SAY DESC @2134
+
+COPY ~sod2bg2_iu/itm/darkbag/dtkquiv2.itm~ ~override~
+  SAY NAME2 @2135
+  SAY DESC @2136
+
+COPY ~sod2bg2_iu/itm/cloakarcan1/dtkclk01.itm~ ~override~
+  SAY NAME2 @2137
+  SAY DESC @2138
+
+COPY ~sod2bg2_iu/itm/eledagg1/dtktdag1.itm~ ~override~
+  SAY NAME2 @2139
+  SAY DESC @2140
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+
+COPY ~sod2bg2_iu/itm/eledagg2/dtktdag2.itm~ ~override~
+  SAY NAME2 @2141
+  SAY DESC @2142
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+
+COPY ~sod2bg2_iu/itm/maelaxe/dtkaxe01.itm~ ~override~
+  SAY NAME2 @2143
+  SAY DESC @2144
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkaxel%" END
+
+COPY ~sod2bg2_iu/itm/maelpike/dtkhalb1.itm~ ~override~
+  SAY NAME2 @2145
+  SAY DESC @2146
+
+COPY ~sod2bg2_iu/itm/maelaxe1/dtkaxe02.itm~ ~override~
+  SAY NAME2 @2147
+  SAY DESC @2148
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkaxham%" END
+
+
+COPY ~sod2bg2_iu/itm/maelpike1/dtkhalb2.itm~ ~override~
+  SAY NAME2 @2149
+  SAY DESC @2150
+
+COPY ~sod2bg2_iu/itm/trollblood1/dtkioun1.itm~ ~override~
+  SAY NAME2 @2151
+  SAY DESC @2152
+
+COPY ~sod2bg2_iu/itm/trollblood2/dtkioun2.itm~ ~override~
+  SAY NAME2 @2153
+  SAY DESC @2154
+
+COPY ~sod2bg2_iu/itm/egons1/dtkshld2.itm~ ~override~
+  SAY NAME2 @2155
+  SAY DESC @2156
+
+COPY ~sod2bg2_iu/itm/vex1/dtkswd04.itm~ ~override~
+  SAY NAME2 @2157
+  SAY DESC @2158
+
+COPY ~sod2bg2_iu/itm/egons2/dtkshd2a.itm~ ~override~
+  SAY NAME2 @2159
+  SAY DESC @2160
+
+COPY ~sod2bg2_iu/itm/astralxbow/bdxbow01.itm~ ~override~
+  SAY NAME2 @2161
+  SAY DESC @2162
+
+COPY ~sod2bg2_iu/itm/shadowspear/bdsper01.itm~ ~override~
+  SAY NAME2 @2163
+  SAY DESC @2164
+
+COPY ~sod2bg2_iu/itm/emerald/dtkemrld.itm~ ~override~
+  SAY NAME1 @2075
+  SAY NAME2 @2165
+  SAY UNIDENTIFIED_DESC @2077
+  SAY DESC @2166
+
+COPY ~sod2bg2_iu/itm/astralxbow1/dtkxbow1.itm~ ~override~
+  SAY NAME2 @2167
+  SAY DESC @2168
+
+COPY ~sod2bg2_iu/itm/shadowspear1/dtksper1.itm~ ~override~
+  SAY NAME2 @2169
+  SAY DESC @2170
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkwind%" END
+
+COPY ~sod2bg2_iu/itm/shadowspear2/dtkspr1a.itm~ ~override~
+  SAY NAME2 @2171
+  SAY DESC @2172
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkwind%" END
+
+COPY ~sod2bg2_iu/itm/ccdragpgrn/dtkplt1e.itm~ ~override~
+  SAY NAME1 @2007
+  SAY NAME2 @2173
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2174
+
+COPY ~sod2bg2_iu/itm/csdraglgrn/dtklea1e.itm~ ~override~
+  SAY NAME1 @2007
+  SAY NAME2 @2175
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2176
+
+COPY ~sod2bg2_iu/itm/gdragarm/dtkleat2.itm~ ~override~
+  SAY NAME1 @2007
+  SAY NAME2 @2178
+  SAY UNIDENTIFIED_DESC @2009
+  SAY DESC @2180
+
+COPY ~sod2bg2_iu/itm/dragblade/dtkswd05.itm~ ~override~
+  SAY NAME2 @2181
+  SAY DESC @2182
+
+COPY ~sod2bg2_iu/itm/dragblade1/dtkswd5a.itm~ ~override~
+  SAY NAME2 @2183
+  SAY DESC @2184
+
+COPY ~sod2bg2_iu/itm/dragshld1/dtkshld3.itm~ ~override~
+  SAY NAME2 @2185
+  SAY DESC @2186
+
+COPY ~sod2bg2_iu/itm/blackscale/dtkscal1.itm~ ~override~ 
+  SAY NAME1 @2187
+  SAY NAME2 @2188
+  SAY UNIDENTIFIED_DESC @2189
+  SAY DESC @2190
+
+COPY ~sod2bg2_iu/itm/acid4a/dtkswd1b.itm~ ~override~
+  SAY NAME2 @2191
+  SAY DESC @2192
+
+COPY ~sod2bg2_iu/itm/acid5a/dtkswd1c.itm~ ~override~
+  SAY NAME2 @2193
+  SAY DESC @2194
+
+COPY ~sod2bg2_iu/itm/forestqn/bdbrd01.itm~ ~override~ 
+  SAY NAME1 @2195
+  SAY NAME2 @2196
+  SAY UNIDENTIFIED_DESC @2197
+  SAY DESC @2198
+
+COPY ~sod2bg2_iu/itm/jester/bdbrac02.itm~ ~override~  // Jester's Bracers
+  SAY NAME2 @2199
+  SAY DESC @2200
+
+COPY_EXISTING ~bdbrac02.eff~ ~override~
+  SET strref = RESOLVE_STR_REF (@45232)
+  WRITE_LONG 0x60 strref
+  SET strref = RESOLVE_STR_REF (@45233)
+  SET strref = RESOLVE_STR_REF (@45234)
+  SET strref = RESOLVE_STR_REF (@45235)
+  SET strref = RESOLVE_STR_REF (@45236)
+  SET strref = RESOLVE_STR_REF (@45237)
+  SET strref = RESOLVE_STR_REF (@45238)
+  SET strref = RESOLVE_STR_REF (@45239)
+
+COPY ~sod2bg2_iu/itm/nightarm/bdleat07.itm~ ~override~ 
+  SAY NAME2 @2201
+  SAY DESC @2202
+
+COPY ~sod2bg2_iu/itm/nightarm1/dtklea02.itm~ ~override~ 
+  SAY NAME2 @2203
+  SAY DESC @2204
+
+COPY ~sod2bg2_iu/itm/jester1/dtkbrac2.itm~ ~override~ 	// Wicked Jester's Bracers
+  SAY NAME2 @2205
+  SAY DESC @2206
+
+COPY ~sod2bg2_iu/itm/ringpurity/bdring10.itm~ ~override~ 
+  SAY NAME2 @2207
+  SAY DESC @2208
+
+COPY ~sod2bg2_iu/itm/ringpurity1/dtkring1.itm~ ~override~ 
+  SAY NAME2 @2209
+  SAY DESC @2210
+
+COPY ~sod2bg2_iu/itm/dervish/bdsw1h08.itm~ ~override~ 
+  SAY NAME2 @2211
+  SAY DESC @2212
+
+COPY ~sod2bg2_iu/itm/dervish1/dtkswd06.itm~ ~override~ 
+  SAY NAME2 @2213
+  SAY DESC @2214
+
+COPY ~sod2bg2_iu/itm/focusband/bdhelm15.itm~ ~override~
+  SAY NAME1 @2215
+  SAY NAME2 @2216
+  SAY UNIDENTIFIED_DESC @2217
+  SAY DESC @2218
+
+COPY ~sod2bg2_iu/itm/wizzard/bdhelm12.itm~ ~override~
+  SAY NAME1 @2219
+  SAY NAME2 @2220
+  SAY UNIDENTIFIED_DESC @2221
+  SAY DESC @2222
+
+COPY ~sod2bg2_iu/itm/varscona1/dtkswd07.itm~ ~override~
+  SAY NAME2 @2223
+  SAY DESC @2224
+
+COPY ~sod2bg2_iu/itm/varscona2/dtkswd7a.itm~ ~override~
+  SAY NAME2 @2225
+  SAY DESC @2226
+
+COPY ~sod2bg2_iu/itm/stonefire/dtkaxe03.itm~ ~override~
+  SAY NAME2 @2227
+  SAY DESC @2228
+
+COPY ~sod2bg2_iu/itm/sourcecap/dtksorcp.itm~ ~override~
+  SAY NAME1 @2219
+  SAY NAME2 @2229
+  SAY UNIDENTIFIED_DESC @2221
+  SAY DESC @2230
+
+COPY ~sod2bg2_iu/itm/sourcecap2/dtksrcp2.itm~ ~override~
+  SAY NAME1 @2219
+  SAY NAME2 @2231
+  SAY UNIDENTIFIED_DESC @2221
+  SAY DESC @2232
+
+
+
+
+
+/////////////////////////////
+//Adding Cromwell Dialogues//
+/////////////////////////////
+
+
+// compiled in serial so that COPY_TRANS will get the one before it
+COMPILE ~sod2bg2_iu/dialogue/crom1.d~ // Tongue of Burning Acid +4
+COMPILE ~sod2bg2_iu/dialogue/crom2.d~ // Tongue of Burning Acid +5
+COMPILE ~sod2bg2_iu/dialogue/crom3.d~ // Quicksilver Sabatons
+COMPILE ~sod2bg2_iu/dialogue/crom4.d~ // Crown of Truths
+COMPILE ~sod2bg2_iu/dialogue/crom5.d~ // Horned Helm of Dumathoin
+COMPILE ~sod2bg2_iu/dialogue/crom6.d~ // Archer's Eagle Eyes
+COMPILE ~sod2bg2_iu/dialogue/crom7.d~ // Belt of the Blademaster
+COMPILE ~sod2bg2_iu/dialogue/crom8.d~ // Biter +3
+COMPILE ~sod2bg2_iu/dialogue/crom9.d~ // Icy Blade of the Void +5
+COMPILE ~sod2bg2_iu/dialogue/crom10.d~ // Icy Hammer of the Void +5
+COMPILE ~sod2bg2_iu/dialogue/crom11.d~ // Melodius Bard Hat
+COMPILE ~sod2bg2_iu/dialogue/crom12.d~ // Robe of Roaring Flames
+COMPILE ~sod2bg2_iu/dialogue/crom13.d~ // Mirrored Buckler of the Fist +2
+COMPILE ~sod2bg2_iu/dialogue/crom14.d~ // Sundermaul +5
+COMPILE ~sod2bg2_iu/dialogue/crom15.d~ // The Scorched Earth +3
+COMPILE ~sod2bg2_iu/dialogue/crom16.d~ // Solar Boots of the Cosmos
+COMPILE ~sod2bg2_iu/dialogue/crom17.d~ // Verdant Crimson/Shadow armor
+COMPILE ~sod2bg2_iu/dialogue/crom18.d~ // Chromatic Crimson/Carmine Viridian armor
+COMPILE ~sod2bg2_iu/dialogue/crom19.d~ // Chromatic Shadow/Umbral Viridian armor
+COMPILE ~sod2bg2_iu/dialogue/crom20.d~ // Stalker's Gauntlets of Blinding Strike
+COMPILE ~sod2bg2_iu/dialogue/crom21.d~ // The Scorched Earth +5
+COMPILE ~sod2bg2_iu/dialogue/crom22.d~ // Cloverleaf +1
+COMPILE ~sod2bg2_iu/dialogue/crom23.d~ // Uncursed Staff of Antipode
+COMPILE ~sod2bg2_iu/dialogue/crom23a.d~ // Uncursed Staff of Antipode - recharge
+COMPILE ~sod2bg2_iu/dialogue/crom24.d~ // Nasty Backwhacker +4
+COMPILE ~sod2bg2_iu/dialogue/crom25.d~ // Bow of the Wailing Banshee +4
+COMPILE ~sod2bg2_iu/dialogue/crom26.d~ // Adventurer's Nimble Gloves of Guarding
+COMPILE ~sod2bg2_iu/dialogue/crom27.d~ // Quiver of Void-Tipped Arrows +3
+COMPILE ~sod2bg2_iu/dialogue/crom28.d~ // Bag of Darkness +3
+COMPILE ~sod2bg2_iu/dialogue/crom29.d~ // Illusory Cloak of Arcana
+COMPILE ~sod2bg2_iu/dialogue/crom30.d~ // Element's Fury +3
+COMPILE ~sod2bg2_iu/dialogue/crom31.d~ // Element's Fury +4
+COMPILE ~sod2bg2_iu/dialogue/crom32.d~ // Maelstrom Axe +3 or Pike +4
+COMPILE ~sod2bg2_iu/dialogue/crom33.d~ // Maelstrom Axe +4
+COMPILE ~sod2bg2_iu/dialogue/crom34.d~ // Maelstrom Pike +5
+COMPILE ~sod2bg2_iu/dialogue/crom35.d~ // Trollkiller's Ioun Stone
+COMPILE ~sod2bg2_iu/dialogue/crom36.d~ // Trollkiller's Ioun Stone +1
+COMPILE ~sod2bg2_iu/dialogue/crom37.d~ // Bulwark of Egons +3
+COMPILE ~sod2bg2_iu/dialogue/crom38.d~ // Vexation +5
+COMPILE ~sod2bg2_iu/dialogue/crom39.d~ // Bulwark of Egons +4
+COMPILE ~sod2bg2_iu/dialogue/crom40.d~ // Astral Crossbow +4
+COMPILE ~sod2bg2_iu/dialogue/crom41.d~ // Shadowed Spear of the Tempest +4
+COMPILE ~sod2bg2_iu/dialogue/crom42.d~ // Shadowed Spear of the Tempest +6
+COMPILE ~sod2bg2_iu/dialogue/crom43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~sod2bg2_iu/dialogue/crom44.d~ // Silver Dragon Blade +4
+COMPILE ~sod2bg2_iu/dialogue/crom45.d~ // Silver Dragon Blade +5
+COMPILE ~sod2bg2_iu/dialogue/crom46.d~ // Dragonscale Aegis +4
+COMPILE ~sod2bg2_iu/dialogue/crom47.d~ // Tongue of Acid +5
+COMPILE ~sod2bg2_iu/dialogue/crom48.d~ // The Night's Embrace +6
+COMPILE ~sod2bg2_iu/dialogue/crom49.d~ // Wicked Jester's Bracers
+COMPILE ~sod2bg2_iu/dialogue/crom50.d~ // Holy Ring of Purity
+COMPILE ~sod2bg2_iu/dialogue/crom51.d~ // Dervish Crescent of Speed +3
+COMPILE ~sod2bg2_iu/dialogue/crom52.d~ // Varscona +3
+COMPILE ~sod2bg2_iu/dialogue/crom53.d~ // Varscona +5
+COMPILE ~sod2bg2_iu/dialogue/crom54.d~ // Stonefire +5
+COMPILE ~sod2bg2_iu/dialogue/crom55.d~ // Sourceror's Cap
+COMPILE ~sod2bg2_iu/dialogue/crom56.d~ // Sourceror's Cap +1
+
+EXTEND_BOTTOM ~ar0334.bcs~ ~sod2bg2_iu/scripts/ar0334.baf~		//item generating script for cromwell
+
+
+/////////////////////////////
+//Adding Cespenar Dialogues//
+/////////////////////////////
+
+
+// compiled in serial so that COPY_TRANS will get the one before it
+COMPILE ~sod2bg2_iu/dialogue/cespy1.d~ // Tongue of Burning Acid +4/Tongue of Acid +4
+COMPILE ~sod2bg2_iu/dialogue/cespy2.d~ // Tongue of Burning Acid +5
+COMPILE ~sod2bg2_iu/dialogue/cespy3.d~ // Quicksilver Sabatons
+COMPILE ~sod2bg2_iu/dialogue/cespy4.d~ // Crown of Truths
+COMPILE ~sod2bg2_iu/dialogue/cespy5.d~ // Horned Helm of Dumathoin
+COMPILE ~sod2bg2_iu/dialogue/cespy6.d~ // Archer's Eagle Eyes
+COMPILE ~sod2bg2_iu/dialogue/cespy7.d~ // Belt of the Blademaster
+COMPILE ~sod2bg2_iu/dialogue/cespy8.d~ // Biter +3
+COMPILE ~sod2bg2_iu/dialogue/cespy9.d~ // Icy Blade of the Void +5
+COMPILE ~sod2bg2_iu/dialogue/cespy10.d~ // Icy Hammer of the Void +5
+COMPILE ~sod2bg2_iu/dialogue/cespy11.d~ // Melodius Bard Hat
+COMPILE ~sod2bg2_iu/dialogue/cespy12.d~ // Robe of Roaring Flames
+COMPILE ~sod2bg2_iu/dialogue/cespy13.d~ // Mirrored Buckler of the Fist +2
+COMPILE ~sod2bg2_iu/dialogue/cespy14.d~ // Sundermaul +5
+COMPILE ~sod2bg2_iu/dialogue/cespy15.d~ // The Scorched Earth +3
+COMPILE ~sod2bg2_iu/dialogue/cespy16.d~ // Solar Boots of the Cosmos
+COMPILE ~sod2bg2_iu/dialogue/cespy17.d~ // Verdant Crimson/Shadow armor
+COMPILE ~sod2bg2_iu/dialogue/cespy18.d~ // Chromatic Crimson/Carmine Viridian armor
+COMPILE ~sod2bg2_iu/dialogue/cespy19.d~ // Chromatic Shadow/Umbral Viridian armor
+COMPILE ~sod2bg2_iu/dialogue/cespy20.d~ // Stalker's Gauntlets of Blinding Strike
+COMPILE ~sod2bg2_iu/dialogue/cespy21.d~ // The Scorched Earth +5
+COMPILE ~sod2bg2_iu/dialogue/cespy22.d~ // Cloverleaf +1
+COMPILE ~sod2bg2_iu/dialogue/cespy23.d~ // Uncursed Staff of Antipode
+COMPILE ~sod2bg2_iu/dialogue/cespy23a.d~ // Uncursed Staff of Antipode - recharge
+COMPILE ~sod2bg2_iu/dialogue/cespy24.d~ // Nasty Backwhacker +4
+COMPILE ~sod2bg2_iu/dialogue/cespy25.d~ // Bow of the Wailing Banshee +4
+COMPILE ~sod2bg2_iu/dialogue/cespy26.d~ // Adventurer's Nimble Gloves of Guarding
+COMPILE ~sod2bg2_iu/dialogue/cespy27.d~ // Quiver of Void-Tipped Arrows +3
+COMPILE ~sod2bg2_iu/dialogue/cespy28.d~ // Bag of Darkness +3
+COMPILE ~sod2bg2_iu/dialogue/cespy29.d~ // Illusory Cloak of Arcana
+COMPILE ~sod2bg2_iu/dialogue/cespy30.d~ // Element's Fury +3
+COMPILE ~sod2bg2_iu/dialogue/cespy31.d~ // Element's Fury +4
+COMPILE ~sod2bg2_iu/dialogue/cespy32.d~ // Maelstrom Axe +3 or Pike +4
+COMPILE ~sod2bg2_iu/dialogue/cespy33.d~ // Maelstrom Axe +4
+COMPILE ~sod2bg2_iu/dialogue/cespy34.d~ // Maelstrom Pike +5
+COMPILE ~sod2bg2_iu/dialogue/cespy35.d~ // Trollkiller's Ioun Stone
+COMPILE ~sod2bg2_iu/dialogue/cespy36.d~ // Trollkiller's Ioun Stone +1
+COMPILE ~sod2bg2_iu/dialogue/cespy37.d~ // Bulwark of Egons +3
+COMPILE ~sod2bg2_iu/dialogue/cespy38.d~ // Vexation +5
+COMPILE ~sod2bg2_iu/dialogue/cespy39.d~ // Bulwark of Egons +4
+COMPILE ~sod2bg2_iu/dialogue/cespy40.d~ // Astral Crossbow +4
+COMPILE ~sod2bg2_iu/dialogue/cespy41.d~ // Shadowed Spear of the Tempest +4
+COMPILE ~sod2bg2_iu/dialogue/cespy42.d~ // Shadowed Spear of the Tempest +6
+COMPILE ~sod2bg2_iu/dialogue/cespy43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~sod2bg2_iu/dialogue/cespy44.d~ // Silver Dragon Blade +4
+COMPILE ~sod2bg2_iu/dialogue/cespy45.d~ // Silver Dragon Blade +5
+COMPILE ~sod2bg2_iu/dialogue/cespy46.d~ // Dragonscale Aegis +4
+COMPILE ~sod2bg2_iu/dialogue/cespy47.d~ // Tongue of Acid +5
+COMPILE ~sod2bg2_iu/dialogue/cespy48.d~ // The Night' Embrace +6
+COMPILE ~sod2bg2_iu/dialogue/cespy49.d~ // Wicked Jester's Bracers
+COMPILE ~sod2bg2_iu/dialogue/cespy50.d~ // Holy Ring of Purity
+COMPILE ~sod2bg2_iu/dialogue/cespy51.d~ // Dervish Crescent of Speed +3
+COMPILE ~sod2bg2_iu/dialogue/cespy52.d~ // Varscona +3
+COMPILE ~sod2bg2_iu/dialogue/cespy53.d~ // Varscona +5
+COMPILE ~sod2bg2_iu/dialogue/cespy54.d~ // Stonefire +5
+COMPILE ~sod2bg2_iu/dialogue/cespy55.d~ // Sourceror's Cap
+COMPILE ~sod2bg2_iu/dialogue/cespy56.d~ // Sourceror's Cap +1
+
+EXTEND_BOTTOM ~botsmith.bcs~ ~sod2bg2_iu/scripts/cespy.baf~  //Item generating script for cespy
+
+
+
+//////////////////////////////
+//Adding items to containers//
+//////////////////////////////
+
+
+EXTEND_BOTTOM ~ar0602.bcs~ ~sod2bg2_iu/scripts/ar0602.baf~	//keyring
+EXTEND_BOTTOM ~ar3001.bcs~ ~sod2bg2_iu/scripts/ar3001.baf~	//Breath of Wind
+
+
+/////////////////////////////
+//Adding items to creatures//
+/////////////////////////////
+
+
+COPY_EXISTING ~firkra02.cre~ ~override~
+  ADD_CRE_ITEM ~BDHELM01~ #0 #0 #0 ~NONE~ ~INV~		//Crown Of Lies
+
+COPY_EXISTING ~gmayor.cre~ ~override~
+  ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~gron.cre~ ~override~
+  ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~theshal.cre~ ~override~
+  ADD_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~INV~		//Helm of Opposition
+
+COPY_EXISTING ~shadra01.cre~ ~override~
+  ADD_CRE_ITEM ~bdsw1h02~ #0 #0 #0 ~NONE~ ~INV~		//Tongue of Acid +3
+
+COPY_EXISTING ~dragshad.cre~ ~override~
+  ADD_CRE_ITEM ~bdsw1h02~ #0 #0 #0 ~NONE~ ~INV~		//Tongue of Acid +3
+
+COPY_EXISTING ~dragsilv.cre~ ~override~
+  ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
+
+COPY_EXISTING ~udsilver.cre~ ~override~
+  ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver Scales
+
+COPY_EXISTING ~tdr10a.cre~ ~override~
+  ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//Dragonscale Armor
+
+COPY_EXISTING ~maevar.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdleat07~ #0 #0 #0 ~NONE~ ~ARMOR~		//The Night's Embrace +3
+
+COPY_EXISTING ~bheye.cre~ ~override~
+  ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
+
+COPY_EXISTING ~unsee.cre~ ~override~
+  ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
+
+COPY_EXISTING ~shadel.cre~ ~override~
+  ADD_CRE_ITEM ~bdbrac05~ #0 #0 #0 ~NONE~ ~GLOVES~		//Stalker's Gauntlets
+
+COPY_EXISTING ~torgal.cre~ ~override~
+  ADD_CRE_ITEM ~bdsper01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Shadowed Spear +2
+
+COPY_EXISTING ~gorsal.cre~ ~override~
+  ADD_CRE_ITEM ~dtkruby~ #0 #0 #0 ~NONE~ ~INV~		//Heart of Flame
+
+COPY_EXISTING ~gorchr.cre~ ~override~
+  ADD_CRE_ITEM ~dtktopaz~ #0 #0 #0 ~NONE~ ~INV~		//Eye of Ichor
+
+COPY_EXISTING ~fsdragon.cre~ ~override~
+  ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
+
+COPY_EXISTING ~hdragred.cre~ ~override~
+  ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
+
+COPY_EXISTING ~hdragsil.cre~ ~override~
+  ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver scales
+
+COPY_EXISTING ~dragblac.cre~ ~override~
+  ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
+
+//COPY_EXISTING ~sevpat01.cre~ ~override~
+  //ADD_CRE_ITEM ~bdhamm01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Sundermaul +3
+
+COPY_EXISTING ~haer10.cre~ ~override~
+  ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~haer11.cre~ ~override~
+  ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~haer13.cre~ ~override~
+  ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~haer15.cre~ ~override~
+  ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
+
+COPY_EXISTING ~pirsea01.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
+
+COPY_EXISTING ~sevpat02.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun06~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Uncursed Staff +1
+
+COPY_EXISTING ~sevpat03.cre~ ~override~
+  ADD_CRE_ITEM ~bdbrd04~ #0 #0 #0 ~NONE~ ~QITEM1~		//Screaming bagpipes
+
+COPY_EXISTING ~nalia8.cre~ ~override~
+  ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~nalia10.cre~ ~override~
+  ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~nalia11.cre~ ~override~
+  ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~nalia13.cre~ ~override~
+  ADD_CRE_ITEM ~bdioun01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~	//Trollblood Ioun Stone
+
+COPY_EXISTING ~cohrvale.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun07~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Backwhacker +2
+
+COPY_EXISTING ~mekrat.cre~ ~override~
+  ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
+
+COPY_EXISTING ~sppain.cre~ ~override~
+  ADD_CRE_ITEM ~bddagg01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Element's Fury +2
+
+COPY_EXISTING ~keldor9.cre~ ~override~
+  ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+
+COPY_EXISTING ~ohdterp.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdshld03~ #0 #0 #0 ~NONE~ ~SHIELD~	//Shield of Egons +2
+
+COPY_EXISTING ~gall.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdbow04~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED 	//Bow of the Banshee +2
+
+COPY_EXISTING ~gorbat1.cre~ ~override~
+  ADD_CRE_ITEM ~dtkfrost~ #0 #0 #0 ~NONE~ ~INV~	//Soul of Frost
+
+COPY_EXISTING ~ddguard7.cre~ ~override~
+  ADD_CRE_ITEM ~bdring10~ #0 #0 #0 ~NONE~ ~INV~	//Ring of Purity
+
+COPY_EXISTING ~ohnlanne.cre~ ~override~
+  ADD_CRE_ITEM ~bdhelm12~ #0 #0 #0 ~NONE~ ~HELMET~	//Wizzard Hat
+
+COPY_EXISTING ~ohralor.CRE~ ~override~
+  ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
+
+COPY_EXISTING ~ohralor2.CRE~ ~override~
+  ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
+
+COPY_EXISTING ~kaypal01.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdhalb01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Storm Pike +2
+
+COPY_EXISTING ~vaelasa.cre~ ~override~
+  ADD_CRE_ITEM ~bdbrd01~ #0 #0 #0 ~NONE~ ~QITEM1~		//Forest Queen's Benediction
+
+
+
+
+
+/////////////////////////////////
+//Adding items as quest rewards//
+/////////////////////////////////
+		
+COMPILE ~sod2bg2_iu/dialogue/khanz1.d~		//Dervish Crescent +2
+COMPILE ~sod2bg2_iu/dialogue/khanz2.d~		//Dervish Crescent +2
+COMPILE ~sod2bg2_iu/dialogue/renal1.d~		//Nimblefinger Gloves
+COMPILE ~sod2bg2_iu/dialogue/renal2.d~		//Nimblefinger Gloves
+COMPILE ~sod2bg2_iu/dialogue/thern1.d~		//Sundermaul +3
+COMPILE ~sod2bg2_iu/dialogue/vaela1.d~		//Forest Queen's Benediction
+
+
+//////////////////////////
+//Adding items to stores//
+//////////////////////////
+
+COPY_EXISTING ~shop04.sto~ ~override~
+  ADD_STORE_ITEM ~bdbull02~ #0 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
+
+COPY_EXISTING ~shop04.sto~ ~override~
+  ADD_STORE_ITEM ~bdarow02~ #0 #0 #0 ~IDENTIFIED~ #80		//Void-Tipped Arrow +3
+
+COPY_EXISTING ~shop04.sto~ ~override~
+  ADD_STORE_ITEM ~bdbrd01~ #0 #0 #0 ~IDENTIFIED~ #1		//Forest Queen's Benediction
+
+COPY_EXISTING ~shop04.sto~ ~override~
+  ADD_STORE_ITEM ~bdbrac02~ #0 #0 #0 ~IDENTIFIED~ #1		//Jester's Bracers
+
+COPY_EXISTING ~bmthief.sto~ ~override~
+  ADD_STORE_ITEM ~bdboot01~ #0 #0 #0 ~IDENTIFIED~ #1		//Soft Feet
+
+COPY_EXISTING ~ribald3.sto~ ~override~
+  ADD_STORE_ITEM ~potn33~ #0 #0 #0 ~IDENTIFIED~ #2		//Potion of Magic Blocking
+
+
+////////////////////////////////
+//Adding item ability tooltips//
+////////////////////////////////
+
+COPY - ~sod2bg2_iu/2da/tooltip.2da~ ~sod2bg2_iu/2da/tooltip.2da~
+  READ_2DA_ENTRIES_NOW r2en_tooltip 1
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  COUNT_2DA_COLS num_cols
+  COUNT_2DA_ROWS num_cols num_rows
+  FOR (row = 0; row < r2en_tooltip; row += 1) BEGIN
+    READ_2DA_ENTRY_FORMER r2en_tooltip row 0 item
+    READ_2DA_ENTRY_FORMER r2en_tooltip row 1 ability1
+    READ_2DA_ENTRY_FORMER r2en_tooltip row 2 ability2
+    READ_2DA_ENTRY_FORMER r2en_tooltip row 3 ability3
+    LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability1%~ RET ability1 = strref END
+    LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability2%~ RET ability2 = strref END
+    LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability3%~ RET ability3 = strref END
+    INSERT_2DA_ROW num_rows num_cols ~%item%  %ability1%  %ability2%  %ability3%~
+    SET num_rows += 1
+  END
+  BUT_ONLY
+
+
+/////////////////////////////////////////
+// Force all import-able items from SoD//
+/////////////////////////////////////////
+
+BEGIN @9004
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+SUBCOMPONENT @9002
+
+EXTEND_BOTTOM ~baldur.bcs~ ~sod2bg2_iu/scripts/baldur.baf~	//SoD Global Variables with Voidsword +3
+
+
+BEGIN @9005
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+SUBCOMPONENT @9002
+
+EXTEND_BOTTOM ~baldur.bcs~ ~sod2bg2_iu/scripts/baldur1.baf~	//SoD Global Variables with Voidhammer +3
+
+
+///////////////////////////////////////////////////////////////
+// Equip Cromwell with new items more relevant to his skills //
+///////////////////////////////////////////////////////////////
+
+BEGIN @9007
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+
+COPY ~sod2bg2_iu/itm/cromrobe/dtkfrgrb.itm~ ~override~
+  SAY NAME2 @2233
+  SAY DESC @2234
+
+COPY ~sod2bg2_iu/itm/remohelm/dtkremoh.itm~ ~override~
+  SAY NAME2 @2235
+  SAY DESC @2236
+
+COPY ~sod2bg2_iu/itm/cromhammer/dtkfrghm.itm~ ~override~
+  SAY NAME2 @2237
+  SAY DESC @2238
+
+COPY_EXISTING ~wsmith01.cre~ ~override~
+  REPLACE_CRE_ITEM ~dtkfrghm~ #0 #0 #0 ~UNDROPPABLE~ ~WEAPON~ EQUIP		//The Forger +3
+
+COPY_EXISTING ~wsmith01.cre~ ~override~
+  REPLACE_CRE_ITEM ~dtkfrgrb~ #0 #0 #0 ~UNDROPPABLE~ ~ARMOR~		//Forgemaster's Robes
+
+COPY_EXISTING ~wsmith01.cre~ ~override~
+  REPLACE_CRE_ITEM ~dtkremoh~ #0 #0 #0 ~UNDROPPABLE~ ~HELMET~		//Remorhaz Helm
