@@ -8,7 +8,7 @@
 
 **Author**: [Daeros_Trollkiller](https://www.gibberlings3.net/profile/11100-daeros_trollkiller/)
 
-**On the Web**: [Discussion forum](https://forums.beamdog.com/discussion/76631/mod-siege-of-dragonspear-2-baldurs-gate2-ee-item-upgrade-v0-5-1-released/p1)
+**On the Web**: [Discussion forum](https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/)
 
 
 ## Introduction
