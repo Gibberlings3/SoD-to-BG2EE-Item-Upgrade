@@ -26,6 +26,7 @@ PRINT @9001
 
 INCLUDE ~sod2bg2_iu/lib/functions.tpa~		//adding functions
 
+ACTION_IF NOT GAME_IS ~EET~ THEN BEGIN
 
 ///////////////////////
 // Adding Projectiles//
@@ -836,7 +837,7 @@ COPY ~sod2bg2_iu/itm/sourcecap2/dtksrcp2.itm~ ~override~
   SAY UNIDENTIFIED_DESC @2221
   SAY DESC @2232
 
-
+END //This is the end for EET not importing already existing items
 
 
 
