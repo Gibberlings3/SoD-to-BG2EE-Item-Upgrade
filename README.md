@@ -8,7 +8,7 @@
 
 **Author**: [Daeros_Trollkiller](https://www.gibberlings3.net/profile/11100-daeros_trollkiller/)
 
-**On the Web**: [Discussion forum](https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/)
+**On the Web**: [Home page](https://www.gibberlings3.net/mods/items/sod-to-bg2ee-item-upgrade/) and [Discussion forum](https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/)
 
 
 ## Introduction
