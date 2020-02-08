@@ -3,7 +3,7 @@
 BACKUP ~sod2bg2_iu/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/~
 
-VERSION ~v1.0.0~
+VERSION ~v1.0.1~
 
 README ~sod2bg2_iu/readme.html~
 
@@ -407,6 +407,13 @@ COPY ~sod2bg2_iu/itm/frobe/dtkrobe1.itm~ ~override~
 COPY ~sod2bg2_iu/itm/buckler/dtkshld1.itm~ ~override~ 
   SAY NAME2 @2039
   SAY DESC @2040
+  	SET projectile = EVAL "%dtkdagg1%"
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkaxel%"
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtkaxham%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+
 
 COPY ~sod2bg2_iu/itm/sunder/bdhamm01.itm~ ~override~ 
   SAY NAME2 @2041
