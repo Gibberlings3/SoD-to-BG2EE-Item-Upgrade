@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.0.1
+
+### Fixed
+
+- Corrected Reflection Shield +1 and Mirrored Buckler of the Fist + to properly relfect projectiles from Maelstrom Axe +3 and +4, Elemental Fury +3 and +4
 
 ## Version 1.0.0
 

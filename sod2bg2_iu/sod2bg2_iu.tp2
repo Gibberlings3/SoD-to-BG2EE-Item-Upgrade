@@ -1192,6 +1192,18 @@ COPY_EXISTING ~tooltip.2da~ ~override~
     SET num_rows += 1
   END
   BUT_ONLY
+  
+//////////////////////////////////////////////////
+//Updating Reflection Shield for new projectiles//
+//////////////////////////////////////////////////
+
+COPY_EXISTING ~shld24.itm~ ~override~	//Reflection Shield +1
+  	SET projectile = EVAL "%dtkdagg1%"
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkaxel%"
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtkaxham%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
 
 
 /////////////////////////////////////////
