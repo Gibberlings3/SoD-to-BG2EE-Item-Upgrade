@@ -130,7 +130,7 @@ Tazok, Firkraag's dungeon, Windspear Hills
 Shop, Bridge District
 
 ### Heart of Flame
-Saladrex, Watcher's Keep (Machine of Lum the Mad level)
+Saladrex, Watcher's Keep, Level 4 (Machine of Lum the Mad level)
 
 ### Eye of Ichor
 Chromatic Demon, Watcher's Keep (Elemental Level)
@@ -146,3 +146,28 @@ Black Dragons in Suldanessellar, Hell (if you decide to fight it)
 
 ### Helm of Opposition
 Undead Mayor, Unseeing Eye Cult Area
+
+### Crimson Dawn +2
+Dragomir the Red, Dragomir's tomb
+
+### Severance +2
+Lady Galvena, Lady Galvena's Festhall, Brynnlaw
+
+### Sealed Ancient Scroll (Trollkiller's Fireball)
+Firkraag, Windspear Hills Dungeon
+
+### Sealed Ancient Scroll (Thunder Thrust)
+Revanek, Twisted Rune Building, Athkatla Bridge District
+
+### Sealed Ancient Scroll (Corrosion)
+Vault, Watcher's Keep, Level 4 (Machine of Lum the Mad level)
+
+### Sealed Ancient Scroll (Hoar of Frost)
+Fire Pit, Yaga-Shura's Lair
+
+### Shadow Dragon's Blood
+Shadow Dragon (Thaxll'ssillyia), Shade Lord's Dungeon
+
+### Blood-stained Ancient Scroll
+Given as reward for completing Human Flesh using new alternate upgrade path
+

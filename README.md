@@ -34,6 +34,12 @@ What this mod does:
 
 - Includes an optional component to change Cromwell's equipment to something more in-line with his skills as a forger of highly magical items.
 
+- Includes five new mage spells, their scrolls created through Cromwell and Cespenar.
+
+- Includes alternate completion and upgrade path for the human flesh armor.
+
+- Includes upgrade paths for a two importable weapons from Baldur's Gate:EE
+
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 
 

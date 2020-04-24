@@ -144,3 +144,19 @@ Stonefire +3
 Wizzard Hat – can be upgraded twice
 - 1st upgrade: Circlet of Netheril(component version) + 10,000gp
   - 2nd upgrade: Bronze Ioun Stone + 5,000gp
+  
+Crimson Dawn +2 – can be upgraded twice
+- 1st upgrade: Light Gem + 5,000gp
+  - 2nd upgrade: Starfall Ore + 10,000gp
+  
+Severance +2 – can be upgraded twice
+- 1st upgrade: Light Gem + 5,000gp
+  - 2nd upgrade: Starfall Ore + 10,000gp
+  
+Human Flesh - can be upgraded twice (new, alternate path)
+- 1st upgrade: Robe of Vecna + Shadow Dragon Blood + 10,000gp
+  - 2nd upgrade: Skull of the Lich + 10,000gp
+  
+Sealed Ancient Scroll (4 available)
+- dragon scales (red, blue, shadow, white, black, or green) + 10,000gp
+  

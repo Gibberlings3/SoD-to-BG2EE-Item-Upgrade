@@ -223,6 +223,35 @@
 @199 = ~The Sourceror's Cap?  Ye say ye would like it enhanced further?  Hmmm, let me think a moment...~
 @200 = ~Yes, I believe I can enhance this cap o' yers.  I would need an ioun stone of bronze and 5,000 gold crowns~
 @201 = ~Well then, ye certainly be proficient in the adventurin' business.  I can use this bronze ioun stone to enhance yer Sourceror's Cap.  Are ye ready to help at me forge fer the day, <CHARNAME>?~
+@202 = ~What be this? looks to be an unfinished garment constructed of human skin?  I'll not ask ye where ye got this from.~
+@203 = ~With the right components, I could finish this ghastly thing into a completely serviceable piece of armor.  If ye are able to pry Vecna's robes from Ribald's greedy fingers, and find me some blood from a shadow dragon, I could finish the work.~
+@204 = ~This be the old Lich's robe sure enough, and by the Soul Forger... is this murky vial filled with the life-blood from a Shadow Drake?  Such a sight to behold, it's almost as if this be bled from the very void itself.  With these, and a generous contribution of 10,000 gold crowns for the forgin' I will get to work on that fleshy garment for ye right away.~
+@205 = ~Ye say ye would like the Lich's Raiment improved even further?  This be a tall order, even for me...~
+@206 = ~I cannae make this armor any more powerful without an equally powerful artifact of dark magick.  If'n ye can somehow find an intact Lich's skull, I might be able to do something with it.~
+@207 = ~Ye never cease to amaze this old dwarf.  How in the nine hells did ye come across this skull?  Never ye mind, it's not important.  If ye can suffer the loss of 10,000 more gold crowns, I can use this skull to improve that ghoulish mage armor of yers.~
+@208 = ~What's this now? Some dusty old parchment?  Ah, ye have quite the find here friend, tis a majick-locked scroll, likely containing something special, eh?~
+@209 = ~Me granda taught me a thing or two about these scrolls, and I can remove the seal for ye, if'n ye make it worth me while.  Bring me some scales from a chromatic dragon, any color will do, and we can speak further on yer scroll.~
+@210 = ~Aye, ye've brought me some scales from those evil, overgrown lizards.  I can use these in unsealing that scroll of yers.~
+@211 = ~I can use these red dragon scales to unseal that scroll...~
+@212 = ~I can use these white dragon scales to unseal that scroll...~
+@213 = ~I can use these shadow dragon scales to unseal that scroll...~
+@214 = ~I can use these blue dragon scales to unseal that scroll...~
+@215 = ~I can use these green dragon scales to unseal that scroll...~
+@216 = ~*spits in disgust at the sight of the dragon scales*  Good riddiance to those scaly bastards, my dragonslayer friend.  I can use any of these scales to remove the seal on that scroll.~
+@217 = ~In addition to the scales, I will need a mere 10,000 gold crowns for me time in removing the seal on yer old scroll.~
+@218 = ~I can use these black dragon scales to unseal that scroll...~
+@219 = ~What's this ye've here?  Looks to be a Kara-Turan blade....doesn't appear to be forged by mortal hands....~
+@220 = ~Ye say ye would like this blade improved?  Aye, I can do it, but I'll need something special.  If'n ye can find me a a gemstone of light, I can use it to rework that crimson blade.~
+@221 = ~A gemstone of pure light.... rather impressive ye be in the art of adventurin'.  With this and 5,000 gold pieces, I can reforge yer blade.~
+@222 = ~Ah, ye've got a nicely balanced old fighter's blade here, seen alot of use.... ye would like it reforged?~
+@223 = ~Aye, I can reforge this blade for ye, I would need something to give it a bit more pep... a gemstone of light would to the trick.~
+@224 = ~This be a gemstone of brilliant light alright, I can use this to reforge that fighter's blade of yours, it would set ye back a mere 5,000 gold coins and a day's worth of yer help at me forge.~
+@225 = ~Ah, the Kara-Turan blade of legend again, eh?  Ye say ye would like it enhanced further?~
+@226 = ~Aye, I can enhance it, but an unearthly blade requires unearthly ore to reforge.  Nothing less than starfall ore would do the trick.~
+@227 = ~This ore certainly be of unearthly origin, I can use this to reforge that red katana of yours.  A simple 10,000 golden coins from your coffers would seal the deal.~
+@228 = ~The Severance +3?  A blade this well balanced be tough to enhance any further....~
+@229 = ~If'n ye can somehow find me some ore from the heavens, I can reforge yer blade with it.~
+@230 = ~Aye, this be ore from the stars alright, I can use it to enhance that old fighter's blade of yers.  I would just need 10,000 gold pieces and a day's worth of yer help at me forge.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -477,6 +506,42 @@
 @1244 = ~Cespenar has just one recipe that would make mage hat better.  Needs bronze ioun stone and 5,000 gold shinys.~
 @1245 = ~Ah... you does have a bronze ioun stone!  Where does the master get such wonderful toys?  Should I use to enhance mageses hat for you?~
 @1246 = ~Well then, would the master consider letting Cespenar use?  No?  Stingy, stingy...  what else you has then?~
+@1247 = ~Oooohhhh!  The master has such good taste!  Cespenar loooves what you has done with this human flesh... though it not quite look finished....~
+@1248 = ~I can finishes human skin-armor into something much wonderful for you master, I would just need an old lich robe... like maybe... Vecna's?  Oh and human flesh skin must be cured with bloods.  Dragon bloods...Shadow Dragon bloods to be specific for best result.  And don't forget the gold shinys! 10,000 to be precise!~
+@1249 = ~Master is truly the great one if <PRO_HESHE> can gets ahold of both Vecna robe and nasty Shadow Dragon bloods. Shall loyal butler get to work on fixing up human skin-flesh for you?~
+@1250 = ~Well, if the master isn't going to use human flesh-skin, can Cespenar use to make new coat?  Or maybe jerky-beef?  No?  Master is sooo stingy sometimes......~
+@1251 = ~What now?  The master wants the Lich's Raiment improved even mores?~
+@1252 = ~I dont know if I has... wait...wait.......maybe, just maybe.  Yes, I can makes it even better!  But Cespenar would need a relic of very dark magic... like a skull from a lich~
+@1253 = ~The master is truly astounding... this is definitely an empowered lich's skull.  If the master can part with a measly sum of 10,000 golds, I will get to work on reforging human-skin-armor right away.~
+@1254 = ~Truly?  Master, I would highly recommend using skull for ashtray then.  Teeths can hold all forms of smoke-device for you, trust me!  No messes for butler to clean!~
+@1255 = ~What you has this time, Master?  Smells like moldy socks... but is sealed scroll?  Must be something reaallly important inside...~
+@1256 = ~Very tricksy recipe to open sealed scroll, would needs some scaleses from stinky, evil dragon.  Red, blue, black, green, white, or shadow would do.~
+@1257 = ~Cespenar can use dragon scales you has here to remove seal from musty old scroll.~
+@1258 = ~I can uses these red dragon scales to unseal old scroll for you.~
+@1259 = ~I can uses these shadow dragon scales to unseal old scroll for you.~
+@1260 = ~I can uses these white dragon scales to unseal old scroll for you.~
+@1261 = ~I can uses these blue dragon scales to unseal old scroll for you.~
+@1262 = ~I can uses these green dragon scales to unseal old scroll for you.~
+@1263 = ~I can uses these black dragon scales to unseal old scroll for you.~
+@1264 = ~So many stinky scales from old nasty lizards, the master sure knows how to put those big bullies in their place!~
+@1265 = ~I would just need stinky scales and 10,000 gold shinys.~
+@1266 = ~No then?  Would master like to play tiddlywinks with scales instead?~
+@1267 = ~Such shiny red blade this is, is red from blood of enemies?  Cespenar sure hopes so...~
+@1268 = ~You would like for loyal butler to improves crimson blade for you?  I can do, but would need something most untasteful... gemstone of yucky light.~
+@1269 = ~You has light-stone here, I can uses this with 5,000 gold shinys to improves crimson blade for you.~
+@1270 = ~Okay then, no on crimson blade, what else you has for me to look at?~
+@1271 = ~Ohhh, good balanced fighter-sword you have here master, you would likes it improved?~
+@1272 = ~Loyal butler can improve fighter-sword for you, I would needs icky gemstone of light and 5,000 shiny golds.~
+@1273 = ~You has the light gem here, and the golds, should I get to work on fighter-sword for you, master?~
+@1274 = ~No then?  Do you have other shinys for me to look through?~
+@1275 = ~Master would like red dawn-blade enhanced further?  Hmmm...  Might have a recipe for that.~
+@1276 = ~To reforge dawn-blade, I will needs metal from sky, not sure how you would get that...~
+@1277 = ~You found sky-metal!  I can use to enhance red katana for you, I just needs 10,000 golds for complete the recipe.~
+@1278 = ~Oh alright then.. was looking forward to using sky-metal, never got to work with that before.  What else do you has for me?~
+@1279 = ~You would likes your fighter-sword improved further?  That's a tought one, even for me....~
+@1280 = ~Cespenar does have recipe, just one, needs star-metal ore to reforge sword for you.~
+@1281 = ~You gots star-metal?  Did the master pluck it from the sky?   Well, since you has ore, I can use with 10,000 gold shinys to enhance fighter-sword for you.~
+@1282 = ~No?  Shucks... well what else you has for me?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -518,6 +583,16 @@
 @6031 = ~What would it take using the equalizer's blade?~
 @6032 = ~I would rather wait until I find the equalizer's hilt.~
 @6033 = ~I would rather wait until I find the equalizer's blade.~
+@6034 = ~What would it take for the black scales?~
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Creature Names                                   \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+@7000 = ~Burning Skeleton~
+@7001 = ~Drowned in Blood~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -951,9 +1026,10 @@ Equipped abilities:
 – Physical Damage Resistance: +5%
 
 Charge abilities:
-– Chain Lightning once per day
-  Damage: 6d6 electrical (Save vs. Spell for half)
-  Range: 40 ft.
+– Thunder Thrust once per day
+  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+  Special: knocks target back and unconscious for one round
+  Range: 80 ft.
 – Produce Fire once per day
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
@@ -1059,9 +1135,11 @@ Equipped abilities:
 – Physical Damage Resistance: +5%
 
 Charge abilities:
-– Chain Lightning once per day
-  Damage: 6d6 electrical (Save vs. Spell for half)
-  Range: 40 ft.
+– Thunder Thrust once per day
+  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+  Special: knocks target back and unconscious for one round
+  Range: 80 ft.
+
 – Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
@@ -2012,7 +2090,7 @@ STATISTICS:
 
 Equipped abilities:
 – Slashing Damage: +10% bonus
-– Chance to score a critical hit: +5% (this weapon only)
+– Chance to score a critical hit: +10% (this weapon only)
 – While enraged, the chance to score a critical hit is increased by 10% (Berserkers, Barbarians and Rashemi warriors only)
 
 Combat abilities:
@@ -2035,7 +2113,7 @@ STATISTICS:
 
 Equipped abilities:
 – Slashing Damage: +10% bonus
-– Chance to score a critical hit: +5% (this weapon only)
+– Chance to score a critical hit: +15% (this weapon only)
 – While enraged, the chance to score a critical hit is increased by 10% (Berserkers, Barbarians and Rashemi warriors only)
 
 Combat abilities:
@@ -2462,6 +2540,268 @@ Requires:
  9 Strength
 
 Weight: 5~
+@2239 = ~Heavy Mage Robe~
+@2240 = ~Raiment of the Lich +4~
+@2241 = ~This garment is of a much heavier construction than a standard mage's robe.  Tougher materials, such as strips of cured hides are interwoven into the cloth, providing better protection, at the cost of slightly more restricted movement.~
+@2242 = ~At the comission of <CHARNAME>, The Robe of Vecna has been meticulously reforged with the dragon's blood-cured human flesh, creating a ghastly garment that is more akin to leather in it's protective abilities and appearance, but still allows for enough freedom of movement for a mage to manipulate the ethereal weave while wearing it.  However, only the most callous and malicious personage would don this armor, and it would certainly draw the ire of others while worn. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 3
+– Improves casting speed by 2
+– Magic Resistance: +15%
+– All magic and cold damage inflicted by the wearer is increased by 15%
+– Charisma: -4
+
+
+Combat abilities:
+– Lich's Grasp: Any opponent within 6 ft. that successfully hits the wearer suffers 3d2 magic damage, healing the wearer for the amount done (No Save), attacker must also Save vs. Death or be paralyzed for one round.
+
+Weight: 5~
+@2243 = ~Small Shield +3~
+@2244 = ~Throwing Axe +1~
+@2245 = ~Throwing Axe +2~
+@2246 = ~Throwing Axe +3~
+@2247 = ~Shadow Dragon's Blood~
+@2248 = ~This swirling vial of shadow dragon's blood reeks of death and seems to covalesce with negative plane energies.  It may be useful in creating or improving equipment in the hands of a skilled forger.
+
+STATISTICS:
+
+Weight: 1~
+@2249 = ~Heavy Mage Robe~
+@2250 = ~Raiment of the Lich +5~
+@2251 = ~This garment is of much heavier construction than a standard mage's robe.  Tougher materials, such as strips of cured hides are interwoven into the cloth, providing far better protection, at the cost of slightly more restricted movement.~
+@2252 = ~The Skull of the Lich has been expertly integrated into the Lich's Raiment, further empowering the deathly armor.  It now improves the casting speed of magical spells further, along with empowering them to do even more damage.  The dastardly wearer's saving throws are also improved a bit as well. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 3
+– Improves casting speed by 3
+– Magic Resistance: +15%
+– All magic and cold damage inflicted by the wearer is increased by 20%
+– Saving Throws: +1
+– Charisma: -4
+
+
+Combat abilities:
+– Lich's Grasp: Any opponent within 6 ft. that successfully hits the wearer suffers 3d2 magic damage, healing the wearer for the amount done (No Save), attacker must also Save vs. Death or be paralyzed for one round.
+
+Weight: 5~
+@2253 = ~Katana~
+@2254 = ~Crimson Dawn +2~
+@2255 = ~The katana is a single-edged, slightly curved sword that ends with a chisel point. The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else. This blade is an important facet of Kara-Turan culture. To touch or wield a samurai's katana is to insult the samurai and to incite his wrath. For a gaijin, or foreigner, to own such a blade is a rare occurrence. Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.
+
+STATISTICS:
+
+Damage: 1d10 (slashing)
+Speed Factor: 4
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 6~
+@2256 = ~Legend tells that this elegant blade appeared at the moment the sun rose over the eastern horizon. As the dawn's rosy light flooded the forest, the blade shimmered into being atop a flat stone. Local foresters, even warriors, were afraid to touch the weapon lest it was cursed. Finally, a brave old man who had been a fighter in his youth grasped the hilt and claimed the blade as its own. Terrifying beasts sprang at him a moment later, creatures of red mist and fangs and claws. The old man clung to his courage and lay about him with the sword. He grew faster with every monster he killed until finally the clearing was empty. The old man was feasted in the village for days and then set off to live his final years seeking adventure on the road.
+
+STATISTICS:
+
+Equipped abilities: 
+– Critical Hit Chance: +5% (with this weapon only)
+
+Combat abilities:
+– 15% chance per kill of hasting the wielder for 3 rounds
+
+THAC0: +2
+Damage: 1d10+2 (slashing) 
+Speed Factor: 2
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@2257 = ~Severance +2~
+@2258 = ~Anyone who draws this well-balanced blade feels a surge of vitality in their body. The sword was originally wielded by a fighter who found the bloody business of war exhausting. He hated to make his enemies suffer and trained to be a better warrior solely so he could end battles quickly. With this enchanted blade, he destroyed his enemies with speedy precision, not leaving them to linger on the battlefield. When death finally came for him in a duel, he was reported to have said, "At last," with a sigh of relief before he expired.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: +5
+
+Combat abilities:
+– 15% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum. Does not affect undead, constructs, and extraplanar creatures.
+
+THAC0: +2
+Damage: 2d4+2 (slashing)
+Speed Factor: 6
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+@2259 = ~Crimson Dawn +3~
+@2260 = ~Expert reforging has integrated the light gem into the tsuka of the Crimson Dawn, further empowering the legendary blade with light energy.  The glowing crimson blade is now more accurate and deadly than ever before, causing searing wounds with each slash.
+
+STATISTICS:
+
+Equipped abilities: 
+– Critical Hit Chance: +5% (with this weapon only)
+
+Combat abilities:
+– 15% chance per kill of hasting the wielder for 3 rounds
+
+THAC0: +3
+Damage: 1d10+3 (slashing) +1d3 (fire)
+Speed Factor: 2
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@2261 = ~Severance +3~
+@2262 = ~This well-balanced fighter's blade has been reforged and a gemstone of light placed into the crossguard.  The blade now imparts even more energy to the weilder, allowing them to fight longer and harder.  Additionally, the life-draining effect now affects all creatures, and occurs more often.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: +10
+
+Combat abilities:
+– 20% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
+
+THAC0: +3
+Damage: 2d4+3 (slashing)
+Speed Factor: 6
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+@2263 = ~Crimson Dawn +5~
+@2264 = ~Reforged with more skill than even the finest Kara-Turan swordsmith, the starfall ore has unlocked the legendary Crimson Dawn's full potential.  Accurate, deadly strokes are made with ease, each followed by the searing heat of a falling star in their wake.
+
+STATISTICS:
+
+Equipped abilities: 
+– Critical Hit Chance: +10% (with this weapon only)
+
+Combat abilities:
+– 20% chance per kill of hasting the wielder for 3 rounds
+
+THAC0: +5
+Damage: 1d10+5 (slashing) 1d4+1 (fire)
+Speed Factor: 2
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@2265 = ~Severance +5~
+@2266 = ~Painstakingly reforging the Severance +3 with unearthly starfall ore has brough the sword to it's full potential.  The weilder is fully energized by the blade, allowing <PRO_HIMHER> to fight long past the point of exhaustion, wading through scores of foes with ease.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: +15
+
+Combat abilities:
+– 25% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
+
+THAC0: +5
+Damage: 2d4+5 (slashing)
+Speed Factor: 6
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// New Spell Descriptions                           \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+@3000 = ~Blood-stained Ancient Scroll~
+@3001 = ~This frayed scroll appears to made of human skin, and is heavily stained with blood.  It was found within the lining of the Robe of Vecna when it was unraveled for use during reforging.~
+@3002 = ~Conjure Death~
+@3003 = ~Conjure Death
+(Necromancy)
+
+Level: 6
+Range: 30 ft.
+Duration: 8 hours
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+This spell is a more powerful version of the level 5 wizard spell, animate dead.  When cast, an undead horror is summoned to serve the caster and will obey <PRO_HISHER> commands, until the enchantment ends or it is utterly destroyed.
+
+  1st – 14th: a 7 HD burning skeleton weilding a +1 melee or ranged weapon and +1 shield or buckler.  There is a 10% chance that two burning skeletons, or a 9 HD Drowned in Blood will be summoned instead.
+  
+  15th – 17th: a 9 HD burning skeleton weilding a +2 melee or ranged weapon and +2 shield or buckler.  There is a 10% chance that two burning skeletons, or a 11 HD Drowned in Blood will be summoned instead.
+  
+  18th and up: an 11 HD burning skeleton weilding a +3 melee or ranged weapon and +3 shield or buckler.  There is a 10% chance that two burning skeletons, or a 13 HD Drowned in Blood will be summoned instead.
+  
+The conjured undead can follow the caster, remain in an area and attack any creature entering the place, etc. It remains animated until it is destroyed in combat, 8 hours pass, or it is turned. This spell cannot be dispelled.~
+@3004 = ~Sealed Ancient Scroll~
+@3005 = ~Thunder Thrust~
+@3006 = ~Thunder Thrust
+(Evocation)
+
+Level: 6
+Range: 80 ft.
+Duration: Instant
+Casting Time: 4
+Area of Effect: 7-ft. radius 
+Saving Throw: 1/2
+
+This spell draws forth a massive bolt of electrical energy from the plane of air into the prime, striking the caster's target and nearby foes with a surge of eletricity. Each bolt causes 12d8 points of electrical damage, plus an additional 1d8 points per level of the caster, up to a maximum of 21d8. Any creatures within a 7 foot radius are also caught in the blast and take 4d8 of electrical damage, plus 1d8 per two levels up to a maximum of 8d8.  The force of the blast knocks affected targets back and unconscious for one round.  Creatures may make a reflex save to evade the blast, or successfully Save vs. Spell to halve the damage.~
+@3007 = ~This scroll is sealed by some magical encryption that defies all attempts to understand it's contents.  Just when it appears that a word or symbol is discernable, it shifts into another form.  It would take far more knowledge than most mortals possess to decipher this enigma.~
+@3008 = ~Trollkiller's Fireball~
+@3009 = ~Trollkiller's Fireball
+(Evocation)
+
+Level: 4
+Range: Visual range of the caster
+Duration: Instant
+Casting Time: 3
+Area of Effect: 15-ft. radius
+Saving Throw: 1/2
+
+Trollkiller's Fireball is a more powerful version of the level 3 wizard spell, Fireball.  It's namesake, Durlag Trollkiller, comissioned an exiled elven mage of considerable skill to create this spell for use in eradicating trolls from his homeland.  Much to his delight, the creation of the spell was successful and put to great use during his troll-cleansing campaign.  In the years following, as Durlag's madness took hold of him, he kept all of his most prized possessions, including this spell, under lock, key, and devious trap inside his tower.  How it came to be in your possession is a mystery.   When cast, a raging ball of flame flies forth from the caster's hand, striking the target point and exploding in a horrific display of hellfire, doing 1d6 points of damage for each level of the spellcaster (up to a maximum of 16d6) to targets caught in the blast.  The searing heat is so intense that it can ignite clothing, armor, and even flesh, causing an additional 1d4 fire damage per round and sending the afflicted into a state of panic until they successfully roll a Save vs. Spell to extinguish the flames.  Those who roll successful a Save vs. Spell manage to dodge, fall flat, or roll aside, taking only half damage from the inital blast, and evade the ongoing fire damage and panic.  All saving throws must be made at -2.~
+@3010 = ~Hoar of Frost~
+@3011 = ~Hoar of Frost
+(Evocation)
+
+Level: 7
+Range: 0
+Duration: Instant
+Casting Time: 3
+Area of Effect: 18-ft. cone with 90-deg. arc
+Saving Throw: 1/2
+
+The chosen of Auril speak of this spell as legend, a power that the Ice Maiden bestows only upon her most blessed, and is a closely guarded secret.  It is said this spell conjures forth the very breath of Auril herself.  Cold as the hearts of Auril's followers may be, there are beings far, far more cruel than they in the realms, and it is rumored that one such being, known as "The Shattered One", caputured a high priestess of Auril and performed torturous experiments on her to "extract" knowledge of this magic for his own use.  Why or how the scroll containing this magic came to be in your hands is unknown, nor is the fate of the Aurilite priestess.  This spell brings forth a gale of icy, frozen wind from the caster's hands, feezing all in it's path with 1d5+1 of cold damage per level, up to a maximum of 20d5+20.   Those afflicted by the penetrating cold suffer from slowed reaction and movement, hindering their ability to fight unless a saving throw is made.   Those who roll a successful Save vs. Spell will shrug off a portion of the cold, taking half damage and avoiding stifled movement.  All saving throws must be made at -2.~
+@3012 = ~Corrosion~
+@3013 = ~Corrosion
+(Conjuration)
+
+Level: 6
+Range: 40 ft.
+Duration: 1 turn
+Casting Time: 5
+Area of Effect: 15-ft. radius
+Saving Throw: Special
+
+This spell conjures forth a thick, acrid, corrosive smog that immediately begins to dissolve the flesh and armor of any creature unfortunate enough to be caught in it.  Creatures caught in the area of effect will take 1d10 of acid damage per round that they remain in the caustic fog, and must roll a Saving Throw vs. Spells at a -4 penalty or suffer reduction to their resistances against all forms of physical damage 15% for three rounds.  These effects increase with the caster's level, up to a maximum of 1d10+5 acid damage and 20% reduction of physical damage resistance at level 17.~
+
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2495,6 +2835,12 @@ Weight: 5~
 @4023 = ~Corrosion~
 @4024 = ~Blinded~
 @4025 = ~Crippling Pain~
+@4026 = ~Lich's Grasp~
+@4027 = ~Scorching Flames~
+@4028 = ~Corroded~
+@4029 = ~Hasted~
+@4030 = ~Drain Life~
+@4031 = ~Healed~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2507,7 +2853,7 @@ Weight: 5~
 @5003 = ~Wind Slash~
 @5004 = ~Produce Fire~
 @5005 = ~Vitriolic Sphere~
-@5006 = ~Chain Lightning~
+@5006 = ~Thunder Thrust~
 @5007 = ~Cone of Cold~
 @5008 = ~Poison Weapon~
 @5009 = ~Neutralize Poison~
