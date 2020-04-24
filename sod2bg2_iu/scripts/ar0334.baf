@@ -67,6 +67,16 @@
 66 - Stonefire +5
 67 - Sourceror's Cap
 68 - Sourceror's Cap +1
+69 - Raiment of the Lich +4
+70 - Raiment of the Lich +5
+71 - Trollkiller's Fireball
+72 - Thunder Thrust
+73 - Corrosion
+74 - Hoar of Frost
+75 - Crimson Dawn +3
+76 - Severance +3
+77 - Crimson Dawn +5
+78 - Severance +5
 */
 
 
@@ -211,6 +221,7 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkrobe1",Player1,0,0,0) // Robe of Roaring Flames
+    GiveItemCreate("dtkcdeat",Player1,0,0,0) // Scroll of Conjure Death
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -884,5 +895,126 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtksrcp2",Player1,0,0,0) // Sourceror's Cap +1
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",69)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtknecro",Player1,0,0,0) // Raiment of the Lich +4
+    GiveItemCreate("dtkcdeat",Player1,0,0,0) // Scroll of Conjure Death
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",70)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtknecr2",Player1,0,0,0) // Raiment of the Lich +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",71)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkfball",Player1,0,0,0) // Scroll of Trollkiller's Fireball
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",72)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkthrst",Player1,0,0,0) //Scroll of Thunder Thrust
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",73)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkcorro",Player1,0,0,0) //Scroll of Corrosion
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",74)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkccld2",Player1,0,0,0) //Scroll of Hoar of Frost
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",75)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd8",Player1,0,0,0) //Crimson Dawn +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",76)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd9",Player1,0,0,0) //Severance +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",77)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd8a",Player1,0,0,0) //Crimson Dawn +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",78)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkswd9a",Player1,0,0,0) //Severance +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END

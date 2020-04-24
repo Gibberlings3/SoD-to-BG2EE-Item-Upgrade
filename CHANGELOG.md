@@ -1,10 +1,32 @@
 # Changelog
 
-## Version 1.0.1
+## Version 1.1.0
 
 ### Fixed
 
-- Corrected Reflection Shield +1 and Mirrored Buckler of the Fist + to properly relfect projectiles from Maelstrom Axe +3 and +4, Elemental Fury +3 and +4
+- Corrected Reflection Shield +1 and Mirrored Buckler of the Fist +2 to properly relfect projectiles from Maelstrom Axe +3 and +4, Elemental Fury +3 and +4
+- Corrected Biter +3 recipe issue for Cromwell.
+- Corrected dialogue for red scale choice to upgrade dragon armor on Cespenar.
+- Corrected critical hit chance increase on Vorpal Dragon Blade +4 and +5 to 10% and 15% respectively (was incorrectly set to 25%)
+- Corrected Stonefire +5 hit effect to now effect golems, undead, and elementals
+
+### Changed
+
+- New charge ability for Chromatic Crimson and Shadow Dragon armors (blue scales)
+
+### Added
+
+- Crimson Dawn +2
+ - Can be upgraded twice with new recipes on Cromwell and Cespenar
+- Severance +2
+ - Can be upgraded twice with new recipes on Cromwell and Cespenar
+- New mage spells, craftable with new recipes on Cromwell and Cespenar:
+	  Trollkiller's Fireball
+	  Thunder Thrust
+	  Corrosion
+	  Hoar of Frost
+- Alternate completion and upgrade path for Human Flesh armor
+ - New mage spell, Conjure Death, given as additional reward for completing alternate Human Flesh
 
 ## Version 1.0.0
 

@@ -185,7 +185,7 @@ PartyHasItem("bdscaleg")
 END
 
 IF ~~ THEN BEGIN shadowdragCespy_want_01 // red scales
-SAY @1073
+SAY @1079
 ++ @6006 GOTO HowMuch_redscale
 ++ @6011 + shadowdragCespy_stall
 ++ @6012 GOTO shadowdragCespy_stall

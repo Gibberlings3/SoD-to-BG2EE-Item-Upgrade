@@ -7,8 +7,8 @@ APPEND WSMITH01
     IF ~OR(2)
           NumItemsPartyLT("scrl95",5)
           NumItemsPartyLT("misc37",5)~ THEN GOTO NewItem2
-    IF ~NumItemsPartyGT("scrl95",5)
-        NumItemsPartyGT("misc37",5)~ THEN GOTO NewItem3
+    IF ~NumItemsPartyGT("scrl95",4)
+        NumItemsPartyGT("misc37",4)~ THEN GOTO NewItem3
   END
   
   IF ~~ THEN BEGIN NewItem2 SAY @23
