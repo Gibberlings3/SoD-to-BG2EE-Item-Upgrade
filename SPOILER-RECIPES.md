@@ -7,6 +7,7 @@
 - Soul of Frost
 - Breath of Wind
 - Black Dragon Scales
+- Shadow Dragon Blood
 
 ## Upgrade Requirements
 
