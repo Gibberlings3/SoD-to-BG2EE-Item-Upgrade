@@ -62,6 +62,8 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkcali2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkfball.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkccld2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkccld3.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkastrm.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkffblt.pro~
 
 COPY_EXISTING ~sod2bg2_iu/pro/dtkccld2.pro~ ~override~
 WRITE_SHORT 0x214 ~%dtkccld3%~ -1
@@ -145,7 +147,26 @@ COPY ~sod2bg2_iu/cre/dtkbrskl.cre~ ~override~
    SAY NAME1 @7000
    SAY NAME2 @7000
 
-   
+COPY ~sod2bg2_iu/cre/dtkeprc4.cre~ ~override~
+   SAY NAME1 @7002
+   SAY NAME2 @7002
+
+EXTEND_BOTTOM ~dtkeprc4.bcs~ ~sod2bg2_iu/scripts/dtkeprc4.baf~  //Script for Ben-Hadar
+
+
+//////////////////////////////////
+//Modifying Existing Spells //////
+//////////////////////////////////
+COPY_EXISTING ~sppr724.spl~ ~override~		//Summon Greater Elemental - Add Ben-Hadar to summons
+	LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete = 177   END
+		LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 probability1 = 24 probability2 = 0 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 0 parameter2 = 2 STR_VAR resource = dtkeprc4 END  
+			LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 probability1 = 49 probability2 = 25 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 0 parameter2 = 2 STR_VAR resource = sumzaam END  
+				LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 probability1 = 74 probability2 = 50 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 0 parameter2 = 2 STR_VAR resource = sumchan END  
+					LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 probability1 = 99 probability2 = 75 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 0 parameter2 = 2 STR_VAR resource = sumsunn END  
+						LPF DELETE_SPELL_EFFECT INT_VAR opcode_to_delete = 206  END
+							LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 3 probability1 = 100 probability2 = 0 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 74011 STR_VAR resource = sppr723 END  
+								LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 3 probability1 = 100 probability2 = 0 timing = 0 duration = 60 resist_dispel = 2 parameter1 = 74011 STR_VAR resource = sppr724 END  
+
 //////////////////////////
 //Adding New Spells //////
 //////////////////////////
@@ -294,14 +315,22 @@ COPY ~sod2bg2_iu/spl/bdsw1h22.spl~ ~override~
 		COPY ~sod2bg2_iu/spl/bdsevrnc.spl~ ~override~
 			LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4031) END
 			
-
+COPY ~sod2bg2_iu/spl/bdblun04.spl~ ~override~
+  LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4035) END
 
 
 //////////////////////////
 //Adding New Item Spells//
 //////////////////////////
+COPY ~sod2bg2_iu/spl/dtkbln1a.spl~ ~override~
+   
+COPY ~sod2bg2_iu/spl/dtkbdrgp.spl~ ~override~
+   SAY NAME1 @4033  // Spell Name
+   SAY NAME2 @4033
+	
 COPY ~sod2bg2_iu/spl/dtknecro.spl~ ~override~
-	SAY NAME1 @4026  // Spell Name
+	SAY NAME1 @4026
+	SAY NAME2 @4026	// Spell Name
 
 COPY ~sod2bg2_iu/spl/dtkcali1.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcalli%" END
@@ -310,8 +339,8 @@ COPY ~sod2bg2_iu/spl/dtkcali2.spl~ ~override~
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcali2%" END
 
 COPY ~sod2bg2_iu/spl/dtkcalli.spl~ ~override~
-  // SAY NAME1 @STRING  // Spell Name
-  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+	SAY NAME1 @3005
+	SAY NAME2 @3005
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4002) STR_VAR bam_file = dtkanmgp RET icon END
 COPY ~sod2bg2_iu/spl/dtkanmag.spl~ ~override~
@@ -342,8 +371,8 @@ COPY ~sod2bg2_iu/spl/dtkcloud.spl~ ~override~
 
 COPY ~sod2bg2_iu/spl/dtkcocld.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkcocld%" END
-  // SAY NAME1 @STRING  // Spell Name
-  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+	SAY NAME1 @3016
+	SAY NAME2 @3016
 
 COPY ~sod2bg2_iu/spl/dtkdeafn.spl~ ~override~
   // SAY NAME1 @STRING  // Spell Name
@@ -392,8 +421,8 @@ COPY ~sod2bg2_iu/spl/dtkluck.spl~ ~override~
 
 COPY ~sod2bg2_iu/spl/dtkprfir.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkpfir%" END
-  // SAY NAME1 @STRING  // Spell Name
-  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+	SAY NAME1 @3015
+	SAY NAME2 @3015
 
 COPY ~sod2bg2_iu/spl/dtkquake.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkquake%" END
@@ -438,8 +467,8 @@ COPY ~sod2bg2_iu/spl/dtktyr1.spl~ ~override~
 
 COPY ~sod2bg2_iu/spl/dtkvit.spl~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkvit%" END
-  // SAY NAME1 @STRING  // Spell Name
-  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+	SAY NAME1 @3014
+	SAY NAME2 @3014
 
 COPY ~sod2bg2_iu/spl/dtkvity.spl~ ~override~
   // SAY NAME1 @STRING  // Spell Name
@@ -457,8 +486,8 @@ COPY ~sod2bg2_iu/spl/dtkwave.spl~ ~override~
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 match_parameter1 = 20438 parameter1 = RESOLVE_STR_REF(@4018) END
 
 COPY ~sod2bg2_iu/spl/dtkwfog.spl~ ~override~
-  // SAY NAME1 @STRING  // Spell Name
-  // SAY UNIDENTIFIED_DESC @STRING  // Spell description
+	SAY NAME1 @3017
+	SAY NAME2 @3017
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4010) END
 
 COPY ~sod2bg2_iu/spl/dtkwhirl.spl~ ~override~
@@ -528,10 +557,220 @@ COPY ~sod2bg2_iu/spl/dtkswd9.spl~ ~override~
 	
 COPY ~sod2bg2_iu/spl/dtkswd8a.spl~ ~override~
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4029) END
+  
+LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4034) STR_VAR bam_file = dtkastmp RET icon END  
+COPY ~sod2bg2_iu/spl/dtkastrm.spl~ ~override~
+  	SAY NAME1 @4034
+	SAY NAME2 @4034
+	  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkastrm%" END
+		LPF ALTER_EFFECT INT_VAR match_opcode = 142 match_parameter2 = 6 parameter2 = icon END
+
+COPY ~sod2bg2_iu/spl/dtkdflam.spl~ ~override~	
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkfball%" END
+  	SAY NAME1 @5025
+	SAY NAME2 @5025
+	
+COPY ~sod2bg2_iu/spl/dtkeprc1.spl~ ~override~
+	//SAY NAME1 @4030  // Spell Name
+	
+COPY ~sod2bg2_iu/spl/dtkeprc2.spl~ ~override~
+	//SAY NAME1 @4030  // Spell Name
+	
+COPY ~sod2bg2_iu/spl/dtkeprc3.spl~ ~override~
+	//SAY NAME1 @4030  // Spell Name
+	
+COPY ~sod2bg2_iu/spl/dtkeprc4.spl~ ~override~
+	//SAY NAME1 @4030  // Spell Name
+	
+COPY ~sod2bg2_iu/spl/dtkistrm.spl~ ~override~
+	//SAY NAME1 @4030  // Spell Name
 
 /////////////////
 // Adding Items//
 /////////////////
+COPY ~sod2bg2_iu/itm/frostfirebolt/dtkbol1.itm~ ~override~	  //Bolt of Frostfire +2
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkffblt%" END
+  SAY NAME2 @2337
+  SAY DESC @2338
+
+COPY ~sod2bg2_iu/itm/heartwood/dtkrng2d.itm~ ~override~	  //Heartwood Ring of Water
+  SAY NAME2 @2335
+  SAY DESC @2336
+  
+COPY ~sod2bg2_iu/itm/heartwood/dtkrng2c.itm~ ~override~	  //Heartwood Ring of Earth
+  SAY NAME2 @2333
+  SAY DESC @2334
+  
+COPY ~sod2bg2_iu/itm/heartwood/dtkrng2b.itm~ ~override~	  //Heartwood Ring of Wind
+  SAY NAME2 @2331
+  SAY DESC @2332
+  
+COPY ~sod2bg2_iu/itm/heartwood/dtkrng2a.itm~ ~override~	  //Heartwood Ring of Fire
+  SAY NAME2 @2329
+  SAY DESC @2330
+  
+COPY ~sod2bg2_iu/itm/martyr2/dtkbln1a.itm~ ~override~	  //Martyr's Morningstar +5
+  SAY NAME2 @2325
+  SAY DESC @2326
+  
+COPY ~sod2bg2_iu/itm/martyr1/dtkbln1.itm~ ~override~	  //Martyr's Morningstar +3
+  SAY NAME2 @2323
+  SAY DESC @2324
+  
+COPY ~sod2bg2_iu/itm/martyr/bdblun04.itm~ ~override~	  //Martyr's Morningstar +2
+  SAY NAME2 @2321
+  SAY DESC @2322
+  
+COPY ~sod2bg2_iu/itm/icebolt/bdbolt02.itm~ ~override~	  //Bolt of Ice +1
+  SAY NAME2 @2319
+  SAY DESC @2320
+  
+COPY ~sod2bg2_iu/itm/firebolt/bdbolt01.itm~ ~override~	  //Bolt of Fire +1
+  SAY NAME2 @2317
+  SAY DESC @2318
+  
+COPY ~sod2bg2_iu/itm/elecbull/bull09.itm~ ~override~	  //Bullet of Electricity +1
+  SAY NAME2 @2315
+  SAY DESC @2316
+  
+COPY ~sod2bg2_iu/itm/icebull/bull08.itm~ ~override~	  //Bullet of Ice +1
+  SAY NAME2 @2313
+  SAY DESC @2314
+  
+COPY ~sod2bg2_iu/itm/firebull/bull07.itm~ ~override~	  //Bullet of Fire +1
+  SAY NAME2 @2311
+  SAY DESC @2312
+  
+COPY ~sod2bg2_iu/itm/ccdraglshd/dtklea3g.itm~ ~override~	  //Chromatic Crimson Dragonscale (Shadow Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2309
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2310
+  
+COPY ~sod2bg2_iu/itm/ccdraglwht/dtklea3c.itm~ ~override~	  //Chromatic Crimson Dragonscale (White Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2307
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2308
+  
+COPY ~sod2bg2_iu/itm/ccdraglsil/dtklea3d.itm~ ~override~	  //Chromatic Crimson Dragonscale (Silver Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2305
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2306
+  
+COPY ~sod2bg2_iu/itm/ccdraglred/dtklea3a.itm~ ~override~	  //Scarlet Viridescent Dragonscale (Red Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2303
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2304
+  
+COPY ~sod2bg2_iu/itm/ccdraglgrn/dtklea3e.itm~ ~override~	  //Carmine Viridian Dragonscale (Green Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2301
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2302
+  
+COPY ~sod2bg2_iu/itm/ccdraglblu/dtklea3b.itm~ ~override~	  //Chromatic Crimson Dragonscale (Blue Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2299
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2300
+  
+COPY ~sod2bg2_iu/itm/ccdraglblk/dtklea3f.itm~ ~override~	  //Chromatic Crimson Dragonscale (Black Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2297
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2298
+  
+COPY ~sod2bg2_iu/itm/csdragpwht/dtkplt3c.itm~ ~override~	  //Chromatic Shadow Dragon Plate (White Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2295
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2296
+  
+COPY ~sod2bg2_iu/itm/csdragpsil/dtkplt3d.itm~ ~override~	  //Chromatic Shadow Dragon Plate (Silver Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2293
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2294
+  
+COPY ~sod2bg2_iu/itm/csdragpred/dtkplt3a.itm~ ~override~	  //Chromatic Shadow Dragon Plate (Red Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2291
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2292
+  
+COPY ~sod2bg2_iu/itm/csdragpgrn/dtkplt3e.itm~ ~override~	  //Umbral Viridian Dragon Plate (Green Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2289
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2290
+  
+COPY ~sod2bg2_iu/itm/csdragpblk/dtkplt3f.itm~ ~override~	  //Chromatic Shadow Dragon Plate (Black Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2287
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2288
+  
+COPY ~sod2bg2_iu/itm/csdragpblu/dtkplt3b.itm~ ~override~	  //Chromatic Shadow Dragon Plate (Blue Scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2285
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2286
+  
+COPY ~sod2bg2_iu/itm/vsdragp/dtkplt3.itm~ ~override~	  //Verdant Shadow Dragon Plate
+  SAY NAME1 @2007	
+  SAY NAME2 @2283
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2284
+  
+COPY ~sod2bg2_iu/itm/vcdragl/dtklea3.itm~ ~override~	  //Verdant Crimson Dragonscale
+  SAY NAME1 @2007	
+  SAY NAME2 @2281
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2282
+  
+COPY ~sod2bg2_iu/itm/ccdragpscarlet/dtkplt1g.itm~ ~override~	  //Scarlet Viridian Dragon Plate
+  SAY NAME1 @2007	
+  SAY NAME2 @2279
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2280
+  
+COPY ~sod2bg2_iu/itm/csdragblack/dtklea1f.itm~ ~override~	  //Chromatic Shadow Dragonscale(black scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2277
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2278
+  
+COPY ~sod2bg2_iu/itm/ccdragpblack/dtkplt1f.itm~ ~override~	  //Chromatic Crimson Dragon Plate(black scales)
+  SAY NAME1 @2007	
+  SAY NAME2 @2275
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2276
+  
+COPY ~sod2bg2_iu/itm/gdragplate/dtkgdrgp.itm~ ~override~	  //Green Dragon Plate
+  SAY NAME1 @2007	
+  SAY NAME2 @2273
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2274
+  
+COPY ~sod2bg2_iu/itm/bdragarm2/dtkbdrgl.itm~ ~override~	  //Black Dragonscale +4
+  SAY NAME1 @2007	
+  SAY NAME2 @2271
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2272
+  
+COPY ~sod2bg2_iu/itm/bdragshield/dtkbdrgs.itm~ ~override~	  //Dragonscale Shield +3 (Black Scales)
+  SAY NAME2 @2269
+  SAY DESC @2270
+  
+COPY ~sod2bg2_iu/itm/bdragarm/dtkbdrgp.itm~ ~override~	  //Black Dragon Plate
+  SAY NAME1 @2007	
+  SAY NAME2 @2267
+  SAY UNIDENTIFIED_DESC @2179
+  SAY DESC @2268
+  
 COPY ~sod2bg2_iu/itm/severance2/dtkswd9a.itm~ ~override~	  //Severance +5
   SAY NAME2 @2265
   SAY DESC @2266
@@ -930,10 +1169,12 @@ COPY ~sod2bg2_iu/itm/maelpike1/dtkhalb2.itm~ ~override~
 COPY ~sod2bg2_iu/itm/trollblood1/dtkioun1.itm~ ~override~
   SAY NAME2 @2151
   SAY DESC @2152
+    LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4032) END
 
 COPY ~sod2bg2_iu/itm/trollblood2/dtkioun2.itm~ ~override~
   SAY NAME2 @2153
   SAY DESC @2154
+      LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4032) END
 
 COPY ~sod2bg2_iu/itm/egons1/dtkshld2.itm~ ~override~
   SAY NAME2 @2155
@@ -1165,7 +1406,7 @@ COMPILE ~sod2bg2_iu/dialogue/crom39.d~ // Bulwark of Egons +4
 COMPILE ~sod2bg2_iu/dialogue/crom40.d~ // Astral Crossbow +4
 COMPILE ~sod2bg2_iu/dialogue/crom41.d~ // Shadowed Spear of the Tempest +4
 COMPILE ~sod2bg2_iu/dialogue/crom42.d~ // Shadowed Spear of the Tempest +6
-COMPILE ~sod2bg2_iu/dialogue/crom43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~sod2bg2_iu/dialogue/crom43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3/Green Dragon Plate
 COMPILE ~sod2bg2_iu/dialogue/crom44.d~ // Silver Dragon Blade +4
 COMPILE ~sod2bg2_iu/dialogue/crom45.d~ // Silver Dragon Blade +5
 COMPILE ~sod2bg2_iu/dialogue/crom46.d~ // Dragonscale Aegis +4
@@ -1189,6 +1430,14 @@ COMPILE ~sod2bg2_iu/dialogue/crom63.d~ // Crimson Dawn +3
 COMPILE ~sod2bg2_iu/dialogue/crom64.d~ // Severance +3
 COMPILE ~sod2bg2_iu/dialogue/crom65.d~ // Crimson Dawn +5
 COMPILE ~sod2bg2_iu/dialogue/crom66.d~ // Severance +5
+COMPILE ~sod2bg2_iu/dialogue/crom67.d~ // Black Dragon Plate/Black Dragonscale +4/Dragonscale Shield +3 (black scales)
+COMPILE ~sod2bg2_iu/dialogue/crom68.d~ // Chromatic Crimson/Carmine Viridian/Scarlet Viridescent Dragonscale
+COMPILE ~sod2bg2_iu/dialogue/crom69.d~ // Chromatic Shadow/Umbral Viridian Dragon Plate
+COMPILE ~sod2bg2_iu/dialogue/crom70.d~ // Martyr's Morningstar +3
+COMPILE ~sod2bg2_iu/dialogue/crom71.d~ // Martyr's Morningstar +5
+COMPILE ~sod2bg2_iu/dialogue/crom72.d~ // Heartwood Ring - Elementals
+COMPILE ~sod2bg2_iu/dialogue/crom73.d~ // Bolt of Frostfire +2
+COMPILE ~sod2bg2_iu/dialogue/crom74.d~ // Bolt of Frostfire +2
 
 
 EXTEND_BOTTOM ~ar0334.bcs~ ~sod2bg2_iu/scripts/ar0334.baf~		//item generating script for cromwell
@@ -1243,7 +1492,7 @@ COMPILE ~sod2bg2_iu/dialogue/cespy39.d~ // Bulwark of Egons +4
 COMPILE ~sod2bg2_iu/dialogue/cespy40.d~ // Astral Crossbow +4
 COMPILE ~sod2bg2_iu/dialogue/cespy41.d~ // Shadowed Spear of the Tempest +4
 COMPILE ~sod2bg2_iu/dialogue/cespy42.d~ // Shadowed Spear of the Tempest +6
-COMPILE ~sod2bg2_iu/dialogue/cespy43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3
+COMPILE ~sod2bg2_iu/dialogue/cespy43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +3/Green Dragon Plate
 COMPILE ~sod2bg2_iu/dialogue/cespy44.d~ // Silver Dragon Blade +4
 COMPILE ~sod2bg2_iu/dialogue/cespy45.d~ // Silver Dragon Blade +5
 COMPILE ~sod2bg2_iu/dialogue/cespy46.d~ // Dragonscale Aegis +4
@@ -1267,6 +1516,14 @@ COMPILE ~sod2bg2_iu/dialogue/cespy63.d~ // Crimson Dawn +3
 COMPILE ~sod2bg2_iu/dialogue/cespy64.d~ // Severance +3
 COMPILE ~sod2bg2_iu/dialogue/cespy65.d~ // Crimson Dawn +5
 COMPILE ~sod2bg2_iu/dialogue/cespy66.d~ // Severance +5
+COMPILE ~sod2bg2_iu/dialogue/cespy67.d~ // Black Dragon Plate/BlackDragonscale +4/Dragonscale Shield +3(black scales)
+COMPILE ~sod2bg2_iu/dialogue/cespy68.d~ // Chromatic Crimson/Scarlet Viridescent/Carmine Viridian Dragonscale
+COMPILE ~sod2bg2_iu/dialogue/cespy69.d~ // Chromatic Shadow/Umbral Viridian Dragon Plate
+COMPILE ~sod2bg2_iu/dialogue/cespy70.d~ // Martyr's Morningstar +3
+COMPILE ~sod2bg2_iu/dialogue/cespy71.d~ // Martyr's Morningstar +5
+COMPILE ~sod2bg2_iu/dialogue/cespy72.d~ // Heartwood Ring - Elementals
+COMPILE ~sod2bg2_iu/dialogue/cespy73.d~ // Bolt of Frostfire +2
+COMPILE ~sod2bg2_iu/dialogue/cespy74.d~ // Bolt of Frostfire +2
 
 EXTEND_BOTTOM ~botsmith.bcs~ ~sod2bg2_iu/scripts/cespy.baf~  //Item generating script for cespy
 
@@ -1334,6 +1591,7 @@ COPY_EXISTING ~torgal.cre~ ~override~
 
 COPY_EXISTING ~gorsal.cre~ ~override~
   ADD_CRE_ITEM ~dtkruby~ #0 #0 #0 ~NONE~ ~INV~		//Heart of Flame
+    ADD_CRE_ITEM ~scaler~ #0 #0 #0 ~NONE~ ~INV~		//Red Scales
 
 COPY_EXISTING ~gorchr.cre~ ~override~
   ADD_CRE_ITEM ~dtktopaz~ #0 #0 #0 ~NONE~ ~INV~		//Eye of Ichor
@@ -1430,9 +1688,22 @@ COPY_EXISTING ~ohhdrago.cre~ ~override~
 
 COPY_EXISTING ~pirmur01.cre~ ~override~
   REPLACE_CRE_ITEM ~bdsw1h22~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Severance +2
+  
+COPY_EXISTING ~anomen10.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2
 
+COPY_EXISTING ~anomen6.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2
+  
+COPY_EXISTING ~anomen7.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2  
 
-
+COPY_EXISTING ~anomen8.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2
+  
+COPY_EXISTING ~anomen9.cre~ ~override~
+  REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2
+  
 /////////////////////////////////
 //Adding items as quest rewards//
 /////////////////////////////////
@@ -1449,25 +1720,158 @@ COMPILE ~sod2bg2_iu/dialogue/vaela1.d~		//Forest Queen's Benediction
 //Adding items to stores//
 //////////////////////////
 
-COPY_EXISTING ~shop04.sto~ ~override~
-  ADD_STORE_ITEM ~bdbull02~ #0 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
+COPY_EXISTING ~shop04.sto~ ~override~		//Enge's Shop
+  ADD_STORE_ITEM ~bdbull02~ #1 #0 #0 ~IDENTIFIED~ #80		//Bullet of Darkness +3
+	ADD_STORE_ITEM ~bdarow02~ #1 #0 #0 ~IDENTIFIED~ #80			//Void-Tipped Arrow +3
+	    ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Fire +1
+			ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Ice +1
+			  ADD_STORE_ITEM ~bdbrac02~ #0 #0 #0 ~IDENTIFIED~ #1			//Jester's Bracers
+			  	   ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+					   ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+						   ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+							   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
 
-COPY_EXISTING ~shop04.sto~ ~override~
-  ADD_STORE_ITEM ~bdarow02~ #0 #0 #0 ~IDENTIFIED~ #80		//Void-Tipped Arrow +3
-
-COPY_EXISTING ~shop04.sto~ ~override~
-  ADD_STORE_ITEM ~bdbrd01~ #0 #0 #0 ~IDENTIFIED~ #1		//Forest Queen's Benediction
-
-COPY_EXISTING ~shop04.sto~ ~override~
-  ADD_STORE_ITEM ~bdbrac02~ #0 #0 #0 ~IDENTIFIED~ #1		//Jester's Bracers
-
-COPY_EXISTING ~bmthief.sto~ ~override~
+COPY_EXISTING ~bmthief.sto~ ~override~		//Black Market Thief
   ADD_STORE_ITEM ~bdboot01~ #0 #0 #0 ~IDENTIFIED~ #1		//Soft Feet
 
-COPY_EXISTING ~ribald3.sto~ ~override~
+COPY_EXISTING ~ribald3.sto~ ~override~		//Ribald (restock)
   ADD_STORE_ITEM ~potn33~ #0 #0 #0 ~IDENTIFIED~ #2		//Potion of Magic Blocking
+    ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Ice +1
+		   ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+			   ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+				   ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+					   
+COPY_EXISTING ~amsmug01.sto~ ~override~		//Amkethran Smugglers
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+					   
+COPY_EXISTING ~amsmug02.sto~ ~override~		//Amkethran Smugglers 2
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+					   
+COPY_EXISTING ~arled.sto~ ~override~		//Shadow Thief Fence
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
 
+COPY_EXISTING ~bernard5.sto~ ~override~		//Bernard
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
 
+COPY_EXISTING ~bernard6.sto~ ~override~		//Bernard 2
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~hendak.sto~ ~override~		//Hendak
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~ohbsdwm.sto~ ~override~		//Weapon Merchant
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #40			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #40			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #40			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #40			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #40			//Bullet of Electricity +1
+					
+COPY_EXISTING ~ohngduke.sto~ ~override~		//Gul Dukeem
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+					   
+COPY_EXISTING ~ohnsdwm.sto~ ~override~		//Merchant
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #80			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #80			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #80			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #80			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #80			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~trgeni01.sto~ ~override~		//Khan Zahraa
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~trmer04a.sto~ ~override~		//Anvil of the Right
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~type3.sto~ ~override~		//Copper Coronet
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing	
+
+COPY_EXISTING ~hgkar01.sto~ ~override~		//Karthis al-Hezzar
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160 		//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+
+COPY_EXISTING ~sarbar01.sto~ ~override~		//The Tankard Tree
+	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
+		ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Ice +1
+			ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Fire +1
+			    ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Ice +1
+				    ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #160			//Bullet of Electricity +1
+					   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing					   
+
+//////////////////////////////////////////////////////
+//Adding charge item ability to Robe of Vecna       //
+//////////////////////////////////////////////////////
+
+COPY_EXISTING ~wa2robe.itm~ ~override/wa2robe.itm~		//Robe of Vecna - adding scroll charge
+	  SAY NAME1 @2327	
+		SAY UNIDENTIFIED_DESC @2328
+			WRITE_BYTE 0x42 ~200~
+			PATCH_IF (SOURCE_SIZE < 0x202) BEGIN
+				LPF ADD_ITEM_HEADER INT_VAR target = 5 range = 1 charges = 1 required_id = 1 depletion = 3 STR_VAR icon = dtkconjs END
+					LPF ADD_ITEM_EFFECT INT_VAR header = 1 type = 3 opcode = 122 target = 1 timing = 1 type_flags = 0 STR_VAR resource = dtkcdeat END
+						LPF ADD_ITEM_EFFECT INT_VAR header = 1 type = 3 opcode = 215 target = 1 timing = 0 duration = 4 STR_VAR resource = spcontin END
+					END
+
+COPY_EXISTING ~wmart2.sto~ ~override~		//Diedre
+	REMOVE_STORE_ITEM ~wa2robe~
+		ADD_STORE_ITEM ~wa2robe~ #0 #0 #0 ~NONE~ #1
+	
 ////////////////////////////////
 //Adding item ability tooltips//
 ////////////////////////////////
@@ -1490,7 +1894,7 @@ COPY_EXISTING ~tooltip.2da~ ~override~
     SET num_rows += 1
   END
   BUT_ONLY
-  
+   
 //////////////////////////////////////////////////
 //Updating Reflection Shield for new projectiles//
 //////////////////////////////////////////////////

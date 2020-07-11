@@ -77,6 +77,35 @@
 76 - Severance +3
 77 - Crimson Dawn +5
 78 - Severance +5
+79 - Black Dragon Plate
+80 - Dragonscale Shield +3 (black scales)
+81 - Black Dragonscale +4
+82 - Green Dragon Plate
+83 - Chromatic Crimson Dragon Plate (black scales)
+84 - Chromatic Shadow Dragonscale (black scales)
+85 - Scarlet Viridescent Dragon Plate
+86 - Verdant Crimson Dragonscale
+87 - Verdant Shadow Dragon Plate
+88 - Chromatic Shadow Dragon Plate (Blue Scales)
+89 - Chromatic Shadow Dragon Plate (Black Scales)
+90 - Umbral Viridian Dragon Plate (Green Scales)
+91 - Chromatic Shadow Dragon Plate (Red Scales)
+92 - Chromatic Shadow Dragon Plate (Silver Scales)
+93 - Chromatic Shadow Dragon Plate (White Scales)
+94 - Chromatic Crimson Dragonscale (Black Scales)
+95 - Chromatic Crimson Dragonscale (Blue Scales)
+96 - Carmine Viridian Dragonscale (Green Scales)
+97 - Scarlet Viridescent Dragonscale (Red Scales)
+98 - Chromatic Crimson Dragonscale (Silver Scales)
+99 - Chromatic Crimson Dragonscale (White Scales)
+100 - Chromatic Crimson Dragonscale (Shadow Scales)
+101 - Martyr's Morningstar +3
+102 - Martyr's Morningstar +5
+103 - Heartwood Ring of Fire
+104 - Heartwood Ring of Air
+105 - Heartwood Ring of Earth
+106 - Heartwood Ring of Water
+107 - Bolt of Frostfire +2
 */
 
 
@@ -281,7 +310,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkplat1",Player1,2,0,0) // Verdant Crimson Dragon Plate
+    GiveItemCreate("dtkplat1",Player1,1,0,0) // Verdant Crimson Dragon Plate
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -293,7 +322,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkleat1",Player1,2,0,0) // Verdant Shadow Dragonscale
+    GiveItemCreate("dtkleat1",Player1,1,0,0) // Verdant Shadow Dragonscale
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -726,7 +755,7 @@ THEN
     SetGlobal("ForgeStuff","GLOBAL",0)
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    GiveItemCreate("dtkleat2",Player1,2,0,0) // Green Dragonscale Armor +4
+    GiveItemCreate("dtkleat2",Player1,1,0,0) // Green Dragonscale Armor +4
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -907,7 +936,6 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtknecro",Player1,0,0,0) // Raiment of the Lich +4
-    GiveItemCreate("dtkcdeat",Player1,0,0,0) // Scroll of Conjure Death
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
@@ -1016,5 +1044,353 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkswd9a",Player1,0,0,0) //Severance +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",79)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbdrgp",Player1,0,0,0) //Black Dragon Plate
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",80)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbdrgs",Player1,1,0,0) // Dragonscale Shield +3 (black scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",81)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbdrgl",Player1,1,0,0) // Black Dragonscale +4
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",82)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkgdrgp",Player1,1,0,0) // Green Dragon Plate
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",83)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt1f",Player1,1,1,0) // Chromatic Crimson Dragon Plate (black scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",84)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea1f",Player1,1,1,0) // Chromatic Shadow Dragonscale (black scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",85)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt1g",Player1,1,1,0) // Scarlet Viridescent Dragon Plate
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",86)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3",Player1,1,0,0) // Verdant Crimson Dragonscale
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",87)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3",Player1,1,0,0) // Verdant Shadow Dragon Plate
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",88)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3b",Player1,1,1,0) // Chromatic Shadow Dragon Plate (Blue Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",89)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3f",Player1,1,1,0) // Chromatic Shadow Dragon Plate (Black Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",90)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3e",Player1,1,1,0) // Umbral Viridian Dragon Plate (Green Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",91)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3a",Player1,1,1,0) // Chromatic Shadow Dragon Plate (Red Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",92)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3d",Player1,1,1,0) // Chromatic Shadow Dragon Plate (Silver Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",93)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkplt3c",Player1,1,1,0) // Chromatic Shadow Dragon Plate (White Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",94)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3f",Player1,1,1,0) // Chromatic Crimson Dragonscale (Black Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",95)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3b",Player1,1,1,0) // Chromatic Crimson Dragonscale (Blue Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",96)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3e",Player1,1,1,0) // Carmine Viridian Dragonscale (Green Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",97)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3a",Player1,1,1,0) // Scarlet Viridescent Dragonscale (Red Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",98)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3d",Player1,1,1,0) // Chromatic Crimson Dragonscale (Silver Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",99)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3c",Player1,1,1,0) // Chromatic Crimson Dragonscale (White Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",100)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtklea3g",Player1,1,1,0) // Chromatic Crimson Dragonscale (Shadow Scales)
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",101)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbln1",Player1,0,0,0) // Martyr's Morningstar +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",102)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbln1a",Player1,0,0,0) // Martyr's Morningstar +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",103)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkrng2a",Player1,1,0,0) // Heartwood Ring of Fire
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",104)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkrng2b",Player1,1,0,0) // Heartwood Ring of Air
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",105)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkrng2c",Player1,1,0,0) // Heartwood Ring of Earth
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",106)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkrng2d",Player1,1,0,0) // Heartwood Ring of Water
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",107)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkbol1",Player1,80,0,0) // Bolt of Frostfire +2
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END

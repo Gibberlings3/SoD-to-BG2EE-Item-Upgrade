@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("dtknecro")~ THEN GOTO NewItem //Raiment of the Lich +5
+  IF ~PartyHasItem("dtknecro")~ THEN GOTO NewItem //Raiment of the Demilich
 END
   
 APPEND WSMITH01

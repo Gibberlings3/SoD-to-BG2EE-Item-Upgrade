@@ -24,6 +24,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_axe 
 SAY @132
+ IF ~PartyGoldLT(7500)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("DTKItems","ar0334",39)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(7500)
@@ -37,6 +38,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_halberd
 SAY @132
+ IF ~PartyGoldLT(7500)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(7499)~ THEN DO ~SetGlobal("DTKItems","ar0334",40)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(7500)

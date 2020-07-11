@@ -1,6 +1,6 @@
 # Item Spoilers
 
-## New SoD Items This Mod Imports
+## Additional SoD Items This Mod Imports
 
 - KeyRing
 - Tongue of Acid +3
@@ -27,9 +27,9 @@
 - Vexation +2
 - Astral Crossbow +2
 - Shadowed Spear +2
-- Dragonscale Shield +3 (forged using green scales)
+- Dragonscale Shield +3 (forged by Cromwell or Cespenar using green dragon scales)
 - The Forest Queen's Benediction
-- Jester's Bracers
+- Jester's Bracers 
 - The Night's Embrace +3
 - Ring of Purity
 - Dervish Crescent +2
@@ -37,6 +37,12 @@
 - Wizzard Hat
 - Crimson Dawn +2
 - Severance +2
+- Martyr's Morningstar +2
+- Bolt of Fire +1
+- Bolt of Ice +1
+- Bullet of Fire +1
+- Bullet of Ice +1
+
 
 ## Existing SoD Items Force-Imported by Optional Component
 
@@ -154,9 +160,10 @@ These new items are the result of the various upgrades available in this mod
 - Quicksilver Sabatons
 
 	Equipped abilities:
-	– Saving Throws +1
 	– Move Silently: +50%
-	– Immunity to Grease, Entangle, Web, Stun, and Slow
+	– Non-detectable by magical means such as Detect Invisibility and scrying
+	– Immunity to all effects that impair movement
+	– Movement rate increased by 1
 
 	Charge abilities:
 	– Shadowstep once per day
@@ -391,7 +398,7 @@ These new items are the result of the various upgrades available in this mod
 	– Fire Resistance +50%
 
 	Charge abilities:
-	– Produce Fire twice per day
+	– Produce Fire once per day
 	  Damage: 1d4+20 fire to all creatures in area of effect once per round
 	  Range: 40 ft.
 	  Radius: 4 ft.
@@ -410,7 +417,7 @@ These new items are the result of the various upgrades available in this mod
 	– Acid Resistance +50%
 
 	Charge abilities:
-	– Vitriolic Sphere twice per day
+	– Vitriolic Sphere once per day
 	  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
 	  Radius: 5 ft. 
 	  Range: 30 ft.
@@ -644,7 +651,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 2
 	
 	
-- Cloverleaf +1
+- Tymora's Cinch
 	Equipped abilities:
 	– Luck
 
@@ -725,6 +732,14 @@ These new items are the result of the various upgrades available in this mod
 
 	Equipped abilities:
 	– Unlimited Void-Tipped Arrows +3
+	
+	Combat abilities:
+	– The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates)
+	– Does no damage to undead
+
+	THAC0: +3
+	Damage: 1d6+3 (magic)
+	Launcher: Bow
 
 	Weight: 0
 	
@@ -733,6 +748,14 @@ These new items are the result of the various upgrades available in this mod
 
 	Equipped abilities:
 	– Unlimited Bullets of Darkness +3
+	
+	Combat abilities:
+	– The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates).
+	– Does no damage to the undead
+
+	THAC0: +3
+	Damage: 1d4+4 (magic)
+	Launcher: Sling
 
 	Weight: 0
 	
@@ -897,7 +920,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 0
 	
 	
-- Trollkiller's Ioun Stone +1
+- Trollkiller's Vigorous Ioun Stone
 
 	Equipped abilities:
 	– Protects against all forms of panic and boosts morale
@@ -918,7 +941,7 @@ These new items are the result of the various upgrades available in this mod
 - Bulwark of Egons +3
 
 	Equipped abilities:
-	– Armor Class: +3, +4 vs. missile attacks
+	– Armor Class: +4, +5 vs. missile attacks
 	– Magical Resistance: 10%
 	– Turn Undead Level: +2
 	– Negative plane protection
@@ -1092,14 +1115,13 @@ These new items are the result of the various upgrades available in this mod
 - Green Dragonscale +4
 
 	Equipped abilities:
-	– Immunity to poison
+	– Fire Resistance +20%
+	– Immunity to poison, disease, blindness, deafness
+	– Physical Damage Resistance: +5%
 
 	Charge abilities:
-	– Neutralize Poison twice per day
-	  Special: Heals 10 Hit Points and cures poison,   
-	  disease, deafness, and blindness
-	  Range: 10 ft.
-	  Area of Effect: 1 creature
+	– Poison Weapon once per day
+	  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
 
 	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
 	Requires:
@@ -1108,7 +1130,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 7
 	
 	
-- Vorpal Dragon Blade +4
+- Silver Dragon Blade +4
 
 	Equipped abilities:
 	– Slashing Damage: +10% bonus
@@ -1130,7 +1152,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 9
 	
 	
-- Vorpal Dragon Blade +5
+- Silver Dragon Blade +5
 
 	Equipped abilities:
 	– Slashing Damage: +10% bonus
@@ -1153,7 +1175,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 9
 	
 	
-- Dragonscale Aegis +4
+- Dragonscale Aegis +3
 
 	Equipped abilities:
 	– Armor Class: +4
@@ -1166,7 +1188,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 5
 	
 	
-- The Night's Embrace +6
+- The Night's Embrace +7
 
 	Equipped abilities:
 	– If the wearer is rendered helpless (e.g. by a Hold Person spell), <PRO_HESHE> becomes invisible for 1 turn
@@ -1317,7 +1339,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 7
 	
 	
-- Sourceror's Cap
+- Sourcerer's Cap
 
 	Equipped abilities:
 	– Hit Points: +10
@@ -1328,7 +1350,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 0
 	
 	
-- Sourceror's Cap +1
+- Sourcerer's Chapeau
 
 	Equipped abilities:
 	– Hit Points: +10
@@ -1340,7 +1362,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 0
 	
 	
-- Raiment of the Lich +4
+- Raiment of the Lich
 
 	Equipped abilities:
 	– Armor Class: 3
@@ -1356,7 +1378,7 @@ These new items are the result of the various upgrades available in this mod
 	Weight: 5
 	
 	
-- Raiment of the Lich +5
+- Raiment of the Demi-Lich
 
 	Equipped abilities:
 	– Armor Class: 3
@@ -1396,6 +1418,7 @@ These new items are the result of the various upgrades available in this mod
 
 	Equipped abilities:
 	– Hit Points: +10
+	– Extra 1/2 attack per round
 
 	Combat abilities:
 	– 20% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
@@ -1434,6 +1457,7 @@ These new items are the result of the various upgrades available in this mod
 
 	Equipped abilities:
 	– Hit Points: +15
+	– 1 extra attack per round
 
 	Combat abilities:
 	– 25% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
@@ -1448,7 +1472,571 @@ These new items are the result of the various upgrades available in this mod
 
 	Weight: 7
 	
+- Martyr's Morningstar +3
+
+	Equipped abilities:
+	– Hit Points: -15
+	– Chance to score a critical hit: +5% (this weapon only)
+
+	Combat abilities:
+	– On a critical hit, target loses 15% of their maximum Hit Points
+	– On a critical hit, 50% chance target is stunned for 1 round (No Save)
+
+	THAC0: +3
+	Damage: 2d4+3 (crushing)
+	Speed Factor: 5
+	Proficiency Type: Flail/Morning Star
+	Type: One-handed
+	Requires:
+	 11 Strength
+
+	Weight: 9
 	
+- Martyr's Morningstar +5
+
+	Equipped abilities:
+	– Hit Points: -20
+	– Chance to score a critical hit: +10% (this weapon only)
+
+	Combat abilities:
+	– On a critical hit, target loses 15% of their maximum Hit Points
+	– On a critical hit, target is stunned for 1 round (No Save)
+
+	THAC0: +5
+	Damage: 2d4+5 (crushing)
+	Speed Factor: 5
+	Proficiency Type: Flail/Morning Star
+	Type: One-handed
+	Requires:
+	 11 Strength
+
+	Weight: 9
+	
+- Bolt of Frostfire +2
+
+	THAC0: +2
+	Damage: 1d8+2, +1d3 (fire), +1d3 (cold)
+	Damage Type: Missile
+	Launcher: Crossbow
+
+	Weight: 0
+
+- Black Dragonscale Armor +4
+
+	Equipped abilities:
+	– Fire Resistance +20%
+	– Acid Resistance +20%
+	– Physical Damage Resistance: +10%
+
+	Combat abilities:
+	– Caustic Scales: Any opponent within 6 ft. that successfully hits the wearer suffers 1d3 points of acid damage.
+
+	Armor Class: 1 (-1 vs. slashing, 0 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 7
+	
+- Black Dragon Plate 
+
+	Equipped abilities:
+	– Fire Resistance +25%
+	– Acid Resistance +25%
+	– Physical Damage Resistance: +10%
+
+	Combat abilities:
+	– Caustic Scales: Any opponent within 6 ft. that successfully hits the wearer suffers 1d3 points of acid damage.
+
+	Armor Class: -1 (-4 vs. slashing, -2 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Dragonscale Shield +3 (Black Scales)
+
+	Equipped abilities:
+	– Armor Class: +4
+	– Fire Resistance +15%
+	– Acid Resistance +15%
+	– Physical Damage Resistance: +10%
+
+	Charge abilities:
+	– Vitriolic Sphere once per day
+	  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+	  Radius: 5 ft. 
+	  Range: 30 ft.
+
+	Requires:
+	 8 Strength
+
+	Weight: 5
+	
+- Green Dragon Plate
+
+	Equipped abilities:
+	– Fire Resistance +25%
+	– Immunity to poison, disease, blindness, deafness
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Poison Weapon once per day
+	  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Verdant Crimson Dragonscale
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+
+	Charge abilities:
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Verdant Shadow Dragon Plate
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance +50%
+
+	Charge abilities:
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+
+- Chromatic Crimson Dragonscale (Blue Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+	– Electrical Resistance +50%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Thunder Thrust once per day
+	  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+	  Special: knocks target back and unconscious for one round
+	  Range: 80 ft.
+
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Chromatic Crimson Dragonscale (White Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+	– Cold Resistance +50%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Cone of Cold once per day
+	  Damage: 10d4+10 cold (Save vs. Spell for half)
+	  Range: 8 ft.
+	  Area of Effect: 18-ft. cone with 90-deg. arc
+	  
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Chromatic Crimson Dragonscale (Silver Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+	– Magic Resistance: +10%
+	– Charisma: -2
+
+	Charge abilities:
+	– Writhing Fog once per day
+	  1d6+1 cold damage per round,
+	  25% chance of being slowed for 1 round (save vs.
+	  death negates)
+	  Range: 30 ft. 
+	  Area of Effect: 15 ft. radius
+	  
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Combat abilities:
+	– Heals wearer 2 Hit Points each time damage is taken
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Chromatic Crimson Dragonscale (Black Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance +20%
+	– Fire Resistance +70%
+	– Piercing Damage Resistance: +10%
+	– Crushing Damage Resistance: +10%
+
+	Charge abilities:
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Chromatic Crimson Dragonscale (Shadow Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+	– Acid Resistance +50%
+	– Crushing Damage Resistance: +10%
+	– Piercing Damage Resistance: +10%
+
+	Charge abilities:
+	– Vitriolic Sphere once per day
+	  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+	  Radius: 5 ft. 
+	  Range: 30 ft.
+	  
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Carmine Viridian Dragonscale (Green Scales)
+
+	Equipped abilities:
+	– Immunity to poison, disease, blindness, deafness
+	– Fire Resistance +50%
+	– Slashing Damage Resistance: +10%
+	– Crushing Damage Resistance: +10%
+
+	Charge abilities:
+	– Poison Weapon once per day
+	  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Scarlet Viridescent Dragonscale (Red Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +80%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Produce Fire once per day
+	  Damage: 1d4+20 fire to all creatures in area of effect once per round
+	  Range: 40 ft.
+	  Radius: 4 ft.
+
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+
+	Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+	Requires:
+	 6 Strength
+
+	Weight: 10
+	
+- Scarlet Viridescent Dragon Plate (Red Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +80%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Produce Fire once per day
+	  Damage: 1d4+20 fire to all creatures in area of effect once per round
+	  Range: 40 ft.
+	  Radius: 4 ft.
+	  
+	– Dread Flame once per day
+	  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+	  Range: 40 ft.
+	  Radius: 15 ft.
+	  
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Umbral Viridian Dragon Plate (Green Scales)
+
+	Equipped abilities:
+	– Acid Resistance +50%
+	– Immunity to poison, disease, blindness, deafness
+	– Missile Damage Resistance: +10%
+	– Piercing Damage Resistance: +10%
+
+	Charge abilities:
+	– Poison Weapon once per day
+	  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Chromatic Shadow Dragon Plate (Red Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Fire Resistance +50%
+	– Acid Resistance +50%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+	  
+	– Produce Fire once per day
+	  Damage: 1d4+20 fire to all creatures in area of effect once per round
+	  Range: 40 ft.
+	  Radius: 4 ft.
+
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Chromatic Shadow Dragon Plate (Blue Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance +50%
+	– Electrical Resistance +50%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Thunder Thrust once per day
+	  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+	  Special: knocks target back and unconscious for one round
+	  Range: 80 ft.
+	  
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Chromatic Shadow Dragon Plate (White Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance +50%
+	– Cold Resistance +50%
+	– Physical Damage Resistance: +5%
+
+	Charge abilities:
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+	  
+	– Cone of Cold once per day
+	  Damage: 10d4+10 cold (Save vs. Spell for half)
+	  Range: 8 ft.
+	  Area of Effect: 25-ft. cone with 90-deg. arc
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Chromatic Shadow Dragon Plate (Silver Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance: +50%
+	– Magic Resistance: +10%
+	– Charisma: -2
+
+	Charge abilities:
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+	  
+	– Writhing Fog once per day
+	  1d6+1 cold damage per round,
+	  25% chance of being slowed for 1 round (save vs.
+	  death negates)
+	  Range: 30 ft. 
+	  Area of Effect: 15 ft. radius
+
+	Combat abilities:
+	– Heals wearer 2 Hit Points each time damage is taken
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+	
+- Chromatic Shadow Dragon Plate (Black Scales)
+
+	Equipped abilities:
+	– Immunity to poison
+	– Acid Resistance +70%
+	– Fire Resistance +20%
+	– Missile Damage Resistance: +10%
+	– Slashing Damage Resistance: +10%
+
+	Charge abilities:
+	– Vitriolic Sphere once per day
+	  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+	  Radius: 5 ft. 
+	  Range: 30 ft.
+	  
+	– Acid Storm once per day
+	  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+	  Range: 60 ft.
+	  Radius: 12 ft.
+
+	Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+	Requires:
+	 8 Strength
+
+	Weight: 30
+
+- Heartwood Ring of Fire
+
+	Equipped abilities:
+	– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+	– Fire Resistance +50%
+	– Improves casting speed by 2
+	– All fire damage inflicted by the wearer is increased by 10%
+
+	Charge abilities:
+	– May summon Zaaman Rul, Elemental Prince of Fire once per day for 3 turns
+
+	Weight: 1
+	
+- Heartwood Ring of Wind
+
+	Equipped abilities:
+	– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+	– Electricity Resistance +50%
+	– Improves casting speed by 2
+	– All electrial damage inflicted by the wearer is increased by 10%
+
+	Charge abilities:
+	– May summon Chan, Elemental Prince of Air once per day for 3 turns
+
+	Weight: 1
+	
+- Heartwood Ring of Earth
+
+	Equipped abilities:
+	– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+	– Acid Resistance +50%
+	– Improves casting speed by 2
+	– All acid damage inflicted by the wearer is increased by 10%
+
+	Charge abilities:
+	– May summon Sunnis, Elemental Prince of Earth once per day for 3 turns
+
+	Weight: 1
+	
+- Heartwood Ring of Water
+
+	Equipped abilities:
+	– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+	– Cold Resistance +50%
+	– Improves casting speed by 2
+	– All cold damage inflicted by the wearer is increased by 10%
+
+	Charge abilities:
+	– May summon Ben-Hadar, Elemental Prince of Water once per day for 3 turns
+
+	Weight: 1
+
+
 ## New spells that can be created by Cromwell and Cespenar
 
 - Conjure Death
@@ -1484,9 +2072,3 @@ These new items are the result of the various upgrades available in this mod
 
 	1d5+1 of cold damage per level, up to a maximum of 20d5+20 in a 90-degree arc
 	Affected creatures slowed for 3 rounds if save is failed
-	
-	
-
-	
-	
-	

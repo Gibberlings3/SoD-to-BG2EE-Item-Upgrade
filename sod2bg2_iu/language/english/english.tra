@@ -70,29 +70,29 @@
 @47 = ~If'n ye want me to improve Crommus' old boots for ye, I'd need a few things.  Two potions each of magic protection, magic shielding, and magic blocking.~
 @48 = ~Ye have all the potions I need here to reforge those starry boots, I would just need 5,000gp for me work at the forge.  Shall I get started on em for ye?~
 @49 = ~Placeholder~
-@50 = ~Ahh, I believe I recognize the craftmanship of this Green Dragonscale o' yers.  Jegg's works is it?  How is the ol' bird?~
+@50 = ~Ahh, I believe I recognize the craftmanship of this green dragonscale o' yers.  Jegg's work is it?  How is the ol' bird?~
 @51 = ~I can rework this dragonscale into better armor if ye can bring me some red or shadow dragon scales.~
 @52 = ~Aye, ye've collected some more scales from the dastardly beasts.  I can use 'em to reforge yer green dragonscale.~
 @52 = ~I can use these dragon scales to reforge your green dragonscale armor.~
-@53 = ~I can use these red dragon scales to reforge the green dragonscale into sturdy plate.~
-@54 = ~What've ye here, scales from a noxious green dragon?~
-@55 = ~I can use these scales to make for ye a suit of armor, or a sturdy shield.~
+@53 = ~I can use these red dragon scales to reforge the green dragonscale into lightweight scale armor or a suit of heavy plate.~
+@54 = ~What've ye here, scales from a toxic green dragon?  Ach, the smell is enough to knock a buzzard off a gut-wagon.~
+@55 = ~I can use these noxious scales to make for ye a lightweight suit of scale armor, a suit of heavy plate armor, or even a sturdy shield.~
 @56 = ~It'll cost ye 7,500gp and a day's worth of yer sweat helping at me forge.~
-@57 = ~I can use these shadow dragon scales to reforge the green dragonscale into a lightweight scale armor.~
+@57 = ~I can use these shadow dragon scales to reforge the green dragonscale into a lightweight scale armor, or a suit of heavy plate.~
 @58 = ~Scales from a shadow dragon?  I can use these to further enhance your armor.~
 @59 = ~This be a nice greatsword ye have here, a dragon's gift?  She looks rather worn...~
-@60 = ~I can use either these red dragon scales or shadow dragon scales to reforge your green dragonscale.~
+@60 = ~I can use either these red dragon scales or shadow dragon scales to reforge yer green dragonscale into lightweight scale armor or a suit of heavy plate.~
 @61 = ~It'll cost ye 15,000 gold and since me apprentice would rather chase harlots and courtesans than work, ye'll need to stay on a day and help me run the forge.~
-@62 = ~Well, let's see what ye got then.~
+@62 = ~Well, let's see what else ye've got then.~
 @63 = ~I can reforge this blade, I would just need a sharp new blade for the forgin'.  A Githyanki's vorpal blade of silver would work best.~
 @64 = ~Ahh yes, this be a vorpal blade alright, I can use it to reforge that dragon's sword of yours, along with 7,500 gold for me trouble.~
 @65 = ~The Verdant Crimson Dragon Plate?  Ye wish to improve it further, eh?~
-@66 = ~I can rework the armor for ye with some more scales.  Blue, white, shadow, green, or silver will do.~
+@66 = ~I can rework the armor for ye with some more dragon scales.  Any color from the scaly bastards will do.~
 @67 = ~Scales from a shadow dragon?  I can use these to further enhance your armor.~
 @68 = ~Ye would like to enhance that silver dragon's blade of yers further, ye say?~
 @69 = ~Scales from a white dragon? I can use these to further enhance your armor.~
 @70 = ~Scales from a dragon of noble silver?  It saddens this old dwarf to know such a creature fell for these scales.  However, we shouldn't let them go to waste.  I can use these to improve your armor.~
-@71 = ~Enhancing a vorpal blade be a tall order, I'd need an elemental gemstone for it, and 10,000gp to fit it to your sword.~
+@71 = ~Enhancing your silver dragon further blade be a tall order, I'd need an elemental gemstone for it, and 10,000gp to fit it to your sword.~
 @72 = ~Scales from a blue dragon?  I can use these to enhance your armor.~
 @73 = ~Looks like ye have an elemental gem of frost here, I can use this to enhance your dragon blade with.~
 @74 = ~It'll cost ye 20,000 gold, and since me apprentice has ran off to Waterdeep with a rather homely courtesan, I'll need yer help at the forge once again.~
@@ -105,7 +105,7 @@
 @81 = ~Always wanted to try me hand at reforgin a pair o' these, and I believe I can do it for ye with a bracers of blinding strike, an improved haste scroll, two potions of power and two potions of master thievery.~
 @82 = ~Ye have everything I need here to upgrade those stalker gauntlets of yers.  It'll be 10,000gp and I'll need yer help at me forge.  Me son of a kobald of an apprentice was out all hours deep in his cups with the blasted courtesans again.~
 @83 = ~The Scorched Earth again eh?  Not hot enough for ye?  Heh.~
-@84 = ~Be a difficult task to make this blade burn hotter... but I might just be able to do it for ye if'n ye can find me an elemental gem of flame.  Oh, and a small comission for me work, 15,000gp should cover it.  And lest I forget, I'll need yer help for the day at me forge.  That damnable apprentice of mine has gone and knocked up a half-orc lass.  I doubt I will ever see him again, heh.~
+@84 = ~Be a difficult task to make this blade burn hotter... but I might just be able to do it for ye if'n ye can find me an elemental gem of flame.  Oh, and a small commission for me work, 15,000gp should cover it.  And lest I forget, I'll need yer help for the day at me forge.  That damnable apprentice of mine has gone and knocked up a half-orc lass.  I doubt I will ever see him again, heh.~
 @85 = ~Looks like ye found an elemental gem of flame, they be rare as hen's teeth.  Shall we get started on mounting it into yer blade?~
 @86 = ~What've ye got here?  A lucky belt ye say?~
 @87 = ~Methinks I can make this belt even more "lucky" for ye and yer friends with five scrolls of luck and 10,000gp.~
@@ -220,9 +220,9 @@
 @196 = ~Ah, this looks to be some scrappy ol' wizard's hat...~
 @197 = ~If'n ye would like to have this old hat enhanced, it'd take some potent magics.  Methinks it would take the Circlet of Netheril, nothing less.~
 @198 = ~Aye, this be the Cirlet of Netheril ye have here.  I can enhance that old pointy hat of yers with it along with a mere 10,000 gold crowns fer me trouble at tha' forge~
-@199 = ~The Sourceror's Cap?  Ye say ye would like it enhanced further?  Hmmm, let me think a moment...~
+@199 = ~The Sourcerer's Cap?  Ye say ye would like it enhanced further?  Hmmm, let me think a moment...~
 @200 = ~Yes, I believe I can enhance this cap o' yers.  I would need an ioun stone of bronze and 5,000 gold crowns~
-@201 = ~Well then, ye certainly be proficient in the adventurin' business.  I can use this bronze ioun stone to enhance yer Sourceror's Cap.  Are ye ready to help at me forge fer the day, <CHARNAME>?~
+@201 = ~Well then, ye certainly be proficient in the adventurin' business.  I can use this bronze ioun stone to enhance yer Sourcerer's Cap.  Are ye ready to help at me forge fer the day, <CHARNAME>?~
 @202 = ~What be this? looks to be an unfinished garment constructed of human skin?  I'll not ask ye where ye got this from.~
 @203 = ~With the right components, I could finish this ghastly thing into a completely serviceable piece of armor.  If ye are able to pry Vecna's robes from Ribald's greedy fingers, and find me some blood from a shadow dragon, I could finish the work.~
 @204 = ~This be the old Lich's robe sure enough, and by the Soul Forger... is this murky vial filled with the life-blood from a Shadow Drake?  Such a sight to behold, it's almost as if this be bled from the very void itself.  With these, and a generous contribution of 10,000 gold crowns for the forgin' I will get to work on that fleshy garment for ye right away.~
@@ -252,6 +252,29 @@
 @228 = ~The Severance +3?  A blade this well balanced be tough to enhance any further....~
 @229 = ~If'n ye can somehow find me some ore from the heavens, I can reforge yer blade with it.~
 @230 = ~Aye, this be ore from the stars alright, I can use it to enhance that old fighter's blade of yers.  I would just need 10,000 gold pieces and a day's worth of yer help at me forge.~
+@231 = ~What's this now? Some scales from a black dragon?  Good on ye fer stickin' the wicked beast.~
+@232 = ~These be some impressively tough scales, I can make ye a lightweight suit of scale armor, a suit of heavy plate, or even a sturdy shield with these.~
+@233 = ~Scales from a black dragon?  I can use these to further enhance your armor.~
+@234 = ~The Verdant Crimson Dragonscale?  Ye wish to improve it further, eh?~
+@235 = ~The Verdant Shadow Dragon Plate?  Ye wish to improve it further, eh?~
+@236 = ~What've ye here?  A morningstar forged by an Ilmateran priest?  Surely to be blessed by the crying god himself, eh?~
+@237 = ~Aye, I can improve it for ye.  I would need a gemstone fitting for the crying god, a king's tear, and a scroll of champion's strength to empower it.~
+@238 = ~Ah, this be a tear of kings alright, and the champion's strength scroll as well.  I can get to work on that morningstar for ye right away, if'n ye can part with a mere 3,000gp for the work.~
+@239 = ~Ilusarian's blessed morningstar again eh?  Ye wish it further enhanced?~
+@240 = ~It be a challenge to improve it further, but me granda would surely strike at me from the grave if'n I could'nt, hah!  If ye come across a crystallized tear from a nymph in yer travels, I can use it to enhance yer morningstar.~
+@241 = ~A crystallized nymph's tear... rarer than hen's teeth, but sure enough, ye have one here.  If ye can part with a mere 5,000 gold, I can get to work on fitting it to yer morningstar.~
+@242 = ~Hmmm, a ring of oak?  Seems to have a bit 'o enchantment to it, but needs a stone set in 'er to be complete.~
+@243 = ~I can complete this oaken ring of yers if'n ye can find me an elemental gemstone to set into it.~
+@244 = ~Ahh, it appears ye have a gem here I can use for yer oaken ring.~
+@245 = ~I can use the Heart of Flame to complete your oaken ring.~
+@246 = ~I can use the Breath of Wind to complete your oaken ring.~
+@247 = ~I can use the Eye of Ichor to complete your oaken ring.~
+@248 = ~I can use the Soul of Frost to complete your oaken ring.~
+@249 = ~Ye must have a miner's spirit in ye to have found stones such as these, I can use any of them to complete yer oaken ring.~
+@250 = ~It'll take a day's worth of your help at me forge, and a mere 5,000 gold for the commission.~
+@251 = ~What've ye here now?  Looks to be one of those enchanted crossbow bolts I heard about from the battle at Dragonspear.   Talk around the docks is there be a surplus of these from the war that found their way to Athkatla.  Bloodscalp's work I'd wager, heh.~
+@252 = ~Ye want these enhanced?  Tymora be your lady <CHARNAME>, I've been wanting to get me mitts on these new bolts and work with 'em.  If'n ye can find and bring me no less than forty each of bolts of fire +1 and bolts of ice +1, I can reforge them into something more potent.~
+@253 = ~Aye, ye've enough bolts here for me to work with.  If ye can part with 1,000 gold crowns, I'll get to work on 'em right away.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -324,13 +347,13 @@
 @1062 = ~Phew, stinks like dead dragon.  This armor is made from stinky dragon hide?~ 
 @1063 = ~Cespenar can make stinky dragon armor better if you brings him more scales to work with.  Red scales or shadow dragon scales will work.~
 @1064 = ~Yes, yes!  I can use these scales to improve stinky green dragon hide of yours.~
-@1065 = ~I can use these red dragon scales for to make green dragon armor into hard plate for the master.~
-@1066 = ~I can use these shadow dragons cales to make green dragon armor into light scale for the master.~
-@1067 = ~Ohhh, the master is big time dragon killer, I can use either these red or shadow dragon scales to improve green dragon armor for you.~
+@1065 = ~I can use these red dragon scales for to make green dragon armor into heavy plate, or light scale for the master.~
+@1066 = ~I can use these shadow dragon scales to make green dragon armor into light scale, or heavy plate for the master.~
+@1067 = ~Ohhh, the master is big time dragon killer, I can use either these red or shadow dragon scales to improve green dragon armor for you.  I can makes either light scale or heavy plate armors.~
 @1068 = ~I just needs the scales and 15,000 golds to make the armor.~
 @1069 = ~No?  Maybe the master could consider washing stinky dragon hide armor at least?~
 @1070 = ~Oh no, not stinky dragon armor again... Master wants me to make even better?~
-@1071 = ~I can makes nasty dragon hide armor better for you with more scales.  This time I will needs shadow, blue, white, silver, or more green scales.~
+@1071 = ~I can makes nasty dragon hide armor better for you with more scales.  This time I can uses any color scales from stinky big lizards.~
 @1072 = ~Loyal butler can use these scales to further improve stinky dragon armor for you.~
 @1073 = ~I can use these shadow dragon scales to remakes stinky dragon hide armor for the master.~
 @1074 = ~I can use these white dragon scales to remakes stinky dragon hide armor for the master.~
@@ -442,7 +465,7 @@
 @1180 = ~No?  Ok then, let me look through bags more...~
 @1181 = ~I can use these green dragon scales to remakes stinky dragon hide armor for the master.~
 @1182 = ~What's this?  Scales from stinky dragon?~
-@1183 = ~Green scales extra stinky, but Cespenar can use to make shield or armor for the master.~
+@1183 = ~Green scales extra stinky, but Cespenar can use to make shield, light scale armor, or heavy plate armor for the master.~
 @1184 = ~I just needs the scales and 7,500 golds.~
 @1185 = ~Alright then, any more shinys for me to look through?~
 @1186 = ~Shiny, shiny dragon's blade you has, looks really worn though, has been used by careless beserker perhaps?~
@@ -542,6 +565,32 @@
 @1280 = ~Cespenar does have recipe, just one, needs star-metal ore to reforge sword for you.~
 @1281 = ~You gots star-metal?  Did the master pluck it from the sky?   Well, since you has ore, I can use with 10,000 gold shinys to enhance fighter-sword for you.~
 @1282 = ~No?  Shucks... well what else you has for me?~
+@1283 = ~More scales from nasty dragonses?  Black ones this time?  Master must dislike dragons as much as Cesepenar!~
+@1284 = ~Black scaleses are extra tough!  Cespenar can use to make shield, light scale armor, or heavy plate armor for the master.~
+@1285 = ~I can use these black dragon scales to remakes stinky dragon hide armor for the master.~
+@1286 = ~Ouch! Cespenar stuck fingers on prickly crying god morningstar.  Master wants me to improve?~
+@1287 = ~I can makes Ilmater weapon better with a king's tear and a champion's strength scroll.~
+@1288 = ~Master has the scroll and king gem here, I just needs 3,000 of your shiniest golds to complete recipe.~
+@1289 = ~No go?  Just as well, never liked crybaby god anyway.  What else you has for me?~
+@1290 = ~Oh no, not silly crybaby morningstar again......  The master would like it enhanced more?~
+@1291 = ~Loyal butler has a recipe for that.... but needs something rare, a crystallized tear from nymphs.~
+@1292 = ~Ooooh... such sweet sorrow in this tear...It's deliciously palpable!  I can use to empower Ilmater weapon for you, I just needs 5,000 golds to get started.~
+@1293 = ~Nope?  Does master have other shinys and trinkets for me to look through?~
+@1294 = ~Ring made of wood?  Ladyfriend would think Cespenar is big time cheapskate if I tries to gives her something like this...~
+@1295 = ~I has ancient druid's recipe for wood ring, I would just needs gemstone of elements to make complete.~
+@1296 = ~I can uses Heart of Flame gem to complete ring.~
+@1297 = ~I can uses Eye of Ichor gem to complete ring.~
+@1298 = ~I can uses Breath of Wind gem to complete ring.~
+@1299 = ~I can uses Soul of Frost gem to complete ring.~
+@1300 = ~Wow.... master has nice rock collection here, much better than mine, I can use any of these to complete wood ring.~
+@1301 = ~Hoookay... we keeps 'em seperated then.~
+@1302 = ~Cespenar can use shiny stone you has here to complete wood ring.~
+@1303 = ~I just needs the stone and 5,000 of your shiniest golds.~
+@1304 = ~Hmmm... bolt that burns... I heard about these in Avernus.  Some mean guys from Baldur's Gate had them when they re-sealed the portal!  Wait... you weren't involved in that, were you, Master?~
+@1305 = ~Hmmm... bolt that freezes... I heard about these in Avernus.  Some mean guys from Baldur's Gate had them when they re-sealed the portal!  Wait... you weren't involved in that, were you, Master?~
+@1306 = ~Cespenar has a recipe for frosty-fire bolts, I just needs forty of each, icy-bolt and firey-bolt.  Oh, can't forget golds, I needs 1,000 of those.~
+@1307 = ~Master has everything I needs to make better bolts, should I make them for you now?~
+@1308 = ~Maybe just use for toothpicks instead then, do you have other shinys for me to look through?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -569,7 +618,7 @@
 @6017 = ~I would rather wait until I have some shadow dragon scales instead.~
 @6018 = ~I would rather wait until I find some red dragon scales instead.~
 @6019 = ~How much would that take for the shield?~
-@6020 = ~What would that take for the armor?~
+@6020 = ~What would that take for the light scale armor?~
 @6021 = ~What would that take using the Gesen Bowstring?~
 @6022 = ~How much would that take with the Bowstring of Gond?~
 @6023 = ~I would rather wait until I find a gesen bowstring.~
@@ -584,6 +633,17 @@
 @6032 = ~I would rather wait until I find the equalizer's hilt.~
 @6033 = ~I would rather wait until I find the equalizer's blade.~
 @6034 = ~What would it take for the black scales?~
+@6035 = ~what would that take for the heavy plate armor?~
+@6036 = ~I would rather wait and use the black scales for something else.~
+@6037 = ~What would that take for the lightweight armor using the red scales?~
+@6038 = ~How much would it take for the heavy plate armor using the red scales?~
+@6040 = ~What would that take for the lightweight armor using the shadow scales?~
+@6041 = ~How much would it take for the heavy plate armor using the shadow scales?~
+@6042 = ~What would that take using the Heart of Flame?~
+@6043 = ~How much would that take using the Breath of Wind?~
+@6044 = ~What would that take using the Eye of Ichor?~
+@6045 = ~How much would that take using the Soul of Frost?~
+@6046 = ~I would rather wait until I find another elemental gemstone.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -593,6 +653,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @7000 = ~Burning Skeleton~
 @7001 = ~Drowned in Blood~
+@7002 = ~Ben-Hadar~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -702,14 +763,15 @@ Equipped abilities:
 
 Weight: 1~
 @2014 = ~Quicksilver Sabatons~
-@2015 = ~Empowered by the liquid mercury, these boots allow the wearer to deftly avoid almost any entanglement impeding <PRO_HISHER> movement.  Additionally, the wearer may now slip into the shadow plane briefly once per day, allowing <PRO_HIMHER> to move unseen amongst friend and foe alike, the world around them standing still.
+@2015 = ~Enfused with enchanted liquid mercury, these boots allow the wearer to move more quickly and deftly avoid any entanglement that would impede <PRO_HISHER> movement.  Additionally, the boots allow the wearer to move with such grace as to avoid even magical means of detection when skulking about in the shadows.  Once per day, the wearer may even briefly slip into the shadow plane, unseen by all.
 
 STATISTICS:
 
 Equipped abilities:
-– Saving Throws +1
 – Move Silently: +50%
-– Immunity to Grease, Entangle, Web, Stun, and Slow
+– Non-detectable by magical means such as Detect Invisibility and scrying
+– Immunity to all effects that impair movement
+– Movement rate increased by 1
 
 Charge abilities:
 – Shadowstep once per day
@@ -843,7 +905,7 @@ Requires:
 
 Weight: 4~
 @2034 = ~Hat~
-@2035 = ~Melodius Bard Hat~
+@2035 = ~Melodious Bard Hat~
 @2036 = ~With the additional magical enchantments endowed upon the bard hat, the precocious wearer is now better protected in addition to their vocal improvements and also increases their intelligence, making this hat a far more practical choice for the travelling troubador.
 
 STATISTICS:
@@ -961,7 +1023,7 @@ Equipped abilities:
 
 Weight: 4~
 @2049 = ~Star-Strewn Boots of Antimagic~
-@2050 = ~Crommus' boots have been meticulously reforged for <CHARNAME>, further improving their ability to sheild their wearer from magical attacks.  The boots now also have a limited ability to envelop the wearer in a protective shell of antimagic, preventing all magic from affecting the wearer for a short duration.  
+@2050 = ~Crommus' boots have been meticulously re-cobbled for <CHARNAME>, further improving their ability to sheild their wearer from magical attacks.  The boots now also have a limited ability to envelop the wearer in a protective shell of antimagic, preventing all magic from affecting the wearer for a short duration.  
 
 STATISTICS:
 
@@ -975,7 +1037,7 @@ Charge Abilities:
 
 Weight: 4~
 @2051 = ~Verdant Crimson Dragon Plate~
-@2052 = ~Scales from a fearsome red dragon have been integrated into the reworked green dragonsale armor, greatly enhancing its protective abilities against blows and flame attacks.  Additionally, the wearer can engulf their enemies in flames twice per day.  Regretably, it is now far less supple and pliable, more akin to plate armor.
+@2052 = ~Scales from a fearsome red dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and flame attacks.  Additionally, the wearer may conjure forth a field of scorching flames once per day, engulfing <PRO_HISHER> enemies.  Regretably, it is now far less supple and pliable, more akin to plate armor.
 
 STATISTICS:
 
@@ -984,7 +1046,7 @@ Equipped abilities:
 – Fire Resistance +50%
 
 Charge abilities:
-– Produce Fire twice per day
+– Produce Fire once per day
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
   Radius: 4 ft.
@@ -995,7 +1057,7 @@ Requires:
 
 Weight: 30~
 @2053 = ~Verdant Shadow Dragonscale~
-@2054 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonsale armor, greatly enhancing its protective abilities against blows and acid attacks.  It remains easy to wear and move in, leaving the wearer unhindered.  Additionally, the wearer may direct an orb of corrosive acid at their foes twice per day.
+@2054 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and acid attacks.  It remains easy to wear and move in, leaving the wearer unhindered.  Additionally, the wearer may direct an orb of corrosive acid at their foes once per day.
 
 STATISTICS:
 
@@ -1004,7 +1066,7 @@ Equipped abilities:
 – Acid Resistance +50%
 
 Charge abilities:
-– Vitriolic Sphere twice per day
+– Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
   Range: 30 ft.
@@ -1015,7 +1077,7 @@ Requires:
 
 Weight: 10~
 @2055 = ~Chromatic Crimson Dragon Plate~ //Blue Scales
-@2056 = ~The Verdant Crimson Dragon Plate armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and flame attacks.  Additionally, the wearer my direct the stored electrical energy once per day against their foes.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+@2056 = ~The Verdant Crimson Dragon Plate armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and flame attacks.  Additionally, the wearer may direct the stored electrical energy once per day against their foes.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
 
 STATISTICS:
 
@@ -1030,6 +1092,7 @@ Charge abilities:
   Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
   Special: knocks target back and unconscious for one round
   Range: 80 ft.
+  
 – Produce Fire once per day
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
@@ -1056,6 +1119,7 @@ Charge abilities:
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
   Radius: 4 ft.
+  
 – Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
@@ -1082,6 +1146,7 @@ Charge abilities:
   Damage: 10d4+10 cold (Save vs. Spell for half)
   Range: 8 ft.
   Area of Effect: 25-ft. cone with 90-deg. arc
+  
 – Produce Fire once per day
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
@@ -1110,6 +1175,7 @@ Charge abilities:
   death negates)
   Range: 30 ft. 
   Area of Effect: 15 ft. radius
+  
 – Produce Fire once per day
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
@@ -1151,7 +1217,7 @@ Requires:
 
 Weight: 10~
 @2065 = ~Chromatic Shadow Dragonscale~  //Red Scales
-@2066 = ~Scales from a fierce red dragon have been interlinked and woven into the Verdant Shadow Dragonscale armor, further improving its ability to deflect even the sharpest blows, and providing protection against fire attacks.  In addition, the wearer may engulf their enemies in flames once per day.  Remarkably, the armor retains its flexibility and does not hinder its wearer, all the while continuing to provide protection from acid and poison.  This is a truly impressive piece of craftsmanship.
+@2066 = ~Scales from a fierce red dragon have been interlinked and woven into the Verdant Shadow Dragonscale armor, further improving its ability to deflect even the sharpest blows, and providing protection against fire attacks.  In addition, the wearer may conjure forth a field of scorching flames once per day, engulfing <PRO_HISHER> enemies.  Remarkably, the armor retains its flexibility and does not hinder its wearer, all the while continuing to provide protection from acid and poison.  This is a truly impressive piece of craftsmanship.
 
 STATISTICS:
 
@@ -1166,6 +1232,7 @@ Charge abilities:
   Damage: 1d4+20 fire to all creatures in area of effect once per round
   Range: 40 ft.
   Radius: 4 ft.
+  
 – Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
@@ -1192,6 +1259,7 @@ Charge abilities:
   Damage: 10d4+10 cold (Save vs. Spell for half)
   Range: 8 ft.
   Area of Effect: 18-ft. cone with 90-deg. arc
+  
 – Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
@@ -1220,6 +1288,7 @@ Charge abilities:
   death negates)
   Range: 30 ft. 
   Area of Effect: 15 ft. radius
+  
 – Vitriolic Sphere once per day
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
@@ -1542,7 +1611,7 @@ Weight: 2~
 STATISTICS:
 
 Weight: 0~
-@2123 = ~Cloverleaf +1~
+@2123 = ~Tymora's Cinch~
 @2124 = ~Tip Eldermaple's lucky belt has been infused with magical luck, which now allows the wearer to share their luck with their party members once per day.
 
 STATISTICS:
@@ -1633,6 +1702,14 @@ STATISTICS:
 Equipped abilities:
 – Unlimited Void-Tipped Arrows +3
 
+Combat abilities:
+– The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates)
+– Does no damage to undead
+
+THAC0: +3
+Damage: 1d6+3 (magic)
+Launcher: Bow
+
 Weight: 0~
 @2135 = ~Bag of Darkness +3~
 @2136 = ~With further investment from your coffers, the Bag of Plenty has been enhanced to allow an unlimited supply of deadly bullets of darkness.
@@ -1641,6 +1718,14 @@ STATISTICS:
 
 Equipped abilities:
 – Unlimited Bullets of Darkness +3
+
+Combat abilities:
+– The target suffers -1 to Strength for 5 rounds per hit (minimum 1 Strength; Save vs. Spell negates).
+– Does no damage to the undead
+
+THAC0: +3
+Damage: 1d4+4 (magic)
+Launcher: Sling
 
 Weight: 0~
 @2137 = ~Illusory Cloak of Arcana~
@@ -1811,7 +1896,7 @@ Charge Abilities:
   Area of Effect: Party
 
 Weight: 0~
-@2153 = ~Trollkiller's Ioun Stone +1~
+@2153 = ~Trollkiller's Vigorous Ioun Stone~
 @2154 = ~The fighting spirit of Wong Fei has been enfused into the Trollkiller Ioun Stone, further focusing and enhancing its abilities.  It further increases the vitality of the wearer and the regenerative abilities have also improved.  When peering into the stone, one can seemingly see a furious battle taking place, with silhouettes of Rigar Trueblood and Wong Fei fighting heroically against a horde of trolls, relishing the conflict as they fight.
 
 STATISTICS:
@@ -1836,7 +1921,7 @@ Weight: 0~
 STATISTICS:
 
 Equipped abilities:
-– Armor Class: +3, +4 vs. missile attacks
+– Armor Class: +4, +5 vs. missile attacks
 – Magical Resistance: 10%
 – Turn Undead Level: +2
 – Negative plane protection
@@ -2014,7 +2099,7 @@ Requires:
 
 Weight: 3~
 @2173 = ~Carmine Viridian Dragon Plate~ //Green Scales
-@2174 = ~The Verdant Crimson Dragon Plate armor has been reworked with more scales from a noxious green dragon further improving its protection from physical attacks.  The armor now protects its weaerer from several maladies in addition to poison, as if constantly under the effects of neutralize poison.  The wearer may also draw toxins from the armor into their weapons once per day, allowing them to posion their foes with blows and strikes.
+@2174 = ~The Verdant Crimson Dragon Plate armor has been reworked with more scales from a noxious green dragon further improving its protection from physical attacks.  The armor now protects its weaerer from several maladies in addition to poison, as if constantly under the effects of neutralize poison.  The wearer may also apply residual toxins from the scales onto <PRO_HISHER> weapons once per day, making them more deadly in combat.
 
 STATISTICS:
 
@@ -2038,7 +2123,7 @@ Requires:
 
 Weight: 30~
 @2175 = ~Umbral Viridian Dragonscale~  //Green Scales
-@2176 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from another noxious green dragon, further improving its protection from physical attacks.  The wearer is now protected from several maladies in addition to poison, as if constantly under the effects of nuetralize poison.  Additionally, the wearer can draw toxins from the scales into their weapons once per day, allowing them to poison their foes with strikes and blows.
+@2176 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from another noxious green dragon, further improving its protection from physical attacks.  The wearer is now protected from several maladies in addition to poison, as if constantly under the effects of nuetralize poison.  Additionally, the wearer can apply residual toxins from the scales onto <PRO_HISHER> weapons once per day, making them more deadly in combat.
 
 STATISTICS:
 
@@ -2053,6 +2138,7 @@ Charge abilities:
   Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
   Radius: 5 ft. 
   Range: 30 ft.
+  
 – Poison Weapon once per day
   Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
 
@@ -2062,29 +2148,29 @@ Requires:
 
 Weight: 10~
 @2177 = ~Scale Armor~
-@2178 = ~Green Dragonscale +4~
-@2179 = ~Scale armor is made from the tough, chitinous scales of creatures througout the realms.  The protective quality varies dependant on the scales used, and the skill of the smith who fashions them into armor.  Natural resistances and even some magical abilities from the host can be imparted to the wearer.~
-@2180 = ~This shimmering viridian suit of leather armor is soft and supple despite the strength in the plates of green dragon scale. The wearer of this armor is protected from even the heaviest blows as well as from poison, and may even neutralize many other types of afflictions from the wearer or their companions twice per day.
+@2178 = ~Green Dragonscale Armor +4~
+@2179 = ~Scale armor is made from the tough, chitinous scales of various creatures througout the realms.  The protective quality varies dependant on the type and amount of scales used, and the skill of the smith who fashions them into armor.  Natural resistances and even some magical abilities from the host creature can be imparted to the wearer.~
+@2180 = ~This shimmering viridian suit of leather armor is soft and supple despite the strength in the plates of green dragon scale. The wearer of this armor is protected from even the heaviest blows as well as from poison, blindness, disease, and deafness.  Once per day, the wearer may apply some of the residual toxins from the scales onto <PRO_HISHER> weapons, making them more deadly in combat.
 
 STATISTICS:
 
 Equipped abilities:
-– Immunity to poison
+– Fire Resistance +20%
+– Immunity to poison, disease, blindness, deafness
+– Physical Damage Resistance: +5%
 
 Charge abilities:
-– Neutralize Poison twice per day
-  Special: Heals 10 Hit Points and cures poison,   
-  disease, deafness, and blindness
-  Range: 10 ft.
-  Area of Effect: 1 creature
+– Poison Weapon once per day
+  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
 
 Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
 Requires:
  6 Strength
 
 Weight: 7~
-@2181 = ~Vorpal Dragon Blade +4~
-@2182 = ~The well-worn blade of the Dragon Blade +3 has been reforged with a vorpal blade of silver.  The new blade is exceedingly sharp, able to cut through flesh and bone with ease. 
+@2181 = ~Silver Dragon Blade +4~
+@2182 = ~The well-worn Dragon Blade +3 has been reforged with a Githyanki silver blade.  The sword is now exceedingly sharp, able to cut through flesh and bone with ease. 
 
 STATISTICS:
 
@@ -2106,8 +2192,8 @@ Requires:
  14 Strength
 
 Weight: 9~
-@2183 = ~Vorpal Dragon Blade +5~
-@2184 = ~With the Soul of Frost placed into the pommel, the Vorpal Dragon Blade roars to life with the force of a raging blizzard from each slash from the massive blade, cleaving foes and leaving frostbitten wounds in its wake.  One critical hits, the blade emits a blast of ice so cold it can freeze opponents, stunning them, and sending shards of ice into nearby targets, impaling and slowing them. 
+@2183 = ~Silver Dragon Blade +5~
+@2184 = ~With the Soul of Frost placed into the pommel, the Silver Dragon Blade roars to life with the force of a raging blizzard upon each slash of the massive blade, cleaving foes and leaving frostbitten wounds in its wake.  On critical hits, the blade emits a blast of ice so cold it can freeze opponents, holding them in place, while sending shards of ice into nearby foes, impaling them, and slowing their movement. 
 
 STATISTICS:
 
@@ -2130,7 +2216,7 @@ Requires:
  14 Strength
 
 Weight: 9~
-@2185 = ~Dragonscale Aegis +4~
+@2185 = ~Dragonscale Aegis +3~
 @2186 = ~Black dragon scales, each as hard as the toughest alloy, have been worked into the dragonscale shield.  The shield now deflects and reduces damage from even the fiercest blows, while remaining light and easy to weild.
 
 STATISTICS:
@@ -2147,7 +2233,7 @@ Weight: 5~
 @2187 = ~Dragon Scales~
 @2188 = ~Black Dragon Scales~
 @2189 = ~These are scales from a Dragon~
-@2190 = ~These black dragon scales are as hard and rigid as even the toughest alloys, but much lighter.  They are far too rigid to forge into something by themselves, but a skilled blacksmith could use these to enhance a shield or armor with.
+@2190 = ~The scales of a black dragon, even amongst others their kin, are known for their toughness and rigidity.  A skilled smith would be able to forge these into an impressive suit of armor, a stalwart shield, or work them into an another piece of equipment.
 
 STATISTICS:
 
@@ -2244,7 +2330,7 @@ Requires:
  3 Strength
 
 Weight: 5~
-@2203 = ~The Night's Embrace +6~
+@2203 = ~The Night's Embrace +7~
 @2204 = ~Tough and durable black dragon scales have been interworked into the leather plates of the Iriaeborian's thief's armor, greatly increasing its protective abilities.  The magics imparted from the scales have amplified the armor's ability to render its wearer temporarily invisible such that there is a chance it will do so when the wearer takes damage from any attack.
 
 STATISTICS:
@@ -2320,8 +2406,10 @@ Equipped abilities:
 
 Charge abilities:
 – Mass Exaltation once per day
+  Special: removes fear, sleep, feeblemind, unconsciousness, intoxication, and protects against these effects for 1 turn.
 – Mass Cure once per day
-
+  Heals 1d8+20 Hit Points of all party members within a 15-ft. radius of  the caster.
+  
 Weight: 0~
 @2211 = ~Dervish Crescent +2~
 @2212 = ~The length of this blade is etched with flames, genies, and whirlwinds. Small glittering particles along its length evoke a sandstorm. The style and quality of the blade indicates it was made in Calimshan.
@@ -2402,12 +2490,12 @@ Equipped abilities:
 
 Weight: 0~
 @2223 = ~Varscona +3~
-@2224 = ~The cold fury of the Sharran priestess has been better focused in the blade, striking harder and more accuratley than before.  Occasionally, frozen, thorny brambles will erupt from the ground underneath its target, causing even more cold damage and ensnaring the victim.
+@2224 = ~The cold fury of the Sharran priestess has been better focused in the blade, striking harder and more accuratley than before.  Occasionally, sharp, icy tendrils will erupt from the ground underneath its target penetrating their flesh and rooting them in place..
 
 STATISTICS:
 
 Combat abilities:
-– 10% chance of icy thorns ensnaring the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
+– 10% chance of icy tendrils entangling the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
 
 THAC0: +3
 Damage: 1d8+3, 1d3+1 cold damage
@@ -2420,12 +2508,12 @@ Requires:
 
 Weight: 3~
 @2225 = ~Varscona +5~
-@2226 = ~By placing the Soul of Frost into the pommel, Varscona's full icy wrath has been unleashed.  Wounds made by the blade are further exacerbated by frostbite with each slash.  The weilder of this blade my call upon the Sharran priestess' rage once per day, causing a field of frozen spikes to erupt upward from the ground, impaling enemies and hindering their ability to fight.
+@2226 = ~By placing the Soul of Frost into the pommel, Varscona's full glacial wrath has been unleashed.  Wounds made by the blade are further exacerbated by frostbite with each slash.  The weilder of this blade my call upon the Sharran priestess' rage once per day, causing a field of frozen spikes to erupt upward from the ground, impaling enemies and hindering their ability to fight.
 
 STATISTICS:
 
 Combat abilities:
-– 15% chance of icy thorns ensnaring the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
+– 15% chance of icy tendrils entangling the victim for one round and 1d8 cold damage(Save vs. spell at -4 to avoid snare and halves damage)
 
 Charge abilities:
 – Ice Spikes once per day
@@ -2471,7 +2559,7 @@ Requires:
  10 Strength
 
 Weight: 7~
-@2229 = ~Sourceror's Cap~
+@2229 = ~Sourcerer's Cap~
 @2230 = ~By meticulous stitchwork and magical manipulations, the Circlet of Netheril has been combined with the Wizzard Hat, making it far more practical headgear for a master of the mystical arts.  At the cost of running speed and lower level spells, the cap enables the wearer to memorize more higher level spells and cast them far more quickly.  Afterall, why run away when one can stand their ground and eleminate their foes instead?
 
 STATISTICS:
@@ -2483,8 +2571,8 @@ Equipped abilities:
 – May memorize two extra level 5 and level 6 spells
 
 Weight: 0~
-@2231 = ~Sourceror's Cap +1~
-@2232 = ~By magically forcing the bronze ioun stone into stable orbit around the Sourceror's Cap, the wearer is able to memorize additional high level spells.  The masterful mage wearing this cap would do well to be wary of jealous rivals, most certainly ones who wear red robes...
+@2231 = ~Sourcerer's Chapeau~
+@2232 = ~By magically forcing the bronze ioun stone into stable orbit around the Sourcerer's Cap, the wearer is able to memorize additional high level spells.  The masterful mage wearing this cap would do well to be wary of jealous rivals, most certainly ones who wear red robes...
 
 STATISTICS:
 
@@ -2541,9 +2629,9 @@ Requires:
 
 Weight: 5~
 @2239 = ~Heavy Mage Robe~
-@2240 = ~Raiment of the Lich +4~
+@2240 = ~Raiment of the Lich~
 @2241 = ~This garment is of a much heavier construction than a standard mage's robe.  Tougher materials, such as strips of cured hides are interwoven into the cloth, providing better protection, at the cost of slightly more restricted movement.~
-@2242 = ~At the comission of <CHARNAME>, The Robe of Vecna has been meticulously reforged with the dragon's blood-cured human flesh, creating a ghastly garment that is more akin to leather in it's protective abilities and appearance, but still allows for enough freedom of movement for a mage to manipulate the ethereal weave while wearing it.  However, only the most callous and malicious personage would don this armor, and it would certainly draw the ire of others while worn. 
+@2242 = ~At the commission of <CHARNAME>, The Robe of Vecna has been meticulously reforged with the dragon's blood-cured human flesh, creating a ghastly garment that is more akin to leather in it's protective abilities and appearance, but still allows for enough freedom of movement for a mage to manipulate the ethereal weave while wearing it.  However, only the most callous and malicious personage would don this armor, and it would certainly draw the ire of others while worn. 
 
 STATISTICS:
 
@@ -2570,7 +2658,7 @@ STATISTICS:
 
 Weight: 1~
 @2249 = ~Heavy Mage Robe~
-@2250 = ~Raiment of the Lich +5~
+@2250 = ~Raiment of the Demilich~
 @2251 = ~This garment is of much heavier construction than a standard mage's robe.  Tougher materials, such as strips of cured hides are interwoven into the cloth, providing far better protection, at the cost of slightly more restricted movement.~
 @2252 = ~The Skull of the Lich has been expertly integrated into the Lich's Raiment, further empowering the deathly armor.  It now improves the casting speed of magical spells further, along with empowering them to do even more damage.  The dastardly wearer's saving throws are also improved a bit as well. 
 
@@ -2669,6 +2757,7 @@ STATISTICS:
 
 Equipped abilities:
 – Hit Points: +10
+– Extra 1/2 attack per round
 
 Combat abilities:
 – 20% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
@@ -2703,12 +2792,13 @@ Requires:
 
 Weight: 4~
 @2265 = ~Severance +5~
-@2266 = ~Painstakingly reforging the Severance +3 with unearthly starfall ore has brough the sword to it's full potential.  The weilder is fully energized by the blade, allowing <PRO_HIMHER> to fight long past the point of exhaustion, wading through scores of foes with ease.
+@2266 = ~Painstakingly reforging the Severance +3 with unearthly starfall ore has brought the sword to it's full potential.  The weilder is fully energized by the blade, allowing <PRO_HIMHER> to fight long past the point of exhaustion, wading through scores of foes with haste and ease.
 
 STATISTICS:
 
 Equipped abilities:
 – Hit Points: +15
+– 1 extra attack per round
 
 Combat abilities:
 – 25% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
@@ -2722,6 +2812,763 @@ Requires:
  11 Strength
 
 Weight: 7~
+@2267 = ~Black Dragon Plate~
+@2268 = ~Forged at the behest of <CHARNAME>, this suit of armor is made of interlinked scales from a malevolent black dragon.  The armor can turn aside and blunt all manner of strikes in combat, offering great protection to the wearer.  The rigid, sharp scales that make up the armor still contain a small amount of the black dragon's corrosive blood, which can slice open careless assailants, leaving sizzling wounds.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance +25%
+– Acid Resistance +25%
+– Physical Damage Resistance: +10%
+
+Combat abilities:
+– Caustic Scales: Any opponent within 6 ft. that successfully hits the wearer suffers 1d3 points of acid damage.
+
+Armor Class: -1 (-4 vs. slashing, -2 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2269 = ~Dragonscale Shield +3~
+@2270 = ~The inky black surface of this shield is made of interlocking dragon scales, each one hard as forged steel. Though thin and light, the shield is strong enough to turn aside even the heaviest blows.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +4
+– Fire Resistance +15%
+– Acid Resistance +15%
+– Physical Damage Resistance: +10%
+
+Charge abilities:
+– Vitriolic Sphere once per day
+  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+  Radius: 5 ft. 
+  Range: 30 ft.
+
+Requires:
+ 8 Strength
+
+Weight: 5~
+@2271 = ~Black Dragonscale Armor +4~
+@2272 = ~This burnished onyx suit of leather armor is soft and supple despite the strength in the plates of black dragon scale.  The rigid, sharp scales that make up the armor still contain a small amount of the black dragon's corrosive blood, which can slice open careless assailants, leaving sizzling wounds.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance +20%
+– Acid Resistance +20%
+– Physical Damage Resistance: +10%
+
+Combat abilities:
+– Caustic Scales: Any opponent within 6 ft. that successfully hits the wearer suffers 1d3 points of acid damage.
+
+Armor Class: 1 (-1 vs. slashing, 0 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 7~
+@2273 = ~Green Dragon Plate~
+@2274 = ~Forged at the behest of <CHARNAME>, this suit of armor is made of interlinked scales from a toxic green dragon.  The armor can turn aside and blunt all manner of strikes in combat, offering great protection to the wearer, in addition to protecting <PRO_HIMHER> from many types of maladies.  Once per day, the wearer may extract some of the residual poison from the scales and apply it to <PRO_HISHER> weapons, making them far more deadly.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance +25%
+– Immunity to poison, disease, blindness, deafness
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Poison Weapon once per day
+  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2275 = ~Chromatic Crimson Dragon Plate~ //Black Scales
+@2276 = ~The Verdant Crimson Dragon Plate armor has been reworked with scales from a malevolent black dragon, enhancing even further its abilities to deflect strikes from blade and acid alike, while retaining its resistances to poison and flame attacks.  Additionally, the wearer may conjure a corrosive torrent of acid upon their foes once per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +70%
+– Acid Resistance +20%
+– Missile Damage Resistance: +10%
+– Slashing Damage Resistance: +10%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half)
+  Range: 60 ft.
+  Radius: 12 ft.
+  
+– Produce Fire once per day
+  Damage: 1d4+20 fire to all creatures in area of effect once per round
+  Range: 40 ft.
+  Radius: 4 ft.
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2277 = ~Chromatic Shadow Dragonscale~  //Black Scales
+@2278 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a malevolent black dragon, enhancing even further its abilities to deflect the heaviest blows and flame, while retaining its resistances to poison and acid attacks.  Additionally, the wearer may conjure a corrosive torrent of acid upon their foes once per day.  This truly magnificent work of craftsmanship even retains its flexible, supple nature, providing excellent protection and ease of movement.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +70%
+– Fire Resistance +20%
+– Piercing Damage Resistance: +10%
+– Crushing Damage Resistance: +10%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+– Vitriolic Sphere once per day
+  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+  Radius: 5 ft. 
+  Range: 30 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2279 = ~Scarlet Viridescent Dragon Plate~
+@2280 = ~More scales from an ignoble red dragon have been worked into the verdant crimson dragon plate armor, further enhancing it's ability to protect it's wearer from harm.  It is able to deflect even the heaviest blows, and flame attacks pose little threat.  Additionally, <PRO_HESHE> may invoke and direct a scorching ball of dreaded flame at thier foes once per day, searing and igniting armor and flesh upon impact.  A warrior could hardly ask for better protection on the battlefront than this piece of master craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +80%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Produce Fire once per day
+  Damage: 1d4+20 fire to all creatures in area of effect once per round
+  Range: 40 ft.
+  Radius: 4 ft.
+  
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+  
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2281 = ~Verdant Crimson Dragonscale~
+@2282 = ~Scales from a fearsome red dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and flame attacks.  It remains easy to wear and move in, leaving the wearer unhindered.  Additionally, the wearer may invoke and direct an intensly hot ball of dreaded flame at thier foes once per day, searing and igniting armor and flesh upon impact.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+
+Charge abilities:
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2283 = ~Verdant Shadow Dragon Plate~
+@2284 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and acid attacks.  Additionally, the wearer may conjure an acidic storm at <PRO_HISHER> foes once per day, corroding their flesh.  Regretably, it is now far less supple and pliable, more akin to plate armor.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +50%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2285 = ~Chromatic Shadow Dragon Plate~ //Blue Scales
+@2286 = ~The Verdant Shadow Dragon Plate armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and acid attacks.  Additionally, the wearer may direct the stored electrical energy once per day against their foes.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +50%
+– Electrical Resistance +50%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Thunder Thrust once per day
+  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+  Special: knocks target back and unconscious for one round
+  Range: 80 ft.
+  
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2287 = ~Chromatic Shadow Dragon Plate~ //Black Scales
+@2288 = ~The Verdant Shadow Dragon Plate armor has been reworked with scales from a malevolent black dragon, enhancing even further its abilities to deflect blows and prevent damage from acid and flames. Additionally, the wearer may direct a caustic globe of acid at <PRO_HISHER> enemies, covering them in the corrosive fluid, dissolving flesh.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +70%
+– Fire Resistance +20%
+– Missile Damage Resistance: +10%
+– Slashing Damage Resistance: +10%
+
+Charge abilities:
+– Vitriolic Sphere once per day
+  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+  Radius: 5 ft. 
+  Range: 30 ft.
+  
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2289 = ~Umbral Viridian Dragon Plate~  //Green scales
+@2290 = ~The Verdant Shadow Dragon Plate armor has been reworked with more scales from a noxious green dragon further improving its protection from physical attacks.  The armor now protects its weaerer from several maladies in addition to poison, as if constantly under the effects of neutralize poison.  The wearer may also apply residual toxins from the scales onto <PRO_HISHER> weapons once per day, making them more deadly in combat.
+
+STATISTICS:
+
+Equipped abilities:
+– Acid Resistance +50%
+– Immunity to poison, disease, blindness, deafness
+– Missile Damage Resistance: +10%
+– Piercing Damage Resistance: +10%
+
+Charge abilities:
+– Poison Weapon once per day
+  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2291 = ~Chromatic Shadow Dragon Plate~  //Red Scales
+@2292 = ~Scales from a fearsome red dragon have been interlinked and woven into the Verdant Shadow Dragon Plate, further enhancing its protective abilities against blows and flame attacks.   Additionally, the wearer may conjure forth a field of scorching flames once per day, engulfing <PRO_HISHER> enemies.  This sturdy suit of armor also retains its protections from poison and acid.  A warrior could hardly ask for better protection on the battlefront.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+– Acid Resistance +50%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+  
+– Produce Fire once per day
+  Damage: 1d4+20 fire to all creatures in area of effect once per round
+  Range: 40 ft.
+  Radius: 4 ft.
+
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2293 = ~Chromatic Shadow Dragon Plate~  //Silver Scales
+@2294 = ~The Verdant Shadow Dragon Plate has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining its defenses against to poison and acid attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance: +50%
+– Magic Resistance: +10%
+– Charisma: -2
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+  
+– Writhing Fog once per day
+  1d6+1 cold damage per round,
+  25% chance of being slowed for 1 round (save vs.
+  death negates)
+  Range: 30 ft. 
+  Area of Effect: 15 ft. radius
+
+Combat abilities:
+– Heals wearer 2 Hit Points each time damage is taken
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2295 = ~Chromatic Shadow Dragon Plate~  //White Scales
+@2296 = ~The Verdant Shadow Dragon Plate has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and acid attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +50%
+– Cold Resistance +50%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+  
+– Cone of Cold once per day
+  Damage: 10d4+10 cold (Save vs. Spell for half)
+  Range: 8 ft.
+  Area of Effect: 25-ft. cone with 90-deg. arc
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 30~
+@2297 = ~Chromatic Crimson Dragonscale~  //Black Scales
+@2298 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a malevolent black dragon, enhancing even further its abilities to deflect the heaviest blows and acid, while retaining its resistances to poison and flame attacks.  Additionally, the wearer may conjure a corrosive torrent of acid upon their foes once per day.  This truly magnificent work of craftsmanship even retains its flexible, supple nature, providing excellent protection and ease of movement.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Acid Resistance +20%
+– Fire Resistance +70%
+– Piercing Damage Resistance: +10%
+– Crushing Damage Resistance: +10%
+
+Charge abilities:
+– Acid Storm once per day
+  Damage: 1d4 acid per round for 3 rounds, 1d6 acid per round for next 3 rounds, 1d8 acid per round for final 3 rounds (Save vs. Spell for half per round)
+  Range: 60 ft.
+  Radius: 12 ft.
+
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2299 = ~Chromatic Crimson Dragonscale~  //Blue Scales
+@2300 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a great blue dragon, enhancing even further its abilities to deflect strikes from blade and lightning alike, while retaining its resistances to poison and flame attacks.  The wearer may even direct a lightning blast at their foes once per day from the stored electrical energy in the blue scales.  This truly magnificent work of craftsmanship even retains its flexible, supple nature, providing excellent protection and ease of movement.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+– Electrical Resistance +50%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Thunder Thrust once per day
+  Damage: 12d8 electrical (Save vs. Spell for half), 4d8 electrical ( 5ft. radius Save vs. Spell for half)
+  Special: knocks target back and unconscious for one round
+  Range: 80 ft.
+
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2301 = ~Carmine Viridian Dragonscale~  //Green Scales
+@2302 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from another noxious green dragon, further improving its protection from physical attacks.  The wearer is now protected from several maladies in addition to poison, as if constantly under the effects of nuetralize poison.  Additionally, the wearer may apply residual toxins from the scales onto <PRO_HISHER> weapons once per day, allowing them to poison their foes with strikes and blows.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison, disease, blindness, deafness
+– Fire Resistance +50%
+– Slashing Damage Resistance: +10%
+– Crushing Damage Resistance: +10%
+
+Charge abilities:
+– Poison Weapon once per day
+  Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at +2 penalty negates), and also immediately suffers 6 poison damage (no save)
+
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2303 = ~Scarlet Viridescent Dragonscale~  //Red Scales
+@2304 = ~More scales from an ignoble red dragon have been interlinked and woven into the Verdant Crimson Dragonscale armor, further improving its ability to deflect even the heaviest blows, and flame attacks pose little threat.  Additionally, the wearer may conjure forth a field of scorching flames once per day, engulfing <PRO_HISHER> enemies.  Remarkably, the armor retains its flexibility and does not hinder its wearer, all the while continuing to provide protection from poison.  This is a truly impressive piece of craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +80%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Produce Fire once per day
+  Damage: 1d4+20 fire to all creatures in area of effect once per round
+  Range: 40 ft.
+  Radius: 4 ft.
+
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2305 = ~Chromatic Crimson Dragonscale~  //Silver Scales
+@2306 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a noble silver dragon, enhancing even further its abilities to protect against the fiercest blows and resistances to magic spells, while retaining its defences against poison and flame attacks.  In addition, the armor accelerates healing of wounds and the wearer may blanket their foes in a freezing fog once per day.  Remarkably, the armor remains pliable and easy to move in as well. However, only the most malicious would wear armor enhanced with these magnificent scales, the heinous act being immediately apparent to all. 
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+– Magic Resistance: +10%
+– Charisma: -2
+
+Charge abilities:
+– Writhing Fog once per day
+  1d6+1 cold damage per round,
+  25% chance of being slowed for 1 round (save vs.
+  death negates)
+  Range: 30 ft. 
+  Area of Effect: 15 ft. radius
+  
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Combat abilities:
+– Heals wearer 2 Hit Points each time damage is taken
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2307 = ~Chromatic Crimson Dragonscale~  //White Scales
+@2308 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and flame attacks.  The wearer may even direct a frigid arctic blast from the armor at their foes once per day.  Remarkably, the armor remains pliable and easy to move in as well, no doubt due to the excellent craftsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+– Cold Resistance +50%
+– Physical Damage Resistance: +5%
+
+Charge abilities:
+– Cone of Cold once per day
+  Damage: 10d4+10 cold (Save vs. Spell for half)
+  Range: 8 ft.
+  Area of Effect: 18-ft. cone with 90-deg. arc
+  
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2309 = ~Chromatic Crimson Dragonscale~  //Shadow Scales
+@2310 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a diabolical shadow dragon, further improving its protection from physical attacks and infernal acids, while retaining it's protections from flames and poison.  Additionally, the wearer may conjure forth an emerald sphere of caustic acid and hurl it at <PRO_HISHER> foes, causing instant and ongoing corrosive damage.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to poison
+– Fire Resistance +50%
+– Acid Resistance +50%
+– Crushing Damage Resistance: +10%
+– Piercing Damage Resistance: +10%
+
+Charge abilities:
+– Vitriolic Sphere once per day
+  Damage: 10d4 acid, 8d4(2nd round), 6d4(3rd round), 4d4(4th round, Save vs. Spell after each round after the first to avoid) + 4d4 acid (5 ft. radius, Save vs. Polymorph to avoid)
+  Radius: 5 ft. 
+  Range: 30 ft.
+  
+– Dread Flame once per day
+  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
+  Range: 40 ft.
+  Radius: 15 ft.
+
+Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 10~
+@2311 = ~Bullet of Fire +1~
+@2312 = ~Carved from the knucklebones of slain salamanders, these incendiary missiles burst into flames once they are hurled from a sling.
+
+STATISTICS:
+
+Damage: 1d4+1, +1d6 fire damage (Save vs. Spell for none)
+Damage type: Missile
+Launcher: Sling
+
+Weight: 0~
+@2313 = ~Bullet of Ice +1~
+@2314 = ~Chipped from the corpse of an ice elemental, these sharp projectiles shatter upon impact to chill the target with unnatural cold.
+
+STATISTICS:
+
+Damage: 1d4+1, +1d6 cold damage (Save vs. Spell for none)
+Damage type: Missile
+Launcher: Sling
+
+Weight: 0~
+@2315 = ~Bullet of Electricity +1~
+@2316 = ~Each of these copper bullets is molded around the vertebrae of an electric eel. Upon impact, they release a powerful jolt to the target.
+
+STATISTICS:
+
+Damage: 1d4+1, +1d6 electrical damage (Save vs. Spell for none)
+Damage type: Missile
+Launcher: Sling
+
+Weight: 0~
+@2317 = ~Bolt of Fire +1~
+@2318 = ~This bolt is magically enhanced so as to burst into flames when it is fired. The effect is similar to a bolt doused in oil and set to flame.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8+1, +1d3 (fire)
+Damage Type: Missile
+Launcher: Crossbow
+
+Weight: 0~
+@2319 = ~Bolt of Ice +1~
+@2320 = ~This bolt is magically enhanced so as to burst into a rolling ball of ice when it is fired. When the bolt strikes its victim, a shock of cold will travel through its body, both burning and numbing to the very core.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8+1, +1d3 (cold)
+Damage type: Missile
+Launcher: Crossbow
+
+Weight: 0~
+@2321 = ~Martyr's Morningstar +2~
+@2322 = ~Forged by Ilusarian Roan, a priest of Ilmater, this morning star sacrifices the wielder's strength in order to destroy the enemies of the faith. Roan used the morning star when he joined a company of knights and priests fighting against a cabal of Cyricists. He took down six cultists before he died, and the morning star was returned to the temple with his remains.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: -10
+
+Combat abilities:
+– On a critical hit, target loses 15% of their maximum Hit Points
+
+THAC0: +2
+Damage: 2d4+2 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 9~
+@2323 = ~Martyr's Morningstar +3~
+@2324 = ~Expert reforging with a blessed king's tear has enfused the Martyr's Morningstar with holy power, which is imparted upon the weilder, allowing <PRO_HIMHER> to swing with fervor, connecting with critical hits more easily, crushing foes and leaving them stunned.  This power comes at a cost, however.  The crying god demands more strength from the weilder in return for his favor.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: -15
+– Chance to score a critical hit: +5% (this weapon only)
+
+Combat abilities:
+– On a critical hit, target loses 15% of their maximum Hit Points
+– On a critical hit, 50% chance target is stunned for 1 round (No Save)
+
+THAC0: +3
+Damage: 2d4+3 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 9~
+@2325 = ~Martyr's Morningstar +5~
+@2326 = ~With the addition of the Nymph's Tear into the pommel, Ilusarian's morningstar now surges with Ilmater's holy retribution.  While it demands ever more from the weilder's own strength, the crying god's faithful would be well served by this weapon in dealing punishment to the wicked.
+
+STATISTICS:
+
+Equipped abilities:
+– Hit Points: -20
+– Chance to score a critical hit: +10% (this weapon only)
+
+Combat abilities:
+– On a critical hit, target loses 15% of their maximum Hit Points
+– On a critical hit, target is stunned for 1 round (No Save)
+
+THAC0: +5
+Damage: 2d4+5 (crushing)
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 9~
+@2327 = ~Robe of Vecna~
+@2328 = ~This robe doesn't even have close to the power that the two famous artifacts, the Hand and Eye of Vecna, possess. Still, from simply being worn by the powerful lich, the robe absorbed enough magical energies to become a potent magic item.  Upon inspection, there appears to be something sewn into the lining of the robe.  If more closely examined, one might be able to extract it.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 5
+– Magic Resistance: +10%
+– Improves casting speed by 4
+
+Weight: 3~
+@2329 = ~Heartwood Ring of Fire~
+@2330 = ~Combined with the Heart of Flame, this simple band of oak allows a druid to draw upon the elemental power of fire, becoming a fearsome force of nature.  By focusing <PRO_HISHER> energies into the ring, the wearer may summon Zaaman Rul, Elemental Prince of Fire, once per day.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+– Fire Resistance +50%
+– Improves casting speed by 2
+– All fire damage inflicted by the wearer is increased by 10%
+
+Charge abilities:
+– May summon Zaaman Rul, Elemental Prince of Fire once per day for 3 turns
+
+Weight: 1~
+@2331 = ~Heartwood Ring of Wind~
+@2332 = ~Combined with the Breath of Wind, this simple band of oak allows a druid to draw upon the elemental power of air, becoming a fearsome force of nature.  By focusing <PRO_HISHER> energies into the ring, the wearer may summon Chan, Elemental Prince of Air, once per day.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+– Electricity Resistance +50%
+– Improves casting speed by 2
+– All electrial damage inflicted by the wearer is increased by 10%
+
+Charge abilities:
+– May summon Chan, Elemental Prince of Air once per day for 3 turns
+
+Weight: 1~
+@2333 = ~Heartwood Ring of Earth~
+@2334 = ~Combined with the Eye of Ichor, this simple band of oak allows a druid to draw upon the elemental power of earth, becoming a fearsome force of nature.  By focusing <PRO_HISHER> energies into the ring, the wearer may summon Sunnis, Elemental Prince of Earth, once per day.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+– Acid Resistance +50%
+– Improves casting speed by 2
+– All acid damage inflicted by the wearer is increased by 10%
+
+Charge abilities:
+– May summon Sunnis, Elemental Prince of Earth once per day for 3 turns
+
+Weight: 1~
+@2335 = ~Heartwood Ring of Water~
+@2336 = ~Combined with the Soul of Frost, this simple band of oak allows a druid to draw upon the elemental power of water, becoming a fearsome force of nature.  By focusing <PRO_HISHER> energies into the ring, the wearer may summon Ben-Hadar, Elemental Prince of Water, once per day.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
+– Cold Resistance +50%
+– Improves casting speed by 2
+– All cold damage inflicted by the wearer is increased by 10%
+
+Charge abilities:
+– May summon Ben-Hadar, Elemental Prince of Water once per day for 3 turns
+
+Weight: 1~
+@2337 = ~Bolt of Frostfire +2~
+@2338 = ~Forged for <CHARNAME>, these bolts combine fire and ice magics in every shot.  Upon impact, a burst of frostfire is released into the target, leaving a scorched, frostbitten wound.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d8+2, +1d3 (fire), +1d3 (cold)
+Damage Type: Missile
+Launcher: Crossbow
+
+Weight: 0~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2730,7 +3577,7 @@ Weight: 7~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @3000 = ~Blood-stained Ancient Scroll~
-@3001 = ~This frayed scroll appears to made of human skin, and is heavily stained with blood.  It was found within the lining of the Robe of Vecna when it was unraveled for use during reforging.~
+@3001 = ~This scroll, long hidden within the lining of Vecna's robe, is heavily stained with blood and appears to be made of human skin.  It likely contains a powerful spell scribed by the lich himself.~
 @3002 = ~Conjure Death~
 @3003 = ~Conjure Death
 (Necromancy)
@@ -2776,7 +3623,7 @@ Casting Time: 3
 Area of Effect: 15-ft. radius
 Saving Throw: 1/2
 
-Trollkiller's Fireball is a more powerful version of the level 3 wizard spell, Fireball.  It's namesake, Durlag Trollkiller, comissioned an exiled elven mage of considerable skill to create this spell for use in eradicating trolls from his homeland.  Much to his delight, the creation of the spell was successful and put to great use during his troll-cleansing campaign.  In the years following, as Durlag's madness took hold of him, he kept all of his most prized possessions, including this spell, under lock, key, and devious trap inside his tower.  How it came to be in your possession is a mystery.   When cast, a raging ball of flame flies forth from the caster's hand, striking the target point and exploding in a horrific display of hellfire, doing 1d6 points of damage for each level of the spellcaster (up to a maximum of 16d6) to targets caught in the blast.  The searing heat is so intense that it can ignite clothing, armor, and even flesh, causing an additional 1d4 fire damage per round and sending the afflicted into a state of panic until they successfully roll a Save vs. Spell to extinguish the flames.  Those who roll successful a Save vs. Spell manage to dodge, fall flat, or roll aside, taking only half damage from the inital blast, and evade the ongoing fire damage and panic.  All saving throws must be made at -2.~
+Trollkiller's Fireball is a more powerful version of the level 3 wizard spell, Fireball.  It's namesake, Durlag Trollkiller, commissioned an exiled elven mage of considerable skill to create this spell for use in eradicating trolls from his homeland.  Much to his delight, the creation of the spell was successful and put to great use during his troll-cleansing campaign.  In the years following, as Durlag's madness took hold of him, he kept all of his most prized possessions, including this spell, under lock, key, and devious trap inside his tower.  How it came to be in your possession is a mystery.   When cast, a raging ball of flame flies forth from the caster's hand, striking the target point and exploding in a horrific display of hellfire, doing 1d6 points of damage for each level of the spellcaster (up to a maximum of 16d6) to targets caught in the blast.  The searing heat is so intense that it can ignite clothing, armor, and even flesh, causing an additional 1d4 fire damage per round and sending the afflicted into a state of panic until they successfully roll a Save vs. Spell to extinguish the flames.  Those who roll successful a Save vs. Spell manage to dodge, fall flat, or roll aside, taking only half damage from the inital blast, and evade the ongoing fire damage and panic.  All saving throws must be made at -2.~
 @3010 = ~Hoar of Frost~
 @3011 = ~Hoar of Frost
 (Evocation)
@@ -2801,7 +3648,11 @@ Area of Effect: 15-ft. radius
 Saving Throw: Special
 
 This spell conjures forth a thick, acrid, corrosive smog that immediately begins to dissolve the flesh and armor of any creature unfortunate enough to be caught in it.  Creatures caught in the area of effect will take 1d10 of acid damage per round that they remain in the caustic fog, and must roll a Saving Throw vs. Spells at a -4 penalty or suffer reduction to their resistances against all forms of physical damage 15% for three rounds.  These effects increase with the caster's level, up to a maximum of 1d10+5 acid damage and 20% reduction of physical damage resistance at level 17.~
-
+@3014 = ~Vitriolic Sphere~
+@3015 = ~Produce Fire~
+@3016 = ~Cone of Cold~
+@3017 = ~Writhing Fog~
+@3018 = ~Hidden Scroll~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2818,7 +3669,7 @@ This spell conjures forth a thick, acrid, corrosive smog that immediately begins
 @4006 = ~THAC0 Modification~
 @4007 = ~Protected from Normal Weapons~
 @4008 = ~Strength Modification~
-@4009 = ~Strengthend~
+@4009 = ~Strengthened~
 @4010 = ~Slowed~
 @4011 = ~Bleeding~
 @4012 = ~Dispel Effects~
@@ -2841,6 +3692,11 @@ This spell conjures forth a thick, acrid, corrosive smog that immediately begins
 @4029 = ~Hasted~
 @4030 = ~Drain Life~
 @4031 = ~Healed~
+@4032 = ~Regenerating~
+@4033 = ~Caustic Scales~
+@4034 = ~Acid Storm~
+@4035 = ~Hit Points reduced by 15%~
+@4036 = ~Who calls Ben-Hadar, Prince of Water?!~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2872,6 +3728,11 @@ This spell conjures forth a thick, acrid, corrosive smog that immediately begins
 @5022 = ~Shadowstep~
 @5023 = ~Ice Spikes~
 @5024 = ~Caustic Fog~
+@5025 = ~Dread Flame~
+@5026 = ~Summon Zaaman Rul~
+@5027 = ~Summon Chan~
+@5028 = ~Summon Sunnis~
+@5029 = ~Summon Ben-Hadar~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\

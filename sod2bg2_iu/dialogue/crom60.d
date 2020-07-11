@@ -937,6 +937,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_redscale 
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -950,6 +951,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_whitescale
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -963,6 +965,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_shadowscale
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -976,6 +979,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_bluescale
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -989,6 +993,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_greenscale
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -1002,6 +1007,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_blackscale
 SAY @217
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",72)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)

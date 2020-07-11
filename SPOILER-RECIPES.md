@@ -25,10 +25,12 @@ Star-Strewn Boots
 - 2x potions each magic protection, magic blocking, magic shielding + 5,000gp
 
 "Green" Dragonscale Armor — can be upgraded twice with branching paths
-- 1st upgrade: Red Dragon Scales + 7,500gp
-  - 2nd upgrade: shadow, white, silver, blue, or green scales + 15,000gp
-- 1st upgrade (alternate): Shadow Dragon scales + 7,500gp
-  - 2nd upgrade: red, white, blue, silver, or green scales + 15,000gp
+- Path 1:
+	- 1st upgrade: Red Dragon Scales + 7,500gp (Plate or Leather variant choice)
+	  - 2nd upgrade: shadow, white, silver, blue, green, black, or red scales + 15,000gp (Plate or Leather variant based on 1st upgrade choice)
+- Path 2:
+	- 1st upgrade: Shadow Dragon scales + 7,500gp (Plate or Leather variant choice)
+	  - 2nd upgrade: red, white, blue, silver, green, or black scales + 15,000gp (Plate or Leather variant based on 1st upgrade choice)
 
 Stalker's Gauntlets
 - Bracers of Blinding Strike + Improved Haste Scroll +2 potions of power +2 potions of master thievery + 10,000gp
@@ -160,3 +162,33 @@ Human Flesh - can be upgraded twice (new, alternate path)
 Sealed Ancient Scroll (4 available)
 - dragon scales (red, blue, shadow, white, black, or green) + 10,000gp
   
+Martyr's Morningstar +2
+- 1st upgrade: King's Tear + Scroll of Champion's Strength + 3,000gp
+ - 2nd upgrade: Nymph's Tear + 5,000gp
+ 
+Green Dragon Plate
+- Green scales + 7,500gp
+
+Black Dragon Plate
+- Black scales + 7,500gp
+
+Black Dragonscale Armor +4
+- Black scales + 7,500gp
+
+Dragonscale Shield +3 (black scale variant)
+- Black scales + 7,500gp
+
+Bolt of Frostfire +2 (Stack of 80)
+- 40 Bolt of Fire +1 + 40 Bolt of Ice +2 + 1,000gp
+
+Heartwood Ring of Fire
+- Oaken Ring + Heart of Flame + 5,000gp
+
+Heartwood Ring of Wind
+- Oaken Ring + Breath of Wind + 5,000gp
+
+Heartwood Ring of Earth
+- Oaken Ring + Eye of Ichor + 5,000gp
+
+Heartwood Ring of Water
+- Oaken Ring + Soul of Frost + 5,000gp

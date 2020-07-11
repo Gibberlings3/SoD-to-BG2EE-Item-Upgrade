@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("dtkioun1")~ THEN GOTO NewItem //Trollkiller's Ioun Stone +1
+  IF ~PartyHasItem("dtkioun1")~ THEN GOTO NewItem //Trollkiller's Vigorous Ioun Stone
 END
   
 APPEND WSMITH01
