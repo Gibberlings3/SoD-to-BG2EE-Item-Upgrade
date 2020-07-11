@@ -48,6 +48,7 @@ What this mod does:
 
 - Adds Ben-Hadar, the elemental prince of water to the Greater Elemental Summoning HLA (the default spell only has the princes of fire, wind, earth)
 
+
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 
 
