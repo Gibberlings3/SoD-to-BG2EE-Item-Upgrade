@@ -147,8 +147,11 @@ Black Dragons in Suldanessellar, Hell (if you decide to fight it)
 ### Helm of Opposition
 Undead Mayor, Unseeing Eye Cult Area
 
+### Martyr's Morningstar +2
+Anomen's starting equipment
+
 ### Crimson Dawn +2
-Dragomir the Red, Dragomir's tomb
+Dragomir the Red, Dragomir's Tomb
 
 ### Severance +2
 Lady Galvena, Lady Galvena's Festhall, Brynnlaw
@@ -168,6 +171,20 @@ Fire Pit, Yaga-Shura's Lair
 ### Shadow Dragon's Blood
 Shadow Dragon (Thaxll'ssillyia), Shade Lord's Dungeon
 
-### Blood-stained Ancient Scroll
-Given as reward for completing Human Flesh using new alternate upgrade path
+### Blood-stained Ancient Scroll (Conjure Death)
+Robe of Vecna, Adventurer's Mart, Waukeen's Promenade (obtained by using the charge ability once purchased)
 
+### Bolt of Fire +1
+Enge's shop, various other shops througout SoA and ToB
+
+### Bolt of Ice +1
+Enge's shop, various other shops througout SoA and ToB
+
+### Bullet of Fire +1
+Enge's shop, various other shops througout SoA and ToB
+
+### Bullet of Ice +1
+Enge's shop, various other shops througout SoA and ToB
+
+### Bullet of Electricity +1
+Enge's shop, various other shops througout SoA and ToB

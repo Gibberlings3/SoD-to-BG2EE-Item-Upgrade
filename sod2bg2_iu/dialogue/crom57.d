@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("leat22")~ THEN GOTO NewItem	//Raiment of the Lich +4
+  IF ~PartyHasItem("leat22")~ THEN GOTO NewItem	//Raiment of the Lich
 END
   
 APPEND WSMITH01

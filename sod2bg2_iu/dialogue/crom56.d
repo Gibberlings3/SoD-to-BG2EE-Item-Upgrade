@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("dtksorcp")~ THEN GOTO NewItem //Sourceror's Cap +1
+  IF ~PartyHasItem("dtksorcp")~ THEN GOTO NewItem //Sourcerer's Chapeau
 END
   
 APPEND WSMITH01

@@ -1,5 +1,49 @@
 # Changelog
 
+## Version 1.2.0
+
+### Fixed
+
+- Fixed aura of regeneration effect on trollkiller's ioun stone variants to bypass resistance and added message.  The resistance check was preventing it from affecting party members as intended.
+- Corrected spelling of "strengthened" display string for Vexation +2 hit effect.
+- Corrected several minor syntax errors in dialogues and item descriptions.
+- Corrected resistances on trollkiller’s fireball spell.
+- Removed extra copy of Forest Queen’s Benediction from Enge’s Shop.
+
+### Changed
+
+- Added effect description for mass exaltation and mass cure to Holy Ring of Purity.
+- Renamed vorpal dragon blade +4 and +5 to silver dragon blade +4 and +5 respectively, as they do not produce vorpal hits.
+- Changed equipped abilities of Severance +3 and +5.
+- Renamed Raiment of the Lich +4 and +5 to Raiment of the Lich and Raiment of the Demilich, respectively.
+- Renamed Trollkiller's Ioun Stone +1 to Trollkiller's Vigorous Ioun Stone.
+- Increased AC bonus of Bulwark of Egons +3 to 4.
+- Renamed Dragonscale Aegis +4 to +3 to better reflect it’s properties.
+- Renamed The Night's Embrace +6 to +7 to better reflect it’s properties.
+- Renamed Sourceror’s Cap to Sourcerer’s Cap and Sourceror's Cap +1 to Sourcerer's Chapeau.
+- Renamed Cloverleaf +1 to Tymora's Cinch
+- Green Dragonscale Armor +4 - new charge ability, equipped effects.
+- Reduced charge abilities on Verdant Crimson Dragon Plate and Verdant Shadow Dragonscale armor to once per day. 
+- Changed icon for and recolored Umbral Viridian Dragonscale Armor.
+- Changed icons for all variants of Chromatic Shadow Dragonscale armor.
+- Changed icon for Carmine Viridian Dragon Plate.
+- Scroll of Conjure Death moved to Robe of Vecna.
+- Removed unused sequences/frames from several item icons.
+- Changed equipped effects of Quicksilver Sabatons.
+- Added Combat Abilitiy descriptions to Quiver of Void-Tipped Arrows +3 and Bag of Darkness +3
+
+### Added
+
+- Added new recipes for Black Dragon Scales to Cromwell and Cespenar
+- Added new recipes for Green Dragon Scales to Cromwell and Cespenar.
+- Saladrex now drops red dragon scales.
+- Martyr's Morningstar +2 added from SoD.
+- New upgrade recipes for Martyr’s Morningstar +2 on Cromwell and Cespenar.
+- Added more upgrade recipes to Cromwell and Cespenar for the "Green" Dragonscale Armor. (16 new variants)
+- Added new recipes for completing the Heartwood Ring to Cromwell and Cespenar. (4 new variants)
+- Added Bolts of Fire +1, Bolts of Ice +1, Bullets of Fire +1, Bullets of Ice +1, and Bullets of Electricity +1 to various shops.
+- Added upgrade recipe for Bolts of Fire +1 and Bolts of Ice +1 to Cromwell and Cespenar.
+
 ## Version 1.1.0
 
 ### Fixed

@@ -1,6 +1,6 @@
 // extend cespenar's generic item search with cromwell's items
 EXTEND_BOTTOM BOTSMITH 4
-  IF ~PartyHasItem("bdleat05")~ THEN GOTO gdragCespy // Verdant Crimson/Shadow Scale
+  IF ~PartyHasItem("bdleat05")~ THEN GOTO gdragCespy // Verdant Crimson/Shadow Scale/Plate
 END
 
 APPEND BOTSMITH              
@@ -30,26 +30,43 @@ END
 
 IF ~~ THEN BEGIN gdragCespy_want_01 
 SAY @1065
-++ @6006 GOTO HowMuch_redscale
+++ @6038 GOTO HowMuch_redscale_plate
+++ @6037 GOTO HowMuch_redscale_scale
 ++ @6017 + gdragCespy_stall
 ++ @6012 GOTO gdragCespy_stall
 END
 
 IF ~~ THEN BEGIN gdragCespy_want_02
 SAY @1066
-++ @6010 GOTO HowMuch_shadowscale
+++ @6041 GOTO HowMuch_shadowscale_plate
+++ @6040 GOTO HowMuch_shadowscale_scale
 ++ @6018 + gdragCespy_stall
 ++ @6012 GOTO gdragCespy_stall
 END
 
 IF ~~ THEN BEGIN gdragCespy_want_03
 SAY @1067
-++ @6010 GOTO HowMuch_shadowscale
-++ @6006 GOTO HowMuch_redscale
+++ @6041 GOTO HowMuch_shadowscale_plate
+++ @6040 GOTO HowMuch_shadowscale_scale
+++ @6038 GOTO HowMuch_redscale_plate
+++ @6037 GOTO HowMuch_redscale_scale
 ++ @6012 GOTO gdragCespy_stall
 END
 
-IF ~~ THEN BEGIN HowMuch_shadowscale 
+IF ~~ THEN BEGIN HowMuch_shadowscale_plate 
+SAY @1068
+ IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
+ IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",87)
+                                 		TakePartyGold(15000)
+                                 		TakePartyItemNum("bdleat05",1)
+                                		TakePartyItemNum("scaleb",1)
+                                 		DestroyItem("bdleat05")
+                                 		DestroyItem("scaleb")
+                                 		DestroyGold(15000)~ REPLY @6015 GOTO 11
+ IF ~~ THEN REPLY @6012 GOTO gdragCespy_stall
+END
+
+IF ~~ THEN BEGIN HowMuch_shadowscale_scale 
 SAY @1068
  IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
  IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",18)
@@ -62,10 +79,23 @@ SAY @1068
  IF ~~ THEN REPLY @6012 GOTO gdragCespy_stall
 END
 
-IF ~~ THEN BEGIN HowMuch_redscale
+IF ~~ THEN BEGIN HowMuch_redscale_plate
 SAY @1068
  IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
  IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",17)
+                                	        TakePartyGold(15000)
+                                 		TakePartyItemNum("bdleat05",1)
+                                 		TakePartyItemNum("scaler",1)
+                                 		DestroyItem("bdleat05")
+                                 		DestroyItem("scaler")
+                                 		DestroyGold(15000)~ REPLY @6015 GOTO 11
+ IF ~~ THEN REPLY @6012 GOTO gdragCespy_stall
+END
+
+IF ~~ THEN BEGIN HowMuch_redscale_scale
+SAY @1068
+ IF ~PartyGoldLT(15000)~ THEN REPLY #66908 GOTO 10
+ IF ~PartyGoldGT(14999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",86)
                                 	        TakePartyGold(15000)
                                  		TakePartyItemNum("bdleat05",1)
                                  		TakePartyItemNum("scaler",1)

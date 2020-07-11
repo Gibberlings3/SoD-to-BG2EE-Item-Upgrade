@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("bdleat07")~ THEN GOTO NewItem //The Night's Embrace +6
+  IF ~PartyHasItem("bdleat07")~ THEN GOTO NewItem //The Night's Embrace +7
 END
   
 APPEND WSMITH01

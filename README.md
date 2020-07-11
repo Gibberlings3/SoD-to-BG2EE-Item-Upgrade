@@ -30,15 +30,29 @@ What this mod does:
 
 - Adalon now drops silver scales, correcting what I felt was an oversight.  (These scales are used in some of the new upgrades.)
 
+- Saladrex now drops red scales, correcting what I felt was an oversight.
+
+- Adds green and black scales to the Green and Black dragons in the game.
+
+- Adds a few new component items for use in the new upgrade recipes on Cromwell and Cespenar.
+
+- Adds five new wizard spells.
+
+- Adds alternative/new upgrade paths for some pre-existing items.
+
 - Imports Helm of Opposition from BG1 - simply because it's fun, and if you know how to use it, it can be *very* useful.
 
 - Includes an optional component to change Cromwell's equipment to something more in-line with his skills as a forger of highly magical items.
 
+<<<<<<< Updated upstream
 - Includes five new mage spells, their scrolls created through Cromwell and Cespenar.
 
 - Includes alternate completion and upgrade path for the human flesh armor.
 
 - Includes upgrade paths for a two importable weapons from Baldur's Gate:EE
+=======
+- Adds Ben-Hadar, the elemental prince of water to the Greater Elemental Summoning HLA (the default spell only has the princes of fire, wind, earth)
+>>>>>>> Stashed changes
 
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 

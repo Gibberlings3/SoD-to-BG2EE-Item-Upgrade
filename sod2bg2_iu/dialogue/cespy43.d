@@ -1,6 +1,6 @@
 // extend cespenar's generic item search with cromwell's items
 EXTEND_BOTTOM BOTSMITH 4
-  IF ~PartyHasItem("bdscaleg")~ THEN GOTO gdragscaleCespy // Green Dragonscale Armor +4/Dragonscale Shield +3
+  IF ~PartyHasItem("bdscaleg")~ THEN GOTO gdragscaleCespy // Green Dragonscale Armor +4/Dragonscale Shield +3/Green Dragon Plate
 END
 
 APPEND BOTSMITH              
@@ -18,7 +18,8 @@ END
 IF ~~ THEN BEGIN gdragscaleCespy_want 
 SAY @1183
 ++ @6019 GOTO HowMuch_shield
-++ @6020 GOTO HowMuch_armor
+++ @6020 GOTO HowMuch_scale
+++ @6035 GOTO HowMuch_plate
 ++ @6016 GOTO gdragscaleCespy_stall
 END
 
@@ -33,10 +34,21 @@ SAY @1184
  IF ~~ THEN REPLY @6012 GOTO gdragscaleCespy_stall
 END
 
-IF ~~ THEN BEGIN HowMuch_armor
+IF ~~ THEN BEGIN HowMuch_scale
 SAY @1184
  IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
  IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",54)
+                                	        TakePartyGold(7500)
+                                 		TakePartyItemNum("bdscaleg",1)
+                                 		DestroyItem("bdscaleg")
+                                 		DestroyGold(7500)~ REPLY @6015 GOTO 11
+ IF ~~ THEN REPLY @6012 GOTO gdragscaleCespy_stall
+END
+
+IF ~~ THEN BEGIN HowMuch_plate
+SAY @1184
+ IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
+ IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",82)
                                 	        TakePartyGold(7500)
                                  		TakePartyItemNum("bdscaleg",1)
                                  		DestroyItem("bdscaleg")

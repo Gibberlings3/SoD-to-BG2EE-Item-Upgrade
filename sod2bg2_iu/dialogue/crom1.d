@@ -73,6 +73,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_Angurvadal 
 SAY @110
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",1)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)
@@ -88,6 +89,7 @@ END
 
 IF ~~ THEN BEGIN HowMuch_SilverHilt
 SAY @110
+ IF ~PartyGoldLT(10000)~ THEN REPLY #66662 GOTO MovingRightAlong
  IF ~PartyGoldGT(9999)~ THEN DO ~SetGlobal("DTKItems","ar0334",58)
                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                  TakePartyGold(10000)

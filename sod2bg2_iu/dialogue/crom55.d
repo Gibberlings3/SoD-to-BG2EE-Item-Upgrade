@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("bdhelm12")~ THEN GOTO NewItem //Sourceror's Cap
+  IF ~PartyHasItem("bdhelm12")~ THEN GOTO NewItem //Sourcerer's Cap
 END
   
 APPEND WSMITH01
