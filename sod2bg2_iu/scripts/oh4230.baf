@@ -1,0 +1,11 @@
+IF
+Global("DeSpawnItem","OH4230",0)
+PartyHasItem("ohrgem01")
+THEN
+RESPONSE #100
+Wait(30)
+TakePartyItemNum("ohrgem01",1)
+GiveItemCreate("dtkshgem",Player1,3,0,0)  // Imbued Shadow Gem
+DisplayStringHead(Player1,@8034)
+Continue()
+END

@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR0405",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0405",1)
+ActionOverride("Drawer 1",DestroyItem("wand02")) // Wand of Fear
+ActionOverride("Drawer 1",CreateItem("wandtrp",14,0,0)) // Wand of Trap Finding
+Continue()
+END

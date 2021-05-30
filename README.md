@@ -40,13 +40,23 @@ What this mod does:
 
 - Includes an optional component to change Cromwell's equipment to something more in-line with his skills as a forger of highly magical items.
 
-- Includes five new mage spells, their scrolls created through Cromwell and Cespenar.
+- Includes several new wizard and priest spells, placed in locations throughout the campaigns.
 
 - Includes alternate completion and upgrade path for the human flesh armor.
 
 - Includes upgrade paths for a two importable weapons from Baldur's Gate:EE
 
-- Adds Ben-Hadar, the elemental prince of water to the Greater Elemental Summoning HLA (the default spell only has the princes of fire, wind, earth)
+- Optional Component allow for choice of items imported from BG1.
+
+- Optional Component for updating names/appearances of existing dragonscale items to be more consistent.
+
+- Adds new options for armors, helms, and shields that can be created from all existing dragon scales.
+
+- Imports many items from Icewind Dale and places them in thoughtful locations througout the game.
+
+- Imports new spells and Icewind Dale items into Baldur's Gate 1 Enhanced Edition.
+
+- Randomization of some item/spell drops to add replayability.
 
 
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  

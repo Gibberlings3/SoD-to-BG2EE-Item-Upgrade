@@ -1,0 +1,8 @@
+IF
+Global("DeSpawnItem","BG0512",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","BG0512",1)
+ActionOverride("Container37",CreateItem("dbone",0,0,0)) // Ring of Dwarven Bone
+Continue()
+END

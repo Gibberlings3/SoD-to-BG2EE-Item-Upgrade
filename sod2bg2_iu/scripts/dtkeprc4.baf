@@ -4,6 +4,6 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("Display","LOCALS",1)
-		DisplayStringHead(Myself,@4036)  // Who calls Ben-Hadar, Prince of Water?!
+		DisplayStringHead(Myself,@6002)  // Who calls Ben-Hadar, Prince of Water?!
 END
 

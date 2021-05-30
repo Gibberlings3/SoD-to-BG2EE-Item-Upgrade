@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR0400",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0400",1)
+ActionOverride("Barrel 2",CreateItem("bdhalb02",0,0,0)) // Festering Spear +1
+Continue()
+END
+

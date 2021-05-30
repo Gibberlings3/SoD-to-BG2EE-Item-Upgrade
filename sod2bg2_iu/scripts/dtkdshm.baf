@@ -1,0 +1,25 @@
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_BLUR)  // 
+THEN
+	RESPONSE #100
+		DisplayStringHead(Myself,@8035)
+		Spell(Myself,WIZARD_BLUR)  // 
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	!StateCheck(LastSeenBy(Myself),STATE_HELPLESS)
+	HaveSpell(WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
+THEN
+	RESPONSE #100
+		Spell(NearestEnemyOf(Myself),WIZARD_HOLD_PERSON)  // SPWI306.SPL (Hold Person)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END
+

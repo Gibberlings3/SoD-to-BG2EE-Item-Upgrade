@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-IF ~PartyHasItem("dtkplat1")~ THEN GOTO PartyHasRedDrag	//Chromatic Crimson/Carmine Viridian Dragon Plate
+IF ~PartyHasItem("dtkplat1")~ THEN GOTO PartyHasRedDrag	//Chromatic Crimson/Carmine Viridian/Scarlet Viridescent Dragon Plate
 END
 
 APPEND WSMITH01

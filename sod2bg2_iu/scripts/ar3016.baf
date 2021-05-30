@@ -1,0 +1,10 @@
+IF
+Global("RemorSpawn","AR3016",0)
+Global("IceSpawn","AR3016",0)
+THEN
+RESPONSE #100
+SetGlobal("RemorSpawn","AR3016",1)
+CreateCreature("dtkremor",[2055.2880],NE)
+CreateCreature("remorha",[2277.2599],NE)
+Continue()
+END

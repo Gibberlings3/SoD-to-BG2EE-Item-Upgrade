@@ -3,6 +3,6 @@ Global("DeSpawnItem","AR3017",0)
 THEN
 RESPONSE #100
 SetGlobal("DeSpawnItem","AR3017",1)
-ActionOverride("Container 3",CreateItem("dtkacrl3",0,0,0)) // Sealed Ancient Scroll 3 (Corrosion)
+ActionOverride("Container 3",CreateItem("dtkascrl",0,0,0)) // Sealed Ancient Scroll
 Continue()
 END

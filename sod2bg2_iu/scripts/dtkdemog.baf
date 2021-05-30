@@ -1,0 +1,239 @@
+IF
+	AreaCheck("ar3020")
+	Global("Destroy3020Demo","GLOBAL",1)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+
+IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		StartTimer(77,6)
+		TriggerActivation("DemoGorgonInfo",FALSE)
+		Continue()
+END
+
+IF
+	TimerExpired(77)
+THEN
+	RESPONSE #100
+		StartTimer(77,6)
+		Continue()
+END
+
+IF
+	HPLT(Myself,30)
+	Global("DemoEffects","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		GiveItemCreate("dtkdeye",Player1,0,0,0)  // Demogorgon's Eye
+		GiveItemCreate("dtkrnd12",Player1,0,0,0)  // Random new spell level 6 or higher
+		GiveItemCreate("dtkrnd12",Player1,0,0,0)  // Random new spell level 6 or higher
+		MoveViewObject(Myself,INSTANT)
+		StartTimer(77,6)
+		ClearAllActions()
+		SetGlobal("DemoEffects","LOCALS",1)
+		StartCutSceneMode()
+		DisplayStringHead(Myself,71009)  // NO! NOOOOO! THIS CANNOT BE!
+		CreateVisualEffectObject("spflsrin",Myself)
+		Wait(1)
+		CreateVisualEffectObject("sppowrrd",Myself)
+		Wait(2)
+		CreateVisualEffectObject("spfirepi",Myself)
+		Wait(1)
+		CreateVisualEffectObject("spplanar",Myself)
+		Wait(2)
+		SetGlobal("SPRITE_IS_DEADDEMOGOR2","GLOBAL",1)
+		EndCutSceneMode()
+		DestroySelf()
+END
+
+IF
+	Detect([GOODCUTOFF])
+	Allegiance(Myself,ENEMY)
+	Global("Contingency1","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Contingency1","LOCALS",1)
+		DisplayString(Myself,73139)  // Contingency—Fired
+		ReallyForceSpellRES("melstone",Myself)  // Stoneskin
+		ReallyForceSpell(Myself,CLERIC_AURA_OF_FLAMING_DEATH)  // SPPR730.SPL (Aura of Flaming Death)
+		ReallyForceSpellRES("jwglobe",Myself)  // Globe of Invulnerability
+END
+
+IF
+	Detect(NearestEnemyOf(Myself))
+	Global("StoppedTime","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("StoppedTime","LOCALS",2)
+		SetGlobalTimer("SumReinf","LOCALS",3)
+		DisplayStringHead(Myself,70999)  // Now you will pay, foolish mortals!
+		ReallyForceSpell(NearestEnemyOf(Myself),SUMMON_INFERNAL_HOST)  // SPIN549.SPL (Summon the Infernal Host)
+END
+
+IF
+	Detect([GOODCUTOFF.0.DEMONIC.TANARI])
+	!GlobalTimerNotExpired("CharmDemon","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("CharmDemon","LOCALS",4)
+		DisplayStringHead(Myself,71008)  // No! You shall not use my own against me!
+		ReallyForceSpellRES("demochm",[GOODCUTOFF.0.DEMONIC.TANARI])  // Domination
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	Detect(NearestEnemyOf(Myself))
+	NumDead("demosum1",2)  // Marilith
+	!NumCreatureVsPartyGT("demosum3",0)  // Glabrezu
+	!GlobalTimerNotExpired("SumReinf","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("SumReinf","LOCALS",ONE_ROUND)
+		DisplayStringHead(Myself,70998)  // Come, my minions!
+		ForceSpell(Myself,DEMOGORGON_GATE)  // SPIN548.SPL (Gate)
+END
+
+IF
+	See(NearestEnemyOfType([0.0.0.0.0.SUMMONED]))
+	Range(LastSeenBy(Myself),15)
+	LevelLT(LastSeenBy(Myself),10)
+	!GlobalTimerNotExpired("DemiGorgonDeath","LOCALS")
+	RandomNum(2,1)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("DemiGorgonDeath","LOCALS",TWO_ROUNDS)
+		ForceSpell(LastSeenBy(Myself),WIZARD_DEATH_SPELL)  // SPWI605.SPL (Death Spell)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Range(LastSeenBy(Myself),10)
+	CheckStat(Myself,0,STONESKINS)
+	!GlobalTimerNotExpired("DemoGorStone","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("DemoGorStone","LOCALS",TWO_MINUTES)
+		ForceSpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+	RandomNum(2,1)
+	!StateCheck(NearestEnemyOf(Myself),STATE_CHARMED)
+	!StateCheck(NearestEnemyOf(Myself),STATE_CONFUSED)
+	!GlobalTimerNotExpired("gaze","LOCALS")
+THEN
+	RESPONSE #50
+		SetGlobalTimer("gaze","LOCALS",TWO_ROUNDS)
+		FaceObject(NearestEnemyOf(Myself))
+		DisplayStringHead(Myself,71004)  // Feel my beguiling gaze!
+		ReallyForceSpellRES("beguile",NearestEnemyOf(Myself))  // Beguiling Gaze
+	RESPONSE #50
+		SetGlobalTimer("gaze","LOCALS",TWO_ROUNDS)
+		FaceObject(NearestEnemyOf(Myself))
+		DisplayStringHead(Myself,71005)  // Suffer under my gaze of insanity!
+		ReallyForceSpellRES("insanity",NearestEnemyOf(Myself))  // Insanity Gaze
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	!GlobalTimerNotExpired("implosion","LOCALS")
+	RandomNum(3,1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("firestorm","LOCALS",TWENTY_MINUTES)
+		IncrementGlobal("demospell","LOCALS",1)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_IMPLOSION)  // SPPR728.SPL (Implosion)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	!GlobalTimerNotExpired("finger","LOCALS")
+	RandomNum(3,1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("finger","LOCALS",THREE_MINUTES)
+		IncrementGlobal("demospell","LOCALS",1)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_FINGER_OF_DEATH)  // SPPR708.SPL (Finger of Death)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	!GlobalTimerNotExpired("unholy","LOCALS")
+	RandomNum(2,1)
+	See(NearestEnemyOf(Myself))
+	!Alignment(NearestEnemyOf(Myself),MASK_EVIL)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("unholy","LOCALS",FIVE_ROUNDS)
+		IncrementGlobal("demospell","LOCALS",1)
+		ForceSpell(Myself,CLERIC_UNHOLY_WORD)  // SPPR715.SPL (Unholy Word)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	!GlobalTimerNotExpired("quake","LOCALS")
+	RandomNum(3,1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		SetGlobalTimer("quake","LOCALS",TEN_ROUNDS)
+		IncrementGlobal("demospell","LOCALS",1)
+		ForceSpell(Myself,CLERIC_EARTHQUAKE)  // SPPR720.SPL (Earthquake)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	GlobalTimerNotExpired("harm","LOCALS")
+	RandomNum(3,1)
+	OR(2)
+		See(NearestEnemyOf(Myself))
+		See(LeastDamagedOf(Myself))
+	Range(LastSeenBy(Myself),10)
+	CheckStatLT(LastSeenBy(Myself),50,RESISTMAGIC)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("harm","LOCALS",FOUR_MINUTES)
+		IncrementGlobal("demospell","LOCALS",1)
+		ForceSpell(LastSeenBy(Myself),ENEMY_CLERIC_HARM)  // SPPR699.SPL (Harm)
+END
+
+IF
+	!NumCreatureVsPartyLT([ENEMY.0.DEMONIC],0)
+	Range(NearestEnemyOf(Myself),4)
+THEN
+	RESPONSE #100
+		RunAwayFrom(NearestEnemyOf(Myself),30)
+	RESPONSE #50
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	Global("StoppedTime","LOCALS",2)
+	Detect(NearestEnemyOf(Myself))
+	OR(3)
+		Range(NearestEnemyOf(Myself),10)
+		HPPercentLT(Myself,50)
+		GlobalGT("demospell","LOCALS",1)
+THEN
+	RESPONSE #100
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	Global("SPRITE_IS_DEADDEMOGOR2","GLOBAL",1)
+	Global("DtkDemoEye","LOCALS",0)
+THEN
+	RESPONSE #100
+		GiveItemCreate("dtkdeye",Player1,0,0,0)  // Demogorgon's Eye
+		SetGlobal("DtkDemoEye","LOCALS",1)
+END
+

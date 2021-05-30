@@ -1,5 +1,5 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("bdsw1h06")~ THEN GOTO NewItem //Icy Blade of the Void +5
+  IF ~PartyHasItem("bdsw1h06")~ THEN GOTO NewItem //Vampiric Voidsword +5
 END
   
 APPEND WSMITH01

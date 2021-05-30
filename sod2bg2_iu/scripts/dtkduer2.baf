@@ -1,0 +1,11 @@
+IF
+	Detect([PC])
+	Delay(3)
+	Global("Display","LOCALS",0)
+THEN
+	RESPONSE #100
+		SwingOnce()
+		SetGlobal("Display","LOCALS",1)
+		DisplayStringHead(Myself,@8032)  //Hurry!, before the demons catch us!
+END
+

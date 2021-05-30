@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR0420",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0420",1)
+ActionOverride("Container 1",DestroyItem("ax1h03")) // Battle Axe of Mauletar +2
+ActionOverride("Container 1",CreateItem("dtkrnd05",0,0,0)) // Charged Battle Axe +2/Poisonous Battle Axe +2
+Continue()
+END

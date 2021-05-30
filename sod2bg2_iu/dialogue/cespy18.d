@@ -478,11 +478,11 @@ PartyHasItem("dtkscal1")
 /////////////// adding red scales
 
 IF ~!PartyHasItem("scaleb")
-PartyHasItem("compon19")
+!PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
-PartyHasItem("bdscaleg")
+!PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")
+!PartyHasItem("dtkscal1")
 PartyHasItem("scaler")~ THEN + reddragCespy_want_64 // red scales
 IF ~PartyHasItem("scaleb")
 !PartyHasItem("compon19")

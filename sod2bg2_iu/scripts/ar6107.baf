@@ -1,0 +1,8 @@
+IF
+Global("DeSpawnItem","AR6107",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR6107",1)
+ActionOverride("Container 1",CreateItem("dtkrnd12",1,0,0)) // New Spell Level 6 or Higher
+Continue()
+END

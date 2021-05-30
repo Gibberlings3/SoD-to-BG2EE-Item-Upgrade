@@ -1,0 +1,10 @@
+IF
+Global("DeSpawnItem","BG0102",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","BG0102",1)
+ActionOverride("Container 1",CreateItem("cloaksc",0,0,0)) // Cloak of Scintillating Colors
+ActionOverride("Container 1",DestroyItem("amul12") // Lareal's Tear Necklace
+ActionOverride("Container 2",DestroyItem("clck01") // Cloak of Protection +1
+Continue()
+END

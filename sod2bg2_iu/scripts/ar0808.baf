@@ -1,0 +1,8 @@
+IF
+Global("DeSpawnItem","AR0808",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0808",1)
+ActionOverride("Container 6",CreateItem("dtkrnd20",0,0,0)) // 50/50 chance of Voidhammer +3 or Voidsword +3
+Continue()
+END
