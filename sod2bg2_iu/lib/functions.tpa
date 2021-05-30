@@ -99,6 +99,50 @@ WRITE_SHORT 0x6e 0
 
 END // end of function
 
+/////                                                  \\\\\
+///// scroll making made easy                          \\\\\
+/////                                                  \\\\\
+
+DEFINE_PATCH_FUNCTION dtk_scroll
+  INT_VAR
+    unusable0  = 0
+    unusable1  = 0
+    unusable2  = 0
+    target_hdr = 1
+    range      = 30
+    opcode     = 146
+    target_eff = 2
+    price = 54321
+  STR_VAR 
+    spell = cdnull
+  BEGIN
+
+  WRITE_LONG  0x1e (THIS | unusable0) // class/alignment flags
+  WRITE_BYTE  0x2d (THIS | unusable1) // add first set of unusable flags
+  WRITE_BYTE  0x2f (THIS | unusable2) // add second set of unusable flags
+  WRITE_LONG  0x34 price              // price of scroll
+  WRITE_BYTE  0x7e target_hdr         // target: any point
+  WRITE_SHORT 0x80 range              // range
+
+  WRITE_ASCIIE 0x3a "%DEST_RES%"
+  WRITE_ASCII  0x41 a #1
+  WRITE_ASCIIE 0x76 "%DEST_RES%"
+  WRITE_ASCII  0x7d a #1
+  PATCH_IF (SOURCE_SIZE > 0xda) BEGIN // only for arcane scrolls that have second header for learning
+    WRITE_SHORT  0xe2 opcode          // cast-at-point opcode
+    WRITE_BYTE   0xe4 target_eff      // target: self
+    WRITE_ASCIIE 0xae "%DEST_RES%"
+    WRITE_ASCII  0xb5 a #1
+    WRITE_ASCIIE 0xf6 "%spell%" #8
+    WRITE_ASCIIE 0x126 "%spell%" #8
+  END ELSE BEGIN                      // divine scroll
+    WRITE_SHORT  0xaa opcode          // cast-at-point opcode
+    WRITE_BYTE   0xac target_eff      // target: self
+    WRITE_ASCIIE 0xbe "%spell%" #8
+  END
+
+END
+
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////

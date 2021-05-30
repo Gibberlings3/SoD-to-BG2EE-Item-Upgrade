@@ -6,8 +6,8 @@ END
 APPEND BOTSMITH              
 
   IF ~~ THEN BEGIN NightArm6Cespy SAY @1206
-    IF ~!PartyHasItem("dtkscal1")~ THEN GOTO need_NightArm6Cespy
-    IF ~PartyHasItem("dtkscal1")~ THEN GOTO NightArm6Cespy_want
+    IF ~!PartyHasItem("scaleb")~ THEN GOTO need_NightArm6Cespy
+    IF ~PartyHasItem("scaleb")~ THEN GOTO NightArm6Cespy_want
   END
 
   IF ~~ THEN BEGIN need_NightArm6Cespy SAY @1207
@@ -20,8 +20,8 @@ APPEND BOTSMITH
                                                  TakePartyGold(7500)
                                                  TakePartyItemNum("bdleat07",1)
                                                  DestroyItem("bdleat07")
-                                                 TakePartyItemNum("dtkscal1",1)
-                                                 DestroyItem("dtkscal1")
+                                                 TakePartyItemNum("scaleb",1)
+                                                 DestroyItem("scaleb")
                                                  DestroyGold(7500)~ GOTO 11
     IF ~~ THEN REPLY #66910 GOTO NightArm6Cespy_stall
   END

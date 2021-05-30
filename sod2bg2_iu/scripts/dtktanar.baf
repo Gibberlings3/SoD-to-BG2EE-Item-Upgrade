@@ -1,0 +1,9 @@
+IF
+	Detect([PC])
+	Global("Display","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Display","LOCALS",1)
+		DisplayStringHead(Myself,@8031)  //** AHHH, MORE PRIMES FOR THE SLAVE PENS, COME THEN, SO THAT I MAY BREAK YOU. **
+END
+

@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR0528",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0528",1)
+ActionOverride("Chest 1",DestroyItem("misc3i") // Silver Horn of Valhalla
+ActionOverride("Chest 1",CreateItem("bardic",1,0,0)) // Bardic Horn of Valhalla
+Continue()
+END

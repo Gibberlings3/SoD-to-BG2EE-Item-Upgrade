@@ -1,25 +1,27 @@
 // extend cespenar's generic item search with cromwell's items
 EXTEND_BOTTOM BOTSMITH 4
-  IF ~PartyHasItem("dtkleat1")~ THEN GOTO shadowdragCespy // Chromatic Shadow Dragonscale (blue, white, red, silver, green or black)
+  IF ~PartyHasItem("dtkleat1")~ THEN GOTO shadowdragCespy // Chromatic Shadow Dragonscale (blue, white, red, silver, green, black, or shadow)
 END
 
 APPEND BOTSMITH              
 
 IF ~~ THEN BEGIN shadowdragCespy
 SAY @1070
- IF ~OR(6)
+ IF ~OR(7)
      PartyHasItem("scaler")
      PartyHasItem("compon19")
      PartyHasItem("ohdscale")
      PartyHasItem("bdscaleg")
      PartyHasItem("compon18")
-     PartyHasItem("dtkscal1")~ THEN GOTO shadowdragCespy_want
+     PartyHasItem("dtkscal1")
+	 PartyHasItem("scaleb")~ THEN GOTO shadowdragCespy_want
  IF ~!PartyHasItem("scaler")
      !PartyHasItem("compon19")
      !PartyHasItem("ohdscale")
      !PartyHasItem("bdscaleg")
      !PartyHasItem("compon18")
-	 !PartyHasItem("dtkscal1")~ THEN GOTO need_shadowdragCespy
+	 !PartyHasItem("dtkscal1")
+	 !PartyHasItem("scaleb")~ THEN GOTO need_shadowdragCespy
 END
 
 IF ~~ THEN BEGIN need_shadowdragCespy SAY @1071
@@ -34,383 +36,897 @@ IF ~PartyHasItem("scaler")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_01 // red scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_01 // red scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_02 // white scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_02 // white scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_03 // silver scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_03 // silver scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_04 // blue scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_04 // blue scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_05  // red, silver, blue scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_05  // red, silver, blue scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_06  // white, silver, blue scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_06  // white, silver, blue scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_07  // red, silver, white scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_07  // red, silver, white scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_08  // red, white, blue scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_08  // red, white, blue scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_09  // silver, blue, scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_09  // silver, blue, scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_10  // silver, white scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_10  // silver, white scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_11  // red, silver scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_11  // red, silver scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_12  // red, white scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_12  // red, white scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_13  // red, blue scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_13  // red, blue scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_14  // blue, white scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_14  // blue, white scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_15  // blue, white, red, silver, scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_15  // blue, white, red, silver, scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_16 // green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_16 // green scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_17  // red, silver, blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_17  // red, silver, blue, green scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_18  // white, silver, blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_18  // white, silver, blue, green scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_19  // red, silver, white, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_19  // red, silver, white, green scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_20  // red, white, blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_20  // red, white, blue, green scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_21  // silver, blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_21  // silver, blue, green scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_22  // silver, white, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_22  // silver, white, green scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_23  // red, silver, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_23  // red, silver, green scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_24  // red, white, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_24  // red, white, green scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_25  // red, blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_25  // red, blue, green scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_26  // blue, white, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_26  // blue, white, green scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_27  // blue, white, red, silver, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_27  // blue, white, red, silver, green scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_28 // red, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_28 // red, green scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_29 // white, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_29 // white, green scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_30 // silver, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_30 // silver, green scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-!PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_31 // blue, green scales
+!PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_31 // blue, green scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_32 // black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_33 // red, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_34 // white, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_35 // silver, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_36 // blue, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_37  // red, silver, blue, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_38  // white, silver, blue, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_39  // red, silver, white, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_40  // red, white, blue, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_41  // silver, blue, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_42  // silver, white, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_43  // red, silver, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_44  // red, white, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_45  // red, blue, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_46  // blue, white, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_47  // blue, white, red, silver, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_48 // green, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_49  // red, silver, blue, green, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_50  // white, silver, blue, green, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_51  // red, silver, white, green, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_52  // red, white, blue, green, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_53  // silver, blue, green, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_54  // silver, white, green, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_55  // red, silver, green, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_56  // red, white, green, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_57  // red, blue, green, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_58  // blue, white, green, black scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_59  // blue, white, red, silver, green, black scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_60 // red, green, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_61 // white, green, black scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_62 // silver, green, black scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+!PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_63 // blue, green, black scales
 
-///////////adding black scales
+
+//////////adding shadow scales
 
 IF ~!PartyHasItem("scaler")
-!PartyHasItem("compon19")
+PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
-!PartyHasItem("bdscaleg")
+PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_32 // black scales
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_64 // shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_33 // red, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_65 // red, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_34 // white, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_66 // white, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_35 // silver, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_67 // silver, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_36 // blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_68 // blue, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_37  // red, silver, blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_69  // red, silver, blue, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_38  // white, silver, blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_70  // white, silver, blue, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_39  // red, silver, white, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_71  // red, silver, white, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_40  // red, white, blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_72  // red, white, blue, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_41  // silver, blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_73  // silver, blue, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_42  // silver, white, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_74  // silver, white, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_43  // red, silver, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_75  // red, silver, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_44  // red, white, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_76  // red, white, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_45  // red, blue, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_77  // red, blue, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_46  // blue, white, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_78  // blue, white, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 !PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_47  // blue, white, red, silver, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_79  // blue, white, red, silver, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_48 // green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_80 // green, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_49  // red, silver, blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_81  // red, silver, blue, green, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_50  // white, silver, blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_82  // white, silver, blue, green, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_51  // red, silver, white, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_83  // red, silver, white, green, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_52  // red, white, blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_84  // red, white, blue, green, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_53  // silver, blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_85  // silver, blue, green, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_54  // silver, white, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_86  // silver, white, green, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_55  // red, silver, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_87  // red, silver, green, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_56  // red, white, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_88  // red, white, green, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_57  // red, blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_89  // red, blue, green, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_58  // blue, white, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_90  // blue, white, green, shadow scales
 IF ~PartyHasItem("scaler")
 PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_59  // blue, white, red, silver, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_91  // blue, white, red, silver, green, shadow scales
 IF ~PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_60 // red, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_92 // red, green, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_61 // white, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_93 // white, green, shadow scales
 IF ~!PartyHasItem("scaler")
 !PartyHasItem("compon19")
 PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_62 // silver, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_94 // silver, green, shadow scales
 IF ~!PartyHasItem("scaler")
 PartyHasItem("compon19")
 !PartyHasItem("ohdscale")
 PartyHasItem("bdscaleg")
 !PartyHasItem("compon18")
-PartyHasItem("dtkscal1")~ THEN + shadowdragCespy_want_63 // blue, green, black scales
+!PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_95 // blue, green, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_96 // black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_97 // red, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_98 // white, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_99 // silver, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_100 // blue, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_101  // red, silver, blue, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_102  // white, silver, blue, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_103  // red, silver, white, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_104  // red, white, blue, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_105  // silver, blue, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_106  // silver, white, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_107  // red, silver, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_108  // red, white, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_109  // red, blue, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_110  // blue, white, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+!PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_111  // blue, white, red, silver, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_112 // green, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_113  // red, silver, blue, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_114  // white, silver, blue, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_115  // red, silver, white, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_116  // red, white, blue, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_117  // silver, blue, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_118  // silver, white, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_119  // red, silver, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_120  // red, white, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_121  // red, blue, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_122  // blue, white, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_123  // blue, white, red, silver, green, black, shadow scales
+IF ~PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_124 // red, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_125 // white, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+!PartyHasItem("compon19")
+PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_126 // silver, green, black, shadow scales
+IF ~!PartyHasItem("scaler")
+PartyHasItem("compon19")
+!PartyHasItem("ohdscale")
+PartyHasItem("bdscaleg")
+!PartyHasItem("compon18")
+PartyHasItem("dtkscal1")
+PartyHasItem("scaleb")~ THEN + shadowdragCespy_want_127 // blue, green, black, shadow scales
 END
+
+
 
 IF ~~ THEN BEGIN shadowdragCespy_want_01 // red scales
 SAY @1079
@@ -678,8 +1194,6 @@ SAY @1077
 ++ @6012 GOTO shadowdragCespy_stall
 END
 
-///////////adding black scales
-
 IF ~~ THEN BEGIN shadowdragCespy_want_32 // black scales
 SAY @1285
 ++ @6034 GOTO HowMuch_blackscale
@@ -825,10 +1339,9 @@ SAY @1077
 END
 
 IF ~~ THEN BEGIN shadowdragCespy_want_48 // green, black scales
-SAY @1181
+SAY @1077
 ++ @6005 GOTO HowMuch_greenscale
 ++ @6034 GOTO HowMuch_blackscale
-++ @6011 + shadowdragCespy_stall
 ++ @6011 + shadowdragCespy_stall
 ++ @6012 GOTO shadowdragCespy_stall
 END
@@ -945,6 +1458,7 @@ SAY @1077
 ++ @6013 GOTO HowMuch_bluescale
 ++ @6005 GOTO HowMuch_greenscale
 ++ @6034 GOTO HowMuch_blackscale
+++ @6011 + shadowdragCespy_stall
 ++ @6012 GOTO shadowdragCespy_stall
 END
 
@@ -983,6 +1497,647 @@ SAY @1077
 ++ @6012 GOTO shadowdragCespy_stall
 END
 
+
+////////////adding shadow scales
+
+IF ~~ THEN BEGIN shadowdragCespy_want_64 // shadow scales
+SAY @1073
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_65 // red, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_66 // white, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_67 // silver, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_68 // blue, shadow scales
+SAY @1077
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_69 // red, silver, blue, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_70 // white, silver, blue, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_71 // red, silver, white, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_72 // red, white, blue, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_73 // silver, blue, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_74 // silver, white, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_75 // red, silver, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_76 // red, white, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_77 // red, blue, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_78 // blue, white, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_79 // white, silver, red, blue, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_80 // green, shadow scales
+SAY @1077
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_81 // red, silver, blue, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_82 // white, silver, blue, green, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_83 // red, silver, white, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_84 // red, white, blue, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_85 // silver, blue, green, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_86 // silver, white, green, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_87 // red, silver, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_88 // red, white, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_89 // red, blue, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_90 // blue, white, green, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_91 // white, silver, red, blue, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_92 // red, green, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_93 // white, green, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_94 // silver, green, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_95 // blue, green, shadow scales
+SAY @1077
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_96 // black, shadow scales
+SAY @1077
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_97 // red, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_98 // white, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_99 // silver, black, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_100 // blue, black, shadow scales
+SAY @1077
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_101 // red, silver, blue, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_102 // white, silver, blue, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_103 // red, silver, white, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_104 // red, white, blue, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_105 // silver, blue, black, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_106 // silver, white, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_107 // red, silver, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_108 // red, white, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_109 // red, blue, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_110 // blue, white, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_111 // white, silver, red, blue, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_112 // green, black, shadow scales
+SAY @1077
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_113 // red, silver, blue, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_114 // white, silver, blue, green, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_115 // red, silver, white, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_116 // red, white, blue, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_117 // silver, blue, green, black, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_118 // silver, white, green, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_119 // red, silver, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_120 // red, white, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_121 // red, blue, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_122 // blue, white, green, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_123 // white, silver, red, blue, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6007 GOTO HowMuch_whitescale
+++ @6014 GOTO HowMuch_silverscale
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_124 // red, green, black, shadow scales
+SAY @1077
+++ @6006 GOTO HowMuch_redscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_125 // white, green, black, shadow scales
+SAY @1077
+++ @6007 GOTO HowMuch_whitescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_126 // silver, green, black, shadow scales
+SAY @1077
+++ @6014 GOTO HowMuch_silverscale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN shadowdragCespy_want_127 // blue, green, black, shadow scales
+SAY @1077
+++ @6013 GOTO HowMuch_bluescale
+++ @6005 GOTO HowMuch_greenscale
+++ @6034 GOTO HowMuch_blackscale
+++ @6010 GOTO HowMuch_shadowscale
+++ @6011 + shadowdragCespy_stall
+++ @6012 GOTO shadowdragCespy_stall
+END
 
 
 IF ~~ THEN BEGIN HowMuch_redscale 
@@ -1059,6 +2214,19 @@ SAY @1078
                                  		TakePartyItemNum("dtkscal1",1)
                                  		DestroyItem("dtkleat1")
                                  		DestroyItem("dtkscal1")
+                                 		DestroyGold(20000)~ REPLY @6015 GOTO 11
+ IF ~~ THEN REPLY @6012 GOTO shadowdragCespy_stall
+END
+
+IF ~~ THEN BEGIN HowMuch_shadowscale
+SAY @1078
+ IF ~PartyGoldLT(20000)~ THEN REPLY #66908 GOTO 10
+ IF ~PartyGoldGT(19999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",116)
+                                	        TakePartyGold(20000)
+                                 		TakePartyItemNum("dtkleat1",1)
+                                 		TakePartyItemNum("scaleb",1)
+                                 		DestroyItem("dtkleat1")
+                                 		DestroyItem("scaleb")
                                  		DestroyGold(20000)~ REPLY @6015 GOTO 11
  IF ~~ THEN REPLY @6012 GOTO shadowdragCespy_stall
 END

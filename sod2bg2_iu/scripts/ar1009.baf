@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR1009",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR1009",1)
+ActionOverride("Container 2",CreateItem("dtkdarkn",0,0,0)) // Scroll of Darkness 15'
+ActionOverride("Container 1",CreateItem("cdwuff",0,0,0)) // Cloak of the Winter Wolf
+Continue()
+END

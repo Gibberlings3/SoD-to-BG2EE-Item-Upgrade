@@ -1,0 +1,11 @@
+IF
+Global("DeSpawnItem","AR0414",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0414",1)
+CreateCreature("dtkduer1",[1634.698],NW)
+CreateCreature("dtkduer2",[1764.556],N)
+CreateCreature("dtkduer3",[1884.686],NE)
+CreateCreature("dtktanar",[1700.772],N)
+Continue()
+END

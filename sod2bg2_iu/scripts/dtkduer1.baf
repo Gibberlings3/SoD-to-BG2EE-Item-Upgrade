@@ -1,0 +1,11 @@
+IF
+	Detect([PC])
+	Delay(1)
+	Global("Display","LOCALS",0)
+THEN
+	RESPONSE #100
+		SwingOnce()
+		SetGlobal("Display","LOCALS",1)
+		DisplayStringHead(Myself,@8030)  //Primes!  They must have a way out!  Protect the ore and kill them all!
+END
+

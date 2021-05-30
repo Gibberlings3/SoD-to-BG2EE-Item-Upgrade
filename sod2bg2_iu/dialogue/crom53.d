@@ -1,11 +1,11 @@
 EXTEND_BOTTOM WSMITH01 13
-  IF ~PartyHasItem("dtkswd07")~ THEN GOTO NewItem //Varscona +5
+  IF ~PartyHasItem("dtkswd07")~ THEN GOTO NewItem //Varscona +4
 END
   
 APPEND WSMITH01
   IF ~~ THEN BEGIN NewItem SAY @190
-    IF ~!PartyHasItem("dtkfrost")~ THEN GOTO NewItem2
-    IF ~PartyHasItem("dtkfrost")~ THEN GOTO NewItem3
+    IF ~!PartyHasItem("dtkdhilt")~ THEN GOTO NewItem2
+    IF ~PartyHasItem("dtkdhilt")~ THEN GOTO NewItem3
   END
 
   IF ~~ THEN BEGIN NewItem2 SAY @191
@@ -18,9 +18,9 @@ APPEND WSMITH01
                                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                                  TakePartyGold(10000)
                                                  TakePartyItemNum("dtkswd07",1)
-                                                 TakePartyItemNum("dtkfrost",1)
+                                                 TakePartyItemNum("dtkdhilt",1)
                                                  DestroyItem("dtkswd07")
-                                                 DestroyItem("dtkfrost")
+                                                 DestroyItem("dtkdhilt")
                                                  DestroyGold(10000)~ GOTO 56
     IF ~~ THEN REPLY #67013 GOTO NoThanks
   END

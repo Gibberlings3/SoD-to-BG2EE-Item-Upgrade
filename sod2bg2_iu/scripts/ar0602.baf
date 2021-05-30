@@ -4,6 +4,8 @@ THEN
 RESPONSE #100
 SetGlobal("DeSpawnItem","AR0602",1)
 ActionOverride("Jailkeep Table",CreateItem("bdkeyr",0,0,0)) // Keyring
+ActionOverride("Picture 1",DestroyItem("dagg02") // Dagger +1
+ActionOverride("Picture 1",CreateItem("bdsw1hx5",0,0,0)) // Gift of the Demon +1
 Continue()
 END
 

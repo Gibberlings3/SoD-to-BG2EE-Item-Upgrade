@@ -4,8 +4,8 @@ END
   
 APPEND WSMITH01
   IF ~~ THEN BEGIN NewItem SAY @170
-    IF ~!PartyHasItem("dtkscal1")~ THEN GOTO NewItem2
-    IF ~PartyHasItem("dtkscal1")~ THEN GOTO NewItem3
+    IF ~!PartyHasItem("scaleb")~ THEN GOTO NewItem2
+    IF ~PartyHasItem("scaleb")~ THEN GOTO NewItem3
   END
 
   IF ~~ THEN BEGIN NewItem2 SAY @171
@@ -18,9 +18,9 @@ APPEND WSMITH01
                                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                                  TakePartyGold(7500)
                                                  TakePartyItemNum("bdleat07",1)
-                                                 TakePartyItemNum("dtkscal1",1)
+                                                 TakePartyItemNum("scaleb",1)
                                                  DestroyItem("bdleat07")
-                                                 DestroyItem("dtkscal1")
+                                                 DestroyItem("scaleb")
                                                  DestroyGold(7500)~ GOTO 56
     IF ~~ THEN REPLY #67013 GOTO NoThanks
   END

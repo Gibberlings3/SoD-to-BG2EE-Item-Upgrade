@@ -3,6 +3,6 @@ Global("DeSpawnItem","AR5201",0)
 THEN
 RESPONSE #100
 SetGlobal("DeSpawnItem","AR5201",1)
-ActionOverride("FirePit1",CreateItem("dtkacrl4",0,0,0)) // Sealed Ancient Scroll 4 (Hoar of Frost)
+ActionOverride("FirePit1",CreateItem("dtkascrl",0,0,0)) // Sealed Ancient Scroll
 Continue()
 END

@@ -1,0 +1,194 @@
+IF
+	OnCreation()
+	Global("NewGame","AR0602",0)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		HideGUI()
+		FadeToColor([1.0],0)
+		SetGlobal("NewGame","AR0602",1)
+		Continue()
+END
+
+IF
+	Global("BG1Pantaloons","GLOBAL",0)
+	PartyHasItem("MISC47")  // Golden Pantaloons
+THEN
+	RESPONSE #100
+		SetGlobal("BG1Pantaloons","GLOBAL",1)
+		ActionOverride("Picture1",CreateItem("MISC47",0,0,0))  // Golden Pantaloons
+		Continue()
+END
+
+IF
+	Global("BG1DrizztItem","GLOBAL",0)
+	OR(3)
+		PartyHasItem("CHAN06")  // Mithral Chain Mail +4
+		PartyHasItem("SW1H15")  // Icingdeath +3
+		PartyHasItem("SW1H16")  // Twinkle +3
+THEN
+	RESPONSE #100
+		SetGlobal("BG1DrizztItem","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("TakeImportItems","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("TakeImportItems","AR0602",1)
+		StartCutSceneEx("BDSODIMP",TRUE)
+		SetGlobal("Chapter","GLOBAL",1)
+		ActionOverride("Malaaq",MoveBetweenAreas("AR0601",[345.591],SE))
+		ActionOverride("Table3",TakeItemListPartyNum("IMPORT02",1))
+		ActionOverride("DuegarClanChief",TakeItemListPartyNum("IMPORT01",1))
+		ActionOverride("Shelf1",TakeItemListPartyNum("IMPORT03",1))
+		SmallWait(4)
+		TakePartyGold(2147483647)
+		ActionOverride(Player1,DestroyAllEquipment())
+		ActionOverride(Player2,DestroyAllEquipment())
+		ActionOverride(Player3,DestroyAllEquipment())
+		ActionOverride(Player4,DestroyAllEquipment())
+		ActionOverride(Player5,DestroyAllEquipment())
+		ActionOverride(Player6,DestroyAllEquipment())
+		CreateCreature("CSJON",[3210.3304],NE)  // Mage
+		ActionOverride(Player1,PlayDead(165))
+		Wait(1)
+		FadeFromColor([30.0],0)
+		StartCutScene("NewGame")
+END
+
+IF
+	Global("RielevDisable","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("RielevDisable","AR0602",1)
+		TriggerActivation("Rielevdeadtrigger",FALSE)
+END
+
+IF
+	Global("IrenTeleport","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("IrenTeleport","GLOBAL",1)
+		SmallWait(8)
+		PlaySound("EFF_M29")
+		FadeFromColor([30.0],0)
+		CreateVisualEffect("SPCLOUD1",[3075.644])
+		CreateVisualEffect("SPCLOUD1",[3029.652])
+		CreateVisualEffect("SPCLOUD1",[2975.670])
+		CreateVisualEffect("SPCLOUD1",[3114.665])
+		CreateVisualEffect("SPCLOUD1",[3068.681])
+		CreateVisualEffect("SPCLOUD1",[3004.704])
+END
+
+IF
+	Global("bd_imoen_joined","ar0602",1)
+	Global("MoveScreen","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("MoveScreen","AR0602",1)
+		SetGlobal("BD_Chapter_Save","GLOBAL",1)
+		SaveGame(15)
+		SaveGame(0)
+		MoveViewPoint([3802.2769],BD_NORMAL)
+END
+
+IF
+	Global("AataqahFight","AR0602",1)
+	Dead("AataqahOgre")  // Ogre Mage
+THEN
+	RESPONSE #100
+		SetGlobal("AataqahFight","AR0602",2)
+		Wait(1)
+		CreateCreatureObjectEffect("AATAQAH","SPCLOUD3",Player1)  // Aataqah
+		ActionOverride("Aataqah",Wait(2))
+END
+
+IF
+	Global("AataqahFight","AR0602",1)
+	NumDead("AataqahGibber",4)  // Gibberling
+THEN
+	RESPONSE #100
+		SetGlobal("AataqahFight","AR0602",2)
+		Wait(1)
+		CreateCreatureObjectEffect("AATAQAH","SPCLOUD3",Player1)  // Aataqah
+		ActionOverride("Aataqah",Wait(2))
+END
+
+IF
+	Global("AataqahFight","AR0602",1)
+	HPPercentLT(MostDamagedOf(Myself),25)
+THEN
+	RESPONSE #100
+		SetGlobal("AataqahFight","AR0602",2)
+		Wait(1)
+		CreateCreatureObjectEffect("AATAQAH","SPCLOUD3",Player1)  // Aataqah
+		ActionOverride("Aataqah",Wait(2))
+END
+
+IF
+	Global("Ellsime","AR0602",1)
+	OpenState("DOOR08",FALSE)
+THEN
+	RESPONSE #100
+		OpenDoor("DOOR08")
+END
+
+IF
+	PartyHasItem("misc4d")  // The Genie's Flask
+	!Global("AddEntry47514","ar0602",5)
+THEN
+	RESPONSE #100
+		AddJournalEntry(47514,QUEST)  // Freeing the djinni I have retrieved the flask from the dryads... all that remains now is to go back to the genie and return it to him.
+		SetGlobal("AddEntry47514","ar0602",5)
+END
+
+IF
+	Global("BD_DEFAI","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("BD_DEFAI","GLOBAL",1)
+		SetGlobal("BDAI_RESET_TIMERS","GLOBAL",1)
+		ActionOverride(Player1,ChangeAIScript("BDDEFAI",CLASS))
+		Continue()
+END
+
+IF
+	Global("DeSpawnItem","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("DeSpawnItem","AR0602",1)
+		ActionOverride("Shelf 13",CreateItem("dtkdance",0,0,0))  // Dancing Lights
+		Continue()
+END
+
+IF
+	Global("DeSpawnItem","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("DeSpawnItem","AR0602",1)
+		ActionOverride("Shelf 12",CreateItem("dtkdarkn",0,0,0))  // Darkness, 15' Radius
+		Continue()
+END
+
+IF
+	Global("DeSpawnItem","AR0602",0)
+THEN
+	RESPONSE #100
+		SetGlobal("DeSpawnItem","AR0602",1)
+		ActionOverride("Jailkeep Table",CreateItem("bdkeyr",0,0,0))  // Key Ring
+		ActionOverride("Picture 1",DestroyItem("dagg02"))  // Dagger +1
+		ActionOverride("Picture 1",CreateItem("bdsw1hx5",0,0,0))  // Gift of the Demon +1
+		Continue()
+END
+
+IF
+	Global("BD_HAVE_SOD","GLOBAL",0)
+	Global("BD_SOD_IMPORT_11","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("BD_HAVE_SOD","GLOBAL",1)
+		SetGlobal("BD_SOD_IMPORT_11","GLOBAL",1)
+END
+

@@ -1,0 +1,10 @@
+IF
+Global("DeSpawnItem","AR0514",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0514",1)
+ActionOverride("Chest03",CreateItem("lyre",0,0,0)) // Lyre of Progression
+ActionOverride("Chest01",CreateItem("dtkrnd13",0,0,0)) // Random new spell scroll (level 5 or below)
+Continue()
+END
+

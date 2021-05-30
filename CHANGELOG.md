@@ -1,5 +1,65 @@
 # Changelog
 
+## Version 2.0.0
+
+### Fixed
+
+- Added new spells to spells.ids table to allow for sorcerors to learn new spells
+- Fixed melee and description images/icon for Vampiric Voidhammer +5
+- Added missing sound files for "Drowned in Blood" creature.
+- Cleaned up code for more efficient install and better EET compatibility
+- Fixed hit bonus and dmg bonus of maelstrom axe +4 from 3 to 4. Fixed hit bonus and dmg bonus on maelstrom pike +5 and +4  (was +3 incorrectly)
+- Corrected “smashing wave” effect on maelstrom pike to be 10% chance on hit to match description (was incorrectly 100%)
+- Corrected all new summoned creature allegiances to "Controlled" and set all attack items as "Undisplayable"
+- Fixed Silver Dragon Blade +5 area effect projectile animation
+- Shadow Dragons should now drop shadow dragon blood
+
+
+### Changed
+
+- Changed charge abilities on most dragonscale armor upgrade variants to be more unique
+- New icons for several items and their various upgrades
+- Reworked appearance of all dragonscale amror variants
+- Upgraded enchantment level of frostfire bolts to +4 for determining what they can hit
+- Upgraded the audiovisual effects of Trollkiller's Fireball, Corrosion, Thunder Thrust, and Hoar of Frost to be more unique
+- New audiovisual effects for the charge abilities on Wicked Jester's Bracers
+- Sealed Ancient Scrolls now require dragon's blood instead of scales
+- Updated Pooky's script to allow him to use Screaming Bagpipes during battle
+- Malestrom Axe/Pike upgrades now use "Body of Water" gemstone
+- Removed charge effects from heartwood rings, boosted bonuses, added new option for water, updated recipes on cromwell and cespenar
+- Tongue of Acid +5 has a new charge ability
+- Tongue of Burning Acid +4 and +5 have been removed
+- Crown of Lies upgrade has been reworked to use ioun stones with diferent abilities and new name, Crown of Lies +1
+- Wizzard Hat has been moved to a new location
+- Helm of Opposite Alignment has been moved to a new location
+- The upgrade recipe for Element's Fury +2 has been updated to add new options for all four elements
+- Hoar of Frost is now a Priest spell
+- The Antipode effect on the Uncursed Staff of Antipode has a new projectile
+- Conjure Death has a new icon
+- Thunder Thrust has a new icon
+- Night's Embrace +7 upgrade has been reworked to used shadow dragon scales with different abilities
+- There is now an additional option to make the Voidhammer +3/Voidsword +3 random
+- Shield of Egons +2 has been moved to a new location
+- New upgrasde options for Maelstone Axe/Halberd to +5 and +6 respectively
+
+
+
+### Added
+
+- Imported many items from IWD and placed throughout BG1 and BG2 campaigns in EET and BG2EE games in thoughtful locations:Shimmering Sash, Flaming Fists of Lin Mei, Sarutobi's Stone Breakers, Pemby's Wand of Many Missiles, Wand of Armory, Wand of Trap Detection, Vexed Armor(third version), Clasp of Bron's Cloak, Kossuth's Blood, Ogi-Luc's Great Robe, Poisonous Battle Axe +2, Boots of the Fox, Boots of the Forgotten Ones, Messenger of Sseth, Cloak of the Winter Wolf, Cloak of Scintillating Colors, Breath of Auril +3, Flaming Fists of Lin Mei, Sarutobi's Stone Breakers, Gauntlets of Elven Might, Demon's Breath +3, Clear Ioun Stone, Helm of the Trusted Defender, Patriot Helm, Remorhaz Shell Helm, Kontik's Ring of Wizardry, Ulcaster Academy Ring, Ring of Dwarven Bone, Eidon's Ring of Wizardry, Ring of Shadows, Lyre of Progression, Waukeen's Defender +2, The Spear of White Ash +3, Wind of Heaven +4, Solemn Duty +3(upgraded from +2), Shadowed Boots, Glimglam's Cloak +1, Staff of Moradin's Breath +2, Bastard Sword of Greater Phasing +3, The Salamander's Tongue +3, The Love of Black Bess +3, Darkened Glory +2, The Lucky Scimitar +3(upgraded from +2), Evil Spider Crusher of Doom +3(upgraded from +2), Circlet of the Archmagi, Ellistrae's Boon, Bardic Horn of Valhalla, Scarlet/Blue Ioun Stone
+- New component to add IWD items and new spells to BG1/SoD
+- Randomization - Several imported IWD and SoD items are now randomized, Some new spell drops are randomized
+- New Spells: Shadow Bolt, Fell Rage, Ko'Dezza's Caustic Shell, Grasping Shadows, Ko'Dezza's Multi-Fireball, Caustic Quagmire, Ko'Dezza's Slime Golem, Ent Summoning, Cataclysm, Penetrating Cold, Maelstrom, Crushing Earth, Shar's Embrace, Holocaust, Flame Vortice, Antipode, Ko'Dezza's Frozen Death, Conjure Shadow Elemental, Darkness 15 Foot Radius, Faerie Fire, Dancing Lights, Sundering Vitriol
+- Added new elemental gemstone: Body of Water, used for upgrades
+- New upgrade options for Varscona +2
+- New optional component to allow choice of imported weapon, armor, and item from BG1 into BG2
+- More SoD items imported into BG2: Reed of Echoes, Guardian Devil, Echo of the Fiend, Acid-Etched Dagger +2, The Suncatcher +2, Amulet of Whispers, Amulet of Ankheg Summoning, modron heart, Chill Axe +2, Belt of the Cunning Rogue, Mosela's Cudgel +2, The Hydra +2, Sidestep Slippers, Savage Shortbow +2, Bracers of the Shuttered Lid, Bracers of Perseverance, Flute of the Immaculate Breeze, Stalwart Scales +2, Sable Cloak, Crommus' Capelet, Festering Spear +1, Arrow of Anitmagic +1, Dread Hammer +2, Battle Tankard, Peacock Cap, Helm of Equus, Helm of Unwavering Purpose, Skald’s Helmet(Voghiln’s), Circlet of the Cynosure, Blood Red Ioun Stone, Raconteur’s Regalia, Purification Stone, Fine Bearskin, Daeros’s Full plate +1, Bloody Bone Plate +2, Robe of Arcane Aptitude, Cleric’s Vestments, Solar Aegis +3, Spider Silk, Firefly +2, Eadro's Blade +1, Fractal Blade +3, Spell Breaker +2, Aster's Edge +3, Gift of the Demon +1, Sword of Troll Decapitation +1, Sword of Ruin +2, Harold +2, Blazing Glory +3, Cloak of the Gargoyle
+- Added upgrade options for many of the newly imported SoD items
+- Enhanced equipped appearance of Aster's Edge +3, Solar Aegis +3, Circlet of the Cynosure, and Mail of the Hallowed Hero +3 to better match thier description and/or icon.
+- New recipes for shields, helms, plate, and leather for dragon scales (all colors)
+- Added new monsters to Conjure Death spell: Putrid Zombie and Charged Wight
+
+
 ## Version 1.2.0
 
 ### Fixed
