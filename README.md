@@ -58,6 +58,7 @@ What this mod does:
 
 - Randomization of some item/spell drops to add replayability.
 
+
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 
 
