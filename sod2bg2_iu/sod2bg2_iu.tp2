@@ -5551,8 +5551,13 @@ COMPILE ~sod2bg2_iu/dialogue/roger1.d~		//Belt of the Cunning Rogue
 COMPILE ~sod2bg2_iu/dialogue/scsain1.d~		//Shield of Egons +2
 COMPILE ~sod2bg2_iu/dialogue/trskin04a.d~		//Bracers of Perseverance
 COMPILE ~sod2bg2_iu/dialogue/mourner6a.d~		//Flute of the Immaculate Breeze
-COPY_EXISTING ~demson.dlg~ ~override~		
-	REPLACE_TEXTUALLY ~plat15~ ~dtkrnd04~	//Mail of the Hallowed Hero +3/Pride of the Legion +2
+
+COPY_EXISTING ~demson.dlg~ ~override~
+	DECOMPILE_AND_PATCH
+	BEGIN
+		REPLACE_TEXTUALLY ~plat15~ ~dtkrnd04~	//Mail of the Hallowed Hero +3/Pride of the Legion +2
+	END
+
 COMPILE ~sod2bg2_iu/dialogue/ohdazoth.d~		//Vexed Armor
 COMPILE ~sod2bg2_iu/dialogue/tokcre01.d~		//Boots of Speed/Boots of the Fox
 
