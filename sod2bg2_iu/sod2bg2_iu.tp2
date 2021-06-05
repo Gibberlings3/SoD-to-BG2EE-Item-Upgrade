@@ -4859,7 +4859,7 @@ EXTEND_BOTTOM ~oh4101.bcs~ ~sod2bg2_iu/scripts/oh4101.baf~	//Dark Moon Hilt
 EXTEND_BOTTOM ~ar3021.bcs~ ~sod2bg2_iu/scripts/ar3021.baf~	//Iridescent Blue Ioun Stone
 EXTEND_BOTTOM ~ar6107.bcs~ ~sod2bg2_iu/scripts/ar6107.baf~	//Random new spell Level 6 or higher
 EXTEND_BOTTOM ~oh6500.bcs~ ~sod2bg2_iu/scripts/oh6500.baf~	//Sealed Ancient Scroll
-COMPILE ~ar3027.bcs~ ~sod2bg2_iu/scripts/ar3027.baf~	//Conjure Death Scroll
+COMPILE ~sod2bg2_iu/scripts/ar3027.baf~	//Conjure Death Scroll
 		
 ACTION_IF FILE_EXISTS_IN_GAME ~bg0401.bcs~ BEGIN // check if present for EET games
 	EXTEND_BOTTOM ~bg0401.bcs~ ~sod2bg2_iu/scripts/bg0401.baf~	//Glimglam's Cloak +1	
@@ -4869,7 +4869,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bg0102.bcs~ BEGIN // check if present for EET gam
 	EXTEND_BOTTOM ~bg0102.bcs~ ~sod2bg2_iu/scripts/bg0102.baf~	//Cloak of Scintillating Colors	
 		END
 		
-COMPILE ~ar1009.bcs~ ~sod2bg2_iu/scripts/ar1009.baf~	//Cloak of the Winter Wolf
+COMPILE ~sod2bg2_iu/scripts/ar1009.baf~	//Cloak of the Winter Wolf
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bg1504.bcs~ BEGIN // check if present for EET games
 	EXTEND_BOTTOM ~bg1504.bcs~ ~sod2bg2_iu/scripts/bg1504.baf~	//Gauntlets of Elven Might	
@@ -4887,8 +4887,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bg0514.bcs~ BEGIN // check if present for EET gam
 	EXTEND_BOTTOM ~bg0514.bcs~ ~sod2bg2_iu/scripts/bg0514.baf~	// Lyre of Progression	
 		END
 
-COMPILE ~ar0528.bcs~ ~sod2bg2_iu/scripts/ar0528.baf~	// Bardic Horn of Valhalla
-	COPY_EXISTING ~ar0528.are~ ~override~
+COMPILE ~sod2bg2_iu/scripts/ar0528.baf~	// Bardic Horn of Valhalla
+COPY_EXISTING ~ar0528.are~ ~override~
 		WRITE_ASCII 0x94 ar0528
 
 EXTEND_BOTTOM ~ar2000.bcs~ ~sod2bg2_iu/scripts/ar2000.baf~	// Owain's Lullabye
@@ -4897,8 +4897,8 @@ EXTEND_BOTTOM ~ar4500.bcs~ ~sod2bg2_iu/scripts/ar4500.baf~	// Wind of Heaven +4,
 
 EXTEND_BOTTOM ~ar0205.bcs~ ~sod2bg2_iu/scripts/ar0205.baf~	//20% chance - The Spear of White Ash +3/Bastard Sword of Greater Phasing +3/Misery's Herald +3/Evil Spider Crusher of Doom +3/Darkened Glory +2
 
-COMPILE ~ar0414.bcs~ ~sod2bg2_iu/scripts/ar0414.baf~	//Fel Iron Ore
-	COPY_EXISTING ~ar0414.are~ ~override~
+COMPILE ~sod2bg2_iu/scripts/ar0414.baf~	//Fel Iron Ore
+COPY_EXISTING ~ar0414.are~ ~override~
 		WRITE_ASCII 0x94 ar0414
 		
 EXTEND_BOTTOM ~oh4230.bcs~ ~sod2bg2_iu/scripts/oh4230.baf~	// Imbued Shadow Gem
