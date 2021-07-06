@@ -55,7 +55,7 @@
 54 - Green Dragonscale Armor +4
 55 - Silver Dragon Blade +4
 56 - Silver Dragon Blade +5
-57 - Deprecated
+57 - Acid-Etched Boomerang Dagger +3
 58 - Tongue of Acid +4
 59 - Tongue of Acid +5
 60 - The Night's Embrace +7 (leather + chain variant)
@@ -72,7 +72,7 @@
 71 - Trollkiller's Fireball/Thunder Thrust/Hoar of Frost/Corrosion/Ko'Dezza's Multi-Fireball/Ko'Dezza's Slime Golem/Fell Rage/Infernal Bone Shield/Maelstrom/Cataclysm
 72 - Heartwood ring of Water
 73 - Water's Edge +5
-74 - Deprecated
+74 - Blizzard Axe +4
 75 - Crimson Dawn +3
 76 - Severance +3
 77 - Crimson Dawn +5
@@ -158,6 +158,11 @@
 157 - Mace of Disruption +2
 158 - Flail of Ages +4
 159 - Dread Hammer +3
+160 - Acid-Etched Boomerang Dagger +5
+161 - Blizzard Axe +5
+162 - Lucky Boots
+163 - Ashideena +3
+164 - Ashideena +5
 */
 
 IF
@@ -832,17 +837,17 @@ THEN
     StartDialogueNoSet(Player1)
 END
 
-//IF
-  //Global("DTKItemsCespy","GLOBAL",57)
-  //Global("ImpForgeStuff","GLOBAL",1)
-//THEN
-  //RESPONSE #100
-    //SetGlobal("DTKItemsCespy","GLOBAL",0)
-    //SetGlobal("ImpForgeStuff","GLOBAL",0)
-    //SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
-    //GiveItemCreate("dtkshld3",Player1,0,0,0) - deprecated
-    //StartDialogueNoSet(Player1)
-//END
+IF
+  Global("DTKItemsCespy","GLOBAL",57)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkdag1",Player1,0,0,0) 
+    StartDialogueNoSet(Player1)
+END
 
 IF
   Global("DTKItemsCespy","GLOBAL",58)
@@ -1036,17 +1041,17 @@ THEN
     StartDialogueNoSet(Player1)
 END
 
-//IF
-  //Global("DTKItemsCespy","GLOBAL",74)
-  //Global("ImpForgeStuff","GLOBAL",1)
-//THEN
-  //RESPONSE #100
-    //SetGlobal("DTKItemsCespy","GLOBAL",0)
-    //SetGlobal("ImpForgeStuff","GLOBAL",0)
-    //SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
-   //GiveItemCreate("dtkhoarf",Player1,0,0,0) // Hoar of Frost
-   //StartDialogueNoSet(Player1)
-//END
+IF
+  Global("DTKItemsCespy","GLOBAL",74)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkax1ha",Player1,0,0,0) // Blizzard Axe +4
+    StartDialogueNoSet(Player1)
+END
 
 IF
   Global("DTKItemsCespy","GLOBAL",75)
@@ -2065,5 +2070,65 @@ THEN
     SetGlobal("ImpForgeStuff","GLOBAL",0)
     SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
     GiveItemCreate("dtkham3",Player1,0,3,0) // Dread Hammer +3
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",160)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkdag2",Player1,0,0,0) // Acid-Etched Boomerang Dagger +5
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",161)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkax1hb",Player1,0,1,0) // Blizzard Axe +5
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",162)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("bdmisc36",Player1,0,0,0) // Lucky Boots
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",163)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkham4",Player1,0,30,0) // Ashideena +3
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("DTKItemsCespy","GLOBAL",164)
+  Global("ImpForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("DTKItemsCespy","GLOBAL",0)
+    SetGlobal("ImpForgeStuff","GLOBAL",0)
+    SetGlobal("ItemMaker","GLOBAL",999) // just to let cespy use his current post-forge dlg
+    GiveItemCreate("dtkham4a",Player1,0,30,0) // Ashideena +5
     StartDialogueNoSet(Player1)
 END

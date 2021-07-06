@@ -3,7 +3,7 @@
 BACKUP ~sod2bg2_iu/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/~
 
-VERSION ~v2.0.0~
+VERSION ~v2.0.1~
 
 README ~sod2bg2_iu/readme.html~
 
@@ -165,7 +165,13 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkvenbr.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkblabr.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdevd.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkkfrz.pro~
-
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdglor.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdag1.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkvbst.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi1.pro~
+	COPY_EXISTING ~dtkashi1.pro~ ~override~
+	WRITE_SHORT 0x21a ~%dtkashi%~
 
 //////////////////////////
 //Adding Creatures  //////
@@ -1756,6 +1762,10 @@ COPY ~sod2bg2_iu/spl/bdblun04.spl~ ~override~
   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4035) END
 END
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdblun07.spl~ BEGIN // check if already present for EET games
+COPY ~sod2bg2_iu/spl/bdblun07.spl~ ~override~
+END
+
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bddagg05.spl~ BEGIN // check if already present for EET games
 COPY ~sod2bg2_iu/spl/bddagg05.spl~ ~override~
 END
@@ -1840,6 +1850,22 @@ END
 //Adding SoD items///////////
 /////////////////////////////
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdmisc36.itm~ BEGIN // check if already present for EET games
+COPY ~sod2bg2_iu/itm/luckyboot/bdmisc36.itm~ ~override~	  //Lucky Boots
+  SAY NAME1 @2692
+  SAY NAME2 @2801
+  SAY UNIDENTIFIED_DESC @2694
+  SAY DESC @2802
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdsw1h21.itm~ BEGIN // check if already present for EET games
+COPY ~sod2bg2_iu/itm/vex/bdsw1h21.itm~ ~override~	  //Vexation +2
+  SAY NAME1 @2117
+  SAY NAME2 @2119
+  SAY UNIDENTIFIED_DESC @2118
+  SAY DESC @2120
+END
+
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdblun04.itm~ BEGIN // check if already present for EET games
 COPY ~sod2bg2_iu/itm/martyr/bdblun04.itm~ ~override~	  //Martyr's Morningstar +2
   SAY NAME1 @2716
@@ -1895,15 +1921,15 @@ END
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdsw1h02.itm~ BEGIN // check if already present for EET games  
 COPY ~sod2bg2_iu/itm/acid/bdsw1h02.itm~ ~override~ 	//Tongue of Acid +3
 WRITE_ASCII 0x3a dtktocid	//new icon for tongue of acid
-WRITE_ASCII 0x72 dtktocid
   SAY NAME1 @2000
   SAY NAME2 @2001
   SAY DESC @2002
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 STR_VAR icon = dtktocid END
 END
 		ACTION_IF FILE_EXISTS_IN_GAME ~bdsw1h02.itm~ BEGIN // check if already present for EET games  
 		COPY_EXISTING ~bdsw1h02.itm~ ~override~ 	//Tongue of Acid +3
 		WRITE_ASCII 0x3a dtktocid	//new icon for tongue of acid
-		WRITE_ASCII 0x72 dtktocid
+		LPF ALTER_ITEM_HEADER INT_VAR header = 1 STR_VAR icon = dtktocid END
 	END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdleat05.itm~ BEGIN // check if already present for EET games  
@@ -2200,8 +2226,10 @@ COPY ~sod2bg2_iu/itm/modronheart/bdamul08.itm~ ~override~	//Modron Heart
 END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdax1h03.itm~ BEGIN // check if already present for EET games
-COPY ~sod2bg2_iu/itm/chillaxe/bdax1h03.itm~ ~override~	//Chill Axe
+COPY ~sod2bg2_iu/itm/chillaxe/bdax1h03.itm~ ~override~	//Chill Axe +2
+  SAY NAME1 @2813
   SAY NAME2 @2361
+  SAY UNIDENTIFIED_DESC @2814
   SAY DESC @2362
   	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4003) END
 END
@@ -2803,46 +2831,43 @@ COPY ~sod2bg2_iu/iwdresource/itm/bess.itm~ ~override~	//The Love of Black Bess +
   WRITE_LONG 0x98 (BIT0)
 END
 
-ACTION_IF NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ BEGIN	//sw1h45 exists as a different item in EET and BG2, this is used instead of file name check to counter it
-	ACTION_IF NOT FILE_EXISTS_IN_GAME ~idpro237.pro~ BEGIN // check if already present
-	ADD_PROJECTILE ~sod2bg2_iu/iwdresource/pro/idpro237.pro~
-	END
-		ACTION_IF NOT FILE_EXISTS_IN_GAME ~curseh.vvc~ BEGIN // check if already present
-		COPY ~sod2bg2_iu/iwdresource/vvc/curseh.vvc~ ~override~
-		COPY ~sod2bg2_iu/iwdresource/bam/area1x.bam~ ~override~
-		END
-			ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p99.wav~ BEGIN // check if already present
-			COPY ~sod2bg2_iu/iwdresource/wav/#eff_p99.wav~ ~override~
-			END
-				ACTION_IF NOT FILE_EXISTS_IN_GAME ~#bless.vvc~ BEGIN // check if already present
-				COPY ~sod2bg2_iu/iwdresource/vvc/#bless.vvc~ ~override~
-				COPY ~sod2bg2_iu/iwdresource/bam/curseh.bam~ ~override~
-				END
-					ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p32.wav~ BEGIN // check if already present
-					COPY ~sod2bg2_iu/iwdresource/wav/#eff_p32.wav~ ~override~
-					END
-						ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_e04.wav~ BEGIN // check if already present
-						COPY ~sod2bg2_iu/iwdresource/wav/#eff_e04.wav~ ~override~
-						END
-							COPY ~sod2bg2_iu/iwdresource/spl/sppr112.spl~ ~override/dtkdglor.spl~	//Darkend Glory +2
-							LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%idpro237%" STR_VAR icon = dtkcursb END
-							SAY NAME1 @3027 // Spell Name
-							SAY NAME2 @3027
-							SAY UNIDENTIFIED_DESC @3028  // Spell description
-							SAY DESC @3028
-							WRITE_ASCII 0x3a dtkcursc
-							LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4045) END
-								COPY ~sod2bg2_iu/iwdresource/itm/sw1h45.itm~ ~override/dtkdglor.itm~	//Darkened Glory +2 - file name changed to avoid conflicts
-								  SAY NAME1 @2558
-								  SAY NAME2 @2559
-								  SAY UNIDENTIFIED_DESC @2560
-								  SAY DESC @2561
-								  WRITE_ASCII 0x58 csw1h49
-								  WRITE_ASCII 0x3a dtkdglor
-								  WRITE_ASCII 0x76 dtkdglor
-								  WRITE_LONG 0x98 (BIT0)
-								  LPF ALTER_EFFECT INT_VAR match_opcode = 341 STR_VAR resource = dtkdglor END									
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~curseh.vvc~ BEGIN // check if already present
+COPY ~sod2bg2_iu/iwdresource/vvc/curseh.vvc~ ~override~
+COPY ~sod2bg2_iu/iwdresource/bam/area1x.bam~ ~override~
 END
+	ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p99.wav~ BEGIN // check if already present
+	COPY ~sod2bg2_iu/iwdresource/wav/#eff_p99.wav~ ~override~
+	END
+		ACTION_IF NOT FILE_EXISTS_IN_GAME ~#bless.vvc~ BEGIN // check if already present
+		COPY ~sod2bg2_iu/iwdresource/vvc/#bless.vvc~ ~override~
+		COPY ~sod2bg2_iu/iwdresource/bam/curseh.bam~ ~override~
+		END
+			ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p32.wav~ BEGIN // check if already present
+			COPY ~sod2bg2_iu/iwdresource/wav/#eff_p32.wav~ ~override~
+			END
+				ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_e04.wav~ BEGIN // check if already present
+				COPY ~sod2bg2_iu/iwdresource/wav/#eff_e04.wav~ ~override~
+				END
+					COPY ~sod2bg2_iu/iwdresource/spl/sppr112.spl~ ~override/dtkdglor.spl~	//Darkend Glory +2
+					LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkdglor%" STR_VAR icon = dtkcursb END
+					SAY NAME1 @3027 // Spell Name
+					SAY NAME2 @3027
+					SAY UNIDENTIFIED_DESC @3028  // Spell description
+					SAY DESC @3028
+					WRITE_ASCII 0x3a dtkcursc
+					LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4045) END
+						COPY ~sod2bg2_iu/iwdresource/itm/sw1h45.itm~ ~override/dtkdglor.itm~	//Darkened Glory +2 - file name changed to avoid conflicts
+						  SAY NAME1 @2558
+						  SAY NAME2 @2559
+						  SAY UNIDENTIFIED_DESC @2560
+						  SAY DESC @2561
+						  WRITE_ASCII 0x58 csw1h49
+						  WRITE_ASCII 0x3a dtkdglor
+						  WRITE_ASCII 0x76 dtkdglor
+						  WRITE_LONG 0x98 (BIT0)
+						  LPF ALTER_EFFECT INT_VAR match_opcode = 341 STR_VAR resource = dtkdglor END									
+
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~lucky.itm~ BEGIN // check if already present to prevent conflicts
 COPY ~sod2bg2_iu/iwdresource/bam/ilucky.bam~ ~override~
@@ -3211,6 +3236,10 @@ ACTION_IF NOT FILE_EXISTS_IN_GAME ~waukeen.itm~ BEGIN // check if already presen
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
+COPY ~sod2bg2_iu/spl/dtkvbst.spl~ ~override~
+   SAY NAME1 @3014  // Spell Name
+   SAY NAME2 @3014
+   LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkvbst%" END
 
 COPY ~sod2bg2_iu/spl/dtkbln1a.spl~ ~override~
    
@@ -3302,7 +3331,9 @@ COPY ~sod2bg2_iu/spl/dtkwhirl.spl~ ~override~
 COPY ~sod2bg2_iu/spl/dtkxbow1.spl~ ~override~
 
 COPY ~sod2bg2_iu/spl/dtkmagsp.spl~ ~override~
-  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkmagsp%" END
+	SAY NAME1 @4081
+	SAY NAME2 @4081
+	  LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkmagsp%" END
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@4021) STR_VAR bam_file = dtkmagpp RET icon END
 COPY ~sod2bg2_iu/spl/dtkmagsb.spl~ ~override~
@@ -3413,6 +3444,48 @@ COPY ~sod2bg2_iu/spl/dtklea2.spl~ ~override~	//Shadow Mirror Image
 ////////////////////////////////////////////
 // Adding New Items/////////////////////////
 ////////////////////////////////////////////
+COPY ~sod2bg2_iu/itm/ashideena1/dtkham4a.itm~ ~override~	//Ashideena +5
+  SAY NAME1 @2530
+  SAY NAME2 @2817
+  SAY UNIDENTIFIED_DESC @2532
+  SAY DESC @2818
+	LPF ALTER_ITEM_HEADER INT_VAR header = 2 projectile = EVAL "%dtkashi1%" END
+
+COPY ~sod2bg2_iu/itm/ashideena/dtkham4.itm~ ~override~	//Ashideena +3
+  SAY NAME1 @2530
+  SAY NAME2 @2815
+  SAY UNIDENTIFIED_DESC @2532
+  SAY DESC @2816
+	LPF ALTER_ITEM_HEADER INT_VAR header = 2 projectile = EVAL "%dtkashi%" END
+
+COPY ~sod2bg2_iu/itm/chillaxe3/dtkax1hb.itm~ ~override~	//Blizzard Axe +5
+  SAY NAME1 @2813
+  SAY NAME2 @2811
+  SAY UNIDENTIFIED_DESC @2814
+  SAY DESC @2812
+  	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4003) END
+
+COPY ~sod2bg2_iu/itm/chillaxe2/dtkax1ha.itm~ ~override~	//Blizzard Axe +4
+  SAY NAME1 @2813
+  SAY NAME2 @2809
+  SAY UNIDENTIFIED_DESC @2814
+  SAY DESC @2810
+  	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4003) END
+
+COPY ~sod2bg2_iu/itm/aciddagg3/dtkdag2.itm~ ~override~	  //Acid-Etched Boomerang Dagger +5
+  SAY NAME1 @2805
+  SAY NAME2 @2807
+  SAY UNIDENTIFIED_DESC @2806
+  SAY DESC @2808
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdag1%" END
+
+COPY ~sod2bg2_iu/itm/aciddagg2/dtkdag1.itm~ ~override~	  //Acid-Etched Boomerang Dagger +3
+  SAY NAME1 @2805
+  SAY NAME2 @2803
+  SAY UNIDENTIFIED_DESC @2806
+  SAY DESC @2804
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdag1%" END
+
 
 COPY ~sod2bg2_iu/itm/frostfirebolt/dtkbol1.itm~ ~override~	  //Bolt of Frostfire +2
   LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkffblt%" END
@@ -3659,22 +3732,12 @@ COPY ~sod2bg2_iu/itm/creitems/dtkcharw.itm~ ~override~	//attack for charged ghou
 	SAY NAME1 @5051
 	SAY NAME2 @5051
 
-COPY ~sod2bg2_iu/itm/acid4/dtkswd01.itm~ ~override~		//Tongue of Burning Acid +4
-  SAY NAME1 @2000
-  SAY NAME2 @2003
-  SAY DESC @2004
-
-COPY ~sod2bg2_iu/itm/acid5/dtkswd1a.itm~ ~override~ 	//Tongue of Burning Acid +5
-  SAY NAME1 @2000
-  SAY NAME2 @2005
-  SAY DESC @2006
-
 COPY ~sod2bg2_iu/itm/softft1/dtkboot1.itm~ ~override~ 	//Quicksilver Sabatons
   SAY NAME1 @2011
   SAY NAME2 @2014
   SAY DESC @2015
 
-COPY ~sod2bg2_iu/itm/crownt/dtkcrwn1.itm~ ~override~ //Crown of Truths
+COPY ~sod2bg2_iu/itm/crownt/dtkcrwn1.itm~ ~override~ //Crown of Lies +1
   SAY NAME1 @2016
   SAY NAME2 @2020
   SAY DESC @2021
@@ -3870,42 +3933,43 @@ COPY ~sod2bg2_iu/itm/eledagg1/dtktdag1.itm~ ~override~	//Element's Fury +3
   SAY NAME2 @2139
   SAY UNIDENTIFIED_DESC @2548
   SAY DESC @2140
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdagg1%" END
 
 COPY ~sod2bg2_iu/itm/eledagg2d/dtktdag2.itm~ ~override~	//Element's Fury +4 - ice
   SAY NAME1 @2546
   SAY NAME2 @2141
   SAY UNIDENTIFIED_DESC @2548
   SAY DESC @2142
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdagg1%" END
   
 COPY ~sod2bg2_iu/itm/eledagg2a/dtktdag3.itm~ ~override~	//Element's Fury +4 - fire
   SAY NAME1 @2546
   SAY NAME2 @2141
   SAY UNIDENTIFIED_DESC @2548
   SAY DESC @2653
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdagg1%" END
   
 COPY ~sod2bg2_iu/itm/eledagg2b/dtktdag4.itm~ ~override~	//Element's Fury +4 - acid
   SAY NAME1 @2546
   SAY NAME2 @2141
   SAY UNIDENTIFIED_DESC @2548
   SAY DESC @2654
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdagg1%" END
   
 COPY ~sod2bg2_iu/itm/eledagg2c/dtktdag5.itm~ ~override~	//Element's Fury +4 - electricity
   SAY NAME1 @2546
   SAY NAME2 @2141
   SAY UNIDENTIFIED_DESC @2548
   SAY DESC @2655
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkdagg1%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkdagg1%" END
 
 COPY ~sod2bg2_iu/itm/maelaxe/dtkaxe01.itm~ ~override~	//Maelstrom Axe +3
   SAY NAME1 @2660
   SAY NAME2 @2143
   SAY UNIDENTIFIED_DESC @2661
   SAY DESC @2144
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkaxel%" END
+  LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkaxel%" END
+
 
 COPY ~sod2bg2_iu/itm/maelpike/dtkhalb1.itm~ ~override~	//Maelstrom Pike +4
   SAY NAME1 @2664
@@ -3919,6 +3983,7 @@ COPY ~sod2bg2_iu/itm/maelaxe1/dtkaxe02.itm~ ~override~	//Maelstrom Axe +4
   SAY UNIDENTIFIED_DESC @2661
   SAY DESC @2148
   LPF ALTER_ITEM_HEADER INT_VAR header = 1 projectile = EVAL "%dtkaxham%" END
+  
   
 COPY ~sod2bg2_iu/itm/maelaxe2/dtkaxe2a.itm~ ~override~	//Maelstrom Axe +5
   SAY NAME1 @2660
@@ -3959,7 +4024,9 @@ COPY ~sod2bg2_iu/itm/egons1/dtkshld2.itm~ ~override~	//Bulwark of Egons +3
   SAY DESC @2156
 
 COPY ~sod2bg2_iu/itm/vex1/dtkswd04.itm~ ~override~	//Vexation +5
+  SAY NAME1 @2117	
   SAY NAME2 @2157
+  SAY UNIDENTIFIED_DESC @2118
   SAY DESC @2158
 
 COPY ~sod2bg2_iu/itm/egons2/dtkshd2a.itm~ ~override~	//Bulwark of Egons +4
@@ -4640,7 +4707,7 @@ COMPILE ~sod2bg2_iu/dialogue/crom18.d~ // Chromatic Crimson/Carmine Viridian arm
 COMPILE ~sod2bg2_iu/dialogue/crom19.d~ // Chromatic Shadow/Umbral Viridian armor
 COMPILE ~sod2bg2_iu/dialogue/crom20.d~ // Stalker's Gauntlets of Blinding Strike
 COMPILE ~sod2bg2_iu/dialogue/crom21.d~ // The Scorched Earth +5
-COMPILE ~sod2bg2_iu/dialogue/crom22.d~ // Cloverleaf +1
+COMPILE ~sod2bg2_iu/dialogue/crom22.d~ // Tymora's Cinch
 COMPILE ~sod2bg2_iu/dialogue/crom23.d~ // Uncursed Staff of Antipode
 COMPILE ~sod2bg2_iu/dialogue/crom23a.d~ // Uncursed Staff of Antipode - recharge
 COMPILE ~sod2bg2_iu/dialogue/crom24.d~ // Nasty Backwhacker +4
@@ -4650,7 +4717,7 @@ COMPILE ~sod2bg2_iu/dialogue/crom27.d~ // Quiver of Void-Tipped Arrows +3
 COMPILE ~sod2bg2_iu/dialogue/crom28.d~ // Bag of Darkness +3
 COMPILE ~sod2bg2_iu/dialogue/crom29.d~ // Illusory Cloak of Arcana
 COMPILE ~sod2bg2_iu/dialogue/crom30.d~ // Element's Fury +3
-COMPILE ~sod2bg2_iu/dialogue/crom31.d~ // Element's Fury +4
+COMPILE ~sod2bg2_iu/dialogue/crom31.d~ // Element's Fury +4 (4 variants)
 COMPILE ~sod2bg2_iu/dialogue/crom32.d~ // Maelstrom Axe +3 or Pike +4
 COMPILE ~sod2bg2_iu/dialogue/crom33.d~ // Maelstrom Axe +4
 COMPILE ~sod2bg2_iu/dialogue/crom34.d~ // Maelstrom Pike +5
@@ -4665,7 +4732,7 @@ COMPILE ~sod2bg2_iu/dialogue/crom42.d~ // Shadowed Spear of the Tempest +6
 COMPILE ~sod2bg2_iu/dialogue/crom43.d~ // Green Dragonscale Armor +4/Dragonscale Shield +4(Green Scales)/Green Dragon Plate +3/Green Dragon Helm
 COMPILE ~sod2bg2_iu/dialogue/crom44.d~ // Silver Dragon Blade +4
 COMPILE ~sod2bg2_iu/dialogue/crom45.d~ // Silver Dragon Blade +5
-//COMPILE ~sod2bg2_iu/dialogue/crom46.d~ // Deprecated
+COMPILE ~sod2bg2_iu/dialogue/crom46.d~ // Acid-Etched Boomerang Dagger +3
 COMPILE ~sod2bg2_iu/dialogue/crom47.d~ // Tongue of Acid +5
 COMPILE ~sod2bg2_iu/dialogue/crom48.d~ // The Night's Embrace +7
 COMPILE ~sod2bg2_iu/dialogue/crom49.d~ // Wicked Jester's Bracers
@@ -4675,9 +4742,9 @@ COMPILE ~sod2bg2_iu/dialogue/crom52.d~ // Varscona +3
 COMPILE ~sod2bg2_iu/dialogue/crom53.d~ // Varscona +4
 COMPILE ~sod2bg2_iu/dialogue/crom54.d~ // Stonefire +5
 COMPILE ~sod2bg2_iu/dialogue/crom55.d~ // Sourceror's Cap
-COMPILE ~sod2bg2_iu/dialogue/crom56.d~ // Sourceror's Cap +1
-COMPILE ~sod2bg2_iu/dialogue/crom57.d~ // Raiment of the Lich +4
-COMPILE ~sod2bg2_iu/dialogue/crom58.d~ // Raiment of the Lich +5
+COMPILE ~sod2bg2_iu/dialogue/crom56.d~ // Sourceror's Chapeau
+COMPILE ~sod2bg2_iu/dialogue/crom57.d~ // Raiment of the Lich
+COMPILE ~sod2bg2_iu/dialogue/crom58.d~ // Raiment of the Demilich
 COMPILE ~sod2bg2_iu/dialogue/crom59.d~ // Trollkiller's Fireball/Thunder Thrust/Hoar of Frost/Corrosion/Ko'Dezza's Multi-Fireball/Ko'Dezza's Slime Golem/Fell Rage/Infernal Bone Shield/Maelstrom/Cataclysm
 COMPILE ~sod2bg2_iu/dialogue/crom60.d~ // Water's Edge +5
 COMPILE ~sod2bg2_iu/dialogue/crom61.d~ // Dervish Crescent of Speed +5
@@ -4686,7 +4753,7 @@ COMPILE ~sod2bg2_iu/dialogue/crom63.d~ // Crimson Dawn +3
 COMPILE ~sod2bg2_iu/dialogue/crom64.d~ // Severance +3
 COMPILE ~sod2bg2_iu/dialogue/crom65.d~ // Crimson Dawn +5
 COMPILE ~sod2bg2_iu/dialogue/crom66.d~ // Severance +5
-COMPILE ~sod2bg2_iu/dialogue/crom67.d~ // Black Dragon Plate +3/Black Dragonscale +4/Dragonscale Shield +4 (black scales)/Black Dragon Helm
+COMPILE ~sod2bg2_iu/dialogue/crom67.d~ // Black Dragon Plate +3/Black Dragonscale Armor +4/Black Dragonscale Shield +3 /Black Dragon Helm
 COMPILE ~sod2bg2_iu/dialogue/crom68.d~ // Chromatic Crimson/Carmine Viridian/Scarlet Viridescent Dragonscale
 COMPILE ~sod2bg2_iu/dialogue/crom69.d~ // Chromatic Shadow/Umbral Viridian Dragon Plate
 COMPILE ~sod2bg2_iu/dialogue/crom70.d~ // Martyr's Morningstar +3
@@ -4695,9 +4762,9 @@ COMPILE ~sod2bg2_iu/dialogue/crom72.d~ // Heartwood Ring - Original, Fire, Water
 COMPILE ~sod2bg2_iu/dialogue/crom73.d~ // Bolt of Frostfire +2
 COMPILE ~sod2bg2_iu/dialogue/crom74.d~ // Bolt of Frostfire +2
 COMPILE ~sod2bg2_iu/dialogue/crom75.d~ // Remorhaz Shell Helm
-COMPILE ~sod2bg2_iu/dialogue/crom76.d~ // Gift of the Demon +3
-COMPILE ~sod2bg2_iu/dialogue/crom77.d~ // Gift of the Demon +4
-COMPILE ~sod2bg2_iu/dialogue/crom78.d~ // Gift of the Demon +5
+COMPILE ~sod2bg2_iu/dialogue/crom76.d~ // Restored Gift of the Demon +3
+COMPILE ~sod2bg2_iu/dialogue/crom77.d~ // Infernal Gift of the Demon +4
+COMPILE ~sod2bg2_iu/dialogue/crom78.d~ // Infernal Gift of the Demon +5
 COMPILE ~sod2bg2_iu/dialogue/crom79.d~ // Varscona +5
 COMPILE ~sod2bg2_iu/dialogue/crom80.d~ // Maelstrom Axe +5
 COMPILE ~sod2bg2_iu/dialogue/crom81.d~ // Maelstrom Pike +6
@@ -4711,7 +4778,12 @@ COMPILE ~sod2bg2_iu/dialogue/crom88.d~ // Silver Dragon Scale(Plate)/Silver Drag
 COMPILE ~sod2bg2_iu/dialogue/crom89.d~ // White Dragon Plate +2/White Dragon Scale Armor(original)/Dragonscale Shield +4(White Scales)/White Dragon Helm
 COMPILE ~sod2bg2_iu/dialogue/crom90.d~ // Blue Dragon Plate/Blue Dragonscale Armor +6/Dragonscale Shield +4(Blue Scales)/Blue Dragon Helm
 COMPILE ~sod2bg2_iu/dialogue/crom91.d~ // Dread Hammer +3
-
+COMPILE ~sod2bg2_iu/dialogue/crom92.d~ // Acid-Etched Boomerang Dagger +5
+COMPILE ~sod2bg2_iu/dialogue/crom93.d~ // Blizzard Axe +4
+COMPILE ~sod2bg2_iu/dialogue/crom94.d~ // Blizzard Axe +5
+COMPILE ~sod2bg2_iu/dialogue/crom95.d~ // Lucky Boots
+COMPILE ~sod2bg2_iu/dialogue/crom96.d~ // Ashideena +3
+COMPILE ~sod2bg2_iu/dialogue/crom97.d~ // Ashideena +5
 
 EXTEND_BOTTOM ~ar0334.bcs~ ~sod2bg2_iu/scripts/ar0334.baf~		//item generating script for cromwell
 
@@ -4739,13 +4811,13 @@ COMPILE ~sod2bg2_iu/dialogue/cespy12.d~ // Robe of Roaring Flames
 COMPILE ~sod2bg2_iu/dialogue/cespy13.d~ // Mirrored Buckler of the Fist +2
 COMPILE ~sod2bg2_iu/dialogue/cespy14.d~ // Sundermaul +5
 COMPILE ~sod2bg2_iu/dialogue/cespy15.d~ // The Scorched Earth +3
-COMPILE ~sod2bg2_iu/dialogue/cespy16.d~ // Solar Boots of the Cosmos
+COMPILE ~sod2bg2_iu/dialogue/cespy16.d~ // Star-Strewn Boots of Antimagic
 COMPILE ~sod2bg2_iu/dialogue/cespy17.d~ // Verdant Crimson/Shadow armor
 COMPILE ~sod2bg2_iu/dialogue/cespy18.d~ // Chromatic Crimson/Carmine Viridian armor
 COMPILE ~sod2bg2_iu/dialogue/cespy19.d~ // Chromatic Shadow/Umbral Viridian armor
 COMPILE ~sod2bg2_iu/dialogue/cespy20.d~ // Stalker's Gauntlets of Blinding Strike
 COMPILE ~sod2bg2_iu/dialogue/cespy21.d~ // The Scorched Earth +5
-COMPILE ~sod2bg2_iu/dialogue/cespy22.d~ // Cloverleaf +1
+COMPILE ~sod2bg2_iu/dialogue/cespy22.d~ // Tymora's Cinch
 COMPILE ~sod2bg2_iu/dialogue/cespy23.d~ // Uncursed Staff of Antipode
 COMPILE ~sod2bg2_iu/dialogue/cespy23a.d~ // Uncursed Staff of Antipode - recharge
 COMPILE ~sod2bg2_iu/dialogue/cespy24.d~ // Nasty Backwhacker +4
@@ -4755,7 +4827,7 @@ COMPILE ~sod2bg2_iu/dialogue/cespy27.d~ // Quiver of Void-Tipped Arrows +3
 COMPILE ~sod2bg2_iu/dialogue/cespy28.d~ // Bag of Darkness +3
 COMPILE ~sod2bg2_iu/dialogue/cespy29.d~ // Illusory Cloak of Arcana
 COMPILE ~sod2bg2_iu/dialogue/cespy30.d~ // Element's Fury +3
-COMPILE ~sod2bg2_iu/dialogue/cespy31.d~ // Element's Fury +4
+COMPILE ~sod2bg2_iu/dialogue/cespy31.d~ // Element's Fury +4 (4 variants)
 COMPILE ~sod2bg2_iu/dialogue/cespy32.d~ // Maelstrom Axe +3 or Pike +4
 COMPILE ~sod2bg2_iu/dialogue/cespy33.d~ // Maelstrom Axe +4
 COMPILE ~sod2bg2_iu/dialogue/cespy34.d~ // Maelstrom Pike +5
@@ -4767,10 +4839,10 @@ COMPILE ~sod2bg2_iu/dialogue/cespy39.d~ // Bulwark of Egons +4
 COMPILE ~sod2bg2_iu/dialogue/cespy40.d~ // Astral Crossbow +4
 COMPILE ~sod2bg2_iu/dialogue/cespy41.d~ // Shadowed Spear of the Tempest +4
 COMPILE ~sod2bg2_iu/dialogue/cespy42.d~ // Shadowed Spear of the Tempest +6
-//COMPILE ~sod2bg2_iu/dialogue/cespy43.d~ // deprecated
+COMPILE ~sod2bg2_iu/dialogue/cespy43.d~ // Acid-Etched Boomerang Dagger +3
 COMPILE ~sod2bg2_iu/dialogue/cespy44.d~ // Silver Dragon Blade +4
 COMPILE ~sod2bg2_iu/dialogue/cespy45.d~ // Silver Dragon Blade +5
-//COMPILE ~sod2bg2_iu/dialogue/cespy46.d~ // deprecated
+COMPILE ~sod2bg2_iu/dialogue/cespy46.d~ // Acid-Etched Boomerang Dagger +5
 COMPILE ~sod2bg2_iu/dialogue/cespy47.d~ // Tongue of Acid +5
 COMPILE ~sod2bg2_iu/dialogue/cespy48.d~ // The Night' Embrace +7
 COMPILE ~sod2bg2_iu/dialogue/cespy49.d~ // Wicked Jester's Bracers
@@ -4780,9 +4852,9 @@ COMPILE ~sod2bg2_iu/dialogue/cespy52.d~ // Varscona +3
 COMPILE ~sod2bg2_iu/dialogue/cespy53.d~ // Varscona +4
 COMPILE ~sod2bg2_iu/dialogue/cespy54.d~ // Stonefire +5
 COMPILE ~sod2bg2_iu/dialogue/cespy55.d~ // Sourceror's Cap
-COMPILE ~sod2bg2_iu/dialogue/cespy56.d~ // Sourceror's Cap +1
-COMPILE ~sod2bg2_iu/dialogue/cespy57.d~ // Raiment of the Lich +4
-COMPILE ~sod2bg2_iu/dialogue/cespy58.d~ // Raiment of the Lich +5
+COMPILE ~sod2bg2_iu/dialogue/cespy56.d~ // Sourceror's Chapeau
+COMPILE ~sod2bg2_iu/dialogue/cespy57.d~ // Raiment of the Lich
+COMPILE ~sod2bg2_iu/dialogue/cespy58.d~ // Raiment of the Demilich
 COMPILE ~sod2bg2_iu/dialogue/cespy59.d~ // Trollkiller's Fireball/Thunder Thrust/Hoar of Frost/Corrosion/Ko'Dezza's Multi-Fireball/Ko'Dezza's Slime Golem/Fell Rage/Infernal Bone Shield/Maelstrom/Cataclysm
 COMPILE ~sod2bg2_iu/dialogue/cespy60.d~ // Water's Edge +5
 COMPILE ~sod2bg2_iu/dialogue/cespy61.d~ // Dervish Crescent of Speed +5
@@ -4791,18 +4863,18 @@ COMPILE ~sod2bg2_iu/dialogue/cespy63.d~ // Crimson Dawn +3
 COMPILE ~sod2bg2_iu/dialogue/cespy64.d~ // Severance +3
 COMPILE ~sod2bg2_iu/dialogue/cespy65.d~ // Crimson Dawn +5
 COMPILE ~sod2bg2_iu/dialogue/cespy66.d~ // Severance +5
-//COMPILE ~sod2bg2_iu/dialogue/cespy67.d~ // deprecated
+COMPILE ~sod2bg2_iu/dialogue/cespy67.d~ // Blizzard Axe +4
 COMPILE ~sod2bg2_iu/dialogue/cespy68.d~ // Chromatic Crimson/Scarlet Viridescent/Carmine Viridian Dragonscale
 COMPILE ~sod2bg2_iu/dialogue/cespy69.d~ // Chromatic Shadow/Umbral Viridian Dragon Plate
 COMPILE ~sod2bg2_iu/dialogue/cespy70.d~ // Martyr's Morningstar +3
 COMPILE ~sod2bg2_iu/dialogue/cespy71.d~ // Martyr's Morningstar +5
-//COMPILE ~sod2bg2_iu/dialogue/cespy72.d~ // deprecated
+COMPILE ~sod2bg2_iu/dialogue/cespy72.d~ // Blizzard Axe +5
 COMPILE ~sod2bg2_iu/dialogue/cespy73.d~ // Bolt of Frostfire +2
 COMPILE ~sod2bg2_iu/dialogue/cespy74.d~ // Bolt of Frostfire +2
 COMPILE ~sod2bg2_iu/dialogue/cespy75.d~ // Remorhaz Shell Helm
-COMPILE ~sod2bg2_iu/dialogue/cespy76.d~ // Gift of the Demon +3
-COMPILE ~sod2bg2_iu/dialogue/cespy77.d~ // Gift of the Demon +4
-COMPILE ~sod2bg2_iu/dialogue/cespy78.d~ // Gift of the Demon +5
+COMPILE ~sod2bg2_iu/dialogue/cespy76.d~ // Restored Gift of the Demon +3
+COMPILE ~sod2bg2_iu/dialogue/cespy77.d~ // Infernal Gift of the Demon +4
+COMPILE ~sod2bg2_iu/dialogue/cespy78.d~ // Infernal Gift of the Demon +5
 COMPILE ~sod2bg2_iu/dialogue/cespy79.d~ // Varscona +5
 COMPILE ~sod2bg2_iu/dialogue/cespy80.d~ // Maelstrom Axe +5
 COMPILE ~sod2bg2_iu/dialogue/cespy81.d~ // Maelstrom Pike +6
@@ -4813,6 +4885,9 @@ COMPILE ~sod2bg2_iu/dialogue/cespy85.d~ // Plate Mail of the Hallowed Hero +5
 COMPILE ~sod2bg2_iu/dialogue/cespy86.d~ // Spider Silk Gi
 COMPILE ~sod2bg2_iu/dialogue/cespy87.d~ // Blazing Glory +5
 COMPILE ~sod2bg2_iu/dialogue/cespy88.d~ // Dread Hammer +3
+COMPILE ~sod2bg2_iu/dialogue/cespy89.d~ // Lucky Boots
+COMPILE ~sod2bg2_iu/dialogue/cespy90.d~ // Ashideena +3
+COMPILE ~sod2bg2_iu/dialogue/cespy91.d~ // Ashideena +5
 
 ////////////adding modified cromwell recipe to cespy tweak due to incompatibility with cdtweaks version with this mod///////////////////
 
@@ -4927,6 +5002,7 @@ COPY_EXISTING ~firkra02.cre~ ~override~
 		ADD_CRE_ITEM ~dtkrnd01~ #0 #0 #0 ~NONE~ ~INV~		// 50/50 Carsomyr +5 or Aster's Edge +3
 			REMOVE_CRE_ITEM ~sw2h10~	// Removing Carsomyr +5 from inventory
 				ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+					ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COPY_EXISTING ~idemon01.cre~ ~override~
   REPLACE_CRE_ITEM ~HELM02~ #0 #0 #0 ~NONE~ ~HELMET~		//Helm of Opposition
@@ -4955,10 +5031,11 @@ COPY_EXISTING ~udsilver.cre~ ~override~
 		ADD_CRE_ITEM ~dtkascrl~ #0 #0 #0 ~NONE~ ~INV~		//Ancient Scroll
 
 COPY_EXISTING ~tdr10a.cre~ ~override~
-  ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		// (Green) Dragonscale Armor 
+  ADD_CRE_ITEM ~bdleat05~ #0 #0 #0 ~NONE~ ~ARMOR~		//(Green) Dragonscale Armor 
 
 COPY_EXISTING ~maevar.cre~ ~override~
   REPLACE_CRE_ITEM ~bdleat07~ #0 #0 #0 ~NONE~ ~ARMOR~		//The Night's Embrace +3
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COPY_EXISTING ~bheye.cre~ ~override~
   ADD_CRE_ITEM ~bdboot03~ #0 #0 #0 ~NONE~ ~BOOTS~		//Star-Strewn Boots
@@ -4981,22 +5058,27 @@ COPY_EXISTING ~gorsal.cre~ ~override~
   ADD_CRE_ITEM ~dtkruby~ #0 #0 #0 ~NONE~ ~INV~		//Heart of Flame
     ADD_CRE_ITEM ~scaler~ #0 #0 #0 ~NONE~ ~INV~		//Red Scales
 	  ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 	  
 
 COPY_EXISTING ~gorchr.cre~ ~override~
   ADD_CRE_ITEM ~dtktopaz~ #0 #0 #0 ~NONE~ ~INV~		//Eye of Ichor
 	ADD_CRE_ITEM ~dtkascrl~ #0 #0 #0 ~NONE~ ~INV~		//Ancient Scroll
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
   
 COPY_EXISTING ~gorcamb.cre~ ~override~
   ADD_CRE_ITEM ~dtkbowat~ #0 #0 #0 ~NONE~ ~INV~		//Body of Water
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 
 COPY_EXISTING ~fsdragon.cre~ ~override~
   ADD_CRE_ITEM ~bdscaleg~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Green Scales
     ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 
 COPY_EXISTING ~hdragred.cre~ ~override~
   ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
     ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 
 COPY_EXISTING ~hdragsil.cre~ ~override~
   ADD_CRE_ITEM ~ohdscale~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Silver scales
@@ -5011,9 +5093,11 @@ COPY_EXISTING ~ohddixth.cre~ ~override~
 COPY_EXISTING ~dragblac.cre~ ~override~
   ADD_CRE_ITEM ~dtkscal1~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Black Scales
     ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 	
 COPY_EXISTING ~dragblue.cre~ ~override~
   ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~		//Dragon's Blood
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 
 COPY_EXISTING ~haer10.cre~ ~override~
   ADD_CRE_ITEM ~bdbelt01~ #0 #0 #0 ~NONE~ ~BELT~		//Cloverleaf
@@ -5029,9 +5113,11 @@ COPY_EXISTING ~haer15.cre~ ~override~
 
 COPY_EXISTING ~pirsea01.cre~ ~override~
   REPLACE_CRE_ITEM ~bdsw1h21~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Vexation +2
+	
 
 COPY_EXISTING ~sevpat02.cre~ ~override~
   REPLACE_CRE_ITEM ~bdblun06~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Uncursed Staff +1
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COMPILE	~sod2bg2_iu/scripts/dtkpooky.baf~	//updated script to allow pooky to use the bagpipes
 COPY_EXISTING ~sevpat03.cre~ ~override~
@@ -5055,21 +5141,22 @@ COPY_EXISTING ~cohrvale.cre~ ~override~
 
 COPY_EXISTING ~mekrat.cre~ ~override~
   ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COPY_EXISTING ~sppain.cre~ ~override~
   ADD_CRE_ITEM ~dtkrnd02~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	// 50/50 Element's Fury +2/Acid-Eteched Dagger +2
 
 COPY_EXISTING ~keldor9.cre~ ~override~
-  ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+  REPLACE_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ EQUIP TWOHANDED	//Astral Crossbow +2
   
 COPY_EXISTING ~keldor8.cre~ ~override~
-  ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+  REPLACE_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ EQUIP TWOHANDED	//Astral Crossbow +2
   
 COPY_EXISTING ~keldor10.cre~ ~override~
-  ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+  REPLACE_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ EQUIP TWOHANDED	//Astral Crossbow +2
   
 COPY_EXISTING ~keldor12.cre~ ~override~
-  ADD_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP TWOHANDED	//Astral Crossbow +2
+  REPLACE_CRE_ITEM ~bdxbow01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ EQUIP TWOHANDED	//Astral Crossbow +2
 
 COPY_EXISTING ~ohdterp.cre~ ~override~
   REPLACE_CRE_ITEM ~dtksolag~ #0 #0 #0 ~NONE~ ~SHIELD~	//Solar Aegis +3
@@ -5085,6 +5172,7 @@ COPY_EXISTING ~ddguard7.cre~ ~override~
 
 COPY_EXISTING ~ohnlanne.cre~ ~override~
   ADD_CRE_ITEM ~kossuth~ #0 #0 #0 ~NONE~ ~HELMET~	//Kossuth's Blood
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COPY_EXISTING ~ohralor.CRE~ ~override~
   ADD_CRE_ITEM ~bdhelm15~ #0 #0 #0 ~NONE~ ~HELMET~	//Headband of Focus
@@ -5100,6 +5188,7 @@ COPY_EXISTING ~vaelasa.cre~ ~override~
   
 COPY_EXISTING ~hlrevan.cre~ ~override~
   ADD_CRE_ITEM ~dtkascrl~ #0 #0 #0 ~NONE~ ~INV~		//Ancient Scroll
+	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
   
 COPY_EXISTING ~ohhdrago.cre~ ~override~
   REPLACE_CRE_ITEM ~bdsw1h01~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP		//Crimson Dawn +2
@@ -5123,16 +5212,16 @@ COPY_EXISTING ~anomen9.cre~ ~override~
   REPLACE_CRE_ITEM ~bdblun04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Martyr's Morningstar +2
   
 COPY_EXISTING ~korgan8.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdxe1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
+  REPLACE_CRE_ITEM ~bdax1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
   
 COPY_EXISTING ~korgan9.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdxe1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
+  REPLACE_CRE_ITEM ~bdax1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
   
 COPY_EXISTING ~korgan11.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdxe1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
+  REPLACE_CRE_ITEM ~bdax1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
   
 COPY_EXISTING ~korgan12.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdxe1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
+  REPLACE_CRE_ITEM ~bdax1h03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Chill Axe +2
   
 COPY_EXISTING ~rasaad8.cre~ ~override~
   REPLACE_CRE_ITEM ~bdbrac01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP		//Bracers of the Shuttered Lid
@@ -5338,25 +5427,30 @@ COPY_EXISTING ~resuna.cre~ ~override~
   
 COPY_EXISTING ~xappren1.cre~ ~override~
 	REPLACE_CRE_ITEM ~wandmis~ #17 #0 #0 ~NONE~ ~QITEM1~		//Pemby's Wand of Many Missiles
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 ACTION_IF FILE_EXISTS_IN_GAME ~tranzi.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~tranzi.cre~ ~override~
 		REPLACE_CRE_ITEM ~wandmis~ #21 #0 #0 ~NONE~ ~QITEM1~		//Pemby's Wand of Many Missiles
+			ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 
 COPY_EXISTING ~obshal05.cre~ ~override~
 	REPLACE_CRE_ITEM ~wandarm~ #8 #15 #0 ~NONE~ ~QITEM1~		//Wand of Armory
 		REPLACE_CRE_ITEM ~clck12~ #0 #0 #0 ~NONE~ ~ARMOR~	//Knave's Robe
 			REPLACE_CRE_ITEM ~staf02~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED	//Staff +1
+				ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 ACTION_IF FILE_EXISTS_IN_GAME ~daitel.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~daitel.cre~ ~override~
 		REPLACE_CRE_ITEM ~wandarm~ #13 #7 #0 ~NONE~ ~QITEM1~		//Wand of Armory
+			ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 		
 ACTION_IF FILE_EXISTS_IN_GAME ~mulahe.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~mulahe.cre~ ~override~
 		REPLACE_CRE_ITEM ~wandtrp~ #23 #0 #0 ~NONE~ ~QITEM2~		//Wand of Trap Finding
+			ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 		
 ACTION_IF FILE_EXISTS_IN_GAME ~rsgamaz.cre~ BEGIN // check if present for EET games
@@ -5382,11 +5476,13 @@ ACTION_IF FILE_EXISTS_IN_GAME ~phoenix.cre~ BEGIN // check if present for EET ga
 ACTION_IF FILE_EXISTS_IN_GAME ~deathk.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~deathk.cre~ ~override~
 		ADD_CRE_ITEM ~dtkrnd09~ #0 #0 #0 ~NONE~ ~INV~		//20% chance - The Spear of White Ash +3/Bastard Sword of Greater Phasing +3/Misery's Herald +3/Evil Spider Crusher of Doom +3/Darkened Glory +2
+			ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~deathk1.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~deathk1.cre~ ~override~
 		ADD_CRE_ITEM ~dtkrnd09~ #0 #0 #0 ~NONE~ ~INV~		//20% chance - The Spear of White Ash +3/Bastard Sword of Greater Phasing +3/Misery's Herald +3/Evil Spider Crusher of Doom +3/Darkened Glory +2
+			ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 		
 ACTION_IF FILE_EXISTS_IN_GAME ~davaeo.cre~ BEGIN // check if present for EET games
@@ -5395,10 +5491,12 @@ ACTION_IF FILE_EXISTS_IN_GAME ~davaeo.cre~ BEGIN // check if present for EET gam
 		REMOVE_CRE_ITEM ~clck17~
 		REMOVE_CRE_ITEM ~brac03~
 		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 5 or under
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 		END
 		
 COPY_EXISTING ~jugjer01.cre~ ~override~
 	REPLACE_CRE_ITEM ~ogi~ #0 #0 #0 ~NONE~ ~ARMOR~		//Ogi-Luc's Great Robe
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 	
 ACTION_IF FILE_EXISTS_IN_GAME ~riggilo.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~riggilo.cre~ ~override~
@@ -5448,6 +5546,11 @@ ACTION_IF FILE_EXISTS_IN_GAME ~lothan.cre~ BEGIN // check if present for EET gam
 		
 COPY_EXISTING ~kalah2.cre~ ~override~
 	REPLACE_CRE_ITEM ~bootfor~ #0 #0 #0 ~NONE~ ~BOOTS~		//Boots of the Forgotten Ones
+		REPLACE_CRE_ITEM ~hamm05~ #0 #0 #0 ~NONE~ ~WEAPON~	EQUIP	//Borok's Fist +2
+			REMOVE_CRE_ITEM ~slng01~
+				REMOVE_CRE_ITEM ~blun02~
+					REMOVE_CRE_ITEM ~bull01~
+				
 	
 COPY_EXISTING ~rngsha04.cre~ ~override~
 	REPLACE_CRE_ITEM ~shboots~ #0 #0 #0 ~NONE~ ~BOOTS~		//Shadowed Boots
@@ -5516,9 +5619,11 @@ COPY_EXISTING ~demlord.cre~ ~override~
 
 COPY_EXISTING ~uddemon.cre~ ~override~
 	ADD_CRE_ITEM ~dtkdebld~ #1 #0 #0 ~NONE~ ~INV~		//Demon Lord's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 5 or under
 
 COPY_EXISTING ~gortan1.cre~ ~override~
-	ADD_CRE_ITEM ~dtkdebld~ #1 #0 #0 ~NONE~ ~INV~		//Demon Lord's Blood	
+	ADD_CRE_ITEM ~dtkdebld~ #1 #0 #0 ~NONE~ ~INV~		//Demon Lord's Blood
+		ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new mage spell scroll lv 6 or higher
 
 COMPILE	~sod2bg2_iu/scripts/dtkdemog.baf~	//Demogorgon's Eye
 COPY_EXISTING ~demogor2.cre~ ~override~
@@ -5635,15 +5740,16 @@ COPY_EXISTING ~ribald3.sto~ ~override~		//Ribald (restock)
 							ADD_STORE_ITEM ~bdarow01~ #1 #0 #0 ~IDENTIFIED~ #5				//Bolt of Antimagic +1
 
 COPY_EXISTING ~ribald.sto~ ~override~		//Ribald
-	ADD_STORE_ITEM ~bdboot12~ #0 #0 #0 ~IDENTIFIED~ #1			//Sidestep Slippers
-	  ADD_STORE_ITEM ~potn33~ #0 #0 #0 ~IDENTIFIED~ #2		//Potion of Magic Blocking
-		ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Fire +1
-			ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Ice +1
-			   ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
-				   ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
-					   ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
-						   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
-								ADD_STORE_ITEM ~bdarow01~ #1 #0 #0 ~IDENTIFIED~ #5				//Bolt of Antimagic +1
+	ADD_STORE_ITEM ~bdblun01~ #0 #0 #0 ~IDENTIFIED~ #1			//Mosela's Cudgel +2
+		ADD_STORE_ITEM ~bdboot12~ #0 #0 #0 ~IDENTIFIED~ #1			//Sidestep Slippers
+		  ADD_STORE_ITEM ~potn33~ #0 #0 #0 ~IDENTIFIED~ #2		//Potion of Magic Blocking
+			ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Fire +1
+				ADD_STORE_ITEM ~bdbolt02~ #1 #0 #0 ~IDENTIFIED~ #120		//Bolt of Ice +1
+				   ADD_STORE_ITEM ~bull07~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Fire +1
+					   ADD_STORE_ITEM ~bull08~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Ice +1
+						   ADD_STORE_ITEM ~bull09~ #1 #0 #0 ~IDENTIFIED~ #120			//Bullet of Electricity +1
+							   ADD_STORE_ITEM ~bolt05~ #1 #0 #0 ~IDENTIFIED~ #2				//Bolt of Polymorphing
+									ADD_STORE_ITEM ~bdarow01~ #1 #0 #0 ~IDENTIFIED~ #5				//Bolt of Antimagic +1
 					   
 COPY_EXISTING ~amsmug01.sto~ ~override~		//Amkethran Smugglers
 	ADD_STORE_ITEM ~bdbolt01~ #1 #0 #0 ~IDENTIFIED~ #160			//Bolt of Fire +1
@@ -6026,9 +6132,9 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdbrac02.itm~ BEGIN // check if present
 	END
 
 
-//////////////////////////////////////////////////////////////////////////////////////
-// Update names and appearanc of existing dragonscale-based items for consistency/////
-//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+// Update names and appearance of existing dragonscale-based items for consistency/////
+///////////////////////////////////////////////////////////////////////////////////////
 
 BEGIN @9037
 GROUP @9035
@@ -6170,6 +6276,38 @@ SAY NAME2 @2769
 		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
 
 END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdleat05.itm~ BEGIN // check if present	
+	COPY_EXISTING ~bdleat05.itm~ ~override~	//Dragonscale Armor -> Green Dragonscale Armor
+	  SAY NAME1 @2007
+	  SAY NAME2 @2006
+	  SAY UNIDENTIFIED_DESC @2009
+	  SAY DESC @2010
+			SET location = 0
+			SET cycle_speed = 90  
+			SET r = 13
+			SET b = 0
+			SET g = 87
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+	  END
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// Update resist of original shadow dragon scale armor for consistency with new variants/////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @9042
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ @9003
+PRINT @9001
+
+ACTION_IF FILE_EXISTS_IN_GAME ~leat19.itm~ BEGIN // check if present	
+	COPY_EXISTING ~leat19.itm~ ~override~	//Shadow Dragon Scale - Change Acid resist to Magic Damage
+	SAY DESC @2763
+		LPF ALTER_EFFECT INT_VAR match_opcode = 27 opcode = 31 END
+		LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = 28 END
+		END
+
+		
 /////////////////////////////////////////
 // Force all import-able items from SoD//
 /////////////////////////////////////////
@@ -6844,7 +6982,13 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkvenbr.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkblabr.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdevd.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkkfrz.pro~
-
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdglor.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkdag1.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkvbst.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi.pro~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi1.pro~
+	COPY_EXISTING ~dtkashi1.pro~ ~override~
+	WRITE_SHORT 0x21a ~%dtkashi%~
 
 //////////////////////////
 //Adding Creatures  //////
@@ -8689,46 +8833,42 @@ COPY ~sod2bg2_iu/iwdresource/itm/bess.itm~ ~override~	//The Love of Black Bess +
   WRITE_LONG 0x98 (BIT0)
 END
 
-ACTION_IF NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pstee~ BEGIN	//sw1h45 exists as a different item in EET and BG2, this is used instead of file name check to counter it
-	ACTION_IF NOT FILE_EXISTS_IN_GAME ~idpro237.pro~ BEGIN // check if already present
-	ADD_PROJECTILE ~sod2bg2_iu/iwdresource/pro/idpro237.pro~
-	END
-		ACTION_IF NOT FILE_EXISTS_IN_GAME ~curseh.vvc~ BEGIN // check if already present
-		COPY ~sod2bg2_iu/iwdresource/vvc/curseh.vvc~ ~override~
-		COPY ~sod2bg2_iu/iwdresource/bam/area1x.bam~ ~override~
-		END
-			ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p99.wav~ BEGIN // check if already present
-			COPY ~sod2bg2_iu/iwdresource/wav/#eff_p99.wav~ ~override~
-			END
-				ACTION_IF NOT FILE_EXISTS_IN_GAME ~#bless.vvc~ BEGIN // check if already present
-				COPY ~sod2bg2_iu/iwdresource/vvc/#bless.vvc~ ~override~
-				COPY ~sod2bg2_iu/iwdresource/bam/curseh.bam~ ~override~
-				END
-					ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p32.wav~ BEGIN // check if already present
-					COPY ~sod2bg2_iu/iwdresource/wav/#eff_p32.wav~ ~override~
-					END
-						ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_e04.wav~ BEGIN // check if already present
-						COPY ~sod2bg2_iu/iwdresource/wav/#eff_e04.wav~ ~override~
-						END
-							COPY ~sod2bg2_iu/iwdresource/spl/sppr112.spl~ ~override/dtkdglor.spl~	//Darkend Glory +2
-							LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%idpro237%" STR_VAR icon = dtkcursb END
-							SAY NAME1 @3027 // Spell Name
-							SAY NAME2 @3027
-							SAY UNIDENTIFIED_DESC @3028  // Spell description
-							SAY DESC @3028
-							WRITE_ASCII 0x3a dtkcursc
-							LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4045) END
-								COPY ~sod2bg2_iu/iwdresource/itm/sw1h45.itm~ ~override/dtkdglor.itm~	//Darkened Glory +2 - file name changed to avoid conflicts
-								  SAY NAME1 @2558
-								  SAY NAME2 @2559
-								  SAY UNIDENTIFIED_DESC @2560
-								  SAY DESC @2561
-								  WRITE_ASCII 0x58 csw1h49
-								  WRITE_ASCII 0x3a dtkdglor
-								  WRITE_ASCII 0x76 dtkdglor
-								  WRITE_LONG 0x98 (BIT0)
-								  LPF ALTER_EFFECT INT_VAR match_opcode = 341 STR_VAR resource = dtkdglor END									
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~curseh.vvc~ BEGIN // check if already present
+COPY ~sod2bg2_iu/iwdresource/vvc/curseh.vvc~ ~override~
+COPY ~sod2bg2_iu/iwdresource/bam/area1x.bam~ ~override~
 END
+	ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p99.wav~ BEGIN // check if already present
+	COPY ~sod2bg2_iu/iwdresource/wav/#eff_p99.wav~ ~override~
+	END
+		ACTION_IF NOT FILE_EXISTS_IN_GAME ~#bless.vvc~ BEGIN // check if already present
+		COPY ~sod2bg2_iu/iwdresource/vvc/#bless.vvc~ ~override~
+		COPY ~sod2bg2_iu/iwdresource/bam/curseh.bam~ ~override~
+		END
+			ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_p32.wav~ BEGIN // check if already present
+			COPY ~sod2bg2_iu/iwdresource/wav/#eff_p32.wav~ ~override~
+			END
+				ACTION_IF NOT FILE_EXISTS_IN_GAME ~#eff_e04.wav~ BEGIN // check if already present
+				COPY ~sod2bg2_iu/iwdresource/wav/#eff_e04.wav~ ~override~
+				END
+					COPY ~sod2bg2_iu/iwdresource/spl/sppr112.spl~ ~override/dtkdglor.spl~	//Darkend Glory +2
+					LPF ALTER_SPELL_HEADER INT_VAR projectile = EVAL "%dtkdglor%" STR_VAR icon = dtkcursb END
+					SAY NAME1 @3027 // Spell Name
+					SAY NAME2 @3027
+					SAY UNIDENTIFIED_DESC @3028  // Spell description
+					SAY DESC @3028
+					WRITE_ASCII 0x3a dtkcursc
+					LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4045) END
+						COPY ~sod2bg2_iu/iwdresource/itm/sw1h45.itm~ ~override/dtkdglor.itm~	//Darkened Glory +2 - file name changed to avoid conflicts
+						  SAY NAME1 @2558
+						  SAY NAME2 @2559
+						  SAY UNIDENTIFIED_DESC @2560
+						  SAY DESC @2561
+						  WRITE_ASCII 0x58 csw1h49
+						  WRITE_ASCII 0x3a dtkdglor
+						  WRITE_ASCII 0x76 dtkdglor
+						  WRITE_LONG 0x98 (BIT0)
+						  LPF ALTER_EFFECT INT_VAR match_opcode = 341 STR_VAR resource = dtkdglor END									
+
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~lucky.itm~ BEGIN // check if already present to prevent conflicts
 COPY ~sod2bg2_iu/iwdresource/bam/ilucky.bam~ ~override~

@@ -43,7 +43,7 @@ dtkplt3	  @4019  #-1    #-1
 dtkplt3b  @4019  @5006  #-1
 dtkplt3f  @4019  @3042  #-1
 dtkplt3e  @3058  #-1    #-1
-dtkplt3a  @5025  @4019  #-1
+dtkplt3a  @3040  @4019  #-1
 dtkplt3d  @3074  #-1    #-1
 dtkplt3c  @3074  #-1    #-1
 dtklea3f  @3042  @5050  #-1
@@ -86,4 +86,7 @@ dtksishd  @5056  #-1	#-1
 dtkplt2   @5007  #-1	#-1
 dtkwdshd  @5057  #-1	#-1
 dtkbldsh  @5058  #-1	#-1
-dtkham3   #-1    @5064	#-1	
+dtkham3   #-1    @5064	#-1
+dtkax1hb  #-1    @3050	#-1
+dtkham4   #-1    @5067	#-1
+dtkham4a  #-1    @5068	#-1		

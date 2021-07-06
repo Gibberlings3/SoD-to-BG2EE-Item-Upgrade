@@ -4,13 +4,24 @@ END
   
 APPEND WSMITH01
   IF ~~ THEN BEGIN NewItem SAY @16
-    IF ~OR(3)
+    IF ~OR(4)
           !PartyHasItem("scrlaj")
+		  !PartyHasItem("scrlaq")
           !PartyHasItem("scrla1")
           NumItemsPartyLT("potn39",2)~ THEN GOTO NewItem2
     IF ~PartyHasItem("scrlaj")
         PartyHasItem("scrla1")
+		!PartyHasItem("scrlaq")
         NumItemsPartyGT("potn39",1)~ THEN GOTO NewItem3
+	IF ~PartyHasItem("scrlaj")
+        PartyHasItem("scrla1")
+		PartyHasItem("scrlaq")
+        NumItemsPartyGT("potn39",1)~ THEN GOTO NewItem3
+	IF ~!PartyHasItem("scrlaj")
+        PartyHasItem("scrla1")
+		PartyHasItem("scrlaq")
+        NumItemsPartyGT("potn39",1)~ THEN GOTO NewItem4
+
   END
   
   IF ~~ THEN BEGIN NewItem2 SAY @17
@@ -31,6 +42,24 @@ APPEND WSMITH01
                                                  TakePartyItemNum("scrla1",1)
                                                  DestroyItem("scrla1")
                                                  DestroyGold(5000)~ GOTO 56
+    IF ~~ THEN REPLY #66770 GOTO NoThanks
+  END							 
+
+												 
+  IF ~~ THEN BEGIN NewItem4 SAY @18
+    IF ~PartyGoldLT(5000)~ THEN REPLY #66662 GOTO NoThanks
+    IF ~PartyGoldGT(4999)~ THEN REPLY #66664 DO ~SetGlobal("DTKItems","ar0334",6)
+                                                 SetGlobal("ForgeStuff","GLOBAL",1)
+                                                 TakePartyGold(5000)
+                                                 TakePartyItemNum("bdamul02",1)
+                                                 DestroyItem("bdamul02")
+                                                 TakePartyItemNum("potn39",2)
+                                                 DestroyItem("potn39")
+                                                 TakePartyItemNum("scrlaq",1)
+                                                 DestroyItem("scrlaq")
+                                                 TakePartyItemNum("scrla1",1)
+                                                 DestroyItem("scrla1")
+                                                 DestroyGold(5000)~ GOTO 56												 
     IF ~~ THEN REPLY #66770 GOTO NoThanks
   END
 
