@@ -72,7 +72,7 @@
 71 - Trollkiller's Fireball/Thunder Thrust/Hoar of Frost/Corrosion/Ko'Dezza's Multi-Fireball/Ko'Dezza's Slime Golem/Fell Rage/Infernal Bone Shield/Maelstrom/Cataclysm
 72 - Heartwood Ring of Water
 73 - Water's Edge +5
-74 - Deprecated
+74 - Acid-Etched Boomerang Dagger +3
 75 - Crimson Dawn +3
 76 - Severance +3
 77 - Crimson Dawn +5
@@ -149,6 +149,12 @@
 148 - Blue Dragon Helm (three variants)
 149 - Dragonscale Shield +4 (Blue Scales)
 150 - Dread Hammer +3
+151 - Acid-Etched Boomerang Dagger +5
+152 - Blizzard Axe +4
+153 - Blizzard Axe +5
+154 - Lucky Boots
+155 - Ashideena +3
+156 - Ashideena +5
 */
 
 
@@ -1030,17 +1036,17 @@ THEN
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END
 
-//IF
-  //Global("DTKItems","ar0334",74)
-  //Global("ForgeStuff","GLOBAL",1)
-//THEN
-  //RESPONSE #100
-    //SetGlobal("ForgeStuff","GLOBAL",0)
-    //SetGlobal("DTKItems","ar0334",0)
-    //SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
-    //GiveItemCreate("dtkhoarf",Player1,0,0,0) //Scroll of Hoar of Frost
-    //ActionOverride("wsmith01",StartDialogueNoSet([PC]))
-//END
+IF
+  Global("DTKItems","ar0334",74)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkdag1",Player1,0,0,0) //Acid-Etched Boomerang Dagger +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
 
 IF
   Global("DTKItems","ar0334",75)
@@ -1951,5 +1957,77 @@ THEN
     SetGlobal("DTKItems","ar0334",0)
     SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
     GiveItemCreate("dtkham3",Player1,0,3,0) // Dread Hammer +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",151)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkdag2",Player1,0,0,0) // Acid-Etched Boomerang Dagger +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",152)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkax1ha",Player1,0,0,0) // Blizzard Axe +4
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",153)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkax1hb",Player1,0,1,0) // Blizzard Axe +5
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",154)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("bdmisc36",Player1,0,0,0) // Lucky Boots
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",155)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkham4",Player1,0,30,0) // Ashideena +3
+    ActionOverride("wsmith01",StartDialogueNoSet([PC]))
+END
+
+IF
+  Global("DTKItems","ar0334",156)
+  Global("ForgeStuff","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("ForgeStuff","GLOBAL",0)
+    SetGlobal("DTKItems","ar0334",0)
+    SetGlobal("ForgeItem","GLOBAL",999) // route to existing 'here you go' dialogue
+    GiveItemCreate("dtkham4a",Player1,0,30,0) // Ashideena +5
     ActionOverride("wsmith01",StartDialogueNoSet([PC]))
 END

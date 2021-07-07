@@ -1,76 +1,44 @@
 // extend cespenar's generic item search with cromwell's items
 EXTEND_BOTTOM BOTSMITH 4
-  IF ~PartyHasItem("dtkscal1")~ THEN GOTO bdragscaleCespy // Black Dragon Plate/Black Dragonscale +4/Black Dragon Helm/Dragonscale Shield +3(black scales)
+  IF ~PartyHasItem("bdax1h03")~ THEN GOTO blizzaxe // Blizzard Axe +4
 END
 
-APPEND BOTSMITH              
+APPEND BOTSMITH
 
-IF ~~ THEN BEGIN bdragscaleCespy
-SAY @1283
- IF ~PartyHasItem("dtkscal1")~ THEN GOTO bdragscaleCespy_want
- IF ~!PartyHasItem("dtkscal1")~ THEN GOTO need_bdragscaleCespy
-END
+  IF ~~ THEN BEGIN blizzaxe SAY @1436
+    IF ~OR(3)
+          !PartyHasItem("ax1h13")
+          !PartyHasItem("wand06")
+          !PartyHasItem("scrl1x")~ THEN GOTO need_blizzaxe
+    IF ~PartyHasItem("ax1h13")
+        PartyHasItem("wand06")
+        PartyHasItem("scrl1x")~ THEN GOTO blizzaxe_want
+  END
 
-IF ~~ THEN BEGIN need_bdragscaleCespy SAY @1185
-COPY_TRANS BOTSMITH 4
-END
+  IF ~~ THEN BEGIN need_blizzaxe SAY @1437
+    COPY_TRANS BOTSMITH 4
+  END
 
-IF ~~ THEN BEGIN bdragscaleCespy_want 
-SAY @1284
-++ @6019 GOTO HowMuch_shield
-++ @6020 GOTO HowMuch_scale
-++ @6070 GOTO HowMuch_helm
-++ @6035 GOTO HowMuch_plate
-++ @6036 GOTO bdragscaleCespy_stall
-END
+  IF ~~ THEN BEGIN blizzaxe_want SAY @1438
+    IF ~PartyGoldLT(10000)~ THEN REPLY #66908 GOTO 10
+    IF ~PartyGoldGT(9999)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",74)
+                                                 TakePartyGold(10000)
+                                                 TakePartyItemNum("bdax1h03",1)
+                                                 DestroyItem("bdax1h03")
+                                                 TakePartyItemNum("ohioun02",1)
+                                                 DestroyItem("ohioun02")
+                                                 TakePartyItemNum("ax1h13",1)
+                                                 DestroyItem("ax1h13")
+                                                 TakePartyItemNum("wand06",1)
+                                                 DestroyItem("wand06")
+                                                 TakePartyItemNum("scrl1x",1)
+                                                 DestroyItem("scrl1x")
+                                                 DestroyGold(10000)~ GOTO 11
+    IF ~~ THEN REPLY #66910 GOTO crom_stall
+  END
 
-IF ~~ THEN BEGIN HowMuch_shield 
-SAY @1184
- IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",80)
-                                 		TakePartyGold(7500)
-                                 		TakePartyItemNum("dtkscal1",1)
-                                 		DestroyItem("dtkscal1")
-                                 		DestroyGold(7500)~ REPLY @6015 GOTO 11
- IF ~~ THEN REPLY @6012 GOTO bdragscaleCespy_stall
-END
+  IF ~~ THEN BEGIN crom_stall SAY @1439
+    COPY_TRANS BOTSMITH 4
+  END
 
-IF ~~ THEN BEGIN HowMuch_scale
-SAY @1184
- IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",81)
-                                	        TakePartyGold(7500)
-                                 		TakePartyItemNum("dtkscal1",1)
-                                 		DestroyItem("dtkscal1")
-                                 		DestroyGold(7500)~ REPLY @6015 GOTO 11
- IF ~~ THEN REPLY @6012 GOTO bdragscaleCespy_stall
-END
-
-IF ~~ THEN BEGIN HowMuch_plate
-SAY @1184
- IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",79)
-                                	        TakePartyGold(7500)
-                                 		TakePartyItemNum("dtkscal1",1)
-                                 		DestroyItem("dtkscal1")
-                                 		DestroyGold(7500)~ REPLY @6015 GOTO 11
- IF ~~ THEN REPLY @6012 GOTO bdragscaleCespy_stall
-END
-
-IF ~~ THEN BEGIN HowMuch_helm
-SAY @1184
- IF ~PartyGoldLT(7500)~ THEN REPLY #66908 GOTO 10
- IF ~PartyGoldGT(7499)~ THEN REPLY #66909 DO ~SetGlobal("DTKItemsCespy","GLOBAL",128)
-                                	        TakePartyGold(7500)
-                                 		TakePartyItemNum("dtkscal1",1)
-                                 		DestroyItem("dtkscal1")
-                                 		DestroyGold(7500)~ REPLY @6015 GOTO 11
- IF ~~ THEN REPLY @6012 GOTO bdragscaleCespy_stall
-END
-
-IF ~~ THEN BEGIN bdragscaleCespy_stall SAY @1185
-COPY_TRANS BOTSMITH 4
-END
-
-
-END
+END                                            
