@@ -1,5 +1,45 @@
 # Changelog
 
+## Version 2.0.1
+
+### Fixed
+
+- Changed Tearom dialogue in BG1/EET components to be more compatible with other mods that also modify his dialogue
+- Restored "Corny Jokes" effect description to Jester's Bracers and Wicked Jester's Bracers (cosmetic only)
+- Changed new dialoguew for Taerom Thunderhammer to be more compatible with other mods
+- Corrected charged abilities and description for Chromatic Crimson Dragon Plate +3 (red scale variant)
+- Corrected description text for The Scorched Earth +3
+- Corrected Vitriolic Burst effect on Element’s Fury +4 (acid)
+- Corrected description text for Element’s Fury +4 (wind)
+- Corrected description text for Vexation +5
+- Corrected abilities of Shadow Dragon Plate +3 (removed unintended charge abilities)
+- Vexation +2 restored to it's normal location
+- Made a change to Darkened Glory +2’s spell effect to fix compatibility issue with SCS mod
+- Creatures knocked out by Thunder Thrust no longer wake when taking further damage
+- Fixed projectile animation for Vitriolic Burst effect
+- Changed new icon implementation for Tongue of Acid +3 to fix melee effect
+
+### Changed
+
+- Increased saving throw bonus on Green Dragon Helm
+- Revised resistances of dragonscale-based armors to be more consistent
+- Add SoD “Green” dragonscale to optional rename component
+- Add Shadow Drag resist change to optional rename component
+- Update speed of thrown weapon projectiles to match speed increase for 2.6
+
+
+### Added
+
+- Added several more drops of new spell scrolls to various creatures (randomized)
+- Corrected Chill Axe +2 placement
+- Recipe for Cromwell and Cespenar for Fine Bearskin
+- New upgrade options for Acid-Etched Dagger +2
+- New upgrade options for Chill Axe +2
+- New upgrade options for Ashideena +2
+
+
+
+
 ## Version 2.0.0
 
 ### Fixed
@@ -41,6 +81,7 @@
 - There is now an additional option to make the Voidhammer +3/Voidsword +3 random
 - Shield of Egons +2 has been moved to a new location
 - New upgrasde options for Maelstone Axe/Halberd to +5 and +6 respectively
+- (Green) Dragonscale Shield +3 has been replaced with new variant craftable from green scales
 
 
 

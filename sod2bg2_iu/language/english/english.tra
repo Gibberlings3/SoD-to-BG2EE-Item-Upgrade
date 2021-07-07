@@ -7,7 +7,7 @@
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @9000 = ~SoD to BG2:EE Item upgrade by Daeros_Trollkiller~
 @9001 = ~Installing.......~
-@9002 = ~Force all import-able SoD items to be available in their normal locations~
+@9002 = ~Force all import-able SoD items to be available in their normal locations ****Requires starting a new game****~
 @9003 = ~This component is not compatible with this game.  It is only compatible with Baldur's Gate 2: Enhanced Edition, and Baldur's Gate: EE Trilogy.~
 @9004 = ~All importable items with Voidsword +3~
 @9005 = ~All importable items with Voidhammer +3~
@@ -47,6 +47,7 @@
 @9039 = ~Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)~
 @9040 = ~This component requires that the primary component of this mod be installed first.  Please install it and try again.~
 @9041 = ~Remove "Corny Jokes" effect from Jester's Bracers (BGEE)~
+@9042 = ~Update resist type for original Shadow Dragonscale Armor for consistency with new variants:  Acid -> Magic Damage)~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -58,9 +59,9 @@
 @1 = ~Hmm, the hilt on this blade be in rather rough shape, dunnae ye think?  It could be reforged with Githyanki's silver hilt if'n ye could wrestle one away from the beasts.  Mighty dangerous that be, they regard them as a haughty paladin would a holy avenger.  But if'n ye manage to find one, bring it to me, and I'll reforge this caustic carver of yers into something that will strike fear into those blasted mind-flayers.~
 @2 = ~Let's see if ye got what I need to reforge that hellish blade of yours...~
 @3 = ~Well, let's see what else ye got.~
-@4 = ~deprecated~
-@5 = ~deprecated~
-@6 = ~deprecated~
+@4 = ~A corrosive dagger ye got here, eh?  Looks like it's been chewed up and spit out...~
+@5 = ~I can fix up this dagger of yers, and make it even more useful as one ye can throw if ye can bring me the Boomerang Dagger +2 to reforge it with.~
+@6 = ~Ah, this be the Boomerang Dagger!  A mere 5,000gp and I can get right tae work on fixing up yer corroded dagger.~
 @7 = ~What's this? A right nice pair of boots these are, quite soft and quiet.~
 @8 = ~I could improve these boots with some liquid mercury and a commission of 7500gp.~
 @9 = ~Ah, thats some liquid mercury alright, I can improve these boots with them.~
@@ -408,6 +409,23 @@ This morningstar has surely seen it's share of battles, aye?  I can almost hear 
 @329 = ~Ey?  I know this hammer... it once belonged to that rat-bastard Durn Coldhearth.  Betrayed his clan, and if that wasn't bad enough, made a deal with a lich to become one himself!~
 @330 = ~Improve Coldhearth's hammer?  Aye, certainly possible.  I would need an artifact from a powerful lich, a tooth would work best.  Bring one to me shop and I will reforge your traitor's hammer with it's power.~
 @331 = ~Ye've got a lich's tooth?  One from a drow lich, no less.  This will work for your hammer.  5,000 gold pieces to seal the deal and I will get started on it.~
+@332 = ~Ah, yer corrosive dagger again eh?  Ye wish it more powerful?~
+@333 = ~It would take a mighty powerful gem to enhance this dagger further.  Bring me the Eye of Ichor and 5,000gp, and I'll reforge yer dagger into the finest ye've seen.~
+@334 = ~Ah, this is the Eye of Ichor alright, and will do nicely.   Ye've the gold as well, it seems.  Shall I get started?~
+@335 = ~What've ye brought me here.... Ah, a battle axe from the Ice Dragon Berserker Lodge, quite rare in these parts.~
+@336 = ~Hmmm, hard to improve on this axe, but anything is possible, with the right components.  To improve upon this axe, I will need a wand of frost, a scroll of ice storm, and most importantly, the legendary Frostreaver.~
+@337 = ~Excellent!  Ye've found the Frostreaver, and ye've the scroll and wand here too.  A simple matter of 10,000 gold coins for me commission and I'll reforge yer beserker axe into something special.~
+@338 = ~The Blizzard Axe, has she been serving ye well?  Improved ye say?  Hmmm...~
+@339 = ~Yes, there be a way, only one.  An elemental gemstone of coldest ice, the Soul of Frost.  If ye find it in yer travels, bring it back to me shop.~
+@340 = ~I felt the chill as soon as ye entered, ye've found the Soul of Frost.  For a mere 5,000 crowns I will use this to bring the full force of winter to yer axe.~ 
+@341 = ~Ah, ye've got a nice bear pelt here, good quality if I do say so meself.~
+@342 = ~I can make a fine pair of boots out of this pelt for ye.  Any dwarf worth his salt knows the value of a good pair of boots, some of us even consider them lucky, heh.  2,000 gold, ye interested?~
+@343 = ~Ey, I know this hammer, Lady Ashideena's namesake!  Such fine craftsmanship and history behind this one.~
+@344 = ~I can reforge this hammer into something that would make Lady Ashideena proud, I just need a few things from ye.  I will need ye to bring me a wand of lightning, a scroll of lightning bolt, and most importantly, I'll need ye to find and bring me Borok's Fist.~
+@345 = ~Ye've everything I need to reforge Ashideena, a simple manner of my comission is all that remains.  5,000 gold pieces, no less.  Shall we begin?~  
+@346 = ~Ah, ye've brought me Ashideena again.  Further enhanced ye say?  Aye, I can do it.~
+@347 = ~To empower Ashideena further, I'll need an elemental gemstone, the Breath of Wind.~
+@348 = ~Ye've the Breath of Wind here, I can use this to enchance the Ashideena with.  It will cost ye 10,000 pieces o' gold.  What say ye?~  
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -848,6 +866,32 @@ So many shinies, so little time... let's keep looking!~
 @1425 = ~I's can improves cold hammer for you with a lich's tooth.  Bring me one, and 5,000 golds and I will reforge into colder hammer.~
 @1426 = ~The master has a lich's tooth!  Want for me to reforge coldhammer with?~
 @1427 = ~No deal.  Hoookay, I keeps looking.~
+@1428 = ~Ewww, this dagger is all icky, looks like chew toy.~
+@1429 = ~You wants icky dagger fixed up?  Can use Boomerang Dagger to makes it fly, come back to you too maybe, probably.~
+@1430 = ~You has the Boomerange Dagger here, can use this to fix your chewtoy dagger, just 5,000 gold shinies.~
+@1431 = ~Maybe finds new dragon to feed it to then.  What else?~
+@1432 = ~Acid dagger again?  You wants improved more?~
+@1433 = ~Cespenar can improve!  Needs special gem, elemental, Eye of Ichor would work best.  And needs 5,000 golds too.~
+@1434 = ~You has the Ichor gem and golds, should Cespenar gets to work?~
+@1435 = ~Ok, saves gem for rainy day then, let's keep digging!~
+@1436 = ~Brrr... this axe is so cold!  Chilly Chill!~
+@1437 = ~I think I has recipe for chilly axe... yes!  Needs another chilly axe, Frostreaver, a wand of frost, scroll of ice storm.  Need all those and 10,000 gold shinies.~
+@1438 = ~Let's see, you has axe, wand, scroll, and all shinies here.  Want for Cespenar to use to reforge Chilly Axe?~
+@1439 = ~Gotcha, already chill enough, anything else for me?~
+@1440 = ~Chilly Axe again?  Almost froze my tail off last time!~
+@1441 = ~Ok, has just one recipe for this, needs special gem of ice.  Brings me Soul of Frost gem and 5,000 golds and I can make chillest axe ever!~
+@1442 = ~You has brought me the gem, and you has enough golds, shall Cespenar get to work?~
+@1443 = ~Well, shucks.  What else?~
+@1444 = ~What's this?  Dead animal?  No, just skin from bear.~
+@1445 = ~Hmmm, not much can do with this but make boots from, maybe lucky for some.  Will cost 2,000 golds for recipe.  You wants?~
+@1446 = ~Hmm, hammer named after lady?  Cespenar has recipe for!  Will make hammer shoot lightning!  Zap, pow!~
+@1447 = ~To improves hammer, I needs Borok's Fist +2, scroll of lightning, lightning wand and 5,000 golds.~
+@1448 = ~You has all here I need to fix up lady's hammer, want for me to get to work?~
+@1449 = ~Shucks... Anything else for me to look at?~
+@1450 = ~Oh? You want old lady's hammer made even better?  Hmm, I has recipe for that, just one...~
+@1451 = ~To fix up hammer even more requires very special rock... Breath of Wind.  If you can finds it, I can use to make hammer even better!~
+@1452 = ~You has Wind rock here!  I can use this to reforge hammer, just 10,000 golds.  You want?~
+@1453 = ~Gah... sometimes me think Bhaal was easier to work with.  What else then?~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -970,7 +1014,7 @@ While we could not save Joseph, we told his wife that we had found his corpse.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 @8000 = ~You have known us for so short a time, and yet you have bought our freedom with blood. My child, my friend, it is a debt I can never repay...  Please, take this as a token of our unending gratitude.  A disconsolate skald with an insatiable penchant for drink and women left it behind when he came through some months ago.  He was not a good fit for our troupe, but perhaps his helmet will be as such for you.~ [RAELIS21]
 @8001 = ~I say this because I've grown rather fond of this playhouse and would like to make you an offer for it.  I have a magical flute in my possession that will undoubtedly be useful to you in your travels.~
-@8002 = ~My heart is free, and I have you to thank. With the creature gone, my lands are free, and the dead that fell before you are avenged. I thank you as they would.  I found this helmet in the remains of their camp, I think they would be pleased that you have it and use it in good health.~ [GARREN08]
+@8002 = ~My heart is free, and I have you to thank. With the creature gone, my lands are free, and the dead that fell before you are avenged. I thank you as they would.  I found this helmet in the remains of their camp, I think they would be pleased that you have and use it towards righteous ends.~ [GARREN08]
 @8003 = ~Your honor and my child are restored. I thank you. The creature lives; I will not rest easy at night, but I have my child and I could not ask for more than that.  Please, take this helmet that I found in the remains of the paladin's camp, I think they would be pleased for you to have it and use in good health.~
 @8004 = ~Did I promise that? Well, mate, here you go... somethin' even better for yer honesty, an' thanks to you for a deed well done. Anything ye need in the future, don't be hesitating to look me up.~
 @8005 = ~You continue to be a fine resource for the Morninglord. Your service has been exemplary, and you have earned your place within the temple order.  We recently liberated this shield of the ancient family of Egon from a shadow thief attempting to fence it.  I am certain the morninglord would be pleased for you to have it.~
@@ -1057,58 +1101,10 @@ Requires:
  6 Strength
 
 Weight: 2~
-@2003 = ~Tongue of Burning Acid +4~
-@2004 = ~After being reforged and enhanced with the fiery essence of Angurvadal, the blade of the Tongue of Acid is now engulfed in hellish green flames of acidic wrath.  Wounds caused by the blade sizzle and burn with acidic fire, causing crippling pain to any creature unfortunate enough to be struck by it.
-
-STATISTICS:
-
-Equipped Abilities:
-– Negative Plane Protection
-
-Combat abilities:
-– 15% chance per hit of crippling pain on target for 3 rounds
-  Special: -4 AC, -4 THAC0, -6 to dexterity, -1 attacks per round, movement rate slowed by 50% (Save vs. Spell at -2 negates)
-
-THAC0: +4
-Damage: 1d8+4, 1d2+1 (acid), 1d2+1 (fire)
-Damage Type: Slashing
-Speed Factor: 2
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 2~
-@2005 = ~Tongue of Burning Acid +5~
-@2006 = ~After setting the Eye of Ichor into the pommel, this infernal blade from Avernus has reached its full potential.  Ghastly green caustic flames roar from the tongue-like blade of the sword, inflicting agonzing, crippling pain on its victims, hampering their ability to fight.  In addition, the weilder may invoke a protective shield of infernal fire around <PRO_HIMHER>self.  Attackers who breach this shield are met with searing pain from the flames, while the weilder is protected from both acid and flame attacks.   Eerily, the inscription on the hilt seems to have changed on its own: "cuts sharper than any scream, burns hotter than any rage", giving the uneasy feeling that the blade itself is rather pleased with its horrific endowment.
-
-STATISTICS:
-
-Equipped Abilities:
-– Negative Plane Protection
-
-Charge Abilities:
-– Infernal Fire Shield once per day
-  Special: Any opponent within 6 ft. that successfully hits the caster suffers 1d4+1 of acid damage, 1d4+1 of fire damage and loses one point of dexterity, constitution, or strength for one round. (Save vs. Spell at -2 halves damage, negates ability loss)
-  Fire Resistance: +25%
-  Acid Resistance: +25%
-  Area of Effect: Caster
-  Duration: 1 turn
-  
-Combat abilities:
-– 20% chance per hit of crippling pain on target for 3 rounds
-  Special: -4 AC, -4 THAC0, -6 to dexterity, -1 attacks per round, movement rate slowed by 50% (Save vs. Spell at -2 negates)
-  
-THAC0: +5
-Damage: 1d8+5, 1d3+1 (acid), 1d3+1 (fire)
-Damage Type: Slashing
-Speed Factor: 2
-Proficiency Type: Long Sword
-Type: One-handed
-Requires:
- 6 Strength
-
-Weight: 2~
+@2003 = ~deprecated~
+@2004 = ~deprecated~
+@2005 = ~deprecated~
+@2006 = ~Green Dragonscale Armor~
 @2007 = ~Scale Armor~
 @2008 = ~Dragonscale Armor~
 @2009 = ~Scale armor is made from the tough, chitinous scales of creatures througout the realms.  The protective quality varies dependant on the scales used, and the skill of the smith who fashions them into armor.  Natural resistances and even some magical abilities from the host can be imparted to the wearer.~
@@ -1229,7 +1225,7 @@ STATISTICS:
 
 Combat abilities:
 – 15% chance per hit of penalizing the target's Armor Class by 1 for 1 turn (Save vs. Breath negates)
-– Returns to the wielder's hand when thrown
+– Returns to the weilder's hand when thrown
 
 THAC0: +3
 Damage: 1d3+3 (missile), +2 acid
@@ -1277,8 +1273,8 @@ Combat abilities:
 
 THAC0: +5
 Damage: 1d8+5 (magic)
-Speed Factor: 2
-Proficiency Type: Long Sword
+Speed Factor: 1
+Proficiency Type: War Hammer
 Type: One-handed
 Requires:
  9 Strength
@@ -1329,13 +1325,13 @@ Requires:
 
 Weight: 1~
 @2041 = ~Sundermaul +3~
-@2042 = ~Legends speak of a hammer with the power of the gods themselves called Crom Faeyr. A smith once forged an inferior hammer and claimed it Crom Faeyr. Such was the retribution of the gods that ever since, when the name "Crom Faeyr" is uttered, the very earth beneath the wielder's feet may rip and tear asunder, threatening to bury the blasphemer and any who happen to be standing nearby.
+@2042 = ~Legends speak of a hammer with the power of the gods themselves called Crom Faeyr. A smith once forged an inferior hammer and claimed it Crom Faeyr. Such was the retribution of the gods that ever since, when the name "Crom Faeyr" is uttered, the very earth beneath the weilder's feet may rip and tear asunder, threatening to bury the blasphemer and any who happen to be standing nearby.
 
 STATISTICS:
 
 Combat abilities:
 – 15% chance per hit of inflicting a -1 penalty to Armor Class for 1 turn (Save vs. Spell negates)
-– 2% chance per hit that an earthquake is triggered, centered on the wielder
+– 2% chance per hit that an earthquake is triggered, centered on the weilder
 
 THAC0: +3
 Damage: 1d4+4 (crushing)
@@ -1378,10 +1374,10 @@ Weight: 4~
 @2045 = ~The Scorched Earth +3~
 @2046 = ~Expertly reforged for <CHARNAME>, the flame tongue is now a far more balanced blade and searing flames scorch enemies with every slash, leaving charred wounds in its wake.  The sword remains very effective against cold-based, regenerating creatures, and the undead.
 
+STATISTICS:
+
 Combat abilities:
 – 10% chance per hit of immolating the target in flames, causing 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
-
-STATISTICS:
 
 THAC0: +3, +4 vs. cold-using, and regenerating creatures, +5 vs. undead
 Damage: 1d8+3, 1d3+1 fire damage, +4 vs. cold-using and regenerating creatures, +5 vs. undead
@@ -1423,7 +1419,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
+– Fire Resistance: +50%
 
 Charge abilities:
 – Ko'Dezza's Multi-Fireball once per day
@@ -1437,13 +1433,14 @@ Requires:
 
 Weight: 30~
 @2053 = ~Verdant Shadow Dragonscale Armor +4~
-@2054 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and acid attacks.  It remains easy to wear and move in, leaving the wearer unhindered.  Once per day, the wearer may conjure forth shadowy, dark tendrils that grasp and claw at any creature in the area of effect, piercing their flesh and rooting them in place.
+@2054 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows, acidic, and magical attacks.  It remains easy to wear and move in, leaving the wearer unhindered.  Once per day, the wearer may conjure forth shadowy, dark tendrils that grasp and claw at any creature in the area of effect, piercing their flesh and rooting them in place.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
+– Acid Resistance: +20%
+– Magic Damage Resistance: +20%
 
 – Grasping Shadows once per day
   Damage: 1d4(cold), 1d4(piercing) to all creatures in area of effect once per round (Save vs. Spell at -4 for half)
@@ -1464,8 +1461,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Electrical Resistance +50%
+– Fire Resistance: +50%
+– Electrical Resistance: +90%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -1491,8 +1488,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Acid Resistance +50%
+– Fire Resistance: +50%
+– Acid Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -1513,15 +1510,15 @@ Requires:
  8 Strength
 
 Weight: 30~
-@2059 = ~Chromatic Crimson Dragon Plate +3~  //White Scales
+@2059 = ~Chromatic Crimson Dragon Plate +4~  //White Scales
 @2060 = ~The Verdant Crimson Dragon Plate has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and flame attacks.  Frost and flame magics from the combination of scales allow the wearer to direct frost-fire bolts of antipode at their foes twice per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Cold Resistance +50%
+– Fire Resistance: +50%
+– Cold Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge Abilities:
@@ -1530,7 +1527,7 @@ Charge Abilities:
   Range: 90 ft.
   Area of Effect: 15-ft. radius
 
-Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Armor Class: -3 (-6 vs. slashing, -4 vs. piercing and missile)
 Requires:
  8 Strength
 
@@ -1567,8 +1564,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
-– Electrical Resistance +50%
+– Magic Damage Resistance: +40%
+– Electrical Resistance: +90%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -1596,8 +1593,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
-– Fire Resistance +50%
+– Magic Damage Resistance: +50%
+– Fire Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -1618,15 +1615,15 @@ Requires:
  6 Strength
 
 Weight: 10~
-@2067 = ~Chromatic Shadow Dragonscale Armor +4~  //White Scales
+@2067 = ~Chromatic Shadow Dragonscale Armor +5~  //White Scales
 @2068 = ~The Verdant Shadow Dragonscale armor has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and acid attacks.  Additionally, the deadly combination of frost and shadow magics inherent in the scales results in the wearer being able to create a horrific explosion of dark energy amongst <PRO_HISHER> foes once per day.  Remarkably, the armor remains pliable and easy to move in as well, no doubt due to the excellent craftsmanship.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
-– Cold Resistance +50%
+– Magic Damage Resistance: +50%
+– Cold Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -1636,7 +1633,7 @@ Charge abilities:
   Range: 40 ft.
   Radius: 15 ft.
   
-Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Armor Class: -1 (-3 vs. slashing, -2 vs. piercing and missile)
 Requires:
  6 Strength
 
@@ -1648,7 +1645,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
+– Magic Damage Resistance: +50%
 – Magic Resistance: +10%
 – Charisma: -2
 
@@ -1778,12 +1775,12 @@ Requires:
 
 Weight: 3~
 @2091 = ~Bow of the Banshee +2~
-@2092 = ~A wooden face carved mid-scream stares out from the shaft of this hardwood bow. It's whispered that the half-orc archer Zavruk had an elven soul bound into the bow, but the bow's lack of a necromantic aura casts doubt on the story. What's certain is that the bowstring makes a horrible screeching noise whenever fired, instilling fear in the wielder's enemies.
+@2092 = ~A wooden face carved mid-scream stares out from the shaft of this hardwood bow. It's whispered that the half-orc archer Zavruk had an elven soul bound into the bow, but the bow's lack of a necromantic aura casts doubt on the story. What's certain is that the bowstring makes a horrible screeching noise whenever fired, instilling fear in the weilder's enemies.
 
 STATISTICS:
 
 Combat abilities:
-– 10% chance per hit of casting Cloak of Fear centered on the wielder
+– 10% chance per hit of casting Cloak of Fear centered on the weilder
 – Deals 1 extra point of magic damage to panicked targets
 
 THAC0: +3
@@ -1889,13 +1886,13 @@ Requires:
 
 Weight: 1~
 @2107 = ~Storm Pike +2~
-@2108 = ~Storm giants seldom do favors for humans, but when Threk Boltwielder was saved by the wizard Alimor, Threk offered his services as a conduit for the wizard's enchanting spells. Alimor borrowed a lightning bolt from the storm giant to craft this halberd for his companion, Haldus, who had often complained about how the party never found any magic halberds despite it being his chosen weapon. Haldus was so excited by the storm giant's gift that he wielded it immediately, striking a boulder that happened to be nearby, and was promptly struck dead by the captured lightning's power.
+@2108 = ~Storm giants seldom do favors for humans, but when Threk Boltweilder was saved by the wizard Alimor, Threk offered his services as a conduit for the wizard's enchanting spells. Alimor borrowed a lightning bolt from the storm giant to craft this halberd for his companion, Haldus, who had often complained about how the party never found any magic halberds despite it being his chosen weapon. Haldus was so excited by the storm giant's gift that he wielded it immediately, striking a boulder that happened to be nearby, and was promptly struck dead by the captured lightning's power.
 
 STATISTICS:
 
 Combat abilities:
 – 15% chance per hit of stunning the target for 1 round (Save vs. Spell negates)
-– On a critical miss, the halberd deals 1d4 electrical damage to the wielder
+– On a critical miss, the halberd deals 1d4 electrical damage to the weilder
 
 THAC0: +2
 Damage: 1d10+2 (slashing or piercing, whichever is better), +1 electrical
@@ -1937,8 +1934,19 @@ Requires:
  12 Strength
 
 Weight: 6~
-@2117 = ~Deprecated~
-@2118 = ~Deprecated~
+@2117 = ~Short Sword~
+@2118 = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting.
+
+STATISTICS:
+
+Damage: 1d6 (piercing)
+Speed Factor: 3
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
 @2119 = ~Vexation +2~
 @2120 = ~This blade appears smooth and whole at first glance, but on closer examination, its surface is made of thousands of tiny overlapping scales. When the sword is used to stab a target unawares, scales break off and lodge in the wound, irritating the victim and draining their strength.
 
@@ -1946,7 +1954,7 @@ STATISTICS:
 
 Combat abilities:
 – Inflicts 2 points of bleeding damage per hit (one point per round)
-– Drains 2 points of Strength from the target and transfers them to the wielder for 5 rounds when a successful backstab is performed (non-cumulative)
+– Drains 2 points of Strength from the target and transfers them to the weilder for 5 rounds when a successful backstab is performed (non-cumulative)
 
 STATISTICS:
 
@@ -2242,7 +2250,7 @@ Equipped abilities:
 – Regenerate 1 Hit Point per round
 
 Charge Abilities:
-– Aura of Minor Trollish Regeneration once per day
+– Mass Minor Trollish Regeneration once per day
   Special: Regenerate 1 Hit Point per round
   Duration: 2 turns
   Area of Effect: Party
@@ -2261,7 +2269,7 @@ Equipped abilities:
 – Regenerate 2 Hit Points per round
 
 Charge Abilities:
-– Aura of Trollish Regeneration once per day
+– Mass Trollish Regeneration once per day
   Special: Regenerate 2 Hit Points per round
   Duration: 3 turns
   Area of Effect: Party
@@ -2274,7 +2282,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +4, +5 vs. missile attacks
-– Magical Resistance: 10%
+– Magical Resistance: +10%
 – Turn Undead Level: +2
 – Negative plane protection
 
@@ -2291,10 +2299,8 @@ Combat abilities:
 – Inflicts 4 points of bleeding damage per hit (two points per round)
 – 20% chance of insect swarm on target
   3 points of piercing damage per round for 7 rounds, -2 THAC0, -2 AC, 50% chance of spell failure (Save vs. Breath at -4 negates)
-– Drains 2 points of Strength from the target and transfers them to the wielder for 5 rounds when a successful backstab is performed (non-cumulative)
+– Drains 2 points of Strength from the target and transfers them to the weilder for 5 rounds when a successful backstab is performed (non-cumulative)
 – Blinds target on successful backstab (no save)
-
-STATISTICS:
 
 THAC0: +5
 Damage: 1d6+5 (piercing)
@@ -2340,7 +2346,7 @@ Requires:
 
 Weight: 5~
 @2163 = ~Shadowed Spear +2~
-@2164 = ~Rumor has it that a cult of Shar crafted this spear for blackguards in their service, but the spear was liberated during an attack by knights of Lathander. The Temple of Lathander in Athkatla hid the spear away for many years before it was stolen one night by burglars in service to Mask. Since then multiple copies of the spear have been spotted, presumably duplicated by the clergy of Mask. Shadows cling to the black shaft of the spear and the wielder seems to flicker in and out of reality.
+@2164 = ~Rumor has it that a cult of Shar crafted this spear for blackguards in their service, but the spear was liberated during an attack by knights of Lathander. The Temple of Lathander in Athkatla hid the spear away for many years before it was stolen one night by burglars in service to Mask. Since then multiple copies of the spear have been spotted, presumably duplicated by the clergy of Mask. Shadows cling to the black shaft of the spear and the weilder seems to flicker in and out of reality.
 
 STATISTICS:
 
@@ -2457,7 +2463,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison, disease, blindness, deafness
-– Fire Resistance +50%
+– Fire Resistance: +50%
 – Missile Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
   
@@ -2480,7 +2486,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison, disease, blindness, deafness
-– Acid Resistance +50%
+– Magic Damage Resistance: +50%
 – Slashing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
@@ -2504,7 +2510,7 @@ Weight: 10~
 STATISTICS:
 
 Equipped abilities:
-– Fire Resistance +20%
+– Fire Resistance: +20%
 – Immunity to poison, disease, blindness, deafness
 – Physical Damage Resistance: +5%
 
@@ -2655,6 +2661,7 @@ STATISTICS:
 Equipped abilities:
 – Armor Class: 5
 – Charisma: -1 (except for Jesters)
+– Wearer is forced to tell corny jokes 
 – May only be removed with a Remove Curse spell
 
 Weight: 2~
@@ -2699,6 +2706,7 @@ STATISTICS:
 Equipped abilities:
 – Armor Class: 2
 – Charisma: -4 (+4 for Jesters)
+– Wearer is forced to tell corny jokes 
 – May only be removed with a Remove Curse spell
 
 Charge abilities:
@@ -2764,7 +2772,7 @@ Equipped abilities:
 – Movement Speed: +1
 
 Combat abilities:
-– 10% chance per kill that the wielder will be affected by Fireshield (Red)
+– 10% chance per kill that the weilder will be affected by Fireshield (Red)
 
 THAC0: +2
 Damage: 1d8+2, +1 fire
@@ -2785,7 +2793,7 @@ Equipped abilities:
 – Movement Speed: +1
 
 Combat abilities:
-– 15% chance per kill that the wielder will be affected by Fireshield (Red)
+– 15% chance per kill that the weilder will be affected by Fireshield (Red)
 – 1 extra attack per round
 
 THAC0: +3
@@ -2899,7 +2907,7 @@ Weight: 3~
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance +40%
+– Cold Resistance: +40%
 
 Combat abilities:
 – 15% Chance on hit of Magma Burst
@@ -3058,7 +3066,7 @@ Equipped abilities:
 – Critical Hit Chance: +5% (with this weapon only)
 
 Combat abilities:
-– 15% chance per kill of hasting the wielder for 3 rounds
+– 15% chance per kill of hasting the weilder for 3 rounds
 
 THAC0: +2
 Damage: 1d10+2 (slashing) 
@@ -3078,7 +3086,7 @@ Equipped abilities:
 – Hit Points: +5
 
 Combat abilities:
-– 15% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum. Does not affect undead, constructs, and extraplanar creatures.
+– 15% chance per hit of draining 1d4 Hit Points from the target and transferring them to the weilder. This will not heal beyond the weilder's maximum. Does not affect undead, constructs, and extraplanar creatures.
 
 THAC0: +2
 Damage: 2d4+2 (slashing)
@@ -3098,7 +3106,7 @@ Equipped abilities:
 – Critical Hit Chance: +5% (with this weapon only)
 
 Combat abilities:
-– 15% chance per kill of hasting the wielder for 3 rounds
+– 15% chance per kill of hasting the weilder for 3 rounds
 
 THAC0: +3
 Damage: 1d10+3 (slashing) +1d3 (fire)
@@ -3119,7 +3127,7 @@ Equipped abilities:
 – Extra 1/2 attack per round
 
 Combat abilities:
-– 20% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
+– 20% chance per hit of draining 1d4 Hit Points from the target and transferring them to the weilder. This will not heal beyond the weilder's maximum.
 
 THAC0: +3
 Damage: 2d4+3 (slashing)
@@ -3139,7 +3147,7 @@ Equipped abilities:
 – Critical Hit Chance: +10% (with this weapon only)
 
 Combat abilities:
-– 20% chance per kill of hasting the wielder for 3 rounds
+– 20% chance per kill of hasting the weilder for 3 rounds
 
 THAC0: +5
 Damage: 1d10+5 (slashing) 1d4+1 (fire)
@@ -3160,7 +3168,7 @@ Equipped abilities:
 – 1 extra attack per round
 
 Combat abilities:
-– 25% chance per hit of draining 1d4 Hit Points from the target and transferring them to the wielder. This will not heal beyond the wielder's maximum.
+– 25% chance per hit of draining 1d4 Hit Points from the target and transferring them to the weilder. This will not heal beyond the weilder's maximum.
 
 THAC0: +5
 Damage: 2d4+5 (slashing)
@@ -3177,8 +3185,7 @@ Weight: 7~
 STATISTICS:
 
 Equipped abilities:
-– Fire Resistance +25%
-– Acid Resistance +25%
+– Acid Resistance: +50%
 – Physical Damage Resistance: +10%
 
 Combat abilities:
@@ -3196,8 +3203,8 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +4
-– Fire Resistance +15%
-– Acid Resistance +15%
+– Fire Resistance: +15%
+– Acid Resistance: +15%
 – Physical Damage Resistance: +10%
 
 Charge abilities:
@@ -3217,8 +3224,7 @@ Weight: 5~
 STATISTICS:
 
 Equipped abilities:
-– Fire Resistance +20%
-– Acid Resistance +20%
+– Acid Resistance: +50%
 – Physical Damage Resistance: +10%
 
 Combat abilities:
@@ -3235,7 +3241,7 @@ Weight: 7~
 STATISTICS:
 
 Equipped abilities:
-– Fire Resistance +25%
+– Fire Resistance: +25%
 – Immunity to poison, disease, blindness, deafness
 – Physical Damage Resistance: +5%
 
@@ -3259,8 +3265,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +70%
-– Acid Resistance +20%
+– Fire Resistance: +70%
+– Acid Resistance: +20%
 – Missile Damage Resistance: +10%
 – Slashing Damage Resistance: +10%
 
@@ -3288,8 +3294,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +70%
-– Fire Resistance +20%
+– Acid Resistance: +50%
+– Magic Damage Resistance: +50%
 – Piercing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
@@ -3319,7 +3325,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +80%
+– Fire Resistance: +75%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -3339,7 +3345,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
+– Fire Resistance: +50%
 
 Charge abilities:
 – Ko'Dezza's Multi-Fireball once per day
@@ -3353,13 +3359,14 @@ Requires:
 
 Weight: 10~
 @2283 = ~Verdant Shadow Dragon Plate +3~
-@2284 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows and acid attacks.  Once per day, the wearer may conjure forth shadowy, dark tendrils that grasp and claw at any creature in the area of effect, piercing their flesh and rooting them in place.  Regretably, it is now far less supple and pliable, more akin to plate armor.
+@2284 = ~Scales from a diabolical shadow dragon have been integrated into the reworked green dragonscale armor, greatly enhancing its protective abilities against blows, acidic, and magical attacks.  Once per day, the wearer may conjure forth shadowy, dark tendrils that grasp and claw at any creature in the area of effect, piercing their flesh and rooting them in place.  Regretably, it is now far less supple and pliable, more akin to plate armor.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
+– Acid Resistance: +25%
+– Magic Damage Resistance: +25%
 
 Charge abilities:
 – Grasping Shadows once per day
@@ -3381,8 +3388,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
-– Electrical Resistance +50%
+– Magic Damage Resistance: +50%
+– Electrical Resistance: +90%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -3410,8 +3417,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +70%
-– Fire Resistance +20%
+– Acid Resistance: +50%
+– Magic Damage Resistance: +50%
 – Missile Damage Resistance: +10%
 – Slashing Damage Resistance: +10%
 
@@ -3440,7 +3447,7 @@ Weight: 30~
 STATISTICS:
 
 Equipped abilities:
-– Acid Resistance +50%
+– Magic Damage Resistance: +50%
 – Immunity to poison, disease, blindness, deafness
 – Missile Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
@@ -3465,14 +3472,15 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Acid Resistance +50%
+– Fire Resistance: +50%
+– Magic Damage Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
-– Dread Flame once per day
-  Damage: 8d6 fire to all creatures in area of effect, 1d6 fire damage per round (Save vs Spell at -2 to avoid).  Creatures within 5 ft. of immolated target take 1d4 fire damage, and can be immolated by the damage. (Save vs. Spell negates)
-  Area of Effect: 30-ft. cone with 140-deg. arc
+– Ko'Dezza's Multi-Fireball once per day
+  Damage: 7d6 fire per fireball to all creatures in area of effect
+  Range: 40 ft.
+  Radius: 15 ft.
   
 – Grasping Shadows once per day
   Damage: 1d4(cold), 1d4(piercing) to all creatures in area of effect once per round (Save vs. Spell at -4 for half)
@@ -3494,7 +3502,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance: +50%
+– Magic Damage Resistance: +50%
 – Magic Resistance: +10%
 – Charisma: -2
 
@@ -3513,15 +3521,15 @@ Requires:
  8 Strength
 
 Weight: 30~
-@2295 = ~Chromatic Shadow Dragon Plate +3~  //White Scales
+@2295 = ~Chromatic Shadow Dragon Plate +4~  //White Scales
 @2296 = ~The Verdant Shadow Dragon Plate has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and acid attacks.  Additionally, the deadly combination of frost and shadow magics inherent in the scales results in the wearer being able to create a horrific explosion of dark energy amongst <PRO_HISHER> foes once per day.  A warrior could hardly ask for better protection on the battlefront than from this magnificent piece of craftsmanship.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +50%
-– Cold Resistance +50%
+– Magic Damage Resistance: +50%
+– Cold Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -3543,8 +3551,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +20%
-– Fire Resistance +70%
+– Acid Resistance: +50%
+– Fire Resistance: +50%
 – Piercing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
@@ -3572,8 +3580,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Electrical Resistance +50%
+– Fire Resistance: +50%
+– Electrical Resistance: +90%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -3599,7 +3607,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison, disease, blindness, deafness
-– Fire Resistance +50%
+– Fire Resistance: +50%
 – Slashing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
@@ -3623,7 +3631,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +80%
+– Fire Resistance: +75%
 – Physical Damage Resistance: +5%
 
 Charge abilities:
@@ -3643,7 +3651,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
+– Fire Resistance: +50%
 – Magic Resistance: +10%
 – Charisma: -2
 
@@ -3661,15 +3669,15 @@ Requires:
  6 Strength
 
 Weight: 10~
-@2307 = ~Chromatic Crimson Dragonscale Armor +4~  //White Scales
+@2307 = ~Chromatic Crimson Dragonscale Armor +5~  //White Scales
 @2308 = ~The Verdant Crimson Dragonscale armor has been reworked with scales from a young white dragon, enhancing even further its abilities to protect against the fiercest blows and insulate against blistering cold, while retaining its resistances to poison and flame attacks.  Frost and flame magics from the combination of scales allow the wearer to direct frost-fire bolts of antipode at their foes twice per day.  Remarkably, the armor remains pliable and easy to move in as well, no doubt due to the excellent craftsmanship.
 
 STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Cold Resistance +50%
+– Fire Resistance: +50%
+– Cold Resistance: +50%
 – Physical Damage Resistance: +5%
 
 Charge Abilities:
@@ -3678,7 +3686,7 @@ Charge Abilities:
   Range: 90 ft.
   Area of Effect: 15-ft. radius
 
-Armor Class: 0 (-2 vs. slashing, -1 vs. piercing and missile)
+Armor Class: -1 (-3 vs. slashing, -2 vs. piercing and missile)
 Requires:
  6 Strength
 
@@ -3690,8 +3698,8 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Fire Resistance +50%
-– Acid Resistance +50%
+– Fire Resistance: +50%
+– Magic Damage Resistance: +50%
 – Crushing Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
 
@@ -3765,7 +3773,7 @@ Launcher: Crossbow
 
 Weight: 0~
 @2321 = ~Martyr's Morningstar +2~
-@2322 = ~Forged by Ilusarian Roan, a priest of Ilmater, this morning star sacrifices the wielder's strength in order to destroy the enemies of the faith. Roan used the morning star when he joined a company of knights and priests fighting against a cabal of Cyricists. He took down six cultists before he died, and the morning star was returned to the temple with his remains.
+@2322 = ~Forged by Ilusarian Roan, a priest of Ilmater, this morning star sacrifices the weilder's strength in order to destroy the enemies of the faith. Roan used the morning star when he joined a company of knights and priests fighting against a cabal of Cyricists. He took down six cultists before he died, and the morning star was returned to the temple with his remains.
 
 STATISTICS:
 
@@ -3846,7 +3854,7 @@ STATISTICS:
 
 Equipped abilities:
 – Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
-– Fire Resistance +20%
+– Fire Resistance: +20%
 – Improves casting speed by 2
 – All fire damage inflicted by the wearer is increased by 15%
 
@@ -3870,7 +3878,7 @@ STATISTICS:
 
 Equipped abilities:
 – Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
-– Acid Resistance +20%
+– Acid Resistance: +20%
 – Improves casting speed by 2
 – All acid damage inflicted by the wearer is increased by 15%
 
@@ -3882,7 +3890,7 @@ STATISTICS:
 
 Equipped abilities:
 – Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
-– Cold Resistance +20%
+– Cold Resistance: +20%
 – Improves casting speed by 2
 – All cold damage inflicted by the wearer is increased by 15%
 
@@ -3932,7 +3940,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +3
-– 15% chance that anyone attacking the wielder in melee takes 1d4 points of fire damage and becomes blinded for 2 rounds (Save vs. Spell halves damage and negates blindness)
+– 15% chance that anyone attacking the weilder in melee takes 1d4 points of fire damage and becomes blinded for 2 rounds (Save vs. Spell halves damage and negates blindness)
 – No protection against missile attacks
 
 Charge abilities:
@@ -3971,12 +3979,12 @@ Equipped abilities:
 
 Weight: 1~
 @2351 = ~Echo of the Fiend +3~
-@2352 = ~A devil of Avernus once possessed this gnarled wooden staff. Though the devil long since escaped from the staff, a residue of its essence permeated the weapon and lingers still. When a command word is spoken, an aura of fire springs up around anyone wielding the staff; though the flames leave the wielder untouched, they sear others with devastating heat.
+@2352 = ~A devil of Avernus once possessed this gnarled wooden staff. Though the devil long since escaped from the staff, a residue of its essence permeated the weapon and lingers still. When a command word is spoken, an aura of fire springs up around anyone wielding the staff; though the flames leave the weilder untouched, they sear others with devastating heat.
 
 STATISTICS:
 
 Combat abilities:
-– 5% chance per hit of triggering a Sunfire spell centered on the wielder
+– 5% chance per hit of triggering a Sunfire spell centered on the weilder
 
 Charge abilities:
 – Fireshield (Red) twice per day
@@ -4050,7 +4058,7 @@ Equipped abilities:
 – Strength: +1
 
 Combat abilities:
-– 2% chance per hit that the wielder will become berserk, losing control of <PRO_HISHER> actions for 3 rounds
+– 2% chance per hit that the weilder will become berserk, losing control of <PRO_HISHER> actions for 3 rounds
 
 THAC0: +2
 Damage: 1d8+2, +1 cold
@@ -4095,7 +4103,7 @@ Requires:
 
 Weight: 3~
 @2367 = ~The Hydra +2~
-@2368 = ~The three heads of this flail look like dragon heads, giving the weapon its fearsome name. As the wielder swings the weapon, its heads seem to blur and divide until a mass of hydra heads whips from the end of the chain. When the wielder ceases attacking, the weapon reverts to its original appearance.
+@2368 = ~The three heads of this flail look like dragon heads, giving the weapon its fearsome name. As the weilder swings the weapon, its heads seem to blur and divide until a mass of hydra heads whips from the end of the chain. When the weilder ceases attacking, the weapon reverts to its original appearance.
 
 STATISTICS:
 
@@ -4112,7 +4120,7 @@ Requires:
 
 Weight: 12~
 @2369 = ~Blazing Glory +3~
-@2370 = ~This glittering morningstar was crafted by weaponsmiths in the Temple of Tempus in Waterdeep. Fashioned as a weapon for Tempus's priests, who cannot use their deity's favored weapon due to its bladed edge, Blazing Glory has a black iron tip studded with points of alternating gold and ruby. Enchantments harden these points and add a flash of fire with every blow. The wielder of Blazing Glory never tires in battle, fortified by the will of the Lord of Battles himself. 
+@2370 = ~This glittering morningstar was crafted by weaponsmiths in the Temple of Tempus in Waterdeep. Fashioned as a weapon for Tempus's priests, who cannot use their deity's favored weapon due to its bladed edge, Blazing Glory has a black iron tip studded with points of alternating gold and ruby. Enchantments harden these points and add a flash of fire with every blow. The weilder of Blazing Glory never tires in battle, fortified by the will of the Lord of Battles himself. 
 
 STATISTICS:
 
@@ -4120,7 +4128,7 @@ Equipped abilities:
 – Immunity to fatigue
 
 Combat abilities:
-– 10% chance of casting Chant centered on the wielder on each hit
+– 10% chance of casting Chant centered on the weilder on each hit
 
 THAC0: +3
 Damage: 2d4+3 (crushing) +1 (fire)
@@ -4264,7 +4272,7 @@ Once the property of dwarven cleric of Abbathor, Gurn Coldhearth, this mighty wa
 STATISTICS:
 
 Equipped abilities:
-– On a critical miss, the wielder takes 1d4 points of cold damage
+– On a critical miss, the weilder takes 1d4 points of cold damage
 
 Combat abilities:
 – Deals an extra 2d4 points of cold damage vs. good-aligned Clerics
@@ -4471,7 +4479,7 @@ STATISTICS:
 
 Weight: 1~
 @2431 = ~Firefly +2~
-@2432 = ~This sling, carefully carved from yew wood, has tiny fireflies engraved along its length. When a slingstone is fired, the fireflies glow with a soft golden light. The sling was crafted and blessed by a priestess of Yondalla and so grants its full abilities only to halfling wielders.
+@2432 = ~This sling, carefully carved from yew wood, has tiny fireflies engraved along its length. When a slingstone is fired, the fireflies glow with a soft golden light. The sling was crafted and blessed by a priestess of Yondalla and so grants its full abilities only to halfling weilders.
 
 STATISTICS:
 
@@ -4510,12 +4518,12 @@ Requires:
 
 Weight: 3~
 @2435 = ~Fractal Blade +3~
-@2436 = ~A line of diamond-shaped mirrors run up the center of this short sword's blade. The smallest bit of light catches the mirrors, flashing and flickering as the wielder fights. Rumor has it that the blade was constructed by a particularly vain fighter from Sembia who later lost it in a duel. The fighter became distracted by his own reflection in a nearby shop window and failed to parry his opponent's blow.
+@2436 = ~A line of diamond-shaped mirrors run up the center of this short sword's blade. The smallest bit of light catches the mirrors, flashing and flickering as the weilder fights. Rumor has it that the blade was constructed by a particularly vain fighter from Sembia who later lost it in a duel. The fighter became distracted by his own reflection in a nearby shop window and failed to parry his opponent's blow.
 
 STATISTICS:
 
 Equipped abilities:
-– Whenever the wielder is hit, there is a 10% chance <PRO_HESHE> is surrounded by 3 mirror images for 3 rounds
+– Whenever the weilder is hit, there is a 10% chance <PRO_HESHE> is surrounded by 3 mirror images for 3 rounds
 
 Combat abilities:
 – 50% chance per hit of dispelling all illusionary spells (e.g. Mirror Image or Improved Invisibility) affecting the target
@@ -5814,7 +5822,7 @@ Requires:
  6 Strength
 
 Weight: 6~
-@2629 = ~Not much is known about this katana; its true origin has been lost to time. The edge of the blade has been sharpened to perfection, giving the wielder a chance to slay an opponent with a single blow, unless they can somehow survive the sudden loss of their head. Markings engraved upon the hilt suggest that the sword is especially potent when used against creatures from the outer planes, while protective enchantments keep the wielder's mind clear of doubt and focus <PRO_HISHER> will. Who originally commissioned the creation of this weapon, or why, remains a mystery. Two words are etched into the blade itself: "Solemn Duty."
+@2629 = ~Not much is known about this katana; its true origin has been lost to time. The edge of the blade has been sharpened to perfection, giving the weilder a chance to slay an opponent with a single blow, unless they can somehow survive the sudden loss of their head. Markings engraved upon the hilt suggest that the sword is especially potent when used against creatures from the outer planes, while protective enchantments keep the weilder's mind clear of doubt and focus <PRO_HISHER> will. Who originally commissioned the creation of this weapon, or why, remains a mystery. Two words are etched into the blade itself: "Solemn Duty."
 
 STATISTICS:
 
@@ -6027,7 +6035,7 @@ Combat abilities:
 – Deals an extra 1d4 fire damage to water elementals
 – Deals an extra 1d4 acid damage to earth elementals
 – Deals an extra 1d4 electrical damage to air elementals
-– 10% chance of Vitiolic Burst centered on target
+– 10% chance of Vitriolic Burst centered on target
   Damage: 4d4 acid (Save vs. Spell for half)
   Area of Effect: 5-ft. radius
   
@@ -6051,7 +6059,7 @@ Combat abilities:
 – Deals an extra 1d4 fire damage to water elementals
 – Deals an extra 1d4 acid damage to earth elementals
 – Deals an extra 1d4 electrical damage to air elementals
-– 10% chance of Electrical centered on target
+– 10% chance of Electrical Discharge centered on target
   Damage: 3d4 electrical (Save vs. Spell for half)
   Area of Effect: 6-ft. radius
   
@@ -6071,8 +6079,7 @@ Weight: 1~
 STATISTICS:
 
 Equipped abilities:
-– Acid Resistance +40%
-– Magic Damage Resistance +40%
+– Magic Damage Resistance: +75%
 – Immunity to poison
 – Crushing Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
@@ -6097,8 +6104,7 @@ STATISTICS:
 
 Equipped abilities:
 – Immunity to poison
-– Acid Resistance +30%
-– Magic Damage Resistance +30%
+– Magic Damage Resistance: +75%
 – Physical Damage Resistance +5%
 
 Charge abilities:
@@ -6210,7 +6216,7 @@ STATISTICS:
 
 Equipped abilities:
 – Can memorize two extra 3rd–level, one extra 5th–level and one extra 7th-level Druid spells
-– Magic Damage Resistance +20%
+– Magic Damage Resistance: +20%
 – Improves casting speed by 2
 – All magic damage inflicted by the wearer is increased by 15%
 
@@ -6272,7 +6278,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +3
-– 30% chance that anyone attacking the wielder in melee takes 1d6+1 points per level of fire damage and becomes blinded for 3 rounds.  Undead take an additional 1 point per level of fire damage. (Save vs. Spell halves damage and negates blindness)
+– 30% chance that anyone attacking the weilder in melee takes 1d6+1 points per level of fire damage and becomes blinded for 3 rounds.  Undead take an additional 1 point per level of fire damage. (Save vs. Spell halves damage and negates blindness)
 – No protection against missile attacks
 
 Charge abilities:
@@ -6294,7 +6300,7 @@ Weight: 2~
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance +10%
+– Cold Resistance: +10%
 – Charisma +1
 
 Weight: 2~
@@ -6310,7 +6316,7 @@ Weight: 2~
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance +10%
+– Cold Resistance: +10%
 – Charisma +1
 
 Weight: 2~
@@ -6326,7 +6332,7 @@ Weight: 2~
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance +10%
+– Cold Resistance: +10%
 – Charisma +1
 
 Weight: 2~
@@ -6342,7 +6348,7 @@ Weight: 2~
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance +10%
+– Cold Resistance: +10%
 – Charisma +1
 
 Weight: 2~
@@ -6355,7 +6361,7 @@ Equipped abilities:
 – Movement Speed: +1
 
 Combat abilities:
-– 15% chance per kill that the wielder will be affected by Fireshield (Red)
+– 15% chance per kill that the weilder will be affected by Fireshield (Red)
 – 1 extra attack per round
 
 Charge Abilities:
@@ -6523,7 +6529,7 @@ Equipped abilities:
 – Immunity to fatigue
 
 Combat abilities:
-– 10% chance of casting Chant centered on the wielder on each hit
+– 10% chance of casting Chant centered on the weilder on each hit
 – 10% chance of Flame Strike on target when hit
   Damage: 9d8 fire (Save vs. Spell halves)
   Area of Effect: 1 creature
@@ -6569,8 +6575,7 @@ STATISTICS:
 
 Equipped abilities:
 – Protects against critical hits
-– Acid Resistance: +20%
-– Fire Resistance: +20%
+– Acid Resistance: +25%
 – Physical Damage Resistance: +4%
 
 
@@ -6583,7 +6588,7 @@ STATISTICS:
 Equipped abilities:
 – Protects against critical hits
 – Armor Class: +1
-– Saving Throws: +2
+– Saving Throws: +4
 
 Weight: 2~
 @2728 = ~Green Dragonscale Shield +4~	//Green Scales
@@ -6606,12 +6611,12 @@ Requires:
 
 Weight: 5~
 @2730 = ~Shadow Dragon Plate +2~
-@2731 = ~This suit of armor is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this armor both beautiful and useful. The shadow dragon scales grant the wearer extra protection from acid.
+@2731 = ~This suit of armor is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this armor both beautiful and useful. The shadow dragon scales grant the wearer extra protection from magical attacks.
 
 STATISTICS:
 
 Equipped abilities:
-– Acid Resistance: +50%
+– Magic Damage Resistance: +50%
 
 Armor Class: -1 (-4 vs. slashing, -2 vs. piercing and missile)
 Requires:
@@ -6619,13 +6624,14 @@ Requires:
 
 Weight: 30~
 @2732 = ~Shadow Dragon Helm~
-@2733 = ~This helmet is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this helm both beautiful and useful. The shadow dragon scales grant the wearer extra protection from acid, and increases their ability to weave arcane and divine magics.
+@2733 = ~This helmet is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this helm both beautiful and useful. The shadow dragon scales grant the wearer extra protection from magical attacks, while at the same time increasing their proficiency in casting spells.
 
 STATISTICS:
 
 Equipped abilities:
 – Protects against critical hits
-– Acid Resistance: +25%
+– Acid Resistance: +10%
+– Magic Damage Resistance: +10%
 – Armor Class: +1
 – Caster Level: +2 (All)
 
@@ -6637,7 +6643,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +4
-– Acid Resistance +40%
+– Magic Damage Resistance: +40%
 
 Charge abilities:
 – Shadow Breath once per day
@@ -6698,7 +6704,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +4
-– Fire Resistance +40%
+– Fire Resistance: +40%
 
 Charge abilities:
 – Scorching Breath once per day
@@ -6717,8 +6723,8 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +4
-– Magic Resistance +10%
-– Magic Damage Resistance +20%
+– Magic Resistance: +10%
+– Magic Damage Resistance: +20%
 – Charisma: -2
 
 Charge abilities:
@@ -6764,13 +6770,13 @@ Equipped abilities:
 – Charisma: -2
 
 Weight: 2~
-@2750 = ~White Dragon Plate +2~
+@2750 = ~White Dragon Plate +4~
 @2751 = ~Not surprisingly, this armor created from the scales of a young ice dragon provides the wearer with protection from cold and ice.
 
 STATISTICS:
 
 Equipped abilities:
-– Cold Resistance: +90%
+– Cold Resistance: +50%
 
 Charge abilities:
 – Cone of Cold three times per day
@@ -6778,7 +6784,7 @@ Charge abilities:
   Range: 8 ft.
   Area of Effect: 18-ft. cone with 90-deg. arc
 
-Armor Class: -1 (-5 vs. slashing, -4 vs. piercing and missile)
+Armor Class: -3 (-6 vs. slashing, -6 vs. piercing and missile)
 Requires:
  15 Strength
 
@@ -6790,7 +6796,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +5
-– Cold Resistance +50%
+– Cold Resistance: +50%
 
 Charge abilities:
 – Arctic Breath once per day
@@ -6814,15 +6820,15 @@ Equipped abilities:
 – Vocalize
 
 Weight: 2~
-@2756 = ~Blue Dragonscale Armor +6~
+@2756 = ~Blue Dragonscale Armor +4~
 @2757 = ~The light but durable scales of the blue dragon provide excellent protection against weapons and all forms of electricity.
 
 STATISTICS:
 
 Equipped abilities:
-– Electrical Resistance: +50%
+– Electrical Resistance: +90%
 
-Armor Class: -2 (-3 vs. slashing and missile, -4 vs. piercing)
+Armor Class: 0 (-1 vs. slashing and missile, -2 vs. piercing)
 Requires:
  6 Strength
 
@@ -6834,7 +6840,7 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: +5
-– Electrical Resistance +50%
+– Electrical Resistance: +50%
 
 Charge abilities:
 – Shocking Breath once per day
@@ -6859,12 +6865,12 @@ Equipped abilities:
 
 Weight: 2~
 @2762 = ~Shadow Dragonscale Armor +3~
-@2763 = ~This suit of armor is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this armor both beautiful and useful. The shadow dragon scales grant the wearer extra protection from acid.
+@2763 = ~This suit of armor is formed from interlocking shadow dragon scales. Elegant workmanship and practical considerations make this armor both beautiful and useful. The shadow dragon scales grant the wearer extra protection from magical attacks.
 
 STATISTICS:
 
 Equipped abilities:
-– Acid Resistance: +50%
+– Magic Damage Resistance: +50%
 
 Armor Class: 1 (-1 vs. slashing, 0 vs. piercing and missile)
 Requires:
@@ -6903,7 +6909,7 @@ Weight: 15~
 STATISTICS:
 
 Equipped abilities:
-– On a critical miss, the wielder takes 1d4 points of cold damage
+– On a critical miss, the weilder takes 1d4 points of cold damage
 
 Charge abilities:
 – Knock three times per day
@@ -7085,6 +7091,170 @@ Requires:
  9 Strength
 
 Weight: 4~
+@2801 = ~Lucky Boots~
+@2802 = ~An exquisitely crafted pair of bearskin boots.
+
+STATISTICS:
+
+Equipped abilities:
+– Saving Throws: +3 (dwarves)
+
+Weight: 4~
+@2803 = ~Acid-Etched Boomerang Dagger +3~
+@2804 = ~The Acid-Etched Dagger has been expertly reforged and combined with the Boomerang Dagger +2, making it more even more deadly than before, as the wielder can now throw it at <PRO_HISHER> foes from a distance with impunity.
+
+STATISTICS:
+
+Combat abilities: 
+– 15% chance per hit that the target takes 1 extra point of acid damage per round during the next 3 rounds
+
+THAC0: +3
+Damage: 1d4+3, +1 (acid)
+Damage Type: Piercing
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@2805 = ~Throwing Dagger~
+@2806 = ~The typical throwing dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger. Unlike a dagger, this one has a smaller handle and is balanced differently.
+
+STATISTICS:
+
+Damage: 1d4 (missile)
+Speed Factor: 2
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 0~
+@2807 = ~Acid-Etched Boomerang Dagger +5~
+@2808 = ~Securely mounted in the hilt, the Eye of Ichor lends it's power to the reforged Acid-Etched Dagger, making it much more lethal in combat.  When striking a creature, the dagger can trigger burst of acid, doing further corrosive damage to it, and other creatures nearby.
+
+STATISTICS:
+
+Combat abilities: 
+– 25% chance per hit that the target takes 1 extra point of acid damage per round during the next 3 rounds
+– 10% chance of Vitriolic Burst centered on target
+  Damage: 4d4 acid (Save vs. Spell for half)
+  Area of Effect: 5-ft. radius
+
+THAC0: +5
+Damage: 1d4+5, 1d2+1 (acid)
+Damage Type: Piercing
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@2809 = ~Blizzard Axe +4~
+@2810 = ~When reforged with Illgarth's terrible implement, this berserker's axe is now far stronger.  Frost and acid are imbedded in every slash, exacerbating the wounds further.  The weilder must take care, however, as there is an increased chance of going berserk when swinging it in battle.  
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +1
+
+Combat abilities:
+– 4% chance per hit that the weilder will become berserk, losing control of <PRO_HISHER> actions for 3 rounds
+
+THAC0: +4
+Damage: 1d8+4, 1d2 (cold), 1d2 (acid)
+Damage Type: Slashing
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+@2811 = ~Blizzard Axe +5~
+@2812 = ~The Soul of Frost has awakened the rage of winter in the Ice Dragon ranger's axe.  The runes carved in the blade now glow intensely, fueling the rage contained within, allowing the weilder to draw forth a torrent of frozen stalagmites to impale <PRO_HISHER> foes with, at the increased cost of going berserk themselves with each swing.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +1
+
+Combat abilities:
+– 6% chance per hit that the weilder will become berserk, losing control of <PRO_HISHER> actions for 3 rounds
+
+Charge abilities:
+– Penetrating Cold once per day
+  Damage: 1d6 (cold), 1d6 (piercing) per round (No Save)
+  Special: 15% chance per round of being frozen for 3 rounds beforee shattering, causing additional 1d6 cold and piercing damage in 5-ft. radius
+  Range: 40 ft.
+  Radius: 8 ft.
+  Duration: 12 rounds
+
+THAC0: +5
+Damage: 1d8+5, 1d2+1 (cold), 1d2+1 (acid)
+Damage Type: Slashing
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+@2813 = ~Battle Axe~
+@2814 = ~The most common version of the battle axe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battle axes are also called broad axes. 
+
+STATISTICS:
+
+Damage: 1d8 (slashing)
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+@2815 = ~Ashideena +3~
+@2816 = ~Now combined with the crushing might of Borok's Fist, and charged with lightning magics, the Ashideena crackles with energy, allowing the wielder to put some distance between <PRO_HIMHER>self and <PRO_HISHER>'s enemies by means of discharging stored electrical energy within the hammer from a distance.  This energy is not unlimited however, and once exhausted, the hammer will need time to recharge itself.
+
+STATISTICS:
+
+Charge abilities:
+– Minor Lightning Bolt 
+  Damage: 1d8 (electrical, strength bonus to hit and damage does not apply)
+  Range: 60ft.
+
+THAC0: +3
+Damage: 1d4+4, +1d3 electrical damage
+Damage type: Crushing
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 5~
+@2817 = ~Ashideena +5~
+@2818 = ~With the Breath of Wind securely mounted in the hilt, Ashideena now surges with electrical energy, empowering it's abilities even further.  The hammer strikes with the full force of a thunderbolt, electrifying enemies with every strike.
+
+STATISTICS:
+
+Charge abilities:
+– Minor Chain Lightning 
+  Damage: 1d8 (electrical, strength bonus to hit and damage does not apply)
+  Range: 60ft.
+
+THAC0: +5
+Damage: 1d4+6, 1d3+1 electrical damage
+Damage type: Crushing
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 5~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -7109,9 +7279,9 @@ This spell is a more powerful version of the level 5 wizard spell, animate dead.
 
   1st – 14th: 1d2 of 7 HD burning skeletons weilding a +1 melee or ranged weapon and +1 shield or buckler, 8 HD putrid zombies, 7 HD charged wights, or 9 HD drowned-in-bloods.
   
-  15th – 17th: a 9 HD burning skeleton weilding a +2 melee or ranged weapon and +2 shield or buckler, 10 HD putrid zombies, 9 HD charged wights, or 11 HD drowned-in-bloods.
+  15th – 17th: 1d2 of 9 HD burning skeleton weilding a +2 melee or ranged weapon and +2 shield or buckler, 10 HD putrid zombies, 9 HD charged wights, or 11 HD drowned-in-bloods.
   
-  18th and up: an 11 HD burning skeleton weilding a +3 melee or ranged weapon and +3 shield or buckler, 12 HD putrid zombies, 11 HD charged wights, or 13 HD drowned-in-bloods.
+  18th and up: 1d2 of 11 HD burning skeleton weilding a +3 melee or ranged weapon and +3 shield or buckler, 12 HD putrid zombies, 11 HD charged wights, or 13 HD drowned-in-bloods.
   
 The conjured undead can follow the caster, remain in an area and attack any creature entering the place, etc. It remains animated until it is destroyed in combat, 8 hours pass, or it is turned. This spell cannot be dispelled.~
 @3004 = ~Sealed Ancient Scroll~
@@ -7157,7 +7327,7 @@ The chosen of Auril speak of this spell as legend, a power that the Ice Maiden b
 @3013 = ~Corrosion
 (Conjuration)
 
-Level: 
+Level: 7
 Range: 40 ft.
 Duration: 1 turn
 Casting Time: 5
@@ -7190,7 +7360,7 @@ Level: 2
 Range: 30 ft.
 Duration: 1 turn
 Casting Time: 2
-Area of Effect: 8-ft. radius
+Area of Effect: 15-ft. radius
 Saving Throw: None
 
 This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
@@ -7535,7 +7705,7 @@ Casting Time: 6
 Area of Effect: 15-ft. radius
 Saving Throw: none
 
-The first scroll containing this spell was discovered when a group of adventurers happened across a blasted hovel deep within the spine of the world.  Under the remains lay a small laboratory that had appearently suffered a major magical mishap.  The scroll was firmly in the grasp of a necrotic, yet seemingly permanently frozen half-drowish hand.  It would be Ko'Dezza's final work, and her doom as well.  When cast, the wizard channels a massive amount of dark energy from the heart of the shadow plane into a singular point on the battlefield until it reaches critical mass, then explodes violently outward in all directions, ripping through any creatures in it's path, causing 7d10 Hit Points of cold damage and 7d10 Hit Points of magic damage.  There is a small chance that a creature hit by this dark energy will unwittingly become a conduit for a shadow elemental to enter the prime, resulting in their evisceration upon it's arrival.  The enraged elemental will attack the nearest creature, both friend and foe alike, until it is utterly destroyed.  There is no Saving Throw allowed for any of the effects of this spell.  Undead creatures are immune to the effects of this spell.~
+The first scroll containing this spell was discovered when a group of adventurers happened across a blasted hovel deep within the Spine of the World.  Under the remains lay a small laboratory that had appearently suffered a major magical mishap.  The scroll was firmly in the grasp of a necrotic, yet seemingly permanently frozen half-drowish hand.  It would be Ko'Dezza's final work, and her doom as well.  When cast, the wizard channels a massive amount of dark energy from the heart of the shadow plane into a singular point on the battlefield until it reaches critical mass, then explodes violently outward in all directions, ripping through any creatures in it's path, causing 7d10 Hit Points of cold damage and 7d10 Hit Points of magic damage.  There is a small chance that a creature hit by this dark energy will unwittingly become a conduit for a shadow elemental to enter the prime, resulting in their evisceration upon it's arrival.  The enraged elemental will attack the nearest creature, both friend and foe alike, until it is utterly destroyed.  There is no Saving Throw allowed for any of the effects of this spell.  Undead creatures are immune to the effects of this spell.~
 @3076 = ~Conjure Shadow Elemental~
 @3077 = ~Conjure Shadow Elemental
 (Conjuration/Summoning)
@@ -7627,6 +7797,7 @@ Upon casting a Conjure Shadow Elemental spell, the caster opens a special gate t
 @4078 = ~Electrical Resistance Lowered~
 @4079 = ~Acid Resistance Lowered~
 @4080 = ~Poison Resistance Lowered~
+@4081 = ~Magma Burst~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -7700,6 +7871,8 @@ Upon casting a Conjure Shadow Elemental spell, the caster opens a special gate t
 @5064 = ~Knock~
 @5065 = ~Shadow Elemental Attack~
 @5066 = ~Faerie Fire~
+@5067 = ~Minor Lightning Bolt~
+@5068 = ~Minor Chain Lightning~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\

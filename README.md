@@ -28,7 +28,7 @@ What this mod does:
 
 - Adds upgrade options for the majority of the imported SoD items via Cromwell and Cespenar.  All recipes are on both, so the player should not run into any issues upgrading items.  Many of these new recipes require existing upgrade components within the game, keeping in the spirit of having to choose one upgrade over another for strategizing and replay-ability.  In addition, I have also created a few entirely new upgrade components to fit with the theme for some of the upgraded items.  I included an upgrade path for one importable item from BG1 as well, since I felt it deserved a future in BG2.
 
-- Adalon now drops silver scales, correcting what I felt was an oversight.  (These scales are used in some of the new upgrades.)
+- Adalon now drops silver scales, correcting what I felt was an oversight.  
 
 - Saladrex now drops red scales, correcting what I felt was an oversight.
 
@@ -46,7 +46,7 @@ What this mod does:
 
 - Includes upgrade paths for a two importable weapons from Baldur's Gate:EE
 
-- Optional Component allow for choice of items imported from BG1.
+- Optional Component to allow for choice of items imported from BG1.
 
 - Optional Component for updating names/appearances of existing dragonscale items to be more consistent.
 
@@ -57,7 +57,6 @@ What this mod does:
 - Imports new spells and Icewind Dale items into Baldur's Gate 1 Enhanced Edition.
 
 - Randomization of some item/spell drops to add replayability.
-
 
 All of the upgrades were created with balance in mind, and most have unique effects to keep things fun and fresh.  
 
