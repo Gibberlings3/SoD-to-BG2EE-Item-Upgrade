@@ -50,6 +50,8 @@ What this mod does:
 
 - Optional Component for updating names/appearances of existing dragonscale items to be more consistent.
 
+- Optional components for cosmetically enhancing existing items and on-hit effects.
+
 - Adds new options for armors, helms, and shields that can be created from all existing dragon scales.
 
 - Imports many items from Icewind Dale and places them in thoughtful locations througout the game.

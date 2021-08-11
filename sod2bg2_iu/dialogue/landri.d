@@ -4,8 +4,10 @@ END
 BEGIN 0
 END
 BEGIN
-"ACTION" ~EraseJournalEntry(4685)
-GiveItemCreate("dtkwboot",LastTalkedToBy,0,0,0)~
+"ACTION" ~AddexperienceParty(300)
+TakePartyItem("BOOT06")
+GiveItemCreate("dtkwboot",LastTalkedToBy,0,0,0)
+IncrementGlobal("HelpLandrin","GLOBAL",1)~
 "UNSOLVED_JOURNAL" ~@6068~
 END
 
