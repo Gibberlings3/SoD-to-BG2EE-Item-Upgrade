@@ -35,7 +35,9 @@ APPEND WSMITH01
                                                  TakePartyItemNum("scrlak",1)
                                                  DestroyItem("scrlak")
                                                  DestroyGold(5000)~ GOTO 56
+	IF ~~ THEN REPLY #66770 GOTO NoThanks
   END
+  
    IF ~~ THEN BEGIN NewItem4 SAY @258
     IF ~PartyGoldLT(5000)~ THEN REPLY #66662 GOTO NoThanks
     IF ~PartyGoldGT(4999)~ THEN REPLY #66664 DO ~SetGlobal("DTKItems","ar0334",109)

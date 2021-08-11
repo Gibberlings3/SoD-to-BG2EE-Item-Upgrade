@@ -38,8 +38,6 @@ APPEND WSMITH01
                                                  DestroyItem("hamm05")
                                                  TakePartyItemNum("misc7n",1)
                                                  DestroyItem("misc7n")
-                                                 TakePartyItemNum("ohioun02",1)
-                                                 DestroyItem("ohioun02")
                                                  TakePartyItemNum("scrl1k",1)
                                                  DestroyItem("scrl1k")
                                                  DestroyGold(5000)~ GOTO 56
@@ -58,8 +56,6 @@ APPEND WSMITH01
                                                  DestroyItem("hamm05")
                                                  TakePartyItemNum("wand07",1)
                                                  DestroyItem("wand07")
-                                                 TakePartyItemNum("ohioun02",1)
-                                                 DestroyItem("ohioun02")
                                                  TakePartyItemNum("scrl1k",1)
                                                  DestroyItem("scrl1k")
                                                  DestroyGold(5000)~ GOTO 56

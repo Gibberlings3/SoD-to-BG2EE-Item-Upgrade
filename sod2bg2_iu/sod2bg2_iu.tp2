@@ -3,7 +3,7 @@
 BACKUP ~sod2bg2_iu/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/~
 
-VERSION ~v2.0.1~
+VERSION ~v2.0.2~
 
 README ~sod2bg2_iu/readme.html~
 
@@ -121,7 +121,6 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkpenc2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkpenc3.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkmagsp.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkaxham.pro~
-ADD_PROJECTILE ~sod2bg2_iu/pro/dtkbiter.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkthrs1.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkthrs2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkfball.pro~
@@ -172,6 +171,7 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi1.pro~
 	COPY_EXISTING ~dtkashi1.pro~ ~override~
 	WRITE_SHORT 0x21a ~%dtkashi%~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkbite1.pro~
 
 //////////////////////////
 //Adding Creatures  //////
@@ -479,7 +479,7 @@ ACTION_IF GAME_IS ~bg2ee~ BEGIN	// placing scrolls for BG2EE games
 							EXTEND_BOTTOM ~ar5405.bcs~ ~sod2bg2_iu/scripts/ar5405b.baf~	//Add scoll to treasure chest
 								EXTEND_BOTTOM ~ar1301.bcs~ ~sod2bg2_iu/scripts/ar1301b.baf~	//Add scoll to chest
 									COPY_EXISTING ~bernard.sto~ ~override~	//Copper Coronet
-									ADD_STORE_ITEM ~bdscrl1a.itm~ #0 #0 #0 ~IDENTIFIED~ #1	
+									ADD_STORE_ITEM ~dtkdance.itm~ #0 #0 #0 ~IDENTIFIED~ #1	
 						END
 
 
@@ -1920,17 +1920,10 @@ END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdsw1h02.itm~ BEGIN // check if already present for EET games  
 COPY ~sod2bg2_iu/itm/acid/bdsw1h02.itm~ ~override~ 	//Tongue of Acid +3
-WRITE_ASCII 0x3a dtktocid	//new icon for tongue of acid
   SAY NAME1 @2000
   SAY NAME2 @2001
   SAY DESC @2002
-  LPF ALTER_ITEM_HEADER INT_VAR header = 1 STR_VAR icon = dtktocid END
 END
-		ACTION_IF FILE_EXISTS_IN_GAME ~bdsw1h02.itm~ BEGIN // check if already present for EET games  
-		COPY_EXISTING ~bdsw1h02.itm~ ~override~ 	//Tongue of Acid +3
-		WRITE_ASCII 0x3a dtktocid	//new icon for tongue of acid
-		LPF ALTER_ITEM_HEADER INT_VAR header = 1 STR_VAR icon = dtktocid END
-	END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdleat05.itm~ BEGIN // check if already present for EET games  
 COPY ~sod2bg2_iu/itm/drag/bdleat05.itm~ ~override~ //Dragonscale Armor(Green)
@@ -3765,7 +3758,7 @@ COPY ~sod2bg2_iu/itm/bbelt/dtkblt01.itm~ ~override~ //Belt of the Blademaster
 COPY ~sod2bg2_iu/itm/biter/dtkdart1.itm~ ~override~ //Biter +3
   SAY NAME2 @2028
   SAY DESC @2029
-  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkbiter%" END
+  LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkbite1%" END
 
 COPY ~sod2bg2_iu/itm/voidsw/dtkswd02.itm~ ~override~ //Vampiric Voidsword +5
   SAY NAME2 @2030
@@ -4308,7 +4301,7 @@ COPY ~sod2bg2_iu/itm/demon3/dtkswda3.itm~ ~override~  //Gift of the Demon +3
   SAY UNIDENTIFIED_DESC @2581
   SAY DESC @2635 
 
-COPY ~sod2bg2_iu/itm/demon4/dtkswda4.itm~ ~override~		//Gift of the Demon +4
+COPY ~sod2bg2_iu/itm/demon4/dtkswda4.itm~ ~override~		//Infernal Gift of the Demon +4
   SAY NAME1 @2000
   SAY NAME2 @2580
   SAY UNIDENTIFIED_DESC @2581
@@ -4317,7 +4310,7 @@ COPY ~sod2bg2_iu/itm/demon4/dtkswda4.itm~ ~override~		//Gift of the Demon +4
 	  LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 14672 parameter1 = RESOLVE_STR_REF(@4059) END
 	  LPF ALTER_EFFECT INT_VAR match_opcode = 267 match_parameter1 = 8364 parameter1 = RESOLVE_STR_REF(@4057) END
   
-COPY ~sod2bg2_iu/itm/demon5/dtkswda5.itm~ ~override~		//Gift of the Demon +5
+COPY ~sod2bg2_iu/itm/demon5/dtkswda5.itm~ ~override~		//Infernal Gift of the Demon +5
   SAY NAME1 @2000
   SAY NAME2 @2636
   SAY UNIDENTIFIED_DESC @2581
@@ -5140,7 +5133,7 @@ COPY_EXISTING ~cohrvale.cre~ ~override~
   REPLACE_CRE_ITEM ~bdblun07~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP	//Backwhacker +2
 
 COPY_EXISTING ~mekrat.cre~ ~override~
-  ADD_CRE_ITEM ~bdclck06~ #0 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
+  ADD_CRE_ITEM ~bdclck06~ #10 #0 #0 ~NONE~ ~CLOAK~	//Cloak of Minor Arcana
 	ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~		//Random new spell Level 5 or lower
 
 COPY_EXISTING ~sppain.cre~ ~override~
@@ -5308,16 +5301,16 @@ COPY_EXISTING ~valyg12.cre~ ~override~
   REPLACE_CRE_ITEM ~bdclck03~ #0 #0 #0 ~IDENTIFIED~ ~CLOAK~		//Crommus's Capelet
   
 COPY_EXISTING ~cernd10.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdamul03~ #0 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
+  REPLACE_CRE_ITEM ~bdamul03~ #10 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
   
 COPY_EXISTING ~cernd12.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdamul03~ #0 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
+  REPLACE_CRE_ITEM ~bdamul03~ #10 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
   
 COPY_EXISTING ~cernd13.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdamul03~ #0 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
+  REPLACE_CRE_ITEM ~bdamul03~ #10 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
   
 COPY_EXISTING ~cernd13b.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdamul03~ #0 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
+  REPLACE_CRE_ITEM ~bdamul03~ #10 #0 #0 ~IDENTIFIED~ ~AMULET~		//Amulet of Abnormally Awesome Ankheg Summoning
   
 COPY_EXISTING ~aerie6.cre~ ~override~
   REPLACE_CRE_ITEM ~bdrobe04~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~		//Cleric's Vestments
@@ -5573,6 +5566,8 @@ ACTION_IF FILE_EXISTS_IN_GAME ~dezkie.cre~ BEGIN // check if present for EET gam
 		
 COPY_EXISTING ~ralej.cre~ ~override~
 	REPLACE_CRE_ITEM ~ohioun03~ #0 #0 #0 ~NONE~ ~HELMET~		//Clear Ioun Stone
+		COPY_EXISTING ~dcowl1.cre~ ~override~
+			REPLACE_CRE_ITEM ~ohioun03~ #0 #0 #0 ~NONE~ ~HELMET~		//Clear Ioun Stone
 	
 ACTION_IF FILE_EXISTS_IN_GAME ~thalan.cre~ BEGIN // check if present for EET games
 	COPY_EXISTING ~thalan.cre~ ~override~
@@ -5897,7 +5892,7 @@ COPY_EXISTING ~wmart1.sto~ ~override~		//Joluv
 		ADD_STORE_ITEM ~amulbro~ #0 #0 #0 ~IDENTIFIED~ #1		//Clasp of Bron's Cloak
 			ADD_STORE_ITEM ~usltr3a~ #0 #0 #0 ~IDENTIFIED~ #1		//Shadowed Studded Leather +2
 				ADD_STORE_ITEM ~gauntem~ #0 #0 #0 ~IDENTIFIED~ #1		//Gauntlets of Elven Might
-					ADD_STORE_ITEM ~ohoiun02~ #0 #0 #0 ~IDENTIFIED~ #1		//Scarlet/Blue Ioun Stone
+					ADD_STORE_ITEM ~ohioun02~ #0 #0 #0 ~IDENTIFIED~ #1		//Scarlet/Blue Ioun Stone
 						ADD_STORE_ITEM ~helmdef~ #0 #0 #0 ~IDENTIFIED~ #1		//Helm of the Trusted Defender
 							ADD_STORE_ITEM ~dtkwscrf~ #0 #0 #0 ~IDENTIFIED~ #1		//Winter Wolf Scarf
 								ADD_STORE_ITEM ~dtkwboot~ #0 #0 #0 ~IDENTIFIED~ #1		//Winter Wolf Boots
@@ -6828,6 +6823,1963 @@ COPY_EXISTING ~import03.2da~ ~override~
 	SET_2DA_ENTRY 4 1 2  ~*~
 
  PRETTY_PRINT_2DA
+ 
+ 
+////////////////////////////////////////////////
+// Cosmetic Enhancements for Existing Items/////
+////////////////////////////////////////////////
+
+BEGIN @9043
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+PRINT @9001
+
+INCLUDE ~sod2bg2_iu/lib/functions.tpa~		//adding functions
+
+////////////////////
+//Adding Resources//
+////////////////////
+
+COPY ~sod2bg2_iu/cosmetic/bam~ ~override~
+COPY ~sod2bg2_iu/cosmetic/vvc~ ~override~
+COPY ~sod2bg2_iu/cosmetic/wav~ ~override~
+
+///////////////////////
+// Adding Projectiles//
+///////////////////////
+
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtktham2.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkaciar.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkgesen.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkbiter.pro~ 
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkthamm.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkpyblt.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkfbolt.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkibolt.pro~
+ADD_PROJECTILE ~sod2bg2_iu/cosmetic/pro/dtkltblt.pro~
+
+/////////////////////////////////////////////////
+// Modifying spells to account for item changes//
+/////////////////////////////////////////////////
+
+
+COPY_EXISTING ~sppr613.spl~ ~override~		//Physical mirror - altering to add new projectiles to bounce
+	SET projectile = EVAL "%dtkbiter%"
+	LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkthamm%"
+		LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtktham2%"
+			LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+				SET projectile = EVAL "%dtkaciar%"
+				LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+					SET projectile = EVAL "%dtkgesen%"
+					LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+						SET projectile = EVAL "%dtkpyblt%"
+						LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+							SET projectile = EVAL "%dtkfbolt%"
+							LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+								SET projectile = EVAL "%dtkibolt%"
+								LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+									SET projectile = EVAL "%dtkltblt%"
+									LPF ADD_SPELL_EFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+	BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~shld24a.itm~ ~override~		//reflection shield +1(alternate version) - altering to add new projectiles to bounce
+	SET projectile = EVAL "%dtkbiter%"
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkthamm%"
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtktham2%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+				SET projectile = EVAL "%dtkaciar%"
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+					SET projectile = EVAL "%dtkgesen%"
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+						SET projectile = EVAL "%dtkpyblt%"
+						LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+							SET projectile = EVAL "%dtkfbolt%"
+							LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+								SET projectile = EVAL "%dtkibolt%"
+								LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+									SET projectile = EVAL "%dtkltblt%"
+									LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+	BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~shld24.itm~ ~override~		//reflection shield +1 - altering to add new projectiles to bounce
+	SET projectile = EVAL "%dtkbiter%"
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkthamm%"
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtktham2%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+				SET projectile = EVAL "%dtkaciar%"
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+					SET projectile = EVAL "%dtkgesen%"
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+						SET projectile = EVAL "%dtkpyblt%"
+						LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+							SET projectile = EVAL "%dtkfbolt%"
+							LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+								SET projectile = EVAL "%dtkibolt%"
+								LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+									SET projectile = EVAL "%dtkltblt%"
+									LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+	BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~dtkshld1.itm~ ~override~		//mirrored buckler of the fist +2 (if present) - altering to add new projectiles to bounce
+	SET projectile = EVAL "%dtkbiter%"
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+		SET projectile = EVAL "%dtkthamm%"
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+			SET projectile = EVAL "%dtktham2%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+				SET projectile = EVAL "%dtkaciar%"
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+					SET projectile = EVAL "%dtkgesen%"
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+						SET projectile = EVAL "%dtkpyblt%"
+						LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+							SET projectile = EVAL "%dtkfbolt%"
+							LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+								SET projectile = EVAL "%dtkibolt%"
+								LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+									SET projectile = EVAL "%dtkltblt%"
+									LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 0 duration = 54 resist_dispel = 3 END  //adds a new projectile to be relfected by physical mirror effect
+	BUT_ONLY IF_EXISTS
+
+	
+////////////////////////////
+// Changing Existing Items//
+////////////////////////////
+COPY_EXISTING ~bdsw1h02.itm~ ~override~	//Tongue of Acid +3
+	WRITE_ASCII 0x3a ~dtktocid~ #8  //changes inventory icon
+		WRITE_ASCII 0x76 ~dtktocid~ #8  //changes melee icon
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~bdhamm02.itm~ ~override~		//Voidhammer +3
+LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~bdsw1h06.itm~ ~override~		//Voidsword +3
+LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~bdbull02.itm~ ~override~		//Bullet of Darkness +3
+LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bdarow02.itm~ ~override~		//Void-Tipped Arrow +3
+LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bdbolt02.itm~ ~override~		//Bolt of Ice +1
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkibolt%" END
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bdbolt01.itm~ ~override~		//Bolt of Fire +1
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkfbolt%" END
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bolt03.itm~ ~override~		//Bolt of Lightning
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkltblt%" END
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bolt05.itm~ ~override~		//Bolt of Polymorphing
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkpyblt%" END
+		LPF CLONE_EFFECT INT_VAR match_opcode = 111 opcode = 135 parameter2 = 2 STR_VAR resource = squirr parameter2 = 0 END // fixes polymorph visual effect
+  BUT_ONLY IF_EXISTS
+	BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~arow04.itm~ ~override~		//Acid Arrow +1
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkaciar%" END
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bddart01.itm~ ~override~		//Biter +2
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkbiter%" END
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~hamm06.itm~ ~override~	//Dwarven Thrower +3
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkthamm%" END
+		WRITE_ASCII 0x76 ~ihamm06~ #8  //changes melee icon
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohnhamm1.itm~ ~override~		//The Brick +2
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtktham2%" END
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 247 END  // changing color index - parameter 2 = location parameter 1 = color index number
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 81 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~npchan.itm~ ~override~	//Corthala Family Armor
+    WRITE_ASCII 0x22 ~3A~ #2	//Changes equipped appearance to Chain instead of leather
+  BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~shld24.itm~ ~override~	//Reflection Shield +1
+	SET location = 34
+	SET cycle_speed = 90   
+	SET r = 55
+	SET b = 55
+	SET g = 55
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		SET location = 32
+		SET cycle_speed = 90   
+		SET r = 55
+		SET b = 55
+		SET g = 55
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END
+		WRITE_ASCII 0x22 ~D2~ #2	//Changes equipped appearance to BG1 medium shield
+		WRITE_ASCII 0x3a ~ishldrf~ #8  //changes inventory icon
+		WRITE_ASCII 0x58 ~dtkreflc~ #8  //changes description image
+		WRITE_ASCII 0x44 ~gshld01~ #8  //changes ground icon
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 34 parameter1 = 255 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 33 parameter2 = 37  parameter1 = 109 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 32 parameter1 = 254 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 parameter2 = 36 parameter1 = 210 END // add color index in speificed location
+			SET projectile = EVAL "%dtkbiter%"
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+				SET projectile = EVAL "%dtkthamm%"
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+					SET projectile = EVAL "%dtktham2%"
+					LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+						SET projectile = EVAL "%dtkaciar%"
+						LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+							SET projectile = EVAL "%dtkgesen%"
+							LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+								SET projectile = EVAL "%dtkfbolt%"
+								LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+									SET projectile = EVAL "%dtkibolt%"
+									LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+										SET projectile = EVAL "%dtkltblt%"
+										LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 197 target = 1 parameter2 = (projectile - 1) probability1 = 100 timing = 2 END  //adds a new projectile to be relfected by physical mirror effect
+	BUT_ONLY IF_EXISTS
+					
+COPY_EXISTING ~ohdmask.itm~ ~override~	//The Visage
+	WRITE_SHORT 0x22 16970
+	SET location = 52
+	SET cycle_speed = 255   
+	SET r = 50
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter1 = 195 parameter2 = 52 timing = 2 probability1 = 100 END
+  BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~sw1h63.itm~ ~override~	//Foebane +5
+	SET r = 25
+	SET b = 25
+	SET g = 25
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 16 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 132 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 79 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 104 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 146 match_parameter1 = 1 parameter2 = 2 STR_VAR resource = EVAL "dtkfbane" END  // changes spell cast on hit to new spell
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h62.itm~ ~override~	//Foebane +3
+	SET r = 25
+	SET b = 25
+	SET g = 25
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 16 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 132 END  // changing color index - parameter 2 = location parameter 1 = color index number
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 79 END  // changing color index - parameter 2 = location parameter 1 = color index number
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 104 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ax1h13.itm~ ~override~	//Frostreaver +3
+	SET location = 16
+	SET cycle_speed = 45
+	SET r = 0
+	SET b = 0
+	SET g = 50
+	LPF DELETE_EFFECT INT_VAR match_opcode = 8 match_parameter2 = 16 END
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 86 END  // changing color index - parameter 2 = location parameter 1 = color index number
+						LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 197 END  // changing color index - parameter 2 = location parameter 1 = color index number
+							LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 202 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ax1h12.itm~ ~override~	//Stonefire +3
+	SET location = 16
+	SET cycle_speed = 255
+	SET r = 138
+	SET b = 0
+	SET g = 73
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 147 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~helm33.itm~ ~override~	//Gold Horned Helm
+    WRITE_ASCII 0x22 ~J3~ #2	
+  BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~dagg21.itm~ ~override~	//Dagger of the Star +4
+	SET location = 21
+	SET cycle_speed = 120
+	SET r = 173
+	SET b = 0
+	SET g = 173
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dagg22.itm~ ~override~	//Dagger of the Star +5
+	SET location = 21
+	SET cycle_speed = 44
+	SET r = 173
+	SET b = 0
+	SET g = 173
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		SET r = 173
+		SET b = 0
+		SET g = 173
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 20 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~wa2robe.itm~ ~override~	//Robe of Vecna
+	WRITE_ASCII 0x58 ~cclck12~ #8  //changes description image
+	WRITE_ASCII 0x3a ~dtkvecna~ #8  //changes inventory icon
+		SET location = 0
+		SET cycle_speed = 20
+		SET r = 65
+		SET b = 0
+		SET g = 156
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			SET location = 1
+			SET cycle_speed = 200
+			SET r = 95
+			SET b = 204
+			SET g = 0
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 5 parameter1 = 104 parameter2 = 1 END  // changing color index - parameter 2 = location parameter 1 = color index number
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 0 parameter1 = 69 END  // changing color index - parameter 2 = location parameter 1 = color index number
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 4 parameter1 = 81 END  // changing color index - parameter 2 = location parameter 1 = color index number
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter1 =66  parameter2 = 2 timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohnrobe1.itm~ ~override~	  //Robe of Goodman Hayes
+	WRITE_ASCII 0x3a ~dtkhayes~ #8  //changes inventory icon
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~plat16.itm~ ~override~	  //Armor of the Hart +3
+	WRITE_ASCII 0x3a ~dtkarhrt~ #8  //changes inventory icon
+  BUT_ONLY IF_EXISTS
+	
+COPY_EXISTING ~palplat.itm~ ~override~	  //Armor of the Hart +3 (NPC version)
+	WRITE_ASCII 0x3a ~dtkarhrt~ #8  //changes inventory icon
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~leat24.itm~ ~override~	  //Grandmaster's Armor +6
+	WRITE_ASCII 0x58 ~cleat12~ #8  //changes description image
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 5 parameter1 = 207 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 0 parameter1 = 67 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 4 parameter1 = 93 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~plat21.itm~ ~override~	  //Enkidu's Full Plate +3
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 5 parameter1 = 6 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 0 parameter1 = 242 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~plat13.itm~ ~override~	  //Gorgon's Plate +4
+	WRITE_ASCII 0x3a ~dtkgorg~ #8  //changes iventory icon
+		SET location = 0
+		SET cycle_speed = 255
+		SET r = 40
+		SET b = 0
+		SET g = 40
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 5 parameter1 = 252 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 0 parameter1 = 90 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~leat23.itm~ ~override~	  //Studded Leather of Thorns +6
+	WRITE_ASCII 0x3a ~dtklthrn~ #8  //changes iventory icon
+			SET location = 0
+			SET cycle_speed = 255
+			SET r = 70
+			SET b = 0
+			SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 0 parameter1 = 147 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~helm31.itm~ ~override~	  //Helm of the Rock
+	WRITE_ASCII 0x3a ~dtkhrck1~ #8  //changes iventory icon
+	WRITE_ASCII 0x58 ~1chelm11~ #8  //changes description image
+    WRITE_ASCII 0x22 ~J0~ #2	//Changes equipped appearance to Helm15
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 50 parameter1 = 58 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 53 parameter1 = 205 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 49 parameter1 = 27 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 48 parameter1 = 68 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~helm32.itm~ ~override~	  //Helm of the Rock(with horns)
+	WRITE_ASCII 0x3a ~dtkhrck2~ #8  //changes iventory icon
+	WRITE_ASCII 0x76 ~dtkhrck2~ #8  //changes charge ability icon
+	WRITE_ASCII 0x58 ~1chelm21~ #8  //changes description image
+    WRITE_ASCII 0x22 ~J1~ #2	//Changes equipped appearance to Helm15
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 52 parameter1 = 58 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 53 parameter1 = 205 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 48 parameter1 = 209 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 50 parameter1 = 68 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohhdag01.itm~ ~override~	  //The Jade Fang +3
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 69 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dagg20.itm~ ~override~	  //Life-Stealer +4
+	SET location = 21
+	SET cycle_speed = 255
+	SET r = 100
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 195 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~blun22.itm~ ~override~	  //Blackblood +3
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~xbow16.itm~ ~override~	  //Firetooth +5
+	SET location = 21
+	SET cycle_speed = 130
+	SET r = 100
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~hamm10.itm~ ~override~	  //Runehammer +4
+	LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+		SET cycle_speed = 255
+		SET location = 16
+		SET r = 100
+		SET b = 100
+		SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			SET cycle_speed = 155
+			SET location = 20
+			SET r = 100
+			SET b = 100
+			SET g = 0
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				SET cycle_speed = 80
+				SET location = 21
+				SET r = 100
+				SET b = 100
+				SET g = 0
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~hamm11.itm~ ~override~	  //Runehammer +5
+	LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+		SET cycle_speed = 155
+		SET location = 16
+		SET r = 100
+		SET b = 100
+		SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			SET cycle_speed = 80
+			SET location = 20
+			SET r = 100
+			SET b = 100
+			SET g = 0
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				SET cycle_speed = 45
+				SET location = 21
+				SET r = 100
+				SET b = 100
+				SET g = 0
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohreaver.itm~ ~override~	  //Ir'revrykal +5
+	SET r = 100
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bow21.itm~ ~override~	  //Darkfire Bow +5
+	SET r = 50
+	SET b = 50
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 20 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bow13.itm~ ~override~	  //Mana Bow +4
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 82 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bow19.itm~ ~override~	  //Shortbow of Gesen
+	LPF ALTER_ITEM_HEADER INT_VAR projectile = EVAL "%dtkgesen%" END
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 226 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			SET cycle_speed = 155
+			SET location = 16
+			SET r = 100
+			SET b = 0
+			SET g = 100
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohnslng1.itm~ ~override~	  //Wild Sling +1
+	LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+		SET cycle_speed = 50
+		SET location = 16
+		SET r = 0
+		SET b = 0
+		SET g = 150
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 16 parameter1 = 86 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number		
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~slng09.itm~ ~override~	  //Erienne Sling +5
+	LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+		SET cycle_speed = 122
+		SET location = 16
+		SET r = 100
+		SET b = 100
+		SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 16 parameter1 =104 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~wasling.itm~ ~override~	  //Sling of Everard +5
+		SET cycle_speed = 20
+		SET location = 20
+		SET r = 100
+		SET b = 0
+		SET g = 100
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~blun27.itm~ ~override~	  //Club of Detonation +5
+		SET r = 100
+		SET b = 0
+		SET g = 50
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 =21  timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~blun35.itm~ ~override~	  //Ice Star +4
+		SET r = 0
+		SET b = 50
+		SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 =21  timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 82 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 104 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~blun29.itm~ ~override~	  //Storm Star +5
+		SET cycle_speed = 35
+		SET location = 21
+		SET r = 100
+		SET b = 0
+		SET g = 90
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~halb09.itm~ ~override~	  //Wave +4
+		SET r = 0
+		SET b = 255
+		SET g = 50
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 =20  timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw2h17.itm~ ~override~	  //Gram the Sword of Grief +5
+	LPF DELETE_EFFECT INT_VAR match_opcode = 8 END
+		SET cycle_speed = 90
+		SET location = 21
+		SET r = 0
+		SET b = 0
+		SET g = 5
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 219 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw2h18.itm~ ~override~	  //Gram the Sword of Grief +5(upgraded)
+	LPF DELETE_EFFECT INT_VAR match_opcode = 8 END
+		SET cycle_speed = 45
+		SET location = 21
+		SET r = 0
+		SET b = 0
+		SET g = 15
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			LPF CLONE_EFFECT INT_VAR match_opcode =216 match_parameter1 = 1 opcode = 215 parameter2 = 0 STR_VAR resource = paralh probability1 = 100 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 219 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~miscbc.itm~ ~override~	  //Blackrazor +3
+    WRITE_ASCII 0x22 ~S1~ #2	//Changes equipped appearance to Long Sword
+			SET cycle_speed = 90
+			SET location = 21
+			SET r = 100
+			SET b = 100
+			SET g = 100
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~shld21.itm~ ~override~	  //Dragon Scale Shield +2
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 37 parameter1 = 222 END  // changing color index - parameter 2 = location parameter 1 = color index number
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 34 parameter1 = 86 END  // changing color index - parameter 2 = location parameter 1 = color index number
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 33 parameter1 = 243 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		SET cycle_speed = 20
+		SET location = 33
+		SET r = 20
+		SET b = 0
+		SET g = 0
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			SET cycle_speed = 90
+			SET location = 34
+			SET r = 0
+			SET b = 0
+			SET g = 20
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+				SET cycle_speed = 190
+				SET location = 37
+				SET r = 0
+				SET b = 0
+				SET g = 0
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohbshld1.itm~ ~override~	  //Kazrah's Shield +4
+	SET r = 0
+	SET b = 100
+	SET g = 50
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 37 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohnshld1.itm~ ~override~	  //Shield of Fyrus Khal +2
+    WRITE_ASCII 0x22 ~D3~ #2	//Changes equipped appearance to Medium Shield (BG1)
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 32 parameter1 = 215 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 37 parameter1 = 31 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 33	parameter2 = 34 parameter1 = 221 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			SET r = 50
+			SET b = 0
+			SET g = 0
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 32 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h51.itm~ ~override~	  //Celestial Fury +3
+	LPF ALTER_EFFECT INT_VAR match_opcode = 215 STR_VAR resource = dtkshck duration = 6  END  // changing color index - parameter 2 = location parameter 1 = color index number
+		SET cycle_speed = 60
+		SET location = 255
+		SET r = 125
+		SET b = 0
+		SET g = 125
+			LPF CLONE_EFFECT INT_VAR match_opcode =215 opcode = 50 target = 2 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 0 duration = 6 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h68.itm~ ~override~	  //Spectral Brand +4
+	LPF DELETE_EFFECT INT_VAR match_opcode = 8 END
+		SET r = 0
+		SET b = 60
+		SET g = 60
+		LPF ALTER_EFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 21 parameter1 =27 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 20 parameter1 =66 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 16 parameter1 =67 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h69.itm~ ~override~	  //Spectral Brand +5
+	LPF DELETE_EFFECT INT_VAR match_opcode = 8 END
+		SET r = 0
+		SET b = 120
+		SET g = 120
+		LPF ALTER_EFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 21 parameter1 =27 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 20 parameter1 =66 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 16 parameter1 =67 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw2h15.itm~ ~override~	  //Silver Sword
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd probability1 = 25 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 32 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 80 END  // changing color index - parameter 2 = location parameter 1 = color index number
+			LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 79 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~devaevil.itm~ ~override~	  //Silver Sword (Fallen Deva)
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd probability1 = 25 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~gith.itm~ ~override~	  //Silver Sword (Githyanki)
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd probability1 = 25 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~planetar.itm~ ~override~	  //Silver Sword (Planetar)
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd probability1 = 25 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohbwing.itm~ ~override~	  //Dark Justice +5
+    WRITE_ASCII 0x22 ~S2~ #2	//Changes equipped appearance to two handed sword(default is long sword w/ broken animation)
+		WRITE_ASCII 0x3a ~dtkdkjus~ #8  //changes iventory icon
+			WRITE_ASCII 0x76 ~dtkdkjus~ #8  //changes melee icon
+				LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+					LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd probability1 = 15 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+						LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl probability1 = 100 timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+							SET cycle_speed = 45
+							SET location = 21
+							SET r = 0
+							SET b = 150
+							SET g = 50
+							LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+								SET r = 1
+								SET b = 1
+								SET g = 1
+								LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 16 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+									LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 82 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~helm16.itm~ ~override~	  //Helm of Brilliance
+	SET cycle_speed = 144
+	SET location = 49
+	SET r = 214
+	SET b = 0
+	SET g = 32
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 52 parameter1 = 229 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ohnhelm1.itm~ ~override~	  //Thayan Circlet
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 52 parameter1 =96 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h60.itm~ ~override~	  //Angurvadal +4
+		LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+				SET r = 250
+				SET b = 0
+				SET g = 125
+				LPF ALTER_EFFECT INT_VAR match_opcode = 8 match_parameter2 = 21 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) END  // change existing solid glow RGB value
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h61.itm~ ~override~	  //Angurvadal +5
+		LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+				SET r = 250
+				SET b = 0
+				SET g = 125
+				LPF ALTER_EFFECT INT_VAR match_opcode = 8 match_parameter2 = 21 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) END  // change existing solid glow RGB value
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+					LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+
+COPY_EXISTING ~kuobolt.itm~ ~override~	  //Kuo-toan bolt
+	SET location = 255
+	SET cycle_speed = 180 //cycle speed cant be higher than rgb value on pulse
+	SET r = 180
+	SET g = 180
+	SET b = 0
+	LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 50 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location duration = 0 dicenumber = 0 dicesize = 0 timing = 0 probability1 = 100 END // adds character color pulse on successful stun
+		LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~kuobolt2.itm~ ~override~	  //Kuo-toan bolt
+	SET location = 255
+	SET cycle_speed = 180  //cycle speed cant be higher than rgb value on pulse
+	SET r = 180
+	SET g = 180
+	SET b = 0
+	LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 50 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location duration = 0 dicenumber = 0 dicesize = 0 timing = 0 probability1 = 100 END // adds character color pulse on successful stun
+		LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dwbolt02.itm~ ~override~	  //Drow bolt of stunning
+	SET location = 255
+	SET cycle_speed = 180  //cycle speed cant be higher than rgb value on pulse
+	SET r = 180
+	SET g = 180
+	SET b = 0
+	LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 50 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location duration = 0 dicenumber = 0 dicesize = 0 timing = 0 probability1 = 100 END // adds character color pulse on successful stun
+		LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sahbolt.itm~ ~override~	  //Paralytic bolt
+	SET location = 255
+	SET cycle_speed = 180  //cycle speed cant be higher than rgb value on pulse
+	SET r = 180
+	SET g = 180
+	SET b = 0
+	LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 50 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location duration = 0 dicenumber = 0 dicesize = 0 timing = 0 probability1 = 100 END // adds character color pulse on successful stun
+		LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~dwbolt01.itm~ ~override~	  //Drow bolt of sleep
+	LPF CLONE_EFFECT INT_VAR match_opcode = 39 opcode = 215 parameter2 = 0 STR_VAR resource = cdunhvis dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~bull04.itm~ ~override~	  //sunstone bullet +1
+	SET cycle_speed = 90
+	SET location = 16
+	SET r = 100
+	SET b = 0
+	SET g = 100
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dagg13.itm~ ~override~	  //Pixie Prick +3
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode = 39 opcode = 215 parameter2 = 0 STR_VAR resource = cdunhvis dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dagg17.itm~ ~override~	  //Stiletto of Demarchess +2
+		LPF CLONE_EFFECT INT_VAR match_opcode = 109 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dart03.itm~ ~override~	  //Dart of Stunning
+	SET location = 255
+	SET cycle_speed = 180  //cycle speed cant be higher than rgb value on pulse
+	SET r = 180
+	SET g = 180
+	SET b = 0
+	LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 50 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location duration = 0 dicenumber = 0 dicesize = 0 timing = 0 probability1 = 100 END // adds character color pulse on successful stun
+		LPF CLONE_EFFECT INT_VAR match_opcode = 45 opcode = 215 parameter2 = 0 STR_VAR resource = paralh dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~halb11.itm~ ~override~	  //Ravager +6
+	LPF DELETE_EFFECT INT_VAR match_opcode = 141 END
+		LPF CLONE_EFFECT INT_VAR match_opcode =13 opcode = 215 parameter2 = 0 STR_VAR resource = dtksilsd timing = 1 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~blun16.itm~ ~override~	//The Sleeper +2
+    WRITE_ASCII 0x22 ~FL~ #2	//Changes equipped appearance to Flail
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bdrobe05.itm~ ~override~	  //Robe of Red Flames
+	SET cycle_speed = 144
+	SET location = 0
+	SET r = 150
+	SET b = 0
+	SET g = 75
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h06.itm~ ~override~	  //Varscona +2
+	SET cycle_speed = 180
+	SET location = 21
+	SET r = 0
+	SET b = 50
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~sw1h24.itm~ ~override~	  //The Burning Earth +1
+	SET r = 230
+	SET b = 0
+	SET g = 125
+	LPF ALTER_EFFECT INT_VAR match_opcode = 8 match_parameter2 = 21 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) END  // change existing solid glow RGB value
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 20 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 16 parameter1 = 214 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~ax1h06.itm~ ~override~	  //Rhyte's Last Arrow +2
+	SET cycle_speed = 180
+	SET location = 21
+	SET r = 50
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location  timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~dwdart01.itm~ ~override~	  //Drow dart of sleep
+	LPF CLONE_EFFECT INT_VAR match_opcode = 39 opcode = 215 parameter2 = 0 STR_VAR resource = cdunhvis dicenumber = 0 dicesize = 0 timing = 0 duration = 0 probability1 = 100 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~slng03.itm~ ~override~	  //Arla's Dragonbane +3
+	LPF DELETE_EFFECT INT_VAR match_opcode = 9 END
+		SET cycle_speed = 50
+		SET location = 16
+		SET r = 0
+		SET b = 0
+		SET g = 150
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 7 target = 1 parameter2 = 16 parameter1 = 86 timing = 2 probability1 = 100 END  // changing color index - parameter 2 = location parameter 1 = color index number		
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~bdstaf03.itm~ ~override~	  //Echo of the Fiend +3
+    WRITE_ASCII 0x22 ~GS~ #2	//Changes equipped appearance to glowing staff
+	WRITE_ASCII 0x3a ~dtkefstf~ #8  //changes inventory icon
+	WRITE_ASCII 0x76 ~dtkefstf~ #8  //changes melee icon
+		SET r = 0
+		SET b = 0
+		SET g = 50
+			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = 21 timing = 2 probability1 = 100 END // This adds a solid glow effect in the desired location with desired RBG values, probability, etc..
+				LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 21 parameter1 = 69 END  // changing color index - parameter 2 = location parameter 1 = color index number
+BUT_ONLY IF_EXISTS
+
+
+COPY_EXISTING ~bdrobe01.itm~ ~override~	  //Robe of Arcane Aptitude
+	SET location = 0
+	SET cycle_speed = 20
+	SET r = 0
+	SET b = 70
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		SET location = 1
+		SET cycle_speed = 200
+		SET r = 0
+		SET b = 60
+		SET g = 60
+		LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+BUT_ONLY IF_EXISTS
+
+
+COPY_EXISTING ~bdplat04.itm~ ~override~	  //Rhino Beetle Plate
+	SET location = 0
+	SET r = 0
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 8 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~helm07.itm~ ~override~	//Helm of Balduran
+	SET location = 49
+	SET cycle_speed = 255 
+	SET r = 0
+	SET b = 10
+	SET g = 3
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+	LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 49 parameter1 = 68 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 53 parameter1 = 25 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+  
+COPY_EXISTING ~bdhelm04.itm~ ~override~	 //The Guardian Devil
+	SET location = 48
+	SET cycle_speed = 255   
+	SET r = 100
+	SET b = 0
+	SET g = 0
+	LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 9 target = 1 parameter1 = (b BLSL 24) + (g BLSL 16) + (r BLSL 8) parameter2 = (cycle_speed BLSL 16) + location timing = 2 probability1 = 100 END // This adds a pulse glow effect in the desired location with desired RBG values, probability, etc..
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 49 parameter1 = 0 END  // changing color index - parameter 2 = location parameter 1 = color index number
+		LPF ALTER_EFFECT INT_VAR match_opcode = 7 match_parameter2 = 53 parameter1 = 0 END  // changing color index - parameter 2 = location parameter 1 = color index number
+  BUT_ONLY IF_EXISTS
+
+
+
+	
+	
+////////////////////////////////////
+// Remove Annoying Item Effects/////
+////////////////////////////////////
+
+BEGIN @9044
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+PRINT @9001
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove blur, shadowed, physical mirror, spell trap visual effects from items only ie: claw of kazgoroth, relfection shield, cloak of mirroring
+	READ_BYTE 0x18 flags
+		PATCH_IF ((flags & BIT2) = BIT2) BEGIN // don't care if not droppable
+			LPF DELETE_EFFECT INT_VAR silent = 1 check_headers = 0 match_opcode = 65 match_timing = 2 END // only delete equipping blur effects
+				LPF DELETE_EFFECT INT_VAR silent = 1 check_headers = 0 match_opcode = 66 match_timing = 2 END // only delete equipping blur effects
+					LPF CLONE_EFFECT INT_VAR silent = 1 check_headers = 0 match_opcode = 197 match_timing = 2 opcode = 291 END  // prevent visual effect for phsyical mirror from playing on character if item has them only while equipped (reflection shield)
+						LPF CLONE_EFFECT INT_VAR silent = 1 check_headers = 0 match_opcode = 205 match_timing = 2 opcode = 291 END  // prevent visual effect for spell trap from playing on character if item has them only while equipped (cloak of mirroring)
+			END
+			BUT_ONLY
+
+
+///////////////////////////////////////////////////
+// Remove Pulse-Glows from armor, helms, shields///
+///////////////////////////////////////////////////
+
+BEGIN @9045
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+PRINT @9001
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove blur, shadowed, physical mirror, spell trap visual effects from items only ie: claw of kazgoroth, relfection shield, cloak of mirroring
+	READ_BYTE 0x1c category
+		PATCH_IF ((category = 2) OR (category = 7) OR (category = 12) OR (category = 41) OR (category = 47) OR (category = 49) OR (category = 53) OR (category = 60) OR (category = 61) OR (category = 62) OR (category = 63) OR (category = 64) OR (category = 65) OR (category = 66) OR (category = 67) OR (category = 68)) BEGIN // select only armors that are droppable
+			LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 9 END 
+			END
+			BUT_ONLY
+			
+			
+
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+// Enhanced visual on-hit effects (fire, cold, acid, electricity)///
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+
+///////////////////////////
+////////IWD-Style//////////
+///////////////////////////
+
+BEGIN @9047
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+SUBCOMPONENT @9046
+PRINT @9001	
+
+COPY ~sod2bg2_iu/cosmetic/hiteff/bam~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/vvc~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/wav~ ~override~
+
+COPY_EXISTING ~dmgtypes.2da~ ~override~
+	SET_2DA_ENTRY 2 1 2  ~*~
+	SET_2DA_ENTRY 2 2 2  ~dtkfirhh~
+	SET_2DA_ENTRY 2 3 2  ~dtkfirhl~
+		SET_2DA_ENTRY 7 1 2  ~*~
+		SET_2DA_ENTRY 7 2 2  ~dtkelchh~
+		SET_2DA_ENTRY 7 3 2  ~dtkelchl~
+			SET_2DA_ENTRY 8 1 2  ~*~
+			SET_2DA_ENTRY 8 2 2  ~dtkcldhh~
+			SET_2DA_ENTRY 8 3 2  ~dtkcldhl~
+				SET_2DA_ENTRY 9 1 2  ~*~
+					SET_2DA_ENTRY 10 1 2  ~*~
+					SET_2DA_ENTRY 10 2 2  ~dtkacihh~
+						SET_2DA_ENTRY 12 1 2  ~*~
+						SET_2DA_ENTRY 12 2 2  ~dtkfirhh~
+						SET_2DA_ENTRY 12 3 2  ~dtkfirhl~
+							SET_2DA_ENTRY 13 1 2  ~*~
+							SET_2DA_ENTRY 13 2 2  ~dtkcldhh~
+							SET_2DA_ENTRY 13 3 2  ~dtkcldhl~
+ PRETTY_PRINT_2DA
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Modifying items/spells to account for hit visual effect changes (includes SoD2BG2EE IU mod items/spells if they are present)      //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////
+////Items/////
+//////////////
+
+COPY_EXISTING ~dtkshdel.itm~ ~override~		//Shadow Elemental Attack
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect 
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7b.itm~ ~override~		//Varscona +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7a.itm~ ~override~		//Varscona +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd07.itm~ ~override~		//Varscona +3
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda5.itm~ ~override~		//Infernal Gift of the Demon +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda4.itm~ ~override~		//Infernal Gift of the Demon +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkbol1.itm~ ~override~		//Bolt of Frostfire +2
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (low) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+	
+	COPY_EXISTING ~dtkstaf1.itm~ ~override~		//Uncursed Staff of Antipode
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+
+	
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove old hit visual effects to prevent conflicts
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~ITM ~ = 1) BEGIN
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do instant poison damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do poison over time damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to items that do instant magic damage
+				END
+				BUT_ONLY 
+				
+
+//////////////
+////Spells////
+//////////////
+
+COPY_EXISTING ~dtkshd.spl~ ~override~		//Grasping Shadows
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			ACTION_TRY		//Grasping Shadows (from IDS)
+			  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_GRASPING_SHADOWS~ RET grasshad = spell_res END
+			  COPY_EXISTING ~%grasshad%.spl~ ~override~
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+					WITH
+					  ~Failure("Invalid spell number: -1")~
+					  BEGIN
+						WARN ~Warning: Could not find CLERIC_GRASPING_SHADOWS in SPELL.IDS~
+					  END
+					  DEFAULT
+					END
+
+   
+COPY_EXISTING ~dtksblt.spl~ ~override~		//Shadow Bolt
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			COPY_EXISTING ~dtksblt2.spl~ ~override~		//Shadow Bolt (second component)
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+				  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+				  BUT_ONLY IF_EXISTS
+						ACTION_TRY		//Shadow Bolt (from IDS)
+						  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_SHADOW_BOLT~ RET shadbolt = spell_res END
+						  COPY_EXISTING ~%shadbolt%.spl~ ~override~
+						  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+								WITH
+								  ~Failure("Invalid spell number: -1")~
+								  BEGIN
+									WARN ~Warning: Could not find CLERIC_SHADOW_BOLT in SPELL.IDS~
+								  END
+								  DEFAULT
+								END
+			
+				
+COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~SPL ~ = 1) BEGIN
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do instant poison damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do poison over time damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to spells that do instant magic damage
+		END
+		BUT_ONLY  
+		
+		
+		
+		
+//////////////////////////
+////////BG-Style//////////
+//////////////////////////
+
+BEGIN @9048
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+SUBCOMPONENT @9046
+PRINT @9001	
+
+COPY ~sod2bg2_iu/cosmetic/hiteff/bam~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/vvc~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/wav~ ~override~
+
+COPY_EXISTING ~dmgtypes.2da~ ~override~
+	SET_2DA_ENTRY 2 1 2  ~*~
+	SET_2DA_ENTRY 2 2 2  ~dtkfirh2~
+	SET_2DA_ENTRY 2 3 2  ~spburn~
+		SET_2DA_ENTRY 7 1 2  ~*~
+		SET_2DA_ENTRY 7 2 2  ~dtkelch2~
+		SET_2DA_ENTRY 7 3 2  ~spsparks~
+			SET_2DA_ENTRY 8 1 2  ~*~
+			SET_2DA_ENTRY 8 2 2  ~dtkcldh2~
+			SET_2DA_ENTRY 8 3 2  ~dtkcldl2~
+				SET_2DA_ENTRY 10 1 2  ~*~
+				SET_2DA_ENTRY 10 2 2  ~dtkacih2~
+					SET_2DA_ENTRY 12 1 2  ~*~
+					SET_2DA_ENTRY 12 2 2  ~dtkfirh2~
+					SET_2DA_ENTRY 12 3 2  ~spburn~
+						SET_2DA_ENTRY 13 1 2  ~*~
+						SET_2DA_ENTRY 13 2 2  ~dtkcldh2~
+						SET_2DA_ENTRY 13 3 2  ~dtkcldl2~
+ PRETTY_PRINT_2DA
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Modifying items/spells to account for hit visual effect changes (includes SoD2BG2EE IU mod items/spells if they are present)      //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////
+////Items/////
+//////////////
+
+COPY_EXISTING ~dtkshdel.itm~ ~override~		//Shadow Elemental Attack
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect 
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7b.itm~ ~override~		//Varscona +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7a.itm~ ~override~		//Varscona +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd07.itm~ ~override~		//Varscona +3
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda5.itm~ ~override~		//Infernal Gift of the Demon +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda4.itm~ ~override~		//Infernal Gift of the Demon +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkbol1.itm~ ~override~		//Bolt of Frostfire +2
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (low) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+	
+	COPY_EXISTING ~dtkstaf1.itm~ ~override~		//Uncursed Staff of Antipode
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+
+	
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove old hit visual effects to prevent conflicts
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~ITM ~ = 1) BEGIN
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do instant poison damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do poison over time damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to items that do instant magic damage
+				END
+				BUT_ONLY 
+				
+
+//////////////
+////Spells////
+//////////////
+
+COPY_EXISTING ~dtkshd.spl~ ~override~		//Grasping Shadows
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			ACTION_TRY		//Grasping Shadows (from IDS)
+			  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_GRASPING_SHADOWS~ RET grasshad = spell_res END
+			  COPY_EXISTING ~%grasshad%.spl~ ~override~
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+					WITH
+					  ~Failure("Invalid spell number: -1")~
+					  BEGIN
+						WARN ~Warning: Could not find CLERIC_GRASPING_SHADOWS in SPELL.IDS~
+					  END
+					  DEFAULT
+					END
+
+   
+COPY_EXISTING ~dtksblt.spl~ ~override~		//Shadow Bolt
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			COPY_EXISTING ~dtksblt2.spl~ ~override~		//Shadow Bolt (second component)
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+				  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+				  BUT_ONLY IF_EXISTS
+						ACTION_TRY		//Shadow Bolt (from IDS)
+						  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_SHADOW_BOLT~ RET shadbolt = spell_res END
+						  COPY_EXISTING ~%shadbolt%.spl~ ~override~
+						  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+								WITH
+								  ~Failure("Invalid spell number: -1")~
+								  BEGIN
+									WARN ~Warning: Could not find CLERIC_SHADOW_BOLT in SPELL.IDS~
+								  END
+								  DEFAULT
+								END
+			
+				
+COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~SPL ~ = 1) BEGIN
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do instant poison damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do poison over time damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to spells that do instant magic damage
+		END
+		BUT_ONLY  
+		
+		
+		
+	
+//////////////////////////////////////////////////
+////////IWD-Style visual, BG-style sound//////////
+//////////////////////////////////////////////////
+
+BEGIN @9049
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+SUBCOMPONENT @9046
+PRINT @9001	
+
+COPY ~sod2bg2_iu/cosmetic/hiteff/bam~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/vvc~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/wav~ ~override~
+
+COPY_EXISTING ~dmgtypes.2da~ ~override~
+	SET_2DA_ENTRY 2 1 2  ~*~
+	SET_2DA_ENTRY 2 2 2  ~dtkfirh3~
+	SET_2DA_ENTRY 2 3 2  ~dtkfirhl~
+		SET_2DA_ENTRY 7 1 2  ~*~
+		SET_2DA_ENTRY 7 2 2  ~dtkelch3~
+		SET_2DA_ENTRY 7 3 2  ~dtkelchl~
+			SET_2DA_ENTRY 8 1 2  ~*~
+			SET_2DA_ENTRY 8 2 2  ~dtkcldh3~
+			SET_2DA_ENTRY 8 3 2  ~dtkcldhl~
+				SET_2DA_ENTRY 10 1 2  ~*~
+				SET_2DA_ENTRY 10 2 2  ~dtkacih3~
+					SET_2DA_ENTRY 12 1 2  ~*~
+					SET_2DA_ENTRY 12 2 2  ~dtkfirh3~
+					SET_2DA_ENTRY 12 3 2  ~dtkfirhl~
+						SET_2DA_ENTRY 13 1 2  ~*~
+						SET_2DA_ENTRY 13 2 2  ~dtkcldh3~
+						SET_2DA_ENTRY 13 3 2  ~dtkcldhl~
+				
+ PRETTY_PRINT_2DA
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Modifying items/spells to account for hit visual effect changes (includes SoD2BG2EE IU mod items/spells if they are present)      //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////
+////Items/////
+//////////////
+
+COPY_EXISTING ~dtkshdel.itm~ ~override~		//Shadow Elemental Attack
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect 
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7b.itm~ ~override~		//Varscona +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7a.itm~ ~override~		//Varscona +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd07.itm~ ~override~		//Varscona +3
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda5.itm~ ~override~		//Infernal Gift of the Demon +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda4.itm~ ~override~		//Infernal Gift of the Demon +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkbol1.itm~ ~override~		//Bolt of Frostfire +2
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (low) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+	
+	COPY_EXISTING ~dtkstaf1.itm~ ~override~		//Uncursed Staff of Antipode
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+
+	
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove old hit visual effects to prevent conflicts
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~ITM ~ = 1) BEGIN
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do instant poison damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do poison over time damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to items that do instant magic damage
+				END
+				BUT_ONLY 
+				
+
+//////////////
+////Spells////
+//////////////
+
+COPY_EXISTING ~dtkshd.spl~ ~override~		//Grasping Shadows
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			ACTION_TRY		//Grasping Shadows (from IDS)
+			  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_GRASPING_SHADOWS~ RET grasshad = spell_res END
+			  COPY_EXISTING ~%grasshad%.spl~ ~override~
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+					WITH
+					  ~Failure("Invalid spell number: -1")~
+					  BEGIN
+						WARN ~Warning: Could not find CLERIC_GRASPING_SHADOWS in SPELL.IDS~
+					  END
+					  DEFAULT
+					END
+
+   
+COPY_EXISTING ~dtksblt.spl~ ~override~		//Shadow Bolt
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			COPY_EXISTING ~dtksblt2.spl~ ~override~		//Shadow Bolt (second component)
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+				  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+				  BUT_ONLY IF_EXISTS
+						ACTION_TRY		//Shadow Bolt (from IDS)
+						  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_SHADOW_BOLT~ RET shadbolt = spell_res END
+						  COPY_EXISTING ~%shadbolt%.spl~ ~override~
+						  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+								WITH
+								  ~Failure("Invalid spell number: -1")~
+								  BEGIN
+									WARN ~Warning: Could not find CLERIC_SHADOW_BOLT in SPELL.IDS~
+								  END
+								  DEFAULT
+								END
+			
+				
+COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~SPL ~ = 1) BEGIN
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do instant poison damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do poison over time damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to spells that do instant magic damage
+		END
+		BUT_ONLY  
+		
+		
+		
+	
+//////////////////////////////////////////////////
+////////BG-Style visual, IWD-style sound//////////
+//////////////////////////////////////////////////
+
+BEGIN @9050
+GROUP @9035
+REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 iwd2 pst pstee~ @9003
+SUBCOMPONENT @9046
+PRINT @9001	
+
+COPY ~sod2bg2_iu/cosmetic/hiteff/bam~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/vvc~ ~override~
+COPY ~sod2bg2_iu/cosmetic/hiteff/wav~ ~override~
+
+	COPY_EXISTING ~dmgtypes.2da~ ~override~
+		SET_2DA_ENTRY 2 1 2  ~*~
+		SET_2DA_ENTRY 2 2 2  ~dtkfirh4~
+		SET_2DA_ENTRY 2 3 2  ~spburn~
+			SET_2DA_ENTRY 7 1 2  ~*~
+			SET_2DA_ENTRY 7 2 2  ~dtkelch4~
+			SET_2DA_ENTRY 7 3 2  ~spsparks~
+				SET_2DA_ENTRY 8 1 2  ~*~
+				SET_2DA_ENTRY 8 2 2  ~dtkcldh4~
+				SET_2DA_ENTRY 8 3 2  ~dtkcldl2~
+					SET_2DA_ENTRY 10 1 2  ~*~
+					SET_2DA_ENTRY 10 2 2  ~dtkacih4~
+						SET_2DA_ENTRY 12 1 2  ~*~
+						SET_2DA_ENTRY 12 2 2  ~dtkfirh4~
+						SET_2DA_ENTRY 12 3 2  ~spburn~
+							SET_2DA_ENTRY 13 1 2  ~*~
+							SET_2DA_ENTRY 13 2 2  ~dtkcldh4~
+							SET_2DA_ENTRY 13 3 2  ~dtkcldl2~
+	 PRETTY_PRINT_2DA
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Modifying items/spells to account for hit visual effect changes (includes SoD2BG2EE IU mod items/spells if they are present)      //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////
+////Items/////
+//////////////
+
+COPY_EXISTING ~dtkshdel.itm~ ~override~		//Shadow Elemental Attack
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect 
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7b.itm~ ~override~		//Varscona +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd7a.itm~ ~override~		//Varscona +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswd07.itm~ ~override~		//Varscona +3
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda5.itm~ ~override~		//Infernal Gift of the Demon +5
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkswda4.itm~ ~override~		//Infernal Gift of the Demon +4
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacihh END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih2 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih3 END // prevents acid hit visual to allow for custom hit visual effect
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkacih4 END // prevents acid hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhh END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirhl END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh2 END // prevents fire (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = spburn END // prevents fire (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh3 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR resource = dtkfirh4 END // prevents fire (high) hit visual to allow for custom hit visual effect
+  BUT_ONLY IF_EXISTS
+
+COPY_EXISTING ~dtkbol1.itm~ ~override~		//Bolt of Frostfire +2
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (low) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (low) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+	
+	COPY_EXISTING ~dtkstaf1.itm~ ~override~		//Uncursed Staff of Antipode
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirhh END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh2 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh3 END // prevents fire hit visual (high) to allow for custom
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkfirh4 END // prevents fire hit visual (high) to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkffbl1 resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+	BUT_ONLY IF_EXISTS
+
+	
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~		//remove old hit visual effects to prevent conflicts
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~ITM ~ = 1) BEGIN
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do instant poison damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to items that do poison over time damage
+				LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to items that do instant magic damage
+				END
+				BUT_ONLY 
+				
+
+//////////////
+////Spells////
+//////////////
+
+COPY_EXISTING ~dtkshd.spl~ ~override~		//Grasping Shadows
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			ACTION_TRY		//Grasping Shadows (from IDS)
+			  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_GRASPING_SHADOWS~ RET grasshad = spell_res END
+			  COPY_EXISTING ~%grasshad%.spl~ ~override~
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+					WITH
+					  ~Failure("Invalid spell number: -1")~
+					  BEGIN
+						WARN ~Warning: Could not find CLERIC_GRASPING_SHADOWS in SPELL.IDS~
+					  END
+					  DEFAULT
+					END
+
+   
+COPY_EXISTING ~dtksblt.spl~ ~override~		//Shadow Bolt
+LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+   		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+  BUT_ONLY IF_EXISTS
+			COPY_EXISTING ~dtksblt2.spl~ ~override~		//Shadow Bolt (second component)
+				LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+					LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic to allow for custom
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+				  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+						LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+				  BUT_ONLY IF_EXISTS
+						ACTION_TRY		//Shadow Bolt (from IDS)
+						  LAF RES_NUM_OF_SPELL_NAME STR_VAR spell_name = ~CLERIC_SHADOW_BOLT~ RET shadbolt = spell_res END
+						  COPY_EXISTING ~%shadbolt%.spl~ ~override~
+						  		LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldhh END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh2 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh3 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkcldh4 END // prevents cold (high) hit visual to allow for custom hit visual effect
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh2 END // prevents magic hit visual to allow for custom hit visual effect 
+								LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 215 match_timing = 0 opcode = 296 STR_VAR match_resource = dtkshadh resource = dtkmagh3 END // prevents magic hit visual to allow for custom hit visual effect   
+								WITH
+								  ~Failure("Invalid spell number: -1")~
+								  BEGIN
+									WARN ~Warning: Could not find CLERIC_SHADOW_BOLT in SPELL.IDS~
+								  END
+								  DEFAULT
+								END
+			
+				
+COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+	READ_ASCII 0x0 sg (4) //Signature
+	PATCH_IF (~%sg%~ STRING_EQUAL_CASE ~SPL ~ = 1) BEGIN
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = shacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = dtkacid END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+	LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 215 STR_VAR match_resource = poison END // remove manual hit visual to avoid conflict with IWD DMGTYPES.2DA changes
+		LPF DELETE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 65536 match_parameter1 = 0 match_dicenumber = 0 match_dicesize = 0  END // remove 0 damage acid to avoid conflict with IWD DMGTYPES.2DA changes
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 2097152 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do instant poison damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 25 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 duration = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkpoih2  END // adds new hit visual effect for poison to spells that do poison over time damage
+			LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 parameter1 = 0 timing = 0 dicenumber = 0 dicesize = 0 STR_VAR resource = dtkmagh2  END // adds new hit visual effect for magic to spells that do instant magic damage
+		END
+		BUT_ONLY  
+		
+		
+		
+	
   
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
@@ -6937,7 +8889,6 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkpenc2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkpenc3.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkmagsp.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkaxham.pro~
-ADD_PROJECTILE ~sod2bg2_iu/pro/dtkbiter.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkthrs1.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkthrs2.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkfball.pro~
@@ -6988,6 +8939,7 @@ ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi.pro~
 ADD_PROJECTILE ~sod2bg2_iu/pro/dtkashi1.pro~
 	COPY_EXISTING ~dtkashi1.pro~ ~override~
 	WRITE_SHORT 0x21a ~%dtkashi%~
+ADD_PROJECTILE ~sod2bg2_iu/pro/dtkbite1.pro~
 
 //////////////////////////
 //Adding Creatures  //////

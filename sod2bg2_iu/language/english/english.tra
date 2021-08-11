@@ -48,6 +48,14 @@
 @9040 = ~This component requires that the primary component of this mod be installed first.  Please install it and try again.~
 @9041 = ~Remove "Corny Jokes" effect from Jester's Bracers (BGEE)~
 @9042 = ~Update resist type for original Shadow Dragonscale Armor for consistency with new variants:  Acid -> Magic Damage)~
+@9043 = ~Cosmetic Enhancements for Existing Items (does not affect function)~
+@9044 = ~Remove annoying item effects, ie: blur, shadowed, physical mirror, spell trap. (Does not affect spells)~
+@9045 = ~Remove pulse-glow visual efects from armor, helmets, and shields.~
+@9046 = ~Enhanced visual on-hit effects. (fire, cold, acid, electricity, magic - cosmetic only)~
+@9047 = ~IWD-Style on-hit visual effects.~
+@9048 = ~BG-Style on-hit visual effects.~
+@9049 = ~IWD-Style on-hit visuals, BG-style sounds.~
+@9050 = ~BG-Style on-hit visuals, IWD-style sounds.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -1272,7 +1280,7 @@ Combat abilities:
 – 30% chance on hit of 2d3 damage (magic) and -1 to Strength for 5 rounds to enemies in 15' radius(No Save), weilder is healed for amount of damage done.
 
 THAC0: +5
-Damage: 1d8+5 (magic)
+Damage: 1d4+6 (magic)
 Speed Factor: 1
 Proficiency Type: War Hammer
 Type: One-handed
@@ -7190,7 +7198,7 @@ Charge abilities:
   Special: 15% chance per round of being frozen for 3 rounds beforee shattering, causing additional 1d6 cold and piercing damage in 5-ft. radius
   Range: 40 ft.
   Radius: 8 ft.
-  Duration: 12 rounds
+  Duration: 6 rounds
 
 THAC0: +5
 Damage: 1d8+5, 1d2+1 (cold), 1d2+1 (acid)
@@ -7322,7 +7330,7 @@ Casting Time: 3
 Area of Effect: 18-ft. cone with 90-deg. arc
 Saving Throw: 1/2
 
-The chosen of Auril speak of this spell as legend, a power that the Ice Maiden bestows only upon her most favored, and is a closely guarded secret.  It is said this spell conjures forth the very breath of Auril herself.  Cold as the hearts of Auril's followers may be, there are beings far, far more cruel than they in the realms, and it is rumored that one such being, known as "The Shattered One", caputured a high priestess of Auril and performed torturous experiments on her to "extract" this magic for his own use.  Unfortunately for the mage, he was unable to channel the divine energies required for the spell to work properly.  However, the damage was done and the secrets of this magic were shared across the realms, much to Auril's displeasure.  This spell brings forth a gale of icy, frozen wind from the caster's hands, feezing all in it's path with 1d5+1 of cold damage per level, up to a maximum of 20d5+20.   Those afflicted by the penetrating cold are frozen in their tracks, hindering their ability to fight unless a saving throw is made.   Those who roll a successful Save vs. Spell will shrug off a portion of the cold, taking half damage and avoid freezing in place.  All saving throws must be made at -2.  The use of this spell by non-aurilites angers the Ice Maiden greatly and there is a small chance that an enraged golem of ice is formed from the gale and will attack the party.~
+The chosen of Auril speak of this spell as legend, a power that the Ice Maiden bestows only upon her most favored, and is a closely guarded secret.  It is said this spell conjures forth the very breath of Auril herself.  Cold as the hearts of Auril's followers may be, there are beings far, far more cruel than they in the realms, and it is rumored that one such being, known as "The Shattered One", caputured a high priestess of Auril and performed torturous experiments on her to "extract" this magic for his own use.  Unfortunately for the mage, he was unable to channel the divine energies required for the spell to work properly.  However, the damage was done and the secrets of this magic were shared across the realms, much to Auril's displeasure.  This spell brings forth a gale of icy, frozen wind from the caster's hands, feezing all in it's path with 1d5+1 of cold damage per level, up to a maximum of 20d5+20.   Those afflicted by the blistering cold are frozen in their tracks, hindering their ability to fight unless a saving throw is made.   Those who roll a successful Save vs. Spell will shrug off a portion of the cold, taking half damage and avoid being frozen in place.  All saving throws must be made at -2.  The use of this spell by non-aurilites angers the Ice Maiden greatly and there is a small chance that an enraged golem of ice will form from the gale and attack the party.~
 @3012 = ~Corrosion~
 @3013 = ~Corrosion
 (Conjuration)
@@ -7440,7 +7448,7 @@ Casting Time: 4
 Area of Effect: 5-ft. radius
 Saving Throw: Special
 
-This spell conjures forth shadowy orbs of dark energy from the shadow plane that bolt forward from the caster's hand to strike <PRO_HISHER> target with unerring accuracy. The priest creates one bolt at 9th level and an additional bolt at every third level after 9th—in other words, two bolts at 12th level, three at 15th, four at 18th, to a maximum of five bolts at 21st level. Each bolt inflicts 1d5 points of cold damage and 1d5 points of magic damage to the target and then bursts in a 5-ft. radius concussive blast that inflicts 6 points of cold damage and 6 points of magic damage, increasing by two points each per every 3 levels of the caster, up to a maximum of 14 per each at level 21.  Addtionally, creatures caught in the dark energy blast suffer a 20% chance of being blinded for one turn or being drained of one level permanently. Creatures can attempt a Save vs. Spell at -4 to negate the concussion damage and effects, but the impact of the bolts themselves allow no Saving Throw.  Undead creatures are immune to the effects of this spell.  Priests of good alignment may not cast this spell.~
+This spell conjures forth shadowy orbs of dark energy from the shadow plane that bolt forward from the caster's hand to strike <PRO_HISHER> target with unerring precision. The priest creates one bolt at 9th level and an additional bolt at every third level after 9th—in other words, two bolts at 12th level, three at 15th, four at 18th, to a maximum of five bolts at 21st level. Each bolt inflicts 1d5 points of cold damage and 1d5 points of magic damage to the target and then bursts in a 5-ft. radius concussive blast that inflicts 6 points of cold damage and 6 points of magic damage, increasing by two points each per every 3 levels of the caster, up to a maximum of 14 per each at level 21.  Addtionally, creatures caught in the dark energy blast suffer a 20% chance of being blinded for one turn or being drained of one level permanently. Creatures can attempt a Save vs. Spell at -4 to negate the concussion damage and effects, but the impact of the bolts themselves allow no Saving Throw.  Undead creatures are immune to the effects of this spell.  Priests of good alignment may not cast this spell.~
 @3035 = ~Demi-Shadow Monsters~
 @3036 = ~Demi-Shadow Monsters
 (Illusion/Phantasm)
@@ -7477,7 +7485,7 @@ Casting Time: 4
 Area of Effect: 15-ft. radius
 Saving Throw: 1/2 
 
-Ko'Dezza was an eccentric half-drow mage who lived before the time of troubles.  She attempted to create new spells by modifying and enhancing existing spells.  While her experiements met with failure more often than not, this spell was on her more successful efforts.  For all intents and purposes, this spell functions very similar to the level 3 spell, Fireball, except that two or more fireballs are launched simultaneously, and hone in on a targetted creature with unerring accuracy.  When this spell is cast, two fireballs are launched at a target, and upon impact, explode in a horrific display of flames, doing 6d6 damage to the target and all creatures within a 15 foot radius of the impact.  For every two levels of the caster, damage is increased by 1d6 up to a maximum of 10d6 at level 22, and for every four levels an additional fireball is launched, up to a maximum of four at level 22.  Thus, a level 22 wizard can fire four fireballs each doing 10d6 fire damage at level 22. As with the level 3 spell, fireball, creatures who make a Saving Throw per fireball may reduce their damage taken from it by half.  Creatures weak against fire would do well to steer clear of a mage with this spell in <PRO_HISHER> repetoire.~
+Ko'Dezza was an eccentric half-drow mage who lived before the time of troubles.  She attempted to create new spells by modifying and enhancing existing spells.  While her experiements met with failure more often than not, this spell was on her more successful efforts.  For all intents and purposes, this spell functions very similar to the level 3 spell, Fireball, except that two or more fireballs are launched simultaneously, and home in on a targetted creature with unerring accuracy.  When this spell is cast, two fireballs are launched at a target, and upon impact, explode in a horrific display of flames, doing 6d6 damage to the target and all creatures within a 15 foot radius of the impact.  For every two levels of the caster, damage is increased by 1d6 up to a maximum of 10d6 at level 22, and for every four levels an additional fireball is launched, up to a maximum of four at level 22.  Thus, a level 22 wizard can fire four fireballs each doing 10d6 fire damage at level 22. As with the level 3 spell, Fireball, creatures who make a Saving Throw per fireball may reduce their damage taken from it by half.  Creatures weak against fire would do well to steer clear of a mage with this spell in <PRO_HISHER> repetoire.~
 @3042 = ~Caustic Quagmire~
 @3043 = ~Caustic Quagmire
 (Conjuration)
@@ -7490,7 +7498,7 @@ Casting Time: 4
 Area of Effect: 10-ft. radius
 Saving Throw: Special
 
-When this spell is cast, acrid pools of thick, corrosive slime rise from the earth and cover the ground.  Any creatures entering the area or caught in it when the spell is cast are mired in the sticky substance, which severly hinders their movement while corroding their flesh and armor, doing 1d4 damage(acid) per round, and reducing their physical resistances by 5%, making them more susceptible to melee and ranged attacks.  For every three levels of the caster, damage is increased by one point, and physical resistance is reduced by an additional percentage point, up to a maximum of 1d4+5 and 10%, respectively.  A successful Save vs. Spell at -2 negates the slowed movement and reduced defenses, while halving damage for that round.~
+When this spell is cast, acrid pools of thick, corrosive ichor rise from the earth and cover the ground.  Any creatures entering the area or caught in it when the spell is cast are mired in the sticky substance, which severly hinders their movement while corroding their flesh and armor, doing 1d4 damage(acid) per round, and reducing their physical resistances by 5%, making them more susceptible to melee and ranged attacks.  For every three levels of the caster, damage is increased by one point, and physical resistance is reduced by an additional percentage point, up to a maximum of 1d4+5 and 10%, respectively.  A successful Save vs. Spell at -2 negates the slowed movement and reduced defenses, while halving damage for that round.~
 @3044 = ~Grasping Shadows~
 @3045 = ~Grasping Shadows
 (Conjuration)
@@ -7515,7 +7523,7 @@ Casting Time: 5
 Area of Effect: Special
 Saving Throw: None
 
-Ko'Dezza, an eccentric half-drow mage who lived around 1260DR, attempted to create new spells by experimenting with modifying and combining components of existing spells.  More often than not, her attempts met with unmitigated disater, but this spell was one of her more successful ventures.  Upon casting this spell, the wizard summons forth several slime creatures that pool and coagulate into one monstrous, gelatinous golem.  This golem possesses all the strengths of a slime monster, being very resistant to most physical attacks.  However, it also shares the weaknesses of these creatures and is quite vulnerable to fire and acid attacks.  The summoned golem will obey the commands of it's summoner for for rounds, plus one additional round per level of the caster, or until it is destroyed.  There is a 10% chance when casting this spell that two slime golems will be summoned instead of one.~
+Ko'Dezza, an eccentric half-drow mage who lived around 1260DR, attempted to create new spells by experimenting with modifying and combining components of existing spells.  More often than not, her attempts met with unmitigated disater, but this spell was one of her more successful ventures.  Upon casting this spell, the wizard summons forth several slime creatures that pool and coagulate into one monstrous, gelatinous golem.  This golem possesses all the strengths of a slime monster, being very resistant to most physical attacks.  However, it also shares the weaknesses of these creatures and is quite vulnerable to fire and acid attacks.  The summoned golem will obey the commands of it's summoner for four rounds, plus one additional round per level of the caster, or until it is destroyed.  There is a 10% chance when casting this spell that two slime golems will be summoned instead of one.~
 @3048 = ~Cataclysm~
 @3049 = ~Cataclysm
 (Alteration)
@@ -7542,7 +7550,7 @@ This spell will affect both friend and foe alike, so great care must be taken in
 Level: 7
 Sphere: Elemental (Ice)
 Range: Visual range of the caster
-Duration: 12 rounds
+Duration: 6 rounds
 Casting Time: 6
 Area of Effect: 8-ft. radius
 Saving Throw: Special
@@ -7705,7 +7713,7 @@ Casting Time: 6
 Area of Effect: 15-ft. radius
 Saving Throw: none
 
-The first scroll containing this spell was discovered when a group of adventurers happened across a blasted hovel deep within the Spine of the World.  Under the remains lay a small laboratory that had appearently suffered a major magical mishap.  The scroll was firmly in the grasp of a necrotic, yet seemingly permanently frozen half-drowish hand.  It would be Ko'Dezza's final work, and her doom as well.  When cast, the wizard channels a massive amount of dark energy from the heart of the shadow plane into a singular point on the battlefield until it reaches critical mass, then explodes violently outward in all directions, ripping through any creatures in it's path, causing 7d10 Hit Points of cold damage and 7d10 Hit Points of magic damage.  There is a small chance that a creature hit by this dark energy will unwittingly become a conduit for a shadow elemental to enter the prime, resulting in their evisceration upon it's arrival.  The enraged elemental will attack the nearest creature, both friend and foe alike, until it is utterly destroyed.  There is no Saving Throw allowed for any of the effects of this spell.  Undead creatures are immune to the effects of this spell.~
+The first scroll containing this spell was discovered when a group of adventurers happened across a blasted hovel deep within the Spine of the World.  Under the remains lay a small laboratory that had apparently suffered a major magical mishap.  The scroll was firmly in the grasp of a necrotic, yet seemingly permanently frozen half-drowish hand.  It would be Ko'Dezza's final work, and her doom as well.  When cast, the wizard channels a massive amount of dark energy from the heart of the shadow plane into a singular point on the battlefield until it reaches critical mass, then explodes violently outward in all directions, ripping through any creatures in it's path, causing 7d10 Hit Points of cold damage and 7d10 Hit Points of magic damage.  There is a small chance that a creature hit by this dark energy will unwittingly become a conduit for a shadow elemental to enter the prime, resulting in their evisceration upon it's arrival.  The enraged elemental will attack the nearest creature, both friend and foe alike, until it is utterly destroyed.  There is no Saving Throw allowed for any of the effects of this spell.  Undead creatures are immune to the effects of this spell.~
 @3076 = ~Conjure Shadow Elemental~
 @3077 = ~Conjure Shadow Elemental
 (Conjuration/Summoning)

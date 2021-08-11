@@ -3,6 +3,6 @@ Global("DeSpawnItem","AR2000",0)
 THEN
 RESPONSE #100
 SetGlobal("DeSpawnItem","AR2000",1)
-ActionOverride("Container 3",CreateItem("shawm",1,0,0)) // Owain's Lullabye
+ActionOverride("Container 3",CreateItem("shawm",7,0,0)) // Owain's Lullabye
 Continue()
 END

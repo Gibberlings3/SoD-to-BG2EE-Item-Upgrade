@@ -1,5 +1,38 @@
 # Changelog
 
+## Version 2.0.2
+
+### Fixed
+
+- Corrected several grammatical errors in dialogues and item/spell descriptions.
+- Corrected Infernal Gift of the Demon +5 to strike as a +5 weapon instead of a +4.
+- Corrected Bag of Darkness +3 to strike as a +3 weapon.
+- Bag of Darkness +3 and Quiver of Void-tipped Arrows +3 no longer affect undead as per the description.
+- Slime Golem attack now shares the same immunities as attacks from other slime-based creatures.
+- Corrected Cromwell’s dialogue for Ashideena +3 to no longer take an ioun stone.
+- Corrected Night’s Embrace +7 piercing and missing resistances.
+- Corrected Devouring Darkness’ level drain component to drain two levels instead of one.
+- Corrected Vampiric Voidhammer’s damage output to be more consistent with other war hammers.
+- Corrected power level of new spells to match their spell level.
+- Corrected placement of Dancing Lights scroll on Bernard in the Copper Coronet
+- Corrected placement of scarlet/blue ioun stone on Thalantyr and Joluv.
+- Corrected clear ioun stone placement on Rayic Gethras
+- Corrected Landrin's dialogue to only give one pair of winter wolf boots.
+- Fixed Ashideena +3 and +5 to recharge after resting.
+- Corrected icon for level 25 version of Ko’ Dezza’s Slime Golem.
+- Corrected description for Penetrating Cold to display the correct duration of 6 rounds.
+
+### Changed
+
+- Changed the icons for Heartwood Ring of Frost and Water to better match.
+- Owain's Lullabye, Amulet of Abnormally Awesome Ankheg Summoning, and Cloak of Minor Arcana now come fully charged.
+
+
+### Added
+
+- New optional cosmetic tweaks for items and hit effects.
+
+
 ## Version 2.0.1
 
 ### Fixed
