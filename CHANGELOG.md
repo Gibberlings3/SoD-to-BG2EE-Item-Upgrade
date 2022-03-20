@@ -1,5 +1,40 @@
 # Changelog
 
+## Version 2.0.3
+
+### Changed
+
+- Reworked the optional component to force SoD item placement into BG2 to be more reliable.
+- Updated description images and/or icons for several items:
+	a. Varscona +3	
+	b. Varscona +4
+	c. Varscona +5
+	d. Scorched Earth +3
+	e. Scorched Earth +5
+	f. Infernal Gift of the Demon +4
+	g. Infernal Gift of the Demon +5
+	h. Tongue of Acid +3
+	i. Tongue of Acid +4
+	j. Tongue of Acid +5
+	k. Voidsword +3
+	l. Vampiric Voidsword +5
+	m. Voidhammer +3
+	n. Vampiric Voidhammer +5
+	o. Silver Dragon Blade +4
+	p. Silver Dragon Blade +5
+	q. Shimmering Sash
+	r. Maelstrom Axe +3
+	s. Malestrom Axe +4
+	t. Maelstrom Axe +5
+	u. Ashideena +3
+	v. Ashideena +5
+	w. Maelstrom Pike +4
+	x. Maelstrom Pike +5
+	y. Maelstrom Pike +6
+	z. Vexed Armor
+- New animation for Flame Vortice spell.
+
+
 ## Version 2.0.2
 
 ### Fixed
