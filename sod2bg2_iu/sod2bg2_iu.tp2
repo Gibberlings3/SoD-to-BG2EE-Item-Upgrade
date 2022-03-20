@@ -3,7 +3,7 @@
 BACKUP ~sod2bg2_iu/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/~
 
-VERSION ~v2.0.2~
+VERSION ~v2.0.3~
 
 README ~sod2bg2_iu/readme.html~
 
@@ -27,6 +27,7 @@ PRINT @9001
 
 INCLUDE ~sod2bg2_iu/lib/functions.tpa~		//adding functions
 INCLUDE ~sod2bg2_iu/lib/classspelltool.tpa~		//adding functions
+INCLUDE ~sod2bg2_iu/lib/addspellex.tpa~		//adding functions
 
 ////////////////////
 //Adding Resources//
@@ -2540,6 +2541,9 @@ COPY ~sod2bg2_iu/iwdresource/itm/vexed3.itm~ ~override~	//Vexed Armor
   SAY UNIDENTIFIED_DESC @2469
   SAY DESC @2470
   WRITE_ASCII 0x58 dtkcvexd
+  	WRITE_ASCII 0x3a ~dtkivexd~ #8	//inventory icon
+		WRITE_ASCII 0x76 ~dtkivexd~ #8	//charge ability icon
+			WRITE_ASCII 0xae ~dtkivexd~ #8	//charge ability 2 icon
 END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~ohbrac01.itm~ BEGIN // check if already present to prevent conflicts
@@ -6295,7 +6299,7 @@ REQUIRE_PREDICATE NOT GAME_IS ~iwdee iwd how totlm iwd_in_bg2 bgee iwd2 pst pste
 PRINT @9001
 
 ACTION_IF FILE_EXISTS_IN_GAME ~leat19.itm~ BEGIN // check if present	
-	COPY_EXISTING ~leat19.itm~ ~override~	//Shadow Dragon Scale - Change Acid resist to Magic Damage
+	COPY_EXISTING ~leat19.itm~ ~override~	//Shadow Dragon Scale - Change Acid resist to Magic Damage Resist
 	SAY DESC @2763
 		LPF ALTER_EFFECT INT_VAR match_opcode = 27 opcode = 31 END
 		LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = 28 END
@@ -6954,14 +6958,21 @@ COPY_EXISTING ~dtkshld1.itm~ ~override~		//mirrored buckler of the fist +2 (if p
 COPY_EXISTING ~bdsw1h02.itm~ ~override~	//Tongue of Acid +3
 	WRITE_ASCII 0x3a ~dtktocid~ #8  //changes inventory icon
 		WRITE_ASCII 0x76 ~dtktocid~ #8  //changes melee icon
+			WRITE_ASCII 0x58 ~dtkswd1d~ #8  //changes description image
   BUT_ONLY IF_EXISTS
   
 COPY_EXISTING ~bdhamm02.itm~ ~override~		//Voidhammer +3
 LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+	WRITE_ASCII 0x3a ~dtkham1a~ #8  //changes inventory icon
+		WRITE_ASCII 0x76 ~dtkham1a~ #8  //changes melee icon
+			WRITE_ASCII 0x58 ~dtkham1c~ #8  //changes description image
   BUT_ONLY IF_EXISTS
   
 COPY_EXISTING ~bdsw1h06.itm~ ~override~		//Voidsword +3
 LPF CLONE_EFFECT INT_VAR match_opcode = 12 match_parameter2 = 4194304 opcode = 215 parameter2 = 0 STR_VAR resource = dtkmaghl dicenumber = 0 dicesize = 0 timing = 0 END // adds hit visual effect in proper location by cloning existing hit effect and changing it
+	WRITE_ASCII 0x3a ~dtkswd2a~ #8  //changes inventory icon
+		WRITE_ASCII 0x76 ~dtkswd2a~ #8  //changes melee icon
+			WRITE_ASCII 0x58 ~dtkswd2c~ #8  //changes description image
   BUT_ONLY IF_EXISTS
   
 COPY_EXISTING ~bdbull02.itm~ ~override~		//Bullet of Darkness +3
@@ -8795,6 +8806,7 @@ PRINT @9001
 
 INCLUDE ~sod2bg2_iu/lib/functions.tpa~		//adding functions
 INCLUDE ~sod2bg2_iu/lib/classspelltool.tpa~		//adding functions
+INCLUDE ~sod2bg2_iu/lib/addspellex.tpa~		//adding functions
 
 ////////////////////
 //Adding Resources//
@@ -10499,7 +10511,10 @@ COPY ~sod2bg2_iu/iwdresource/itm/vexed3.itm~ ~override~	//Vexed Armor
   SAY NAME2 @2468
   SAY UNIDENTIFIED_DESC @2469
   SAY DESC @2470
-  WRITE_ASCII 0x58 dtkcvexd
+  WRITE_ASCII 0x58 dtkcvexd		//description image
+	WRITE_ASCII 0x3a ~dtkivexd~ #8	//inventory icon
+		WRITE_ASCII 0x76 ~dtkivexd~ #8	//charge ability icon
+			WRITE_ASCII 0xae ~dtkivexd~ #8	//charge ability 2 icon
 END
 
 ACTION_IF NOT FILE_EXISTS_IN_GAME ~ohbrac01.itm~ BEGIN // check if already present to prevent conflicts

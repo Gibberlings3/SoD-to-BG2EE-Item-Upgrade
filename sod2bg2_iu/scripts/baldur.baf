@@ -1,30 +1,21 @@
 //Force importable SoD items to import - Voidsword choice
 
 IF
-	Global("BD_HAVE_SOD","GLOBAL",0)		//Core variable needed for all items to import
-	Global("BD_SOD_IMPORT_11","GLOBAL",0)	//Dragon Blade +3
-	Global("BD_SOD_IMPORT_05","GLOBAL",0)	//Archer's Eyes
-	Global("BD_SOD_IMPORT_04","GLOBAL",0)	//Belt of the Skillfull Blade
-	Global("BD_SOD_IMPORT_09","GLOBAL",0)	//Tangled Strings
-	Global("BD_SOD_IMPORT_08","GLOBAL",0)	//Biter +2
-	Global("BD_SOD_IMPORT_06","GLOBAL",0)	//Helm of Dumathoin
-	Global("BD_SOD_IMPORT_07","GLOBAL",0)	//Bard Hat
-	Global("BD_SOD_IMPORT_03","GLOBAL",0)	//Robe of Red Flames
-	Global("BD_SOD_IMPORT_10","GLOBAL",0)	//Buckler of the Fist +2
-	Global("BD_SOD_IMPORT_01","GLOBAL",0)	//Voidsword +3
-	Global("BD_SOD_IMPORT_02","GLOBAL",1)	//Voidhammer +3
+	Global("DTK_SOD_FORCE_IMPORT","GLOBAL",0)		
+
 THEN
     RESPONSE #100
-        SetGlobal("BD_HAVE_SOD","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_11","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_05","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_04","GLOBAL",1)
-		setGlobal("BD_SOD_IMPORT_09","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_08","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_06","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_07","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_03","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_10","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_01","GLOBAL",1)
-		SetGlobal("BD_SOD_IMPORT_02","GLOBAL",0)
+        SetGlobal("BD_HAVE_SOD","GLOBAL",1)		//Core variable needed for all items to import
+		SetGlobal("BD_SOD_IMPORT_11","GLOBAL",1)	//Dragon Blade +3
+		SetGlobal("BD_SOD_IMPORT_05","GLOBAL",1)	//Archer's Eyes
+		SetGlobal("BD_SOD_IMPORT_04","GLOBAL",1)	//Belt of the Skillfull Blade
+		setGlobal("BD_SOD_IMPORT_09","GLOBAL",1)	//Tangled Strings
+		SetGlobal("BD_SOD_IMPORT_08","GLOBAL",1)	//Biter +2
+		SetGlobal("BD_SOD_IMPORT_06","GLOBAL",1)	//Helm of Dumathoin
+		SetGlobal("BD_SOD_IMPORT_07","GLOBAL",1)	//Bard Hat
+		SetGlobal("BD_SOD_IMPORT_03","GLOBAL",1)	//Robe of Red Flames
+		SetGlobal("BD_SOD_IMPORT_10","GLOBAL",1)	//Buckler of the Fist +2
+		SetGlobal("BD_SOD_IMPORT_01","GLOBAL",1)	//Voidsword +3
+		SetGlobal("BD_SOD_IMPORT_02","GLOBAL",0)	//Voidhammer +3
+		SetGlobal("DTK_SOD_FORCE_IMPORT","GLOBAL",1)	
 END
