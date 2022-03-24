@@ -1842,7 +1842,7 @@ COPY ~sod2bg2_iu/spl/bddoom.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4043) END
 END
 
-ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdsonef.spl~ BEGIN // check if already present for EET games
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~bdstonef.spl~ BEGIN // check if already present for EET games
 COPY ~sod2bg2_iu/spl/bdstonef.spl~ ~override~
 	LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF(@4075) END
 END
