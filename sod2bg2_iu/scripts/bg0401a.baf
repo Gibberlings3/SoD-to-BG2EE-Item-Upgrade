@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR0401",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR0401",1)
+ActionOverride("Container 3",CreateItem("glimglm",0,0,0)) // Glimglam's Cloak +1
+ActionOverride("Container 3",DestroyItem("clck01") // Cloak of Protection +1
+Continue()
+END

@@ -1060,6 +1060,7 @@ While we could not save Joseph, we told his wife that we had found his corpse.~
 @8037 = ~Ah, I'm so glad I can move home again. Bentley is a kindly man but it is always best not to push favors too far.  He gave me this nice pair of boots, but they chafe me something horrible, and I much rather have these old boots back anyway.  Maybe these new boots will be a better fit for ye, they're all yours.  If you have any of my other possessions, come talk to me again.~ 
 @8038 = ~Thank you. Thank you for bringing me the news.  Please, take this for your troubles.  Joseph gave this to me as a gift just before going back into those damned mines, and I can bear to look at it no longer.~
 @8039 = ~I care nothing for the drow war on the surface elves, and I spit on Phaere and her House. I can give this extra copy of the eggs to you to foil her plans, and should things go awry, take this cloak as well.  I took it from some foolish Duergar who attempted to ambush me in the tunnels.~
+@8040 = ~You return. I cannot say I am totally pleased with that, but you have done me a service, nonetheless. You may live, but we are still not square and fair. Cross my path again and the deaths of my daughters will be the fuel that drives my anger! You wouldn't like me when I'm angry. For now, I am satisfied, but only for now.  Take this minor trinket for your services and begone from my sight.~
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 /////                                                  \\\\\
@@ -2475,7 +2476,7 @@ Equipped abilities:
 – Missile Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
   
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -2498,7 +2499,7 @@ Equipped abilities:
 – Slashing Damage Resistance: +10%
 – Crushing Damage Resistance: +10%
 
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -2523,7 +2524,7 @@ Equipped abilities:
 – Physical Damage Resistance: +5%
 
 Charge abilities:
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -3254,7 +3255,7 @@ Equipped abilities:
 – Physical Damage Resistance: +5%
 
 Charge abilities:
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -3461,7 +3462,7 @@ Equipped abilities:
 – Piercing Damage Resistance: +10%
 
 Charge abilities:
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -3620,7 +3621,7 @@ Equipped abilities:
 – Crushing Damage Resistance: +10%
 
 Charge abilities:
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -7594,8 +7595,8 @@ Area of Effect: The caster
 Saving Throw: None 
 
 Upon casting of this spell, the cleric is enshrouded by a mass of swirling darkness conjured from the shadow plane, which acts as a protective barrier against incoming attacks.  The shadows absorb energy from attacks, both physical and magical, that are directed at the caster.  The barrier reduces damage from all attacks by 10%, increasing by an additional percentage point every two levels to a maximum of 15% at level 21.  Additionally, creatures who successfully hit the caster through the shadowy barrier within melee range suffer 1d5 points of magic damage and 1d5 points of cold damage, with a 20% change of being drained of one level as well.  There is no Saving Throw allowed for these effects, though undead creatures are immune.  This spell may not be cast by clerics of good alignment.~  
-@3058 = ~Holocaust~
-@3059 = ~Holocaust
+@3058 = ~Deleterious Nimbus~
+@3059 = ~Deleterious Nimbus
 (Evocation)
 
 Level: 8

@@ -1,0 +1,9 @@
+IF
+Global("DeSpawnItem","AR2300",0)
+THEN
+RESPONSE #100
+SetGlobal("DeSpawnItem","AR2300",1)
+ActionOverride("Container 1",DestroyItem("ring08") // Evermemory - Ring of Wizardry
+ActionOverride("Container 1",CreateItem("dtkrnd11",0,0,0)) // 66% Evermemory - 33% Kontik's Ring of Wizardry
+Continue()
+END
