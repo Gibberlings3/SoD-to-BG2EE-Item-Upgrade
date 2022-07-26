@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 2.0.4
+
+### Changed
+
+- Reworked how items obtained via quest rewards are implemented for better cross-mod compatibility.
+- Renamed new wizard spell "Holocaust" to "Deleterious Nimbus" based on community feedback.
+
+### Fixed
+
+- IWD items for BG1 component should now spawn items in their intended locations for BGEE games.
+- All version of the Element's Fury should now apply strength bonus when thrown.
+
+
+
 ## Version 2.0.3
 
 ### Changed
