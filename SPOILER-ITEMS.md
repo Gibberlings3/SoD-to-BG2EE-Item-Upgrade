@@ -341,7 +341,7 @@ Upon casting of this spell, the wizard conjures forth a fierce storm of high win
 
 
 
-Holocaust
+Deleterious Nimbus
 (Evocation)
 
 Level: 8
@@ -1585,7 +1585,7 @@ These are all-new items that can be obtained via cromwell/cespenar or other meth
 	– Slashing Damage Resistance: +10%
 	– Crushing Damage Resistance: +10%
 
-	– Holocaust once per day
+	– Deleterious Nimbus once per day
 	  Damage: 1d12+1 poison per round (No Save)
 	  Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
 	  Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -1608,7 +1608,7 @@ These are all-new items that can be obtained via cromwell/cespenar or other meth
 	– Crushing Damage Resistance: +10%
 
 	Charge abilities:
-	– Holocaust once per day
+	– Deleterious Nimbus once per day
 	  Damage: 1d12+1 poison per round (No Save)
 	  Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
 	  Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -1630,7 +1630,7 @@ Equipped abilities:
 – Missile Damage Resistance: +10%
 – Piercing Damage Resistance: +10%
   
-– Holocaust once per day
+– Deleterious Nimbus once per day
   Damage: 1d12+1 poison per round (No Save)
   Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
   Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -1653,7 +1653,7 @@ Weight: 30
 	– Piercing Damage Resistance: +10%
 
 	Charge abilities:
-	– Holocaust once per day
+	– Deleterious Nimbus once per day
 	  Damage: 1d12+1 poison per round (No Save)
 	  Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
 	  Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -2246,7 +2246,7 @@ Equipped abilities:
 	– Physical Damage Resistance: +5%
 
 	Charge abilities:
-	– Holocaust once per day
+	– Deleterious Nimbus once per day
 	  Damage: 1d12+1 poison per round (No Save)
 	  Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
 	  Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
@@ -2268,7 +2268,7 @@ Equipped abilities:
 	– Physical Damage Resistance: +5%
 
 	Charge abilities:
-	– Holocaust once per day
+	– Deleterious Nimbus once per day
 	  Damage: 1d12+1 poison per round (No Save)
 	  Special: 2 poison damage per second for two rounds (Save vs. Death at -8 negates)
 	  Special: Slays creatures of 8 Hit Dice of less, 9-10 Hit Dice creatures must Save vs. Death at -8 or be slain
