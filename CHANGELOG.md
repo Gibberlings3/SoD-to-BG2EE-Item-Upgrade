@@ -1,5 +1,21 @@
 # Changelog
 
+
+## Version 2.0.5
+
+### Fixed
+
+- Corrected spellbook level entries for spells: Thunder Thrust, Infernal Bone Shield, Sundering Vitriol.
+- Corrected usable races/classes for the Adventurer's Nimble Gloves of Guarding.
+- Restored Arbane's Sword of Agility +2 to Suna Seni
+
+## Version 2.0.4
+
+### Fixed
+
+- Corrected spellbook level entries for spells: Thunder Thrust, Infernal Bone Shield, Sundering Vitriol.
+
+
 ## Version 2.0.4
 
 ### Changed

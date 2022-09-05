@@ -3,7 +3,7 @@
 BACKUP ~sod2bg2_iu/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/214-sod-to-bg2ee-item-upgrade/~
 
-VERSION ~v2.0.4~
+VERSION ~v2.0.5~
 
 README ~sod2bg2_iu/readme.html~
 
@@ -800,7 +800,7 @@ COPY ~sod2bg2_iu/itm/scrolls/blank.itm~ ~override/dtkcdeat.itm~
 		
 ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_THUNDER_THRUST~) BEGIN
 
-  ADD_SPELL ~sod2bg2_iu/spl/dtkthrst.spl~ 2 5 WIZARD_THUNDER_THRUST
+  ADD_SPELL ~sod2bg2_iu/spl/dtkthrst.spl~ 2 6 WIZARD_THUNDER_THRUST
     SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3005  // Spell Name
 	SAY NAME2 @3005
@@ -956,7 +956,7 @@ ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_CORROSION~) BEGIN
 ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_INFERNAL_BONE_SHIELD~) BEGIN
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@3029) STR_VAR bam_file = dtkdebnp RET icon END 
-ADD_SPELL ~sod2bg2_iu/spl/dtkdebn.spl~ 2 4 WIZARD_INFERNAL_BONE_SHIELD	
+ADD_SPELL ~sod2bg2_iu/spl/dtkdebn.spl~ 2 5 WIZARD_INFERNAL_BONE_SHIELD	
   	SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3029
 	SAY NAME2 @3029
@@ -1529,7 +1529,7 @@ ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~CLERIC_SUNDERING_VITRIOL~) BEGIN
   END
 
 
-  ADD_SPELL ~sod2bg2_iu/spl/dtkvit.spl~ 1 2 CLERIC_SUNDERING_VITRIOL
+  ADD_SPELL ~sod2bg2_iu/spl/dtkvit.spl~ 1 3 CLERIC_SUNDERING_VITRIOL
     SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3070
 	SAY NAME2 @3070
@@ -5421,7 +5421,7 @@ COPY_EXISTING ~spphil.cre~ ~override~
   ADD_CRE_ITEM ~bdsilk01~ #0 #0 #0 ~IDENTIFIED~ ~INV~		//Spider Silk
   
 COPY_EXISTING ~resuna.cre~ ~override~
-  REPLACE_CRE_ITEM ~bdxbow02~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Harold +2
+  ADD_CRE_ITEM ~bdxbow02~ #0 #0 #0 ~NONE~ ~WEAPON~ EQUIP TWOHANDED		//Harold +2
 	REPLACE_CRE_ITEM ~leat15~ #0 #0 #0 ~UNDROPPABLE~ ~ARMOR~		//Studded Leather +2
 		REPLACE_CRE_ITEM ~bolt02~ #10 #0 #0 ~NONE~ ~QUIVER1~		//Bolt +1
   
@@ -6967,7 +6967,7 @@ COPY ~sod2bg2_iu/itm/scrolls/blank.itm~ ~override/dtkcdeat.itm~
 		
 ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_THUNDER_THRUST~) BEGIN
 
-  ADD_SPELL ~sod2bg2_iu/spl/dtkthrst.spl~ 2 5 WIZARD_THUNDER_THRUST
+  ADD_SPELL ~sod2bg2_iu/spl/dtkthrst.spl~ 2 6 WIZARD_THUNDER_THRUST
     SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3005  // Spell Name
 	SAY NAME2 @3005
@@ -7123,7 +7123,7 @@ ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_CORROSION~) BEGIN
 ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~WIZARD_INFERNAL_BONE_SHIELD~) BEGIN
 
 LAF dtk_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(@3029) STR_VAR bam_file = dtkdebnp RET icon END 
-ADD_SPELL ~sod2bg2_iu/spl/dtkdebn.spl~ 2 4 WIZARD_INFERNAL_BONE_SHIELD	
+ADD_SPELL ~sod2bg2_iu/spl/dtkdebn.spl~ 2 5 WIZARD_INFERNAL_BONE_SHIELD	
   	SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3029
 	SAY NAME2 @3029
@@ -7695,7 +7695,7 @@ ACTION_IF !FILE_CONTAINS_EVALUATED(~spell.ids~ ~CLERIC_SUNDERING_VITRIOL~) BEGIN
   END
 
 
-  ADD_SPELL ~sod2bg2_iu/spl/dtkvit.spl~ 1 2 CLERIC_SUNDERING_VITRIOL
+  ADD_SPELL ~sod2bg2_iu/spl/dtkvit.spl~ 1 3 CLERIC_SUNDERING_VITRIOL
     SPRINT current_spell_res "%DEST_RES%"
 	SAY NAME1 @3070
 	SAY NAME2 @3070
