@@ -388,8 +388,8 @@ COPY ~sod2bg2_iu/cre/dtkshdel.cre~ ~override~		//Shadow Elemental - Berserk
 ACTION_IF FILE_EXISTS_IN_GAME ~lichtoo.bcs~ BEGIN // check if already present first
 	COMPILE ~sod2bg2_iu/scripts/dtklicht.baf~ ~override~	//new script for Diedrex's Tower to not take tooth.
 	COPY_EXISTING ~ar2200.are~ ~override~
-		WRITE_ASCII 0x59c0 ~dtklicht~
-		WRITE_ASCII 0x5a84 ~dtklicht~
+		LPF ALTER_AREA_REGION STR_VAR region_name = ~LichTooth1~ region_script = ~dtklicht~ END
+		LPF ALTER_AREA_REGION STR_VAR region_name = ~LichTooth2~ region_script = ~dtklicht~ END
 		END
    
 
