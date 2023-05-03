@@ -388,8 +388,8 @@ COPY ~sod2bg2_iu/cre/dtkshdel.cre~ ~override~		//Shadow Elemental - Berserk
 ACTION_IF FILE_EXISTS_IN_GAME ~lichtoo.bcs~ BEGIN // check if already present first
 	COMPILE ~sod2bg2_iu/scripts/dtklicht.baf~ ~override~	//new script for Diedrex's Tower to not take tooth.
 	COPY_EXISTING ~ar2200.are~ ~override~
-		WRITE_ASCII 0x59c0 ~dtklicht~
-		WRITE_ASCII 0x5a84 ~dtklicht~
+		LPF ALTER_AREA_REGION STR_VAR region_name = ~LichTooth1~ region_script = ~dtklicht~ END
+		LPF ALTER_AREA_REGION STR_VAR region_name = ~LichTooth2~ region_script = ~dtklicht~ END
 		END
    
 
@@ -6233,10 +6233,6 @@ COPY_EXISTING ~wmart2.sto~ ~override~		//Diedre
 
 COPY - ~sod2bg2_iu/2da/tooltip.2da~ ~sod2bg2_iu/2da/tooltip.2da~
   READ_2DA_ENTRIES_NOW r2en_tooltip 1
-
-COPY_EXISTING ~tooltip.2da~ ~override~
-  COUNT_2DA_COLS num_cols
-  COUNT_2DA_ROWS num_cols num_rows
   FOR (row = 0; row < r2en_tooltip; row += 1) BEGIN
     READ_2DA_ENTRY_FORMER r2en_tooltip row 0 item
     READ_2DA_ENTRY_FORMER r2en_tooltip row 1 ability1
@@ -6245,10 +6241,14 @@ COPY_EXISTING ~tooltip.2da~ ~override~
     LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability1%~ RET ability1 = strref END
     LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability2%~ RET ability2 = strref END
     LPF RESOLVE_REF STR_VAR ref = EVAL ~%ability3%~ RET ability3 = strref END
-    INSERT_2DA_ROW num_rows num_cols ~%item%  %ability1%  %ability2%  %ability3%~
-    SET num_rows += 1
-		PRETTY_PRINT_2DA
+	INNER_ACTION BEGIN
+    	APPEND ~tooltip.2da~ ~%item%  %ability1%  %ability2%  %ability3%~
+	END
   END
+  BUT_ONLY
+
+COPY_EXISTING ~tooltip.2da~ ~override~
+  LPF a7#normalize_table END
   BUT_ONLY
    
 //////////////////////////////////////////////////
@@ -7867,10 +7867,6 @@ COPY ~sod2bg2_iu/itm/scrolls/dtkascrl.itm~ ~override~
 
 COPY - ~sod2bg2_iu/2da/rndtres.2da~ ~sod2bg2_iu/2da/rndtres.2da~
   READ_2DA_ENTRIES_NOW r2en_rndtres 1
-
-COPY_EXISTING ~rndtres.2da~ ~override~
-  COUNT_2DA_COLS num_cols
-  COUNT_2DA_ROWS num_cols num_rows
   FOR (row = 0; row < r2en_rndtres; row += 1) BEGIN
     READ_2DA_ENTRY_FORMER r2en_rndtres row 0 item
     READ_2DA_ENTRY_FORMER r2en_rndtres row 1 tres1
@@ -7913,12 +7909,15 @@ COPY_EXISTING ~rndtres.2da~ ~override~
 	READ_2DA_ENTRY_FORMER r2en_rndtres row 38 tres38
 	READ_2DA_ENTRY_FORMER r2en_rndtres row 39 tres39
 	READ_2DA_ENTRY_FORMER r2en_rndtres row 40 tres40
-    INSERT_2DA_ROW num_rows num_cols ~%item%  %tres1%  %tres2%  %tres3%  %tres4%  %tres5%  %tres6%  %tres7%  %tres8%  %tres9%  %tres10%  %tres11%  %tres12%  %tres13%  %tres14%  %tres15%  %tres16%  %tres17%  %tres18%  %tres19%  %tres20%  %tres21%  %tres22%  %tres23%  %tres24%  %tres25%  %tres26%  %tres27%  %tres28%  %tres29%  %tres30%  %tres31%  %tres32%  %tres33%  %tres34%  %tres35%  %tres36%  %tres37%  %tres38%  %tres39%  %tres40%~
-    SET num_rows += 1
-		PRETTY_PRINT_2DA
-  END
-  BUT_ONLY					   
+	INNER_ACTION BEGIN
+    	APPEND ~rndtres.2da~ ~%item%  %tres1%  %tres2%  %tres3%  %tres4%  %tres5%  %tres6%  %tres7%  %tres8%  %tres9%  %tres10%  %tres11%  %tres12%  %tres13%  %tres14%  %tres15%  %tres16%  %tres17%  %tres18%  %tres19%  %tres20%  %tres21%  %tres22%  %tres23%  %tres24%  %tres25%  %tres26%  %tres27%  %tres28%  %tres29%  %tres30%  %tres31%  %tres32%  %tres33%  %tres34%  %tres35%  %tres36%  %tres37%  %tres38%  %tres39%  %tres40%~
+	END
+	END
+	BUT_ONLY
 
+COPY_EXISTING ~rndtres.2da~ ~override~
+  LPF a7#normalize_table END
+  BUT_ONLY					   
 
 
 ////////////////////////////////////////////////////////////////////////
